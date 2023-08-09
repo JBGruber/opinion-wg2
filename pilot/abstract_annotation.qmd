@@ -1,0 +1,146 @@
+---
+title: "Abstracts Of Opinion Research"
+format:
+  revealjs:
+    logo: https://www.opinion-network.eu/img/opinion_i.gif
+    footer: "OPINION | Measuring Opinionated Communication"
+---
+
+# Coding task
+
+```{r setup}
+#| include: false
+if (!rlang::is_installed("annotinder")) remotes::install_github("ccs-amsterdam/annotinder-r")
+library(annotinder)
+library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc())
+library(googlesheets4)
+library(gt)
+backend_connect(host = "https://cost-tools.up.railway.app",
+                username = "johannesb.gruber@gmail.com",
+                .password = Sys.getenv("ANNOTINDER_PW"))
+if (!file.exists("../abstracts.rds")) {
+  data <- read_sheet("https://docs.google.com/spreadsheets/d/1Yd-c8_nL89ue3tSU-QN2NyAIR3LOKtSVoHAqe_dT6Lw/edit#gid=0")
+  saveRDS(data, "../abstracts.rds")
+} else {
+  data <- readRDS("../abstracts.rds")
+}
+if (!file.exists("abstracts_coded_pilot.csv")) {
+  data_coded <- download_annotations(10L)
+  write.csv(data_coded, "abstracts_coded_pilot.csv")
+} else {
+  data_coded <- read.csv("abstracts_coded_pilot.csv")
+}
+```
+
+```{r}
+coders <- unique(data_coded$coder_id) |> 
+  length()
+coded <- data_coded |> 
+  filter(status == "DONE") |> 
+  distinct(unit_id) |> 
+  nrow()
+```
+
+- We want to identify relevant research that a) measures human opinions and b) uses some tool for it
+- In the next step we look at the tools and what exactly they measure
+- We use a broad search from Web of Science which yielded `r scales::comma(nrow(data))` hits
+- Number of coded abstracts: `r coded`
+- Number of coders who participated: `r coders`
+
+# Relevant research
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "relevant") |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Is this research that measures a human opinion (however it is defined)?")
+```
+
+# Relevant research
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "relevant2",
+         value != "IRRELEVANT") |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Is this research that uses a tool?")
+```
+
+# Tools
+
+```{r}
+data_coded |> 
+  filter(variable == "tool",
+         value != "IRRELEVANT") |> 
+  separate_rows(value, sep = ",") |> 
+  mutate(value = tolower(trimws(value))) |> 
+  count(value, sort = TRUE) |> 
+  gt(caption = "Which tool is mentioned in the abstract?") |> 
+  tab_options(container.overflow.y = TRUE,
+              container.height = "500px")
+```
+
+# Concepts
+
+```{r}
+data_coded |> 
+  filter(variable == "concept",
+         value != "IRRELEVANT") |> 
+  separate_rows(value, sep = ",|/|;") |> 
+  mutate(value = tolower(trimws(value))) |> 
+  count(value, sort = TRUE) |> 
+  gt(caption = "Which concept is mentioned in the abstract?") |> 
+  tab_options(container.overflow.y = TRUE,
+              container.height = "500px")
+```
+
+# Approaches
+
+```{r}
+data_coded |> 
+  filter(variable == "approach",
+         value != "IRRELEVANT") |> 
+  separate_rows(value, sep = ",|/|;") |> 
+  mutate(value = tolower(trimws(value))) |> 
+  count(value, sort = TRUE) |> 
+  gt(caption = "Which approach is mentioned in the abstract?") |> 
+  tab_options(container.overflow.y = TRUE,
+              container.height = "500px")
+
+```
+
+# Languages
+
+```{r}
+data_coded |> 
+  filter(variable == "language",
+         value != "IRRELEVANT") |> 
+  separate_rows(value, sep = ",|/|;") |> 
+  mutate(value = tolower(trimws(value))) |> 
+  count(value, sort = TRUE) |> 
+  gt(caption = "Which natural language are the measured opinions expressed in?") |> 
+  tab_options(container.overflow.y = TRUE,
+              container.height = "500px")
+```
+
+# Understanding of *opinion*
+
+```{r}
+data_coded |> 
+  filter(variable == "definition",
+         value != "IRRELEVANT") |> 
+  separate_rows(value, sep = ",|/|;") |> 
+  mutate(value = tolower(trimws(value))) |> 
+  count(value, sort = TRUE) |> 
+  gt(caption = "If defined in the abstract, how do the authors understand opinion?") |> 
+  tab_options(container.overflow.y = TRUE,
+              container.height = "500px")
+```
+
+
