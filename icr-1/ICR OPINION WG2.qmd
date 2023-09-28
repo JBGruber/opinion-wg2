@@ -1,0 +1,567 @@
+---
+title: ICR OPINION WG2
+author: Johannes B. Gruber
+date: today
+format:
+  revealjs:
+    logo: https://www.opinion-network.eu/img/opinion_i.gif
+    footer: "OPINION | Measuring Opinionated Communication"
+    smaller: true
+    transition: "slide"
+    scrollable: true
+    embed-resources: true
+---
+
+# Introduction
+
+After the first round of annotations (after the pilot), let's see how we are doing in term of intercoder reliability!
+
+1. Look at intercoder agreement
+2. Check the preliminary results
+
+```{r setup}
+#| include: false
+if (!rlang::is_installed("annotinder")) remotes::install_github("ccs-amsterdam/annotinder-r")
+library(annotinder)
+library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc())
+library(tidycomm)
+library(gt)
+
+# if you are me and have the password, load new data, otherwise load it from the repo
+if (Sys.getenv("ANNOTINDER_PW") != "") {
+  backend_connect(host = "https://cost-tools.up.railway.app",
+                  username = "johannesb.gruber@gmail.com",
+                  .password = Sys.getenv("ANNOTINDER_PW"))
+  data_coded <- download_annotations(20L)
+  saveRDS(data_coded, "../data/abstracts_icr-1.rds")
+} else {
+  data_coded <- readRDS("../data/abstracts_icr-1.rds")
+}
+
+abstracts <- readRDS("../data/abstracts.rds")
+
+test_agreement <- function(tbl, title) {
+  tbl |> 
+    test_icr(unit_var = unit_id, coder_var = coder_id, value,
+             cohens_kappa = TRUE,
+             fleiss_kappa = TRUE,
+             brennan_prediger = TRUE,
+             lotus = TRUE,
+             s_lotus = TRUE) |> 
+    select(where(is.numeric)) |> 
+    t() |> 
+    tibble::enframe() |> 
+    filter(!is.na(value)) |> 
+    # mutate(value = str_replace(value, "(\\d\\.\\d{2}).*", "\\1")) |> 
+    gt() |> 
+    fmt_number(value, decimals = 2L, drop_trailing_zeros = TRUE) |> 
+    data_color(
+      columns = value,
+      method = "numeric",
+      palette = c("red", "green"),
+      domain = c(0, 1),
+      na_color = "#FFF"
+    ) |> 
+    tab_header(
+      title = md(title)
+    )
+}
+
+disagreement_score <- function(x) {
+  code_counts <- table(x)
+  proportions <- code_counts / sum(code_counts)
+  max(proportions) - sum(proportions[-which.max(proportions)])
+}
+
+majority_vote <- function(x) {
+  names(which.max(table(x)))
+}
+```
+
+## Top Coders!
+
+```{r}
+coders <- data_coded |> 
+  group_by(coder_id) |> 
+  mutate(name = value[variable == "welcome"]) |> 
+  filter(unit_id != "id") |> 
+  summarise(coded = length(unique(unit_id)),
+            name = unique(name))
+
+star_coders <- coders |>
+  filter(coded == 50L)
+
+coders |> 
+  mutate(name = forcats::fct_reorder(name, coded)) |> 
+  ggplot(aes(x = coded, y = name, fill = coded)) +
+  geom_col() +
+  scale_fill_gradient(low = "#A2A4A6", high = "#AE9653") +
+  labs(x = NULL, y = NULL, title = "Top Coders!")
+```
+
+:::{.fragment .fade-up .absolute top="25%" right="25%"}
+<iframe src="https://giphy.com/embed/KcPvrQkRRiM2D75roA" width="459" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/happy-animated-super-star-KcPvrQkRRiM2D75roA"></a></p>
+:::
+
+# Measurement Problems {.scrollable}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.incremental}
+- Branching in codebook makes calculating intercoder-reliability tough
+- What does it mean when somebody answers an abstract *uses a tool* and someone clicked the research does NOT measure opinion (i.e., isn't asked the question)?
+- options:
+  1. treat *IRRELEVANT* as valid code?
+  2. treat as missing and ignore (works only for Krippendorff's $\alpha$)?
+  3. calculate agreement on full branch path?
+:::
+:::
+::: {.column width="50%"}
+```{r}
+disagreement <- data_coded |> 
+  filter(variable == "relevant-2",
+         coder_id %in% star_coders$coder_id) |> 
+  group_by(unit_id) |> 
+  mutate(d_score = disagreement_score(value)) |> 
+  select(unit_id, coder_id, d_score, value) |> 
+  ungroup()
+
+disagreement |> 
+  filter(unit_id %in% c("4775", "4567", "1948")) |> 
+  select(-d_score) |> 
+  pivot_wider(id_cols = "unit_id", names_from = "coder_id", values_from = "value") |> 
+  gt()
+```
+:::
+
+::::
+
+# ICR
+## Is this research that measures a human opinion?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "relevant-1") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "relevant-1",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+## What understanding or sub-category of opinion is measured here?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "concept") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "concept",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+## New sub-categories of opinion?
+
+```{r}
+
+data_coded |> 
+  filter(variable == "concept-other",
+         value != "IRRELEVANT") |> 
+  separate_longer_delim(cols = value, delim = ";") |> 
+  count(value, sort = TRUE) |> 
+  gt() |> 
+  tab_options(container.height = px(500))
+```
+
+## Is this research that uses a tool?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "relevant-2") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "relevant-2",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+## Disagreement Examples
+
+```{r}
+disagreement |> 
+  filter(unit_id %in% c("1948", "1017", "597")) |> 
+  select(-d_score) |> 
+  pivot_wider(id_cols = "unit_id", names_from = "coder_id", values_from = "value") |> 
+  gt()
+```
+
+
+```{r}
+#| output: asis
+#| class: fragment
+print_abstract <- function(id) {
+  out <- abstracts |> 
+    #filter(ID %in% c("1948", "1017", "597"))
+    filter(ID == id) |> 
+    select(`Article Title`, Abstract)
+  cat("ID:", id, "\n\n")
+  cat(paste0("**", out$`Article Title`, "**"), "\n\n")
+  cat(out$Abstract, "\n\n")
+}
+print_abstract("1948")
+```
+
+```{r}
+#| output: asis
+#| class: fragment
+print_abstract("1017")
+```
+
+```{r}
+#| output: asis
+#| class: fragment
+print_abstract("597")
+```
+
+
+## How would you categorize the measurment approach of the tool?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "approach") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "approach",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+## New sub-categories of approaches?
+
+```{r}
+
+data_coded |> 
+  filter(variable == "approach-other",
+         value != "IRRELEVANT") |> 
+  separate_longer_delim(cols = value, delim = ";") |> 
+  count(value, sort = TRUE) |> 
+  gt() |> 
+  tab_options(container.height = px(500))
+```
+
+## What software application or model or dictionary is employed by the research to measure the concept?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "tool") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "tool",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+
+## Does the abstract mention or hint which data(set) was analysed?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "relevant-data") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "relevant-data",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+## What kind of dataset is referenced?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "data-kind") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "data-kind",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+
+## Does the abstract mention or hint at the natural language analysed?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "islang") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "islang",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+## Does the abstract mention or hint at the country analysed?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "iscountry") |> 
+  test_agreement(title = "Agreement (all coders)")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+data_coded |> 
+  filter(variable == "iscountry",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+:::
+
+::::
+
+# Results
+## Valid
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "relevant-1") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Is this research that measures a human opinion (however it is defined)?")
+```
+
+## Tentative  {.scrollable}
+
+Results are based on a simple majority vote.
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "concept",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Understanding or sub-category of opinion")
+```
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "relevant-2",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Is this research that uses a tool?")
+```
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "tool",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "What software application or model or dictionary?")
+```
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "relevant-data",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "mention or hint which data(set)?")
+```
+
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "data-kind",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "What kind of dataset is referenced?")
+```
+
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "data-source",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Where does the data come from?")
+```
+
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "islang",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Mentions natural language?")
+```
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "data-lang",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Which natural language?")
+```
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "iscountry",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "country analysed?")
+```
+
+```{r}
+data_coded |> 
+  filter(status == "DONE",
+         variable == "data-country",
+         value != "IRRELEVANT") |> 
+  group_by(unit_id) |> 
+  summarise(value = majority_vote(value)) |> 
+  count(value) |> 
+  ggplot(aes(x = n, y = value)) +
+  geom_col(fill = "#042C23") + 
+  labs(x = NULL, y = NULL, title = "Which natural language?")
+```
+
+(Note: the wording of the question was wrong)
