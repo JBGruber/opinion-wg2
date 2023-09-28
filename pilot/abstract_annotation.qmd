@@ -18,14 +18,14 @@ library(gt)
 backend_connect(host = "https://cost-tools.up.railway.app",
                 username = "johannesb.gruber@gmail.com",
                 .password = Sys.getenv("ANNOTINDER_PW"))
-if (!file.exists("../abstracts.rds")) {
+if (!file.exists("../data/abstracts.rds")) {
   data <- read_sheet("https://docs.google.com/spreadsheets/d/1Yd-c8_nL89ue3tSU-QN2NyAIR3LOKtSVoHAqe_dT6Lw/edit#gid=0")
-  saveRDS(data, "../abstracts.rds")
+  saveRDS(data, "../data/abstracts.rds")
 } else {
-  data <- readRDS("../abstracts.rds")
+  data <- readRDS("../data/abstracts.rds")
 }
 if (!file.exists("abstracts_coded_pilot.csv")) {
-  data_coded <- download_annotations(10L)
+  data_coded <- download_annotations(20L)
   write.csv(data_coded, "abstracts_coded_pilot.csv")
 } else {
   data_coded <- read.csv("abstracts_coded_pilot.csv")
