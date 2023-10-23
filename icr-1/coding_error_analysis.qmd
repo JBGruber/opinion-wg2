@@ -1,0 +1,155 @@
+---
+title: OPINION WG2 - Coding error analysis
+author: Johannes B. Gruber
+date: today
+format:
+  pdf:
+    toc: true
+    number-sections: true
+---
+
+
+This document contains abstracts where agreement on whether they are relevant was especially low.
+We use this to see what is still unclear and where our codebook needs improvement.
+
+```{r setup}
+#| include: false
+if (!rlang::is_installed("annotinder")) remotes::install_github("ccs-amsterdam/annotinder-r")
+library(annotinder)
+library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc())
+library(tidycomm)
+library(gt)
+library(tikzDevice)
+
+# if you are me and have the password, load new data, otherwise load it from the repo
+if (Sys.getenv("ANNOTINDER_PW") != "") {
+  backend_connect(host = "https://cost-tools.up.railway.app",
+                  username = "johannesb.gruber@gmail.com",
+                  .password = Sys.getenv("ANNOTINDER_PW"))
+  data_coded <- download_annotations(20L)
+  saveRDS(data_coded, "../data/abstracts_icr-1.rds")
+} else {
+  data_coded <- readRDS("../data/abstracts_icr-1.rds")
+}
+
+# read in abstracts
+abstracts <- readRDS("../data/abstracts.rds")
+
+# small function to test agreement. The function isn't perfect, but smaller
+# values reflect lower agreement, which makes it easy to sort cases
+agreement_score <- function(x) {
+  x <- na.omit(x)
+  code_counts <- table(x)
+  proportions <- code_counts / sum(code_counts)
+  max(proportions) - sum(proportions[-which.max(proportions)])
+}
+
+# function to print abstracts and disagreement to a PDF
+print_abstract <- function(filter_id, disagreement, abstracts) {
+  disagreement_id <- disagreement |> 
+    filter(unit_id == filter_id)
+  
+  d_value <- disagreement_id |> 
+    pull(d_score) |> 
+    unique()
+  
+  out <- abstracts |> 
+    filter(ID == filter_id) |> 
+    select(`Article Title`, Abstract)
+  
+  # put each abstract on a new page
+  cat("\\newpage\n")
+  tmp <- tempfile()
+  tikz(tmp, height = 1, width = 5)
+  plot <- disagreement_id |> 
+    mutate(coder_id = fct_reorder(as.factor(coder_id), value)) |> 
+    ggplot(aes(x = coder_id, y = 1L, colour = value)) +
+    geom_point(size = 5) +
+    theme_void() +
+    labs(colour = NULL) +
+    viridis::scale_color_viridis(discrete = TRUE, option = "D") +
+    theme(legend.position = "top") 
+  print(plot)
+  dev.off()
+  l <- readLines(tmp)
+  l <- paste(l[!grepl("^%", l)], "\n")
+  sapply(l, cat)
+  cat("ID:", filter_id, "\n\n")
+  cat("Agreement Score:", round(d_value, 2), "\n\n")
+  cat(paste0("**", out$`Article Title`, "**"), "\n\n")
+  asbtract <- gsub(
+    "(\\bopinion.*?\\b|\\battitud.*?\\b|\\bideolog.*?\\b|\\bstance.*?\\b|\\bposition.*?\\b)",
+      "**\\1**",
+    out$Abstract,
+    perl = TRUE
+  )
+  cat(asbtract, "\n\n")
+
+}
+```
+
+
+# Relevant 1
+
+```{r}
+#| echo: false
+#| output: asis
+disagreement_relevant_1 <- data_coded |> 
+  filter(variable == "relevant-1") |> 
+  group_by(unit_id) |> 
+  mutate(d_score = agreement_score(value)) |> 
+  select(unit_id, coder_id, d_score, value) |> 
+  ungroup() |> 
+  arrange(d_score) |> 
+  filter(d_score < 0.5)
+
+for (i in unique(disagreement_relevant_1$unit_id)) {
+  print_abstract(filter_id = i, 
+                 disagreement = disagreement_relevant_1,
+                 abstracts = abstracts)
+}
+```
+
+# Concept
+
+```{r}
+#| echo: false
+#| output: asis
+disagreement_concept <- data_coded |> 
+  filter(variable == "concept") |> 
+  group_by(unit_id) |> 
+  mutate(d_score = agreement_score(value)) |> 
+  select(unit_id, coder_id, d_score, value) |> 
+  ungroup() |> 
+  arrange(d_score) |> 
+  filter(d_score < 0.5)
+
+for (i in unique(disagreement_concept$unit_id)) {
+  print_abstract(filter_id = i, 
+                 disagreement = disagreement_concept,
+                 abstracts = abstracts)
+}
+```
+
+# relevant-2
+
+```{r}
+#| echo: false
+#| output: asis
+disagreement_relevant_2 <- data_coded |> 
+  filter(variable == "relevant-2") |> 
+  group_by(unit_id) |> 
+  mutate(d_score = agreement_score(value)) |> 
+  select(unit_id, coder_id, d_score, value) |> 
+  ungroup() |> 
+  arrange(d_score) |> 
+  filter(d_score < 0.5)
+
+for (i in unique(disagreement_relevant_2$unit_id)) {
+  print_abstract(filter_id = i, 
+                 disagreement = disagreement_relevant_2,
+                 abstracts = abstracts)
+}
+```
+
+
