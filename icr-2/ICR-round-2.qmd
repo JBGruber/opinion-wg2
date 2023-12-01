@@ -1,0 +1,208 @@
+---
+title: ICR OPINION WG2
+author: Johannes B. Gruber
+date: today
+format:
+  revealjs:
+    logo: https://www.opinion-network.eu/img/opinion_i.gif
+    footer: "OPINION | Measuring Opinionated Communication"
+    smaller: true
+    transition: "slide"
+    scrollable: true
+    embed-resources: true
+---
+
+# Introduction
+
+Intercoder-reliability test after the second rount of coding (after we re-wrote the codebook).
+
+```{r setup}
+#| include: false
+if (!rlang::is_installed("annotinder")) remotes::install_github("ccs-amsterdam/annotinder-r")
+library(annotinder)
+library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc())
+library(tidycomm)
+library(gt)
+
+# if you are me and have the password, load new data, otherwise load it from the repo
+if (Sys.getenv("ANNOTINDER_PW") != "") {
+  backend_connect(host = "https://cost-tools.up.railway.app",
+                  username = "johannesb.gruber@gmail.com",
+                  .password = Sys.getenv("ANNOTINDER_PW"))
+  data_coded <- download_annotations(23L)
+  data_coded_anon <- data_coded |> 
+    mutate(value = map2_chr(value, variable, function(x, y) 
+      ifelse(y == "welcome", digest::sha1(x), x)))
+  saveRDS(data_coded_anon, "../data/abstracts_icr-2.rds")
+} else {
+  data_coded <- readRDS("../data/abstracts_icr-2.rds")
+}
+
+abstracts <- readRDS("../data/abstracts.rds")
+
+# just a wrapper for tidycomm to display ICR in a colored table
+test_agreement <- function(tbl, title) {
+  tbl |> 
+    test_icr(unit_var = unit_id, coder_var = coder_id, value,
+             cohens_kappa = FALSE,
+             fleiss_kappa = TRUE,
+             brennan_prediger = TRUE,
+             lotus = TRUE,
+             s_lotus = TRUE) |> 
+    select(where(is.numeric)) |> 
+    t() |> 
+    tibble::enframe() |> 
+    filter(!is.na(value)) |> 
+    # mutate(value = str_replace(value, "(\\d\\.\\d{2}).*", "\\1")) |> 
+    gt() |> 
+    fmt_number(value, decimals = 2L, drop_trailing_zeros = TRUE) |> 
+    data_color(
+      columns = value,
+      method = "numeric",
+      palette = c("red", "green"),
+      domain = c(0, 1),
+      na_color = "#FFF"
+    ) |> 
+    tab_header(
+      title = md(title)
+    )
+}
+
+# small function to test agreement. The function isn't perfect, but smaller
+# values reflect lower agreement, which makes it easy to sort cases
+agreement_score <- function(x) {
+  x <- na.omit(x)
+  code_counts <- table(x)
+  proportions <- code_counts / sum(code_counts)
+  max(proportions) - sum(proportions[-which.max(proportions)])
+}
+
+# creates categories to show how many people voted for each possible outcome
+coder_split <- function(x) {
+  x <- na.omit(x)
+  code_counts <- table(x)
+  sort(code_counts, decreasing = TRUE) |> 
+    paste(collapse = "/")
+}
+
+majority_vote <- function(x) {
+  names(which.max(table(x)))
+}
+```
+
+## Top Coders!
+
+```{r}
+coders <- data_coded |> 
+  group_by(coder_id) |> 
+  mutate(name = value[variable == "welcome"]) |> 
+  filter(unit_id != "id") |> 
+  summarise(coded = length(unique(unit_id)),
+            name = unique(name))
+
+star_coders <- coders |>
+  filter(coded == 50L)
+
+coders |> 
+  mutate(name = forcats::fct_reorder(name, coded)) |> 
+  ggplot(aes(x = coded, y = name, fill = coded)) +
+  geom_col() +
+  scale_fill_gradient(low = "#A2A4A6", high = "#AE9653") +
+  labs(x = NULL, y = NULL, title = "Top Coders!")
+```
+
+Some people started the coding twice, but this is ignored, since they have two separate coder IDs, which is the only thing that counts.
+
+## ICR
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-1",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Is this research that applies, reviews, or develops an approach for measuring human opinion in textual communication?")
+```
+:::
+
+::: {.column width="30%"}
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-2",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "What type of a study on human opinion is this?")
+```
+:::
+
+::: {.column width="30%"}
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-3",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Is this research that applies or develops a computational text analysis measurement approach?")
+```
+:::
+
+::::
+
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-2",
+         coder_id %in% star_coders$coder_id) |> 
+  mutate(value = case_when(
+    value %in% c("Methodological paper", "Empirical study") ~ "include",
+    TRUE ~ "exclude"
+  )) |> 
+  test_agreement(title = "What type of a study on human opinion is this?")
+```
+
+## How split was the group in the abstracts
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-1",
+         coder_id %in% star_coders$coder_id) |> 
+  group_by(unit_id) |> 
+  summarise(split = coder_split(value)) |> 
+  count(split) |> 
+  mutate(split = fct_reorder(split, as.integer(str_extract(split, "^\\d+")))) |> 
+  ggplot(aes(x = n, y = split)) +
+  geom_col() +
+  labs(x = NULL, y = NULL, title = "Relevant 1")
+```
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-2",
+         coder_id %in% star_coders$coder_id) |> 
+  group_by(unit_id) |> 
+  summarise(split = coder_split(value)) |> 
+  count(split) |> 
+  mutate(split = fct_reorder(split, as.integer(str_extract(split, "^\\d+")))) |> 
+  ggplot(aes(x = n, y = split)) +
+  geom_col() +
+  labs(x = NULL, y = NULL, title = "Relevant 2")
+```
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-3",
+         coder_id %in% star_coders$coder_id) |> 
+  group_by(unit_id) |> 
+  summarise(split = coder_split(value)) |> 
+  count(split) |> 
+  mutate(split = fct_reorder(split, as.integer(str_extract(split, "^\\d+")))) |> 
+  ggplot(aes(x = n, y = split)) +
+  geom_col() +
+  labs(x = NULL, y = NULL, title = "Relevant 3")
+```
+
+## Results
+
+Does not make much sense yet to calculate them...
+
