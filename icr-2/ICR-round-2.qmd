@@ -32,13 +32,28 @@ if (Sys.getenv("ANNOTINDER_PW") != "") {
   data_coded <- download_annotations(23L)
   data_coded_anon <- data_coded |> 
     mutate(value = map2_chr(value, variable, function(x, y) 
-      ifelse(y == "welcome", digest::sha1(x), x)))
+      ifelse(y == "welcome", digest::sha1(x), x))) |> 
+    select(-coder)
   saveRDS(data_coded_anon, "../data/abstracts_icr-2.rds")
+  rio::export(data_coded_anon, "../data/abstracts_icr-2.csv")
 } else {
   data_coded <- readRDS("../data/abstracts_icr-2.rds")
 }
 
-abstracts <- readRDS("../data/abstracts.rds")
+# I did not commit the abstracts to GitHub, since they are already available on Google drive
+drive_deauth()
+data_file <- "../data/scopus_wos_merged.csv"
+if (!file.exists(data_file)) {
+  drive_download(file = "https://drive.google.com/file/d/16KU7tCFyWWy9doF3hkz8JYd4bRqLxMLK/view?usp=drive_link",
+                 path = data_file)
+}
+
+abstracts <- readr::read_csv(
+  file = data_file, 
+  col_names = c("id", "title", "author", "year", "doi", "outlet", "type", "abstract"), 
+  col_types = "cccicccc",
+  skip = 1L
+)
 
 # just a wrapper for tidycomm to display ICR in a colored table
 test_agreement <- function(tbl, title) {
