@@ -1,0 +1,155 @@
+---
+title: "deduplicate"
+format: gfm
+---
+
+# Intro
+
+We noticed that the dataset still contained some duplicates (abstracts that refer to the same article).
+This script removes them from the databas.
+
+```{r setup}
+#| message: false
+#| include: false
+library(tidyverse)
+library(googledrive)
+library(quanteda)
+library(quanteda.textstats)
+library(tidygraph)
+library(googlesheets4)
+```
+
+Get old data
+
+```{r}
+drive_deauth()
+data_file <- "scopus_wos_merged.csv"
+if (!file.exists(data_file)) {
+  drive_download(file ="https://drive.google.com/file/d/16KU7tCFyWWy9doF3hkz8JYd4bRqLxMLK/view?usp=drive_link",
+                 path = data_file)
+}
+
+data_abstracts <- read_csv(
+  file = data_file, 
+  col_names = c("id", "title", "author", "year", "doi", "outlet", "type", "abstract"), 
+  col_types = "cccicccc",
+  skip = 1
+)
+data_abstracts
+```
+
+These are the examples we manually identified:
+
+```{r}
+# 
+ex1 <- data_abstracts |> 
+  filter(id %in% c(1017, 9873))
+ex1
+
+ex2 <- data_abstracts |> 
+  filter(id %in% c(4780, 9581))
+ex2
+
+ex3 <- data_abstracts |> 
+  filter(id %in% c(4054, 12804))
+ex3
+```
+
+We found two ways to get rid of duplicates.
+Articles with the same DOI:
+
+
+```{r}
+# remove if same DOI
+remove_df_doi <- data_abstracts |> 
+  filter(!is.na(doi), duplicated(doi))
+nrow(remove_df_doi)
+```
+
+Articles where the cosine similarity of the document feature matrix is at or above 0.9.
+We validated the threshold by looking at examples around the thresholds 0.8, 0.85, 0.88 and 0.89.
+For all values below 0.9, we found that a majority of articles pairs were actually different articles, while the number of actual duplicates was negligible.
+
+
+```{r simil}
+data_abstracts_small <- data_abstracts |>
+  select(id, title, abstract, year, doi)
+
+sim_df <- data_abstracts |> 
+  # we check a combination of title and abstract
+  mutate(text = paste(title, "-", abstract)) |> 
+  corpus(docid_field = "id",
+         text_field = "text") |> 
+  tokens(remove_punct = TRUE, remove_symbols = TRUE) |> 
+  dfm() |> 
+  textstat_simil(method = "cosine", min_simil = 0.9) |> 
+  igraph::graph_from_adjacency_matrix(weighted = "cosine") |> 
+  tidygraph::as_tbl_graph() |> 
+  tidygraph::activate("edges") |>
+  tidygraph::mutate(id1 = .N()$name[from],
+                    id2 = .N()$name[to]) |> 
+  as_tibble() |> 
+  filter(!is.na(cosine), from != to) |> 
+  left_join(data_abstracts_small, by = c("id1" = "id")) |> 
+  left_join(data_abstracts_small, by = c("id2" = "id"), suffix = c("_from", "_to"))
+
+remove_df_sim <- sim_df |> 
+  mutate(pair_id = row_number()) |> 
+  select(pair_id, id1, id2) |> 
+  pivot_longer(cols = -pair_id, values_to = "id") |> 
+  left_join(data_abstracts_small, by = "id") |> 
+  mutate(sel_val = ifelse(is.na(doi), year - 5, year)) |> 
+  group_by(pair_id) |> 
+  slice_max(order_by = sel_val, n = 1, with_ties = FALSE)
+
+nrow(remove_df_sim)
+```
+
+Additionally, we noticed that articles about "Mean Opinion Score" are never relevant to our research, so we remove them as well.
+
+```{r}
+# remove "Mean Opinion Score" abstracts
+remove_df_mos <- data_abstracts |> 
+  filter(str_detect(abstract, fixed("Mean Opinion Score", ignore_case = TRUE)) |
+           str_detect(title, fixed("Mean Opinion Score", ignore_case = TRUE)))
+
+```
+
+```{r}
+remove_df <- bind_rows(
+  remove_df_doi,
+  remove_df_mos,
+  remove_df_sim
+) |> 
+  filter(!duplicated((id)))
+```
+
+
+The table below shows how many articles each exclusion criterion identified:
+
+```{r}
+#| echo: false
+tribble(
+  ~"step", ~"n articles",
+  "Same Doi", nrow(remove_df_doi),
+  "Same content", nrow(remove_df_sim),
+  "Mean Opinion Score", nrow(remove_df_mos),
+  "total", nrow(remove_df)
+) |> 
+  mutate(percent = scales::percent(`n articles` / nrow(data_abstracts))) |> 
+  knitr::kable()
+```
+
+We upload the new dataset without duplicates to drive:
+
+```{r}
+#| eval: false
+data_abstracts_clean <- data_abstracts |> 
+  filter(!id %in% remove_df$id)
+
+gs4_auth()
+gs4_create("Opinion Papers Abstracts", 
+           sheets = data_abstracts_clean)
+```
+
+<https://docs.google.com/spreadsheets/d/1FBm9O3B1cU-sYXXzwfPbhI4ktHDeN_8QI8cD9sDIadc/edit?usp=sharing>
