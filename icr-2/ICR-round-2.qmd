@@ -23,6 +23,7 @@ library(annotinder)
 library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc())
 library(tidycomm)
 library(gt)
+library(googledrive)
 
 # if you are me and have the password, load new data, otherwise load it from the repo
 if (Sys.getenv("ANNOTINDER_PW") != "") {
@@ -148,6 +149,10 @@ data_coded |>
 data_coded |> 
   filter(variable == "relevant-2",
          coder_id %in% star_coders$coder_id) |> 
+  mutate(value = case_when(
+    value %in% c("Methodological paper", "Empirical study") ~ "yes",
+    TRUE ~ value
+  )) |> 
   test_agreement(title = "What type of a study on human opinion is this?")
 ```
 :::

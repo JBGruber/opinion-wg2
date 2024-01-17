@@ -1,0 +1,168 @@
+---
+title: ICR OPINION WG2
+author: Johannes B. Gruber
+date: today
+format:
+  revealjs:
+    logo: https://www.opinion-network.eu/img/opinion_i.gif
+    footer: "OPINION | Measuring Opinionated Communication"
+    smaller: true
+    transition: "slide"
+    scrollable: true
+    embed-resources: true
+---
+
+# Introduction
+
+After the first round of annotations (after the pilot), let's see how we are doing in term of intercoder reliability!
+
+1. Look at intercoder agreement
+2. Check the preliminary results
+
+```{r setup}
+#| include: false
+if (!rlang::is_installed("annotinder")) remotes::install_github("ccs-amsterdam/annotinder-r")
+library(annotinder)
+library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc())
+library(tidycomm)
+library(gt)
+library(googledrive)
+
+# if you are me and have the password, load new data, otherwise load it from the repo
+if (Sys.getenv("ANNOTINDER_PW") != "") {
+  backend_connect(host = "https://cost-tools.up.railway.app",
+                  username = "johannesb.gruber@gmail.com",
+                  .password = Sys.getenv("ANNOTINDER_PW"))
+  data_coded <- download_annotations(26L)
+  # saveRDS(data_coded, "../data/abstracts_icr-2.rds")
+} else {
+  # data_coded <- readRDS("../data/abstracts_icr-2.rds")
+}
+
+# I did not commit the abstracts to GitHub, since they are already available on Google drive
+drive_deauth()
+data_file <- "../data/scopus_wos_merged.csv"
+if (!file.exists(data_file)) {
+  drive_download(file = "https://drive.google.com/file/d/16KU7tCFyWWy9doF3hkz8JYd4bRqLxMLK/view?usp=drive_link",
+                 path = data_file)
+}
+
+abstracts <- readr::read_csv(
+  file = data_file, 
+  col_names = c("id", "title", "author", "year", "doi", "outlet", "type", "abstract"), 
+  col_types = "cccicccc",
+  skip = 1L
+)
+
+test_agreement <- function(tbl, title) {
+  tbl |> 
+    test_icr(unit_var = unit_id, coder_var = coder_id, value,
+             cohens_kappa = TRUE,
+             fleiss_kappa = TRUE,
+             brennan_prediger = TRUE,
+             lotus = TRUE,
+             s_lotus = TRUE) |> 
+    select(where(is.numeric)) |> 
+    t() |> 
+    tibble::enframe() |> 
+    filter(!is.na(value)) |> 
+    # mutate(value = str_replace(value, "(\\d\\.\\d{2}).*", "\\1")) |> 
+    gt() |> 
+    fmt_number(value, decimals = 2L, drop_trailing_zeros = TRUE) |> 
+    data_color(
+      columns = value,
+      method = "numeric",
+      palette = c("red", "green"),
+      domain = c(0, 1),
+      na_color = "#FFF"
+    ) |> 
+    tab_header(
+      title = md(title)
+    )
+}
+
+disagreement_score <- function(x) {
+  code_counts <- table(x)
+  proportions <- code_counts / sum(code_counts)
+  max(proportions) - sum(proportions[-which.max(proportions)])
+}
+
+majority_vote <- function(x) {
+  names(which.max(table(x)))
+}
+```
+
+## Top Coders!
+
+```{r}
+coders <- data_coded |> 
+  group_by(coder_id) |> 
+  mutate(name = value[variable == "welcome"]) |> 
+  filter(unit_id != "id") |> 
+  summarise(coded = length(unique(unit_id)),
+            name = unique(name))
+
+star_coders <- coders |>
+  filter(coded == length(unique(data_coded$unit_id)) - 1)
+
+coders |> 
+  mutate(name = forcats::fct_reorder(name, coded)) |> 
+  ggplot(aes(x = coded, y = name, fill = coded)) +
+  geom_col() +
+  scale_fill_gradient(low = "#A2A4A6", high = "#AE9653") +
+  labs(x = NULL, y = NULL, title = "Top Coders!")
+```
+
+:::{.fragment .fade-up .absolute top="25%" right="25%"}
+<iframe src="https://giphy.com/embed/KcPvrQkRRiM2D75roA" width="459" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/happy-animated-super-star-KcPvrQkRRiM2D75roA"></a></p>
+:::
+
+
+# ICR
+## Is this research that measures a human opinion?
+
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-1") |> #,
+         #coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-2",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+
+```{r}
+data_coded |> 
+  filter(variable == "relevant-3",
+         coder_id %in% star_coders$coder_id) |> 
+  test_agreement(title = "Agreement (full cases)")
+```
+
+
+```{r}
+agreement_score <- function(x) {
+  x <- na.omit(x)
+  code_counts <- table(x)
+  proportions <- code_counts / sum(code_counts)
+  max(proportions) - sum(proportions[-which.max(proportions)])
+}
+
+data_coded |> 
+  group_by(coder_id) |> 
+  mutate(coder = value[unit_id == "id"]) |> 
+  filter(unit_id != "id") |> 
+  pivot_wider(id_cols = c("unit_id", "variable"), names_from = "coder", values_from = "value") |> 
+  ungroup() |> 
+  mutate(agreement = rowSums(across(c(Johannes, Valerie, Fabienne, `Christina `, `Daniel Thiele`), ~.x == Johannes)) == 5) |> 
+  arrange(unit_id, variable) |> 
+  mutate(item = cumsum(unit_id != lag(unit_id) | is.na(lag(unit_id))) + 1) |> 
+  View()
+```
+
+

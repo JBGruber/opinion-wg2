@@ -16,32 +16,36 @@ codebook <- create_codebook(
   - The abstract implicitly claims that it measures opinion by stating that it investigates peoples \"views or thoughts about someone or something\" (the definition is from Cambridge dictionary)
   - The abstract explicitly measures one of the following subconcepts (e.g., sentiment, emotions, stance, polarity, evaluation, viewpoint, attitude).
 - Related to “textual communication”: Select yes if the measurement of human opinion relates to textual communication in any form (even when e.g., transcribed from audio)
-- If the abstract provides insufficient information for coders to evaluate whether this relevance criterion is fulfilled (i.e., because it is unclear whether opinion is measured), vote No (unclear)",
-           type = "annotinder"
+- If the abstract provides insufficient information for coders to evaluate whether this relevance criterion is fulfilled (i.e., because it is unclear whether opinion is measured), vote No (unclear). This also applies if the abstract is so poorly written that it is simply unclear what the paper is doing.",
+type = "annotinder"
   ),
   # annotation_variable(
   #   "concept",
   #   instruction = "Is a specific understanding or sub-category of opinion mentioned here?",
   #   codes = c(concept = "darkgreen")
   # ),
-  question("relevant-2", 
-           "What type of a study on human opinion is this?",
-           codes = list(
-             code("Methodological paper", color = "#5BBCD6"),
-             code("Empirical study", color = "lightgreen"),
-             code("Overview", makes_irrelevant = "REMAINING", color = "#FDD262"),
-             code("something else", makes_irrelevant = "REMAINING", color = "#D3DDDC")
-           ),
-           type = "buttons"
-  ),
-  question("relevant-3", 
-           "Is this research that applies or develops a computational text analysis measurement approach?",
-           codes = list(
-             code("No (or unclear)", color = "crimson"),
-             code("Yes", color = "lightgreen")
-           ),
-           instruction = "Most  methodological papers also contain an empirical part - to showcase a new method or approach. The category “methodological paper” should take precedence if this is the main focus of the article.",
-           type = "annotinder"
+  # question("relevant-2", 
+  #          "What type of a study on human opinion is this?",
+  #          codes = list(
+  #            code("Methodological paper", color = "#5BBCD6"),
+  #            code("Empirical study", color = "lightgreen"),
+  #            code("Overview", makes_irrelevant = "REMAINING", color = "#FDD262"),
+  #            code("something else", makes_irrelevant = "REMAINING", color = "#D3DDDC")
+  #          ),
+  #          type = "buttons"
+  # ),
+  # question("relevant-3",
+  #          "Is this research that applies or develops a computational text analysis measurement approach?",
+  #          codes = list(
+  #            code("No (or unclear)", color = "crimson"),
+  #            code("Yes", color = "lightgreen")
+  #          ),
+  #          instruction = "Most  methodological papers also contain an empirical part - to showcase a new method or approach. The category “methodological paper” should take precedence if this is the main focus of the article.",
+  #          type = "annotinder"
+  # )
+  question("relevant-3",
+           "Please explain your coding decision (you can also copy and paste from the abstract)",
+           type = "inputs"
   )
 )
 
@@ -82,9 +86,26 @@ units <- data_abstracts |>
   create_units(id = "id", 
                set_markdown("text", text))
 
-# job <- create_job("wg2-abstracts", units, codebook)
-# job_db <- create_job_db(job, overwrite = T)
-# start_annotator(job_db)
+
+units <- data_abstracts |>
+  slice_sample(n = 10) |> 
+  create_units(id = "id", 
+               set_markdown("text", text))
+
+
+units <- data_abstracts |>
+  slice_sample(n = 10) |> 
+  create_units(id = "id", 
+               set_markdown("text", text))
+
+units <- data_abstracts |>
+  slice_sample(n = 15) |> 
+  create_units(id = "id", 
+               set_markdown("text", text))
+
+ # job <- create_job("wg2-abstracts", units, codebook)
+ # job_db <- create_job_db(job, overwrite = T)
+ # start_annotator(job_db)
 
 backend_connect(host = "https://cost-tools.up.railway.app",
                 username = "johannesb.gruber@gmail.com",
