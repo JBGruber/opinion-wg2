@@ -1,5 +1,6 @@
 # deduplicate
 
+
 # Intro
 
 We noticed that the dataset still contained some duplicates (abstracts
@@ -22,7 +23,8 @@ data_abstracts_scopus <- data.table::fread(data_scopus) |>
   select(title = Title, author = `Author full names`, year = Year, doi = DOI, 
          outlet = `Source title`, type = `Document Type`, 
          abstract = Abstract) |> 
-  as_tibble()
+  as_tibble() |> 
+  mutate(doi = ifelse(doi == "", NA_character_, doi))
 data_abstracts_scopus
 ```
 
@@ -107,7 +109,7 @@ remove_df_doi <- data_abstracts |>
 nrow(remove_df_doi)
 ```
 
-    [1] 9407
+    [1] 8135
 
 2.  Articles where the cosine similarity of the document feature matrix
     is at or above 0.9. We validated the threshold by looking at
@@ -178,10 +180,10 @@ identified:
 
 | step               | n articles | percent |
 |:-------------------|-----------:|:--------|
-| Same Doi           |       9407 | 54.6%   |
+| Same Doi           |       8135 | 47.2%   |
 | Same content       |       9119 | 52.9%   |
 | Mean Opinion Score |        154 | 0.9%    |
-| total              |      11973 | 69.5%   |
+| total              |      11611 | 67.4%   |
 
 New dataset:
 
@@ -191,7 +193,7 @@ data_abstracts_clean <- data_abstracts |>
 data_abstracts_clean
 ```
 
-    # A tibble: 5,252 × 8
+    # A tibble: 5,614 × 8
        id    title                          author  year doi   outlet type  abstract
        <chr> <chr>                          <chr>  <int> <chr> <chr>  <chr> <chr>   
      1 3     The 2021 Nigerian Twitter ban… Moham…  2023 10.1… Commu… Arti… The sus…
@@ -204,7 +206,7 @@ data_abstracts_clean
      8 13    Revealing People’s Sentiment … Calva…  2023 10.3… Compu… Arti… Social …
      9 14    The impact of the federal men… Hswen…  2023 10.1… Preve… Arti… The US …
     10 17    A CONCEPTUAL AQUILA MERGED AR… Sange…  2023 10.3… Journ… Arti… Sentime…
-    # ℹ 5,242 more rows
+    # ℹ 5,604 more rows
 
 We upload the new dataset without duplicates to drive:
 
@@ -214,4 +216,4 @@ gs4_create("Opinion Papers Abstracts",
            sheets = data_abstracts_clean)
 ```
 
-<https://docs.google.com/spreadsheets/d/1FBm9O3B1cU-sYXXzwfPbhI4ktHDeN_8QI8cD9sDIadc/edit?usp=sharing>
+<https://docs.google.com/spreadsheets/d/14gsrQyw_QNamph74kAhy8Iw2QB2PtY11KpoAWGFUcUM/edit?usp=sharing>

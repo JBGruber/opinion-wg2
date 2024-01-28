@@ -35,7 +35,8 @@ data_abstracts_scopus <- data.table::fread(data_scopus) |>
   select(title = Title, author = `Author full names`, year = Year, doi = DOI, 
          outlet = `Source title`, type = `Document Type`, 
          abstract = Abstract) |> 
-  as_tibble()
+  as_tibble() |> 
+  mutate(doi = ifelse(doi == "", NA_character_, doi))
 data_abstracts_scopus
 ```
 
@@ -168,4 +169,4 @@ gs4_create("Opinion Papers Abstracts",
            sheets = data_abstracts_clean)
 ```
 
-<https://docs.google.com/spreadsheets/d/1FBm9O3B1cU-sYXXzwfPbhI4ktHDeN_8QI8cD9sDIadc/edit?usp=sharing>
+<https://docs.google.com/spreadsheets/d/14gsrQyw_QNamph74kAhy8Iw2QB2PtY11KpoAWGFUcUM/edit?usp=sharing>
