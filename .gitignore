@@ -10,6 +10,10 @@ annotinder
 annotinder_jobs
 icr-2/ICR-round-2.html
 scopus_wos_merged.csv
+coding-abstracts/*.csv
+coding-abstracts/*.RDATA
+prisma/*.png
+
 data/scopus.csv
 data/wos.csv
 ollama-annotation/
