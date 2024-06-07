@@ -1,0 +1,46 @@
+---
+title: ICR OPINION WG2
+author: Johannes B. Gruber
+date: today
+format: html
+---
+
+# Introduction
+
+```{r setup}
+#| include: false
+if (!rlang::is_installed("annotinder")) remotes::install_github("ccs-amsterdam/annotinder-r")
+library(annotinder)
+library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc())
+library(tidycomm)
+library(gt)
+library(googledrive)
+
+# if you are me and have the password, load new data, otherwise load it from the repo
+if (Sys.getenv("ANNOTINDER_PW") != "") {
+  backend_connect(host = "https://cost-tools.up.railway.app",
+                  username = "johannesb.gruber@gmail.com",
+                  .password = Sys.getenv("ANNOTINDER_PW"))
+  data_coded <- download_annotations(55L)
+  # saveRDS(data_coded, "../data/abstracts_icr-2.rds")
+} else {
+  # data_coded <- readRDS("../data/abstracts_icr-2.rds")
+}
+```
+
+## Export in wide format
+
+```{r}
+data_coded |> 
+  group_by(coder_id) |> 
+  mutate(coder = value[variable == "welcome"]) |> 
+  filter(variable != "welcome") |> 
+  ungroup() |> 
+  select(unit_id, coder, variable, value) |> 
+  group_by(unit_id, variable) |> 
+  mutate(agreement = length(unique(value)) == 1L) |> 
+  pivot_wider(id_cols = c(unit_id, variable, agreement), names_from = coder, values_from = value) |> 
+  rio::export("2._annotations_pilot.xlsx")
+```
+
+

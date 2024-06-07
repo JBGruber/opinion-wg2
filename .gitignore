@@ -13,10 +13,16 @@ scopus_wos_merged.csv
 coding-abstracts/*.csv
 coding-abstracts/*.RDATA
 prisma/*.png
-
 data/scopus.csv
 data/wos.csv
 ollama-annotation/
 data/papers
 meeting_notes
 experiments
+.httr-oauth
+paper-annotation/wg2_full_paper_annotation_files/
+data/abstracts_coded.csv
+data/scopus_wos_merged_clean.csv
+paper-annotation/rdrop.r
+rdrop-token.rds
+paper-annotation/2._annotation-check_pilot_files/

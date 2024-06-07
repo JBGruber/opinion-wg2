@@ -1,0 +1,261 @@
+---
+title: "Abstracts Of Opinion Research"
+format:
+  revealjs:
+    logo: https://www.opinion-network.eu/img/opinion_i.gif
+    footer: "OPINION | Measuring Opinionated Communication"
+---
+
+
+# get annotated papers
+
+```{r setup}
+#| include: false
+if (!rlang::is_installed("annotinder")) remotes::install_github("ccs-amsterdam/annotinder-r")
+library(annotinder)
+library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc())
+library(googledrive)
+library(glue)
+backend_connect(host = "https://cost-tools.up.railway.app",
+                username = "johannesb.gruber@gmail.com",
+                .password = Sys.getenv("ANNOTINDER_PW"))
+
+coded_abstracts_file <- "../data/abstracts_coded.csv"
+if (!file.exists(coded_abstracts_file)) {
+  drive_deauth()
+  drive_download("https://drive.google.com/file/d/1E9AXyeDoGhLdWSIvnHxAQDi-YqVnzMrT",
+                 coded_abstracts_file)
+}
+data <- read_csv2(coded_abstracts_file)
+```
+
+# Check missing PDFs
+
+```{r}
+pdfs <- list.files("/home/johannes/Dropbox/opinion_pdfs/", full.names = TRUE) |> 
+  enframe(name = "n", value = "path") |> 
+  mutate(file = basename(path))
+
+data_papers <- data |> 
+  filter(!is.na(doi)) |> 
+  mutate(key = gsub("/", "_", paste0(doi, ".pdf"), fixed = TRUE)) |> 
+  inner_join(pdfs, by = c("key" = "file"))
+```
+
+
+# codebook
+
+```{r}
+welcome <- create_unit(
+  "id",
+  type = "train",
+  set_text("text", "Welcome to AnnoTinder!"),
+  set_question(name = "welcome", question = "Who are you", type = "inputs")
+)
+
+q10 <- question(
+  name = "Q1_0_Tool-Mentioned", 
+  question = "Is an Opinion Measurement Tool (OMT) applied or developed in this paper?", 
+  codes = list(
+    code("No (or unclear)", color = "crimson", makes_irrelevant = "REMAINING"),
+    code("Yes", color = "lightgreen")
+  )
+)
+q11 <- question(
+  name = "Q1_1_Tool-Name", 
+  question = "What is the name of the Opinion Measurement Tool (OMT) applied or developed in this paper?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q12 <- question(
+  name = "Q1_2_Tool-Link", 
+  question = "What link is reported for the tool?", 
+  type = "inputs", 
+  instruction = "- if no link is present, separate links for multiple with ;"
+)
+q13 <- question(
+  name = "Q1_3_Tool-Reference", 
+  question = "What reference is reported for the tool?", 
+  type = "inputs", 
+  instruction = "- if no link is present, separate links for multiple with ;"
+)
+
+### Question 2
+q20 <- question(
+  name = "Q2_0_Tool-Mentioned", 
+  question = "Are there (additional) tools reviewed (e.g., in the related work section)?", 
+  codes = list(
+    code("No (or unclear)", color = "crimson", makes_irrelevant = c("Q2_1_Tool-Name",
+                                                                    "Q2_2_Tool-Link",
+                                                                    "Q2_3_Tool-Reference")),
+    code("Yes", color = "lightgreen")
+  )
+)
+q21 <- question(
+  name = "Q2_1_Tool-Name", 
+  question = "What is the name of the Opinion Measurement Tool (OMT) applied or developed in this paper?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q22 <- question(
+  name = "Q2_2_Tool-Link", 
+  question = "What link is reported for the tool?", 
+  type = "inputs", 
+  instruction = "- if no link is present, separate links for multiple with ;"
+)
+q23 <- question(
+  name = "Q2_3_Tool-Reference", 
+  question = "What reference is reported for the tool?", 
+  type = "inputs", 
+  instruction = "- if no link is present, separate links for multiple with ;"
+)
+
+### Question 3
+q31 <- question(
+  name = "Q3_1_Approach", 
+  question = "What approach for measuring opinions (or related concepts) is used in the paper? Select all that are applicable?", 
+   codes = list(
+    code("Dictionaries", makes_irrelevant = "Q3_1_Approach-other"),
+    code("Classic Supervised Machine Learning (i.e., usually bag-of-words pre-processing, no deep learning or transformers)", makes_irrelevant = "Q3_1_Approach-other"),
+    code("Classic Unsupervised Machine Learning (e.g., topic modeling)", makes_irrelevant = "Q3_1_Approach-other"),
+    code("Deep learning/Embeddings, Transformers etc", makes_irrelevant = "Q3_1_Approach-other"),
+    code("Proprietary and unclear", makes_irrelevant = "Q3_1_Approach-other"),
+    code("Combination of approaches", makes_irrelevant = "Q3_1_Approach-other"),
+    code("Unclear", makes_irrelevant = "Q3_1_Approach-other"),
+    code("Other or multiple")
+  ),
+  type = "dropdown"
+)
+q31_mult <- question(
+  name = "Q3_1_Approach-other", 
+  question = "Does the measurement approach include a target-specific approach (e.g., measuring sentiment related to a specific keyword, topic, etc.) or not (e.g., using a sentiment dictionary on the whole text indicriminently, etc.)?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q32 <- question(
+  name = "Q3_2_Target-specific-Measurement", 
+  question = "Does the measurement approach include a target-specific approach (e.g., measuring sentiment related to a specific keyword, topic, etc.) or not (e.g., using a sentiment dictionary on the whole text indicriminently, etc.)?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+
+### Question 4
+q41 <- question(
+  name = "Q4_1_Opinion-Evaluation", 
+  question = "What subjective evaluation, belief, or feeling is measured?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q42 <- question(
+  name = "Q4_2_Opinion-Target", 
+  question = "Which particular entity, topic, event, or aspect thereof related to opinion is measured?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+
+### Question 5
+q50 <- question(
+  name = "Q5_0_Data-Mentioned", 
+  question = "Does the paper mention or hint which data(set) was analysed?", 
+  codes = list(
+    code("No (or unclear)", color = "crimson", makes_irrelevant = "REMAINING"),
+    code("Yes", color = "lightgreen")
+  )
+)
+q51 <- question(
+  name = "Q5_1_Data-Source", 
+  question = "Where did the dataset come from?", 
+  codes = c(
+    "benchmark dataset (e.g., SemEval2013)",
+    "Social Media",
+    "Media",
+    "Governmental texts ",
+    "Online Reviews",
+    "Personal Communication (e.g., emails, messenger texts)",
+    "Other (write in)"
+  )
+)
+q52 <- question(
+  name = "Q5_2_Data-Language", 
+  question = "Which natural language are the measured opinions expressed in?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q53 <- question(
+  name = "Q5_3_Data-Country", 
+  question = "Does the dataset cover specific countries?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q54 <- question(
+  name = "Q5_4_Dataset-Name", 
+  question = "What is/are the name(s) of the data(sets) analysed in this paper?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q55 <- question(
+  name = "Q5_5_Other-Dataset-Name", 
+  question = "What is/are the name(s) of other data(sets) mentioned in this paper?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q56 <- question(
+  name = "Q5_6_Dataset-Link", 
+  question = "What link is reported for the dataset (if any)?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+q57 <- question(
+  name = "5_7_Dataset-Reference", 
+  question = "What reference is reported for the dataset (if any)?", 
+  type = "inputs", 
+  instruction = "separate multiple tools with ; "
+)
+
+# ls(pattern = "q\\d{2}")
+codebook <-  create_codebook(q10, q11, q12, q13, q20, q21, q22, q23, q31, q32,
+                             q41, q42,
+                             q50, q51, q52, q53, q54, q55, q56, q57)
+```
+
+# Units
+
+```{r}
+units <- data_papers |> 
+  head(3) |> 
+  mutate(links = c(
+    "https://www.dropbox.com/scl/fi/yox6n1w4s2or6i60f2sbz/10.1007_978-3-030-30244-3_57.pdf?rlkey=lke959o065avve9lmjfb04yny&dl=1",
+    "https://www.dropbox.com/scl/fi/gw6s8rol3ea6mknh6wb83/10.1177_0361198119846461.pdf?rlkey=p21ys53rz3skoarv5cm53l6eo&dl=1",
+    "https://www.dropbox.com/scl/fi/imagul7b6hd9rc716jqzz/10.1145_3297280.3297570.pdf?rlkey=hv0f6j4yp0h8yj2j20yci28u2&dl=1"
+  )) |> 
+  tail(2) |> 
+  mutate(
+    title = glue("**{title}**\n*{author}*"),
+    unit = glue("{abstract}\n\n[paper]({links})")
+  ) |> 
+  create_units(id = "unit_id", 
+               set_markdown("headline", title),
+               set_markdown("text", unit))
+```
+
+
+# Uplaod
+
+```{r}
+backend_connect(host = "https://cost-tools.up.railway.app",
+                username = "johannesb.gruber@gmail.com",
+                .password = Sys.getenv("ANNOTINDER_PW"))
+
+job_id <- upload_job(
+  title = "wg2-paper-pilot",
+  units = units,
+  debrief = debrief("Thank you for your participation in the coding task! You can add your name to the list of co-authors if you haven't done so yet", 
+                    link = "https://docs.google.com/spreadsheets/d/1dk6LlYgliuD0OdF5p7_UAXeVrNDqiFkTtooX-BLh8Xs/edit?usp=sharing",
+                    link_text = "Google Sheet of coauthors"),
+  pre = welcome,
+  codebook = codebook,
+  rules = rules_fixedset()
+)
+job_id
+```
+
