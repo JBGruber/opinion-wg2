@@ -26,3 +26,4 @@ data/scopus_wos_merged_clean.csv
 paper-annotation/rdrop.r
 rdrop-token.rds
 paper-annotation/2._annotation-check_pilot_files/
+paper-annotation/4._annotation-check_files/
