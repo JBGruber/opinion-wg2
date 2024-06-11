@@ -336,3 +336,43 @@ abstracts_coding_1 <- abstracts_coding_1 %>%
 
 #save working space
 #save.image("abstract_coding-1.RDATA")
+
+##### 4.3 Extract literature review papers (N = 27) #####
+
+# Filter out literature review papers for theory section
+lit_review <- abstracts_coding_1 %>%
+  
+  #reduce to necessary variables
+  select(coder_name,  unit_id, variable, value) %>%
+  
+  #to long format
+  pivot_wider(names_from = c("variable"), values_from = "value") %>%
+  
+  #create single measure of inclusion/exclusion
+  mutate(lit_review = 0,
+         lit_review = replace(lit_review,
+                              `relevant-1` == "Yes" & `relevant-2` == "No (or unclear from abstract)",
+                              1)) %>%
+  
+  #create majority vote
+  group_by(unit_id) %>%
+  mutate(inclusion_team = sum(lit_review),
+         inclusion_team = replace(inclusion_team,
+                                  inclusion_team <=1,
+                                  0),
+         inclusion_team = replace(inclusion_team,
+                                  inclusion_team >=2,
+                                  1)) %>%
+  
+  #keep single observation per unit
+  ungroup() %>%
+  distinct(., unit_id, .keep_all = TRUE) %>%
+  
+  #reduce to necessary variables & bind to abstract data
+  filter(inclusion_team == 1) %>%
+  select(unit_id, inclusion_team) %>%
+  left_join(abstracts %>%
+              rename(unit_id = id)) %>%
+  select(-inclusion_team)
+
+#write.csv2(lit_review, "lit-review.csv", row.names = F)
