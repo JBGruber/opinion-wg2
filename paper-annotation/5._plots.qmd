@@ -1,0 +1,142 @@
+---
+title: Paper annotation results
+author: Johannes B. Gruber
+date: today
+format: 
+  pptx:
+    fig-width: 7
+    fig-height: 7
+---
+
+# Introduction
+
+```{r setup}
+#| include: false
+library(tidyverse); theme_set(hrbrthemes::theme_ipsum_rc() + theme(legend.position = "none"))
+library(gt)
+
+data <- rio::import("4._annotations_jbg.xlsx") |> 
+  bind_rows(rio::import("2._annotations_pilot_jg.xlsx"))
+```
+
+# Tool-Mentioned
+
+```{r}
+data |> 
+  filter(variable == "Q1_0_Tool-Mentioned") |> 
+  count(Final) |>
+  mutate(share = n / sum(n)) |> 
+  ggplot(aes(x = share, y = Final, fill = Final)) +
+  geom_col() +
+  labs(y = NULL, x = NULL, fill = NULL, 
+       title = "Share of papers mentioning a Tool") +
+  scale_fill_manual(values = c("Yes" = "#81A88D", "No (or unclear)" = "#FD6467")) +
+  scale_x_continuous(labels = scales::percent)
+```
+
+Extrapolated, this means 0.6875	* 0.53 * 5252 ~ 1913 papers that use a tool for opinion mining
+
+# Tools
+
+```{r}
+data |> 
+  filter(variable == "Q1_1_Tool-Name",
+         Final != "IRRELEVANT") |> 
+  tidytext::unnest_regex(input = Final, output = "tool", pattern = ";|,") |> 
+  select(tool) |> 
+  count(tool, sort = TRUE) |>
+  gt::gt(caption = "Used/Developed Tools") |> 
+  gt::gtsave(filename = "tool-name.png")
+```
+
+
+# Approach
+
+
+```{r}
+data |> 
+  filter(variable == "Q3_1_Approach",
+         Final != "IRRELEVANT") |> 
+  count(Final, sort = TRUE) |>
+  mutate(share = n / sum(n)) |>
+  mutate(Final = fct_recode(Final,
+                            "SML" = "Classic Supervised Machine Learning (i.e., usually bag-of-words pre-processing, no deep learning or transformers)",
+                            "UML" = "Classic Unsupervised Machine Learning (e.g., topic modeling)",
+                            "Combination" = "Combination of approaches",
+                            "Deep Learning" = "Deep learning/Embeddings, Transformers etc", 
+                            "Dictionaries" = "Dictionaries", 
+                            "Other" = "Other or multiple",
+                            "Proprietary" = "Proprietary and unclear"
+  ),
+  Final = fct_reorder(Final, n)) |> 
+  ggplot(aes(x = share, y = Final, fill = Final)) +
+  geom_col() +
+  labs(y = NULL, x = NULL, fill = NULL, 
+       title = "Approaches used") +
+  scale_x_continuous(labels = scales::percent)
+```
+
+# Target
+
+```{r}
+data |> 
+  filter(variable ==  "Q3_2_Target-specific-Measurement",
+         Final != "IRRELEVANT") |> 
+  count(Final) |>
+  mutate(share = n / sum(n)) |> 
+  ggplot(aes(x = share, y = Final, fill = Final)) +
+  geom_col() +
+  labs(y = NULL, x = NULL, fill = NULL, 
+       title = "Is an opinion target considered?") +
+  scale_fill_manual(values = c("Yes" = "#81A88D", "No (or unclear)" = "#FD6467")) +
+  scale_x_continuous(labels = scales::percent)
+
+```  
+               
+
+# Validation
+
+```{r}
+data |> 
+  filter(variable == "Q3_3_Validation",
+         Final != "IRRELEVANT") |> 
+  count(Final) |>
+  mutate(share = n / sum(n)) |> 
+  ggplot(aes(x = share, y = Final, fill = Final)) +
+  geom_col() +
+  labs(y = NULL, x = NULL, fill = NULL, 
+       title = "Is the tool validated?") +
+  scale_fill_manual(values = c("Yes" = "#81A88D", "No (or unclear)" = "#FD6467")) +
+  scale_x_continuous(labels = scales::percent)
+```  
+
+# Evaluation
+
+```{r}
+data |> 
+  filter(variable == "Q4_1_Opinion-Evaluation",
+         Final != "IRRELEVANT") |> 
+  mutate(Final = tolower(Final)) |> 
+  count(Final) |>
+  mutate(share = n / sum(n),
+         Final = fct_reorder(Final, n)) |> 
+  ggplot(aes(x = share, y = Final)) +
+  geom_col() +
+  labs(y = NULL, x = NULL, fill = NULL, 
+       title = "Which evaluation concept is used?") +
+  scale_x_continuous(labels = scales::percent)
+``` 
+
+# Target
+
+```{r}
+data |> 
+  filter(variable == "Q4_2_Opinion-Target",
+         Final != "IRRELEVANT") |> 
+  count(Final, sort = TRUE) |>
+  gt::gt(caption = "Towards which target?") |> 
+  gt::gtsave(filename = "target-name.png")
+``` 
+          
+ 
+
