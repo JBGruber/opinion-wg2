@@ -9,7 +9,9 @@ if (!reticulate::virtualenv_exists("r-opinion")) {
   reticulate::virtualenv_install("r-opinion", c(
     "openparse",
     "pypdf",
-    "langchain_community"
+    "langchain_community",
+    "pyautogui",
+    "pygetwindow"
   ))
 }
 reticulate::use_virtualenv("r-opinion")
