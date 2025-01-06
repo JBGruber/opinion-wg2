@@ -1,0 +1,99 @@
+---
+title: "PDF annotation"
+format: html
+---
+
+# Intro
+
+After some experiments with pdf parsers, we decided to employ the ChatGPT web interface, which has functionality to work with PDF directly.
+
+## packages and functions
+
+We wrote a couple of custom functions to automate querying ChatGPT. 
+This basically moves the cursor to the right buttons and saves the conversations as html files that can be parsed.
+
+```{r}
+source("annotate_pdf.r")
+library(tidyverse)
+start <- Sys.time() # note start time for later
+```
+
+## test data
+
+In this notebook, We test the performance of ChatGPT against the manual annotations from https://github.com/JBGruber/opinion-wg2/issues/14
+
+```{r}
+test_data <- rio::import("https://github.com/JBGruber/opinion-wg2/raw/main/paper-annotation/4._annotations_jbg.xlsx") |> 
+  select(unit_id, variable, Final, file, url)
+pdfs <- test_data |> 
+  pull(file) |> 
+  unique()
+# number of articles we annotated by hand:
+length(pdfs)
+```
+
+We use this prompt, which contains all questions at ones. 
+The main reason is the rate limit of the ChatGPT interface, but breaking the prompt up into smaller chunks also did not change the performance on three papers We tested.
+
+```{r}
+q <- readChar("query.txt", nchars = file.info("query.txt")$size)
+cli::cat_line(q)
+```
+
+We iterate through the files and ask the same query on all of them:
+
+```{r}
+for (pdf in pdfs) {
+  if (!file.exists(paste0("results-pilot/", pdf, ".html"))) {
+    annotate_pdf(pdf, query = q)
+  }
+  cli::cli_alert_info("{.file {pdf}} annotated")
+}
+```
+
+```{r}
+results <- file.path("results-pilot/", pdfs) |> 
+  map(read_results) |> 
+  bind_rows() |> 
+  left_join(test_data, by = c("file", "variable"))
+```
+
+Adjust coding logic:
+
+```{r}
+results_corrected <- results |> 
+  group_by(file) |> 
+  mutate(result = case_when(
+    # Q1_0 makes all remaining irrelevant
+    variable != "Q1_0_Tool-Mentioned" & result[variable == "Q1_0_Tool-Mentioned"] == "No (unclear)" ~ "IRRELEVANT",
+    # Q2_0 makes q2_X irrelevant
+    variable %in% c("Q2_1_Tool-Name",
+                    "Q2_2_Tool-Link",
+                    "Q2_3_Tool-Reference") & 
+      result[variable == "Q2_0_Tool-Mentioned"] == "No (unclear)" ~ "IRRELEVANT",
+    # Q5_0 makes all remaining irrelevant
+    variable == "Q5_0_Data-Mentioned" ~ result,
+    str_starts(variable, "Q5") & result[variable == "Q5_0_Data-Mentioned"] == "No (unclear)" ~ "IRRELEVANT",
+    TRUE ~ result
+  )) |> 
+  ungroup() |> 
+  relocate(unit_id, file, variable, human = Final, result)
+```
+
+```{r}
+rio::export(results_corrected, "1._pilot-results.csv")
+```
+
+# wrap up
+
+Save data if it takes long to preprocess it here. 
+Afterwards we get some information which is important to reproduce the report.
+
+```{r}
+sessionInfo()
+reticulate::py_list_packages()
+Sys.time()
+# note how long the script takes to (re-)run
+Sys.time() - start
+```
+
