@@ -34,8 +34,20 @@ annotate_pdf <- function(pdf,
   system("firefox https://chatgpt.com/?model=gpt-4\\&temporary-chat=true")
 
   # check if rate limit is reached
-  wait_for_gpt("attach.png", verbose = verbose)
+  Sys.sleep(2L)
   found <- try(pag$locateOnScreen("rate.png"), silent = TRUE)
+  if (methods::is(found, "try-error")) {
+    found <- try(pag$locateOnScreen("rate-alt.png"), silent = TRUE)
+  }
+  if (methods::is(found, "try-error")) {
+    found <- try(pag$locateOnScreen("rate-alt2.png"), silent = TRUE)
+  }
+  if (methods::is(found, "try-error")) {
+    found <- try(pag$locateOnScreen("rate-alt2.png"), silent = TRUE)
+  }
+  if (methods::is(found, "try-error")) {
+    found <- try(pag$locateOnScreen("rate-alt4.png"), silent = TRUE)
+  }
   if (!methods::is(found, "try-error")) {
     cli::cli_progress_cleanup()
     cli::cli_alert_info("rate limit reached. Waiting until {Sys.time() + 60 * 60 * 1}")
@@ -47,6 +59,7 @@ annotate_pdf <- function(pdf,
       verbose = verbose
     )
   }
+  wait_for_gpt("attach.png", verbose = verbose)
   
   
   if (verbose) cli::cli_progress_update(status = "click on attach file and then \"upload from computer\"")
@@ -73,6 +86,18 @@ annotate_pdf <- function(pdf,
   pag$hotkey("ctrl", "v")
   pag$press("enter")
 
+  found <- try(pag$locateOnScreen("rate-alt3.png"), silent = TRUE)
+  if (!methods::is(found, "try-error")) {
+    cli::cli_progress_cleanup()
+    cli::cli_alert_info("rate limit reached. Waiting until {Sys.time() + 60 * 60 * 1}")
+    Sys.sleep(60 * 60 * 1) # wait 3 hours
+    annotate_pdf(
+      pdf = pdf,
+      query = query,
+      env = env,
+      verbose = verbose
+    )
+  }
   
   # wait for text generation, then save page
   if (verbose) cli::cli_progress_update(status = "Saving file")
@@ -144,7 +169,7 @@ wait_for_gpt <- function(img = "done.png", verbose) {
     if (!methods::is(found, "try-error")) {
       break
     }
-    if ((Sys.time() - start) > 180) {
+    if (as.numeric(Sys.time() - start, units = "secs") > 180) {
       stop("timed out after 3 minutes")
     }
   })
@@ -152,16 +177,24 @@ wait_for_gpt <- function(img = "done.png", verbose) {
 
 
 read_results <- function(pdf) {
-  
-  rvest::read_html(paste0(pdf, ".html"))|> 
-    rvest::html_elements(".agent-turn .text-message") |> 
-    rvest::html_text2() |> 
-    str_extract("\\{.*\\}") |> 
-    jsonlite::fromJSON() |> 
-    tibble::as_tibble() |> 
-    tidyr::pivot_longer(cols = dplyr::everything(),
-                        names_to = "variable", 
-                        values_to = "result") |> 
-    mutate(file = basename(pdf))
-  
+  if (file.exists(paste0(pdf, ".html"))) {
+    json <- rvest::read_html(paste0(pdf, ".html"))|> 
+      rvest::html_elements(".agent-turn .text-message") |> 
+      rvest::html_text2() |> 
+      str_extract("\\{.*\\}")
+    if (isTRUE(nchar(json) > 1L)) {
+      df <- try(jsonlite::fromJSON(json), silent = TRUE)
+      if (!methods::is(df, "try-error")) {
+        out <-  df |> 
+          tibble::as_tibble() |> 
+          tidyr::pivot_longer(cols = dplyr::everything(),
+                              names_to = "variable", 
+                              values_to = "result") |> 
+          mutate(file = basename(pdf))
+        return(out)
+      }
+    }
+    cli::cli_alert_warning("{paste0(pdf, \".html\")} had issues and could not be parsed")
+    return(NULL)
+  }  
 }

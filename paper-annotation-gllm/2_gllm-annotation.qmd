@@ -1,0 +1,133 @@
+---
+title: "PDF annotation"
+format: html
+---
+
+# Intro
+
+After the pilot, we now annotate the unseen PDFs.
+
+## packages and functions
+
+We wrote a couple of custom functions to automate querying ChatGPT. 
+This basically moves the cursor to the right buttons and saves the conversations as html files that can be parsed.
+
+```{r}
+setwd(here::here("paper-annotation-gllm/"))
+source("annotate_pdf.r")
+library(tidyverse)
+start <- Sys.time() # note start time for later
+```
+
+## test data
+
+In this notebook, We test the performance of ChatGPT against the manual annotations from https://github.com/JBGruber/opinion-wg2/issues/14
+
+```{r}
+abstracts_clean <- rio::import("https://github.com/JBGruber/opinion-wg2/raw/main/relevance-prediction/Opinion%20Papers%20Abstracts%20-%20data_abstracts_clean_withpredictedrelevance.csv") |> 
+  filter(predicted_relevance == 1L) |> 
+  mutate(file = gsub("/", "_", paste0(doi, ".pdf"), fixed = TRUE),
+         f_path = file.path("/home/johannes/Dropbox/opinion_pdfs", file),
+         exists = file.exists(f_path),
+         doi = ifelse(nchar(doi) == 0, NA_character_, doi))
+```
+
+First question, do we have all PDFs?
+
+```{r}
+abstracts_clean |> 
+  count(exists, no_doi = is.na(doi))
+```
+
+There are still some missing. 
+Some of these were retracted, others were not available for other reasons.
+We exclude the ones without DOI, we also still have to manually split larger PDFs, which are books or proceedings that contain multiple papers.
+
+```{r}
+pdfs <- abstracts_clean |> 
+  filter(!is.na(doi), exists) |> 
+  # don't look at files larger than 5MB yet
+  filter(file.info(f_path)$size < 5089913) |> 
+  pull(file) |> 
+  setdiff(c("10.2196_22734.pdf"))
+```
+
+
+# Annotation
+
+First, we read in the query:
+
+```{r}
+q <- readChar("query.txt", nchars = file.info("query.txt")$size)
+cli::cat_line(q)
+```
+
+We iterate through the files and ask the same query on all of them:
+
+```{r}
+options(cli.progress_show_after = 0L)
+for (pdf in pdfs) {
+  if (!file.exists(paste0("results/", pdf, ".html"))) {
+    res <- try(annotate_pdf(pdf, query = q, verbose = FALSE))
+    counter <- 0L
+    while (methods::is(res, "try-error")) {
+      counter <- counter + 1
+      res <- try(annotate_pdf(pdf, query = q, verbose = TRUE))
+      if (counter > 3) break
+    }
+  }
+  cli::cli_alert_info("{.file {pdf}} annotated")
+}
+```
+
+Chats are saved as HTML files, which we read in and parse:
+
+```{r}
+abstracts_clean_select <- abstracts_clean |> 
+  select(id, doi, file)
+
+results <- file.path("results", pdfs) |> 
+  map(read_results) |> 
+  bind_rows() |> 
+  left_join(abstracts_clean_select, by = "file") |> 
+  relocate(id, doi, file, variable, result)
+```
+
+Adjust coding logic:
+
+```{r}
+results_corrected <- results |> 
+  group_by(file) |> 
+  mutate(result = case_when(
+    # Q1_0 makes all remaining irrelevant
+    variable != "Q1_0_Tool-Mentioned" & result[variable == "Q1_0_Tool-Mentioned"] == "No (unclear)" ~ "IRRELEVANT",
+    # Q2_0 makes q2_X irrelevant
+    variable %in% c("Q2_1_Tool-Name",
+                    "Q2_2_Tool-Link",
+                    "Q2_3_Tool-Reference") & 
+      result[variable == "Q2_0_Tool-Mentioned"] == "No (unclear)" ~ "IRRELEVANT",
+    # Q5_0 makes all remaining irrelevant
+    variable == "Q5_0_Data-Mentioned" ~ result,
+    str_starts(variable, "Q5") & result[variable == "Q5_0_Data-Mentioned"] == "No (unclear)" ~ "IRRELEVANT",
+    TRUE ~ result
+  )) |> 
+  ungroup()
+```
+
+```{r}
+rio::export(results_corrected, "2._annotation-results.xlsx")
+```
+
+# wrap up
+
+Save data if it takes long to preprocess it here. 
+Afterwards we get some information which is important to reproduce the report.
+
+```{r}
+sessionInfo()
+reticulate::py_list_packages()
+Sys.time()
+# note how long the script takes to (re-)run
+Sys.time() - start
+```
+
