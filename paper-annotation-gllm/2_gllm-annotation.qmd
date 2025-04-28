@@ -76,7 +76,7 @@ for (pdf in pdfs) {
       if (counter > 3) break
     }
   }
-  cli::cli_alert_info("{.file {pdf}} annotated")
+  if (interactive()) cli::cli_alert_info("{.file {pdf}} annotated ({which(pdfs == pdf)}/{length(pdfs)})")
 }
 ```
 
@@ -87,6 +87,7 @@ abstracts_clean_select <- abstracts_clean |>
   select(id, doi, file)
 
 results <- file.path("results", pdfs) |> 
+  setdiff(c("results/10.1007_978-981-99-3982-4_16.pdf")) |> 
   map(read_results) |> 
   bind_rows() |> 
   left_join(abstracts_clean_select, by = "file") |> 
@@ -115,7 +116,7 @@ results_corrected <- results |>
 ```
 
 ```{r}
-rio::export(results_corrected, "2._annotation-results.xlsx")
+rio::export(results_corrected, "2._annotation-results.csv")
 ```
 
 # wrap up
