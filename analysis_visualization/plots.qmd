@@ -1,0 +1,155 @@
+---
+title: "PDF annotation"
+format: html
+---
+
+# Intro
+
+After the pilot, we now annotate the unseen PDFs.
+
+## packages and functions
+
+```{r setup}
+setwd(here::here("analysis_visualization"))
+library(tidyverse)
+theme_set(theme_minimal())
+start <- Sys.time() # note start time for later
+```
+
+# Data
+
+```{r}
+results <- rio::import("2._annotation-results.csv")
+abstracts_clean <- rio::import("https://github.com/JBGruber/opinion-wg2/raw/main/relevance-prediction/Opinion%20Papers%20Abstracts%20-%20data_abstracts_clean_withpredictedrelevance.csv") 
+```
+
+Total number of annotated papers:
+
+```{r}
+results |> 
+  distinct(id) |> 
+  nrow()
+```
+
+```{r}
+#| fig-width: 7
+#| fig-height: 7
+tool_count <- results |> 
+  filter(variable == "Q1_1_Tool-Name", !result %in% c("-", "IRRELEVANT")) |> 
+  separate_longer_delim(cols = result, delim = "; ") |> 
+  mutate(result = str_remove(result, "Classifier|Classifier|\\(.*\\)"),
+         result = case_when(
+           str_detect(result, "Naive.*Bay") ~ "Naive Bayes",
+           str_detect(result, "BERT")  ~ "BERT",
+           str_detect(result, "TextBlob")  ~ "TextBlob",
+           str_detect(result, fixed("VADER", ignore_case = TRUE))  ~ "VADER",
+           str_detect(result, fixed("Support Vector", ignore_case = TRUE)) | 
+             str_detect(result, fixed("SVM", ignore_case = FALSE))  ~ "Support Vector Machine",
+           str_detect(result, fixed("Glove", ignore_case = TRUE)) ~ "GloVe",
+           TRUE ~ result
+         )) |> 
+  count(result) |> 
+  mutate(tool = fct_reorder(result, n))
+
+tool_count |> 
+  slice_max(n, n = 250, with_ties = FALSE) |> 
+  ggplot(aes(x = n, y = tool)) +
+  geom_col() +
+  labs(title = "Tools used for Opinion Measurement", x = NULL, y = NULL)
+```
+
+```{r}
+#| fig-width: 7
+#| fig-height: 7
+tool_count |> 
+  slice_max(n, n = 15) |> 
+  ggplot(aes(x = n, y = tool)) +
+  geom_col() +
+  labs(title = "Top 15 Tools used for Opinion Measurement", x = NULL, y = NULL)
+```
+
+
+```{r}
+#| fig-width: 15
+#| fig-height: 7
+approaches <- results |> 
+  filter(variable == "Q3_1_Approach", !result %in% c("-", "IRRELEVANT")) |> 
+  separate_longer_delim(cols = result, delim = ";") |> 
+  mutate(result = trimws(result),
+         result = case_when(
+           str_detect(result, "Deep|Transformers|Embedding") ~ "Deep learning/Embeddings, Transformers etc",
+           str_detect(result, "[U|u]nsupervised") ~ "Classic Unsupervised Machine Learning",
+           str_detect(result, "\\b[S|s]upervised|[M|a]chine|Ensemble|Class") ~ "Classic Supervised Machine Learning",
+           str_detect(result, "[D|d]ict|[L|l]exi") ~ "Dictionaries",
+           str_detect(result, "Proprietary") ~ "Proprietary and unknown to us",
+           
+           TRUE ~ "Other"
+         )) 
+
+approaches |> 
+  count(result) |> 
+  mutate(approach = fct_reorder(result, n)) |> 
+  ggplot(aes(x = n, y = approach)) +
+  geom_col() +
+  labs(title = "Approaches used for Opinion Measurement", x = NULL, y = NULL)
+```
+
+```{r}
+#| fig-width: 9
+#| fig-height: 4
+approaches |>
+  filter(result %in% c(
+    "Classic Supervised Machine Learning",
+    "Deep learning/Embeddings, Transformers etc",
+    "Dictionaries"
+  )) |> 
+  left_join(abstracts_clean, by = "id") |> 
+  count(result, year) |> 
+  group_by(year) |> 
+  mutate(pct = n / sum(n)) |> 
+  ggplot(aes(x = year, y = pct, colour = result)) +
+  geom_line() +
+  scale_color_viridis_d() +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "bottom") +
+  labs(title = "Approaches used for Opinion Measurement", 
+       x = NULL, y = NULL, colour = NULL)
+```
+
+
+```{r}
+#| fig-width: 7
+#| fig-height: 7
+results |> 
+  filter(variable == "Q3_2_Target-specific-Measurement", !result %in% c("-", "IRRELEVANT")) |> 
+  count(result) |> 
+  mutate(result = fct_reorder(result, n)) |> 
+  ggplot(aes(x = n, y = result)) +
+  geom_col() +
+  labs(title = "Does the computational approach consider specific targets?", x = NULL, y = NULL)
+```
+
+```{r}
+#| fig-width: 7
+#| fig-height: 7
+results |> 
+  filter(variable == "Q3_3_Validation", !result %in% c("-", "IRRELEVANT")) |> 
+  count(result) |> 
+  mutate(result = fct_reorder(result, n)) |> 
+  ggplot(aes(x = n, y = result)) +
+  geom_col() +
+  labs(title = "Do the authors report validation of their measurement?", x = NULL, y = NULL)
+```
+
+# wrap up
+
+Save data if it takes long to preprocess it here. 
+Afterwards we get some information which is important to reproduce the report.
+
+```{r}
+sessionInfo()
+Sys.time()
+# note how long the script takes to (re-)run
+Sys.time() - start
+```
+
