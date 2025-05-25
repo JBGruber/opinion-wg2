@@ -41,3 +41,7 @@ paper-annotation-gllm/results_mdl/
 rname.r
 2._gllm-annotation-results_wg3.csv
 paper-annotation-gllm/0._missing_dois.txt
+analysis_visualization/
+opinion-wg2.Rproj
+zotero-export/
+opinion-wg2.Rproj
