@@ -1,0 +1,15 @@
+could you filter column tool_type=="other and classify them more carefully into tool_types you defined before. Please do not use any string matching as you did before. Read every tool name from the list and decide on its type by prompting yourself with the following question "Which tool type is it? Delect from the following dictionary of tool types: 
+tool_type_description = pd.DataFrame([
+    {"tool_type": "algorithm", "description": "Classical machine learning algorithms (e.g., SVM, Random Forest)"},
+    {"tool_type": "deep_learning_model", "description": "Neural network-based models (e.g., LSTM, CNN, BERT)"},
+    {"tool_type": "embedding", "description": "Word/sequence embedding methods (e.g., Word2Vec, FastText, GloVe)"},
+    {"tool_type": "framework", "description": "Libraries or platforms (e.g., TensorFlow, Keras, NLTK)"},
+    {"tool_type": "lexicon", "description": "Sentiment/affect lexicons (e.g., SentiWordNet, AFINN, LIWC)"},
+    {"tool_type": "dataset", "description": "Named datasets (e.g., Sentiment140, MPQA)"},
+    {"tool_type": "task", "description": "NLP or ML tasks (e.g., Topic Modeling, Sentiment Analysis)"},
+    {"tool_type": "preprocessing", "description": "Preprocessing techniques (e.g., TF-IDF, stemming, POS tagging)"},
+    {"tool_type": "metric", "description": "Measures or scores (e.g., Net Sentiment Score, Accuracy)"},
+    {"tool_type": "visualization_tool", "description": "Tools for visualizing data (e.g., WordCloud, LDAvis)"},
+    {"tool_type": "hybrid_model", "description": "Multi-component or pipeline models (e.g., CNN-BiLSTM, BERT-CRF)"},
+    {"tool_type": "other", "description": "Anything that doesn’t fit the above or is unclear"},
+])  "
