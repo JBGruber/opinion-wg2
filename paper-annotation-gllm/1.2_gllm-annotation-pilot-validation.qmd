@@ -1,0 +1,188 @@
+---
+title: "PDF annotation - validation"
+format: html
+---
+
+# Intro
+
+After some experiments with pdf parsers, we decided to employ the ChatGPT web interface, which has functionality to work with PDF directly.
+
+## packages and functions
+
+We wrote a couple of custom functions to automate querying ChatGPT. 
+This basically moves the cursor to the right buttons and saves the conversations as html files that can be parsed.
+
+```{r}
+library(tidyverse)
+library(gt)
+library(tidycomm)
+start <- Sys.time() # note start time for later
+```
+
+## data
+
+In this notebook, We test the performance of ChatGPT agains the manual annotations from https://github.com/JBGruber/opinion-wg2/issues/14
+
+```{r}
+validation_data <- rio::import("1._pilot-results_jbg.csv")
+```
+
+# Agreement
+
+```{r}
+agreement_overall <- validation_data |> 
+  summarise(value = sum(match) / n()) |> 
+  add_column(metric = "agreement_overall", .before = 1L)
+
+agreement <- validation_data |> 
+  group_by(variable) |> 
+  summarise(value = sum(match) / n(), .groups = "drop") |> 
+  mutate(metric = paste0("agreement_", variable)) |> 
+  select(-variable)
+
+bind_rows(
+  agreement_overall,
+  agreement
+) |> 
+  gt() |>
+  fmt_percent(value, decimals = 0L, drop_trailing_zeros = TRUE) |>
+  data_color(
+    columns = value,
+    method = "numeric",
+    palette = c("red", "green"),
+    domain = c(0, 1),
+    na_color = "#FFF"
+  ) |>
+  tab_options(column_labels.hidden = TRUE) |>  
+  tab_header(
+    title = md("Agreement")
+  )
+```
+
+For many of the data extraction questions, it does not make sense to calculate intercoder agreement (there are endless possible options which reference to extract, for example).
+Some of the annotations are more straightforward though:
+
+- Q1_0_Tool-Mentioned
+- Q2_0_Tool-Mentioned
+- Q3_2_Target-specific-Measurement
+- Q3_3_Validation
+- Q5_0_Data-Mentioned
+
+```{r}
+validation_data |> 
+  filter(variable %in% c(
+    "Q1_0_Tool-Mentioned",
+    "Q2_0_Tool-Mentioned",
+    "Q3_2_Target-specific-Measurement",
+    "Q3_3_Validation",
+    "Q5_0_Data-Mentioned"
+  )) |> 
+  mutate(result = case_when(
+    result == "No (unclear)" ~ "No (or unclear)",
+    TRUE ~ result
+  )) |> 
+  # mutate(agree = human == result) |> 
+  # select(human, result, agree) |> 
+  # filter(!agree)
+  pivot_longer(cols = c(human, result), names_to = "coder_id") |> 
+  select(unit_id, variable, coder_id, value) |> 
+  pivot_wider(id_cols = c(unit_id, coder_id), names_from = variable) |> 
+  test_icr(
+    unit_var = unit_id,
+    coder_var = coder_id,
+    agreement = TRUE,
+    holsti = FALSE,
+    kripp_alpha = TRUE,
+    cohens_kappa = TRUE,
+    fleiss_kappa = FALSE,
+    brennan_prediger = FALSE,
+    lotus = FALSE,
+    s_lotus = FALSE
+  ) |> 
+  select(Variable, Agreement, Krippendorffs_Alpha, Cohens_Kappa) |> 
+  gt() |>
+  fmt_percent(where(is.numeric), decimals = 0L, drop_trailing_zeros = TRUE) |>
+  data_color(
+    columns = where(is.numeric),
+    method = "numeric",
+    palette = c("red", "green"),
+    domain = c(0, 1),
+    na_color = "#FFF"
+  )
+```
+
+The validation results are not quite acceptable for Q3_2 and Q3_3, but I also noticed that going back, I sometimes considered the machine to do the right thing here and we, the human annotators, didn't follow our own instructions properly:
+
+```{r}
+validation_data |> 
+  filter(comment != "", match == 0L) |> 
+  count(comment, sort = TRUE) |> 
+  gt()
+```
+
+```{r}
+validation_data |> 
+  filter(comment != "", match == 0L) |> 
+  count(variable, comment, sort = TRUE) |> 
+  gt()
+```
+
+If I would correct the gold standard with my current thinking, these would be the results:
+
+```{r}
+rio::import("1._pilot-results_jbg_test.csv") |> 
+  filter(variable %in% c(
+    "Q1_0_Tool-Mentioned",
+    "Q2_0_Tool-Mentioned",
+    "Q3_2_Target-specific-Measurement",
+    "Q3_3_Validation",
+    "Q5_0_Data-Mentioned"
+  )) |> 
+  mutate(result = case_when(
+    result == "No (unclear)" ~ "No (or unclear)",
+    TRUE ~ result
+  )) |> 
+  # mutate(agree = human == result) |> 
+  # select(human, result, agree) |> 
+  # filter(!agree)
+  pivot_longer(cols = c(human, result), names_to = "coder_id") |> 
+  select(unit_id, variable, coder_id, value) |> 
+  pivot_wider(id_cols = c(unit_id, coder_id), names_from = variable) |> 
+  test_icr(
+    unit_var = unit_id,
+    coder_var = coder_id,
+    agreement = TRUE,
+    holsti = FALSE,
+    kripp_alpha = TRUE,
+    cohens_kappa = TRUE,
+    fleiss_kappa = FALSE,
+    brennan_prediger = FALSE,
+    lotus = FALSE,
+    s_lotus = FALSE
+  ) |> 
+  select(Variable, Agreement, Krippendorffs_Alpha, Cohens_Kappa) |> 
+  gt() |>
+  fmt_percent(where(is.numeric), decimals = 0L, drop_trailing_zeros = TRUE) |>
+  data_color(
+    columns = where(is.numeric),
+    method = "numeric",
+    palette = c("red", "green"),
+    domain = c(0, 1),
+    na_color = "#FFF"
+  )
+```
+
+
+# wrap up
+
+Save data if it takes long to preprocess it here. 
+Afterwards we get some information which is important to reproduce the report.
+
+```{r}
+sessionInfo()
+reticulate::py_list_packages()
+Sys.time()
+# note how long the script takes to (re-)run
+Sys.time() - start
+```
+

@@ -1,0 +1,50 @@
+---
+title: "PDF annotation"
+format: html
+---
+
+# Intro
+
+We are checking which PDFs are still missing and export the DOIs to a txt file for import into Zotero.
+
+## packages and functions
+
+
+```{r}
+library(tidyverse)
+start <- Sys.time() # note start time for later
+```
+
+## test data
+
+In this notebook, We test the performance of ChatGPT against the manual annotations from https://github.com/JBGruber/opinion-wg2/issues/14
+
+```{r}
+abstracts_clean <- rio::import("https://github.com/JBGruber/opinion-wg2/raw/main/relevance-prediction/Opinion%20Papers%20Abstracts%20-%20data_abstracts_clean_withpredictedrelevance.csv") |> 
+  filter(predicted_relevance == 1L) |> 
+  mutate(file = gsub("/", "_", paste0(doi, ".pdf"), fixed = TRUE),
+         f_path = file.path("/home/johannes/Dropbox/opinion_pdfs", file),
+         exists = file.exists(f_path),
+         doi = ifelse(nchar(doi) == 0, NA_character_, doi))
+```
+
+```{r}
+abstracts_clean |> 
+  filter(!is.na(doi), !exists) |> 
+  pull(doi) |> 
+  writeLines("0._missing_dois.txt")
+```
+
+# wrap up
+
+Save data if it takes long to preprocess it here. 
+Afterwards we get some information which is important to reproduce the report.
+
+```{r}
+sessionInfo()
+reticulate::py_list_packages()
+Sys.time()
+# note how long the script takes to (re-)run
+Sys.time() - start
+```
+
