@@ -27,3 +27,10 @@ paper-annotation/rdrop.r
 rdrop-token.rds
 paper-annotation/2._annotation-check_pilot_files/
 paper-annotation/4._annotation-check_files/
+paper-annotation-gllm/
+2._gllm-annotation-results_wg3.csv
+uv.lock
+analysis_visualization/fig/
+.python-version
+analysis_visualization/reqs
+zotero-export
