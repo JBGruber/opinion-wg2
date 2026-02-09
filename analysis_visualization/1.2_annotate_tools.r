@@ -1,9 +1,10 @@
 library(tidyverse)
 library(rio)
-setwd(here::here("analysis_visualization"))
-results <- import("2._annotation-results.csv")
 library(rollama)
-Sys.setenv(GESIS_API = "sk-60c06822e07d486c8f0c8fff71a453da")
+if (file.exists(".Renviron")) {
+  readRenviron(".Renviron")
+}
+setwd(here::here("analysis_visualization"))
 options(
   rollama_server = "https://ai-openwebui.gesis.org/ollama/",
   rollama_headers = list(
@@ -11,44 +12,48 @@ options(
   )
 )
 rollama::ping_ollama()
-tools <- results |>
+annotated_tools_l <- jsonlite::stream_in(
+  file("1.1_tools_dict.json"),
+  simplifyVector = FALSE,
+  verbose = FALSE
+) |>
+  unlist()
+
+tool_dict <- tibble(
+  tool = names(annotated_tools_l),
+  tool_clean = annotated_tools_l
+) |>
+  distinct(tool, .keep_all = TRUE)
+
+tools_df <- import("2._annotation-results.csv") |>
   filter(
     variable %in% c("Q1_1_Tool-Name", "Q2_1_Tool-Name"),
     !result %in% c("-", "IRRELEVANT"),
     nchar(result) > 1
   ) |>
   separate_longer_delim(cols = result, delim = "; ") |>
-  mutate(
-    tool = result,
-    tool_clean = tool |>
-      str_replace("[-_]", " ") |>
-      tolower() |>
-      trimws()
-  ) |>
-  select(tool, tool_clean)
-
-tools_unique <- tools |>
-  distinct(tool_clean, .keep_all = TRUE)
+  rename(tool = result) |>
+  left_join(tool_dict, by = "tool")
 
 
-prompt <- readr::read_file("1._prompt_v0.5.md")
+prompt <- readr::read_file("1.1_standardization_prompt.md")
 schema <- list(
   type = "object",
   properties = list(
     category = list(
       type = "string",
       enum = c(
+        "approach",
+        "programming_language",
+        "infrastructure",
+        "ide",
+        "general_library",
         "algorithm",
         "model",
         "linguistic_resource",
+        "data_collection",
         "general_purpose_nlp",
         "single_purpose_nlp",
-        "general_library",
-        "approach",
-        "programming_language",
-        "ide",
-        "data_collection",
-        "infrastructure",
         "gui_tool",
         "commercial_api",
         "other_unclear"
@@ -58,21 +63,17 @@ schema <- list(
     opinion_measurement_general = list(
       type = "string",
       enum = c("yes", "no", "unclear"),
-      description = "Whether this tool is used for general opinion measurement"
+      description = "Whether this is a general opinion measurement tool"
     ),
     opinion_measurement_specific = list(
       type = "string",
       enum = c("yes", "no", "unclear"),
-      description = "Whether this tool is used for specific opinion measurement"
+      description = "Whether this is a specific opinion measurement tool"
     ),
     software = list(
       type = "string",
       enum = c("yes", "no", "unclear"),
       description = "Whether this is software"
-    ),
-    tool_name_clean = list(
-      type = "string",
-      description = "Cleaned/standardized tool name"
     ),
     note = list(
       type = "string",
@@ -84,7 +85,6 @@ schema <- list(
     "opinion_measurement_general",
     "opinion_measurement_specific",
     "software",
-    "tool_name_clean",
     "note"
   )
 )
@@ -113,7 +113,10 @@ path_safe <- function(x) {
   str_replace_all(x, "[^A-z.0-9]", "_")
 }
 
-tools_annotated <- tools_unique |>
+tools_annotated <- tools_df |>
+  count(tool = tool_clean) |>
+  filter(!is.na(tool)) |>
+  slice_max(n, n = 50) |>
   mutate(
     query = make_query(
       text = tool,
@@ -128,7 +131,7 @@ tools_annotated <- tools_unique |>
       format = schema,
       model_params = list(seed = 42, temperature = 0)
     ),
-    cache_file = paste0("reqs/", path_safe(tool_clean), ".json"),
+    cache_file = paste0("reqs/", path_safe(tool), ".json"),
     annotation = req_perform_parallel_cache(
       reqs = request,
       paths = cache_file,
@@ -137,7 +140,7 @@ tools_annotated <- tools_unique |>
     )
   )
 
-saveRDS(tools_annotated, "tools_annotated.rds")
+saveRDS(tools_annotated, "1.2_tools_annotated_raw.rds")
 
 tools_annotated_df <- tools_annotated |>
   mutate(
@@ -145,35 +148,9 @@ tools_annotated_df <- tools_annotated |>
     annotation_data = purrr::map_chr(annotation_data, c("message", "content")),
     annotation_data = map(annotation_data, jsonlite::fromJSON)
   ) |>
-  unnest_wider(annotation_data) |>
-  mutate(
-    tool_name_clean = ifelse(
-      tool_name_clean == tool_name_clean,
-      tool,
-      tool_name_clean
-    )
-  )
+  unnest_wider(annotation_data)
 
-saveRDS(tools_annotated, "tools_annotated.rds")
+saveRDS(tools_annotated, "1.2_tools_annotated_long.rds")
 tools_annotated_df |>
-  distinct(tool_clean, .keep_all = TRUE) |>
-  select(-request, -cache_file, -query) |>
-  export("tools_annotated_df.xlsx")
-
-tools_annotated_df_clean <- tools_annotated_df |>
-  select(-request, -cache_file, -query)
-
-tools |>
-  left_join(tools_annotated_df_clean, by = "tool") |>
-  group_by(tool_name_clean) |>
-  summarise(
-    tool = toString(tool),
-    category = toString(category),
-    opinion_measurement_general = toString(opinion_measurement_general),
-    opinion_measurement_specific = toString(opinion_measurement_specific),
-    software = toString(software),
-    n = n(),
-    note = toString(note),
-  ) |>
-  mutate(note = str_trunc(note, 32000)) |>
-  export("tools_annotated_counts.xlsx")
+  select(-request, -cache_file, -query, -annotation) |>
+  export("1.2_tools_annotated.xlsx")

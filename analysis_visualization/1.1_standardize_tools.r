@@ -85,11 +85,11 @@ Output: `["Random Forest", "Naive Bayes", "Multinomial Naive Bayes", "Support Ve
 
 for (tool in tools_unique$tool) {
   message(tool)
-  if (file.exists("1._tools_dict.json")) {
-    tool_dict <- readr::read_file("1._tools_dict.json")
+  if (file.exists("1.1_tools_dict.json")) {
+    tool_dict <- readr::read_file("1.1_tools_dict.json")
     suppressWarnings({
       annotated_tools <- jsonlite::stream_in(
-        file("1._tools_dict.json"),
+        file("1.1_tools_dict.json"),
         simplifyVector = FALSE,
         verbose = FALSE
       ) |>
@@ -113,11 +113,11 @@ for (tool in tools_unique$tool) {
   jsonlite::fromJSON(res)
   res <- str_replace_all(res, "\n", "")
   res <- paste0('{"', tool, '":', res, '}\n')
-  readr::write_file(res, "1._tools_dict.json", append = TRUE)
+  readr::write_file(res, "1.1_tools_dict.json", append = TRUE)
 }
 
 annotated_tools_l <- jsonlite::stream_in(
-  file("1._tools_dict.json"),
+  file("1.1_tools_dict.json"),
   simplifyVector = FALSE,
   verbose = FALSE
 ) |>
