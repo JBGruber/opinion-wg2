@@ -1,0 +1,194 @@
+---
+title: "PDF annotation"
+format:
+  pdf:
+    keep-tex: true
+knitr:
+  opts_chunk:
+    dev: pdf
+    fig.path: "fig/"
+---
+
+# Intro
+
+Tables and plots to answer our research questions:
+
+- RQ1a: Which theoretical concepts are being measured in opinion mining?
+- RQ1b: Which methods and measurements are used for opinion mining?
+- RQ1c: Which tools are used for opinion mining?
+- RQ1d: Which data is used in CSS opinion mining?
+- RQ2: Are there disciplinary differences in concepts, methods, tools, and data in opinion mining?
+- RQ3: Do concepts, methods, tools, and data in opinion mining change over time?
+
+## Packages and functions
+
+```{r setup}
+#| output: false
+setwd(here::here("analysis_visualization"))
+library(tidyverse)
+theme_set(theme_minimal())
+start <- Sys.time() # note start time for later
+```
+
+## Data
+
+```{r}
+results <- rio::import("2._annotation-results.csv")
+abstracts_clean <- rio::import(
+  "https://github.com/JBGruber/opinion-wg2/raw/main/relevance-prediction/Opinion%20Papers%20Abstracts%20-%20data_abstracts_clean_withpredictedrelevance.csv"
+)
+```
+
+# Main
+## Validation
+
+
+## RQ1a theoretical concepts
+
+## RQ1b methods and measurements used for opinion mining?
+
+```{r}
+#| fig-width: 15
+#| fig-height: 7
+#| fig-cap: "Approaches used for Opinion Measurement"
+approaches <- results |>
+  filter(variable == "Q3_1_Approach", !result %in% c("-", "IRRELEVANT")) |>
+  separate_longer_delim(cols = result, delim = ";") |>
+  mutate(
+    result = trimws(result),
+    result = case_when(
+      str_detect(
+        result,
+        "Deep|Transformers|Embedding"
+      ) ~ "Deep learning/Embeddings, Transformers etc",
+      str_detect(
+        result,
+        "[U|u]nsupervised"
+      ) ~ "Classic Unsupervised Machine Learning",
+      str_detect(
+        result,
+        "\\b[S|s]upervised|[M|a]chine|Ensemble|Class"
+      ) ~ "Classic Supervised Machine Learning",
+      str_detect(result, "[D|d]ict|[L|l]exi") ~ "Dictionaries",
+      str_detect(result, "Proprietary") ~ "Proprietary and unknown to us",
+
+      TRUE ~ "Other"
+    )
+  )
+
+approaches |>
+  count(result) |>
+  mutate(approach = fct_reorder(result, n)) |>
+  ggplot(aes(x = n, y = approach)) +
+  geom_col() +
+  labs(x = NULL, y = NULL)
+```
+
+## RQ1d: Which data is used in CSS opinion mining?
+
+
+## Target  
+
+
+
+```{r}
+#| fig-width: 7
+#| fig-height: 7
+results |>
+  filter(
+    variable == "Q3_2_Target-specific-Measurement",
+    !result %in% c("-", "IRRELEVANT")
+  ) |>
+  count(result) |>
+  mutate(result = fct_reorder(result, n)) |>
+  ggplot(aes(x = n, y = result)) +
+  geom_col() +
+  labs(
+    title = "Does the computational approach consider specific targets?",
+    x = NULL,
+    y = NULL
+  )
+```
+
+## Validation
+
+```{r}
+#| fig-width: 7
+#| fig-height: 7
+results |>
+  filter(variable == "Q3_3_Validation", !result %in% c("-", "IRRELEVANT")) |>
+  count(result) |>
+  mutate(result = fct_reorder(result, n)) |>
+  ggplot(aes(x = n, y = result)) +
+  geom_col() +
+  labs(
+    title = "Do the authors report validation of their measurement?",
+    x = NULL,
+    y = NULL
+  )
+```
+
+## RQ2: disciplinary differences
+
+### concepts
+
+### methods
+
+### tools
+
+### data
+
+
+## RQ3: change over time
+
+### concepts
+
+
+### methods
+
+```{r}
+#| fig-width: 9
+#| fig-height: 4
+approaches |>
+  filter(
+    result %in%
+      c(
+        "Classic Supervised Machine Learning",
+        "Deep learning/Embeddings, Transformers etc",
+        "Dictionaries"
+      )
+  ) |>
+  left_join(abstracts_clean, by = "id") |>
+  count(result, year) |>
+  group_by(year) |>
+  mutate(pct = n / sum(n)) |>
+  ggplot(aes(x = year, y = pct, colour = result)) +
+  geom_line() +
+  scale_color_viridis_d() +
+  scale_y_continuous(labels = scales::percent) +
+  theme(legend.position = "bottom") +
+  labs(
+    title = "Approaches used for Opinion Measurement",
+    x = NULL,
+    y = NULL,
+    colour = NULL
+  )
+```
+
+### tools
+
+
+### data
+
+# wrap up
+
+Save data if it takes long to preprocess it here. 
+Afterwards we get some information which is important to reproduce the report.
+
+```{r}
+sessionInfo()
+Sys.time()
+# note how long the script takes to (re-)run
+Sys.time() - start
+```
+

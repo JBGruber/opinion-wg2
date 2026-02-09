@@ -1,0 +1,68 @@
+Look at @1._tools_dict.json . I need you to extend the standardization dictionary with some additional tool annotations. See which ones are already there and reuse the standardized names. For new tools, use these guidelines:
+
+1. **Use the official/canonical name** of the tool (e.g., "scikit-learn" not "sklearn", "NLTK" not "nltk")
+2. **Remove generic suffixes** like "library", "package", "tool", "API", "framework" unless they are part of the official name
+3. **Preserve official capitalization** (e.g., "NLTK", "spaCy", "scikit-learn")
+4. **Use hyphens or spaces as in the official name** (e.g., "scikit-learn" not "scikit learn")
+5. **For versions**, remove version numbers unless the version is a distinct tool (e.g., "BERT" not "BERT-base", but "GPT-3" vs "GPT-4" are distinct)
+6. **For acronyms**, use uppercase if that is the standard (e.g., "SVM", "LSTM", "BERT")
+7. **Group variations together** - different capitalizations or separators of the same tool should map to one canonical form
+8. **Split combined entries** - If the input contains multiple tools listed together (comma-separated, semicolon-separated, or in a list), extract and standardize each one separately
+
+## additional Tools
+
+Issue Supervised Approaches: Random Forest (RF), Naïve Bayes (NB), fastText
+Review Supervised Approaches: k-Nearest Neighbors (kNN), Multinomial NB (MNB), Support Vector Machines (SVM), Multilayer Perceptron (MLP), and One-Class SVM (OCSVM)
+Review Multi-label Active Learning with Auxiliary Learner (Logistic Regression, SVM)
+Review Supervised Approaches: RF, NB, NBM, SVM
+Review Supervised Approaches: NBM and Multi-criteria heuristic function
+Machine Learning, Deep Learning and genetics Algorithms
+Naive Bayes and Random Forest, Logistic Regression
+BERT, Refined Rules, Rank-based TF-IDF
+Python Libraries (Pandas, NumPy, Requests, BeautifulSoup, NLTK, spaCy, gensim, TextBlob)
+Word Embedding and Ensemble Learning
+ML classification algorithms (Logistics Regression, Tuned Logistics Regression, Support Vector Classifier, Tuned Support Vector Classifier)
+Amazon’s online product reviews
+NLTK packages ‘punkt’ and ‘stopwords’
+Modified Red Deer Algorithm (MRDA) Extreme Learning Machine Sparse Autoencoder (ELMSAE)
+deep learning, chain classifier, and joint learning models
+Keras with TensorFlow
+Recurrent Neural Networks with word embeddings
+Logistic Regression SVM
+stemming, feature correlation, n-gram models
+Gabor features with SVMs
+SentiBank + SentiStrength
+CBOW + DA + LR
+SVM + TF-IDF
+DistilBERT + FFNN
+Recurrent Neural Network (RNN), Long Short-Term Memory (LSTM), Restricted Boltzmann Machine (RBM)
+CNN + CNN-Word2Vec + RNN with LSTM+Word2Vec
+Unigram with Sentiwordnet
+Chen-Skiena’s Lexicon
+Tutubalina’s Lexicon
+Kotelnikov et al.’s Lexicon (large)
+Kotelnikov et al.’s Lexicon (small)
+Supervised learning models (SVM, Naive Bayes, Logistic Regression, K-Nearest Neighbors)
+NLProcessor;Text to Matrix Generator
+Apache Lucene and Solr
+Stanford’s CoreNLP
+Loughran and McDonald’s dictionary
+Rubtsova’s corpus
+Facebook’s graph API
+Liu’s Polarity Lexicon
+COVID-19 TweetIDs;TweePy API;Python Natural Language Toolkit (NLTK);Scikit-learn
+Convolutional Neural Networks;Naive Bayes
+n-grams+embeddings
+Long Jiang’s model
+Bing Liu’s Opinion Lexicon
+Supervised machine learning approach for teacher’s performance evaluation
+IBM’s Watson Assistant Service
+Microsoft’s LUIS
+n-grams + tfidf
+Hu & Liu’s opinion lexicon
+MPQA’s opinion lexicon
+Porter’s stemming algorithm
+Gram matrix guided visual representation extractor;CNN models including AlexNet, VGG, DenseNet, ResNet
+CNN;AlexNet;VGG;DenseNet;ResNet;Gram matrix guided visual representation extractor
+Tensorflow Keras
+Crimson Hexagon’s ForSight

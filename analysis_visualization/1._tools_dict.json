@@ -1,0 +1,4842 @@
+
+{"Naive Bayes":"Naive Bayes"}
+{"tweepy":"Tweepy"}
+{"Artificial Neural Network":"ANN"}
+{"K-Nearest Neighbors":"KNN"}
+{"Random Forest":"Random Forest"}
+{"Support Vector Machine":"SVM"}
+{"Net Sentiment Score":"Net Sentiment Score"}
+{"Deep Learning Modified Neural Network":"Deep Neural Network"}
+{"Improved Adaptive Neuro-Fuzzy Inference System":"ANFIS"}
+{"K-nearest neighbor (KNN)":"KNN"}
+{"Gradient Boosting":"Gradient Boosting"}
+{"Gaussian Naive Bayes":"Gaussian Naive Bayes"}
+{"Support Vector Machine (SVM)":"SVM"}
+{"Finite-state automata-based tool":"Finite-state automata"}
+{"WordNet":"WordNet"}
+{"Serendio":"Serendio"}
+{"VADER":"VADER"}
+{"Aquila merged Arithmetic Optimization (AIAO)":"AIAO"}
+{"Auto-Encoder based Long Short Term Memory (AuE-LSTM)":"AuE-LSTM"}
+{"Random Forest (RF)":"Random Forest"}
+{"Random Tree (RT)":"Random Tree"}
+{"Regression Tree Learner (REPT)":"REPTree"}
+{"Multilayer Perceptron (MLP)":"MLP"}
+{"Python":"Python"}
+{"TensorFlow":"TensorFlow"}
+{"Long short-term memory":"LSTM"}
+{"Convolutional neural network":"CNN"}
+{"Gate recurrent node":"GRU"}
+{"Recurrent neural network":"RNN"}
+{"BERT":"BERT"}
+{"GPT":"GPT"}
+{"ALBERT":"ALBERT"}
+{"RoBERTa":"RoBERTa"}
+{"XLNet":"XLNet"}
+{"DistilBERT":"DistilBERT"}
+{"XLM-RoBERTa":"XLM-RoBERTa"}
+{"BART":"BART"}
+{"ConvBERT":"ConvBERT"}
+{"Reformer":"Reformer"}
+{"T5":"T5"}
+{"ELECTRA":"ELECTRA"}
+{"DeBERTa":"DeBERTa"}
+{"Longformer":"Longformer"}
+{"LIWC-22":"LIWC"}
+{"jsLDA":"jsLDA"}
+{"MMSA":"MMSA"}
+{"EF-LSTM":"EF-LSTM"}
+{"LF-DNN":"LF-DNN"}
+{"MFN":"MFN"}
+{"TFN":"TFN"}
+{"LMF":"LMF"}
+{"MULT":"MulT"}
+{"SELF-MM":"Self-MM"}
+{"BIMHA":"BIMHA"}
+{"BBFN":"BBFN"}
+{"AV-MC":"AV-MC"}
+{"Political multi-class sentiment analysis (PMSA)":"PMSA"}
+{"Apache Flume":"Apache Flume"}
+{"Hadoop Distributed File System (HDFS)":"HDFS"}
+{"Spark":"Apache Spark"}
+{"Spark MLlib":"MLlib"}
+{"LIWC2007":"LIWC"}
+{"SentiStrength":"SentiStrength"}
+{"Internet-based campus security incident prototype system":"Campus Security Incident System"}
+{"Exponential Poor-Rich Optimization-based Gated Recurrent Unit":"GRU"}
+{"COVID-SA":"COVID-SA"}
+{"ERNIE":"ERNIE"}
+{"LSTM":"LSTM"}
+{"LightGBM":"LightGBM"}
+{"Bidirectional LSTM":"BiLSTM"}
+{"Support Vector Machines":"SVM"}
+{"Word2Vec":"word2vec"}
+{"GloVe":"GloVe"}
+{"FastText":"fastText"}
+{"Naïve Bayes":"Naive Bayes"}
+{"Logistic Regression":"Logistic Regression"}
+{"Hybrid-NN (RNN+CNN)":"RNN-CNN"}
+{"Linear SVC":"LinearSVC"}
+{"Multinomial Naive Bayes":"Multinomial Naive Bayes"}
+{"RNN":"RNN"}
+{"CNN":"CNN"}
+{"Naive Bayes Classifier":"Naive Bayes"}
+{"sentence_transformers":"sentence-transformers"}
+{"numpy":"NumPy"}
+{"qalsadi":"Qalsadi"}
+{"Stanford corpus for Twitter sentiment analysis":"Sentiment140"}
+{"Health Care Reform (HCR) dataset":"HCR"}
+{"Obama-McCain Debate (OMD) dataset":"OMD"}
+{"Sanders’s Twitter dataset":"Sanders Twitter Sentiment Corpus"}
+{"Dialogue Earth project (GASP, WB, WA)":"Dialogue Earth"}
+{"GoodReads dataset for Arabic sentiment analysis":"LABR"}
+{"Mahmoud Nabil et al. dataset":"ASTD"}
+{"Ibrahim et al. dataset":"Ibrahim et al. dataset"}
+{"Almahdawi et al. dataset":"Almahdawi et al. dataset"}
+{"ArECTD dataset":"ArECTD"}
+{"TPD dataset":"TPD"}
+{"EPINetz":"EPINetz"}
+{"SVM":"SVM"}
+{"Urduhack":"urduhack"}
+{"LR":"Logistic Regression"}
+{"MLP":"MLP"}
+{"Plutchik-based hybrid sentiment analysis tool":"Plutchik-based Hybrid Sentiment Analysis"}
+{"Decision Tree":"Decision Tree"}
+{"Novel Auto-Encoder":"Autoencoder"}
+{"Keras":"Keras"}
+{"SPSS":"IBM SPSS Statistics"}
+{"G Power":"G*Power"}
+{"Jupyter":"Project Jupyter"}
+{"TextBlob":"TextBlob"}
+{"Transformer":"Transformer"}
+{"Bi-LSTM":"BiLSTM"}
+{"FLAIR":"Flair"}
+{"Sentiment-specific word embeddings (SSWE)":"SSWE"}
+{"WTFM":"WTFM"}
+{"National Research Council Canada’s (NRC)":"NRC Emotion Lexicon"}
+{"LibLinear":"LIBLINEAR"}
+{"Twitter Streaming Application Programming Interface (API)":"Twitter Streaming API"}
+{"Orange Software":"Orange"}
+{"Trends24.in":"Trends24"}
+{"Scrapy":"Scrapy"}
+{"LDA":"LDA"}
+{"AdaBoost-AAFSA-Elman":"AdaBoost-AAFSA-Elman"}
+{"AAFSA":"AAFSA"}
+{"AdaBoost":"AdaBoost"}
+{"AFSA":"AFSA"}
+{"Elman":"Elman Network"}
+{"CEEMDAN":"CEEMDAN"}
+{"Boruta":"Boruta"}
+{"Granger analysis":"Granger causality"}
+{"multiple-output support vector regression (MSVR)":"MSVR"}
+{"support vector regression (SVR)":"SVR"}
+{"principal component analysis (PCA)":"PCA"}
+{"particle swarm optimization (PSO)":"PSO"}
+{"least square support vector machine (LSSVM)":"LS-SVM"}
+{"ensemble empirical mode decomposition (EEMD)":"EEMD"}
+{"empirical mode decomposition (EMD)":"EMD"}
+{"Twitter Sentiment":"Sentiment140"}
+{"NER":"NER"}
+{"snscrape":"snscrape"}
+{"RoBERTa model":"RoBERTa"}
+{"NLTK":"NLTK"}
+{"k-means":"k-means"}
+{"Pandas":"pandas"}
+{"Matplotlib":"Matplotlib"}
+{"Scikit-learn":"scikit-learn"}
+{"Optimized K-Means Algorithm":"k-means"}
+{"Word Weighting Technique":"TF-IDF"}
+{"jFuzzyLogic":"jFuzzyLogic"}
+{"VaderSentiment":"VADER"}
+{"Beautiful Soup":"Beautiful Soup"}
+{"MLP-SCL-ES":"MLP"}
+{"JET-ACOS":"JET"}
+{"TAS-BERT-ACOS":"TAS-BERT"}
+{"Extract-Classify-ACOS":"Extract-Classify"}
+{"Seq2Path":"Seq2Path"}
+{"GEN-NAT-SCL":"GEN-NAT-SCL"}
+{"Hybrid-GFX–Attention–BiGRU–CNN":"GFX-Attention-BiGRU-CNN"}
+{"BiLSTM":"BiLSTM"}
+{"GPT v1-3":"GPT"}
+{"Bi-GRU":"BiGRU"}
+{"IBM Watson":"IBM Watson"}
+{"Stanford CoreNLP":"Stanford CoreNLP"}
+{"TF*IDF":"TF-IDF"}
+{"lexicon-based sentiment analysis":"Lexicon-based Sentiment Analysis"}
+{"Bangla-BERT":"BanglaBERT"}
+{"GRU":"GRU"}
+{"Radial Bias Neural Network (RBNN)":"RBFN"}
+{"Particle Swarm Optimization":"PSO"}
+{"Gray Wolf Optimization":"Grey Wolf Optimizer"}
+{"R software":"R"}
+{"EMRC":"EMRC"}
+{"Aspect-Based Sentiment Analysis (ABSA)":"ABSA"}
+{"Adolescent depression management ontology":"Adolescent Depression Management Ontology"}
+{"Apriori algorithm":"Apriori"}
+{"Twitter API":"Twitter API"}
+{"twitteR":"twitteR"}
+{"gtrendR":"gtrendsR"}
+{"hybrid regularizations":"Hybrid Regularization"}
+{"orthogonal regularization":"Orthogonal Regularization"}
+{"sparse regularization":"Sparse Regularization"}
+{"task-level regularization":"Task-Level Regularization"}
+{"AT-LSTM":"AT-LSTM"}
+{"ATAE-LSTM":"ATAE-LSTM"}
+{"IAN":"IAN"}
+{"GCAE":"GCAE"}
+{"MApp-IDEA":"MApp-IDEA"}
+{"Review Multi-label Active Learning with Auxiliary Learner (Logistic Regression, SVM)":["Multi-label Active Learning with Auxiliary Learner","Logistic Regression","SVM"]}
+{"Review Unsupervised Approaches: BTM":"BTM"}
+{"Review Supervised Approaches: NBM and Multi-criteria heuristic function":["Multinomial Naive Bayes","Multi-criteria heuristic function"]}
+{"crawler technology":"web crawler"}
+{"sentiment analysis":"Sentiment Analysis"}
+{"Bernoulli Naive Bayes":"Bernoulli Naive Bayes"}
+{"BiLSTM-CRF":"BiLSTM-CRF"}
+{"BiGRU":"BiGRU"}
+{"TDGA":"TDGA"}
+{"Aspect-oriented Opinion Alignment Network (AOAN)":"AOAN"}
+{"TD-LSTM":"TD-LSTM"}
+{"TC-LSTM":"TC-LSTM"}
+{"Deep Memory Network (MemNet)":"MemNet"}
+{"Position-aware Bidirectional Attention Network (PBAN)":"PBAN"}
+{"Interactive Attention Network (IAN)":"IAN"}
+{"Attention over Attention Networks (AOA)":"AOA"}
+{"Type-aware Graph Convolutional Network (T-GCN)":"T-GCN"}
+{"Dual Graph Convolutional Network (DualGCN)":"DualGCN"}
+{"Regular Expression":"regular expressions"}
+{"K nearest neighbor":"KNN"}
+{"TwiSP":"TwiSP"}
+{"BERTopic":"BERTopic"}
+{"Hugging Face Transformers":"Transformers"}
+{"ORDSAENet":"ORDSAENet"}
+{"SMOTE-ENN":"SMOTE-ENN"}
+{"k-NN":"KNN"}
+{"API webtool":"web API"}
+{"Positive and Negative Affect Schedule (PANAS) scale":"PANAS"}
+{"SEM-PLS":"PLS-SEM"}
+{"Google Neural Machine Translation (NMT)":"GNMT"}
+{"CBOW":"CBOW"}
+{"TF-IDF":"TF-IDF"}
+{"LIWC":"LIWC"}
+{"NRC Lexicon":"NRC Emotion Lexicon"}
+{"xgboost":"XGBoost"}
+{"Topic Modeling":"Topic Modeling"}
+{"Tunicate Swarm Algorithm (TSA)":"TSA"}
+{"Harris Hawks Optimization (HHO) with Simulated Annealing":"HHO-Simulated Annealing"}
+{"Butterfly Optimization Algorithm":"BOA"}
+{"Artificial Neural Networks (ANN)":"ANN"}
+{"kNN":"KNN"}
+{"CNN-RNN":"RNN-CNN"}
+{"AC-BiLSTM":"AC-BiLSTM"}
+{"HLESV":"HLESV"}
+{"SentiWordNet":"SentiWordNet"}
+{"Natural Language Toolkit":"NLTK"}
+{"RapidMiner":"RapidMiner"}
+{"Tableau":"Tableau"}
+{"TF-IDF Vectorizer":"TF-IDF"}
+{"Single Value Decomposition":"Singular Value Decomposition"}
+{"Deep RNN":"RNN"}
+{"MTCNN-LSTM":"MTCNN-LSTM"}
+{"R Studio":"RStudio"}
+{"Maximum Entropy":"Maximum Entropy"}
+{"FS-ABSA":"FS-ABSA"}
+{"KH Coder":"KH Coder"}
+{"R":"R"}
+{"RStudio":"RStudio"}
+{"Visual Studio Code":"Visual Studio Code"}
+{"GPT-3":"GPT-3"}
+{"BERTweet":"BERTweet"}
+{"CONE":"CONE"}
+{"SBERT":"Sentence-BERT"}
+{"MBERT":"mBERT"}
+{"CRF":"CRF"}
+{"T5-base":"T5"}
+{"T5-large":"T5"}
+{"SPAN-BERT":"SpanBERT"}
+{"RACL-BERT":"RACL-BERT"}
+{"Dual-MRC":"Dual-MRC"}
+{"CMLA":"CMLA"}
+{"JET-BERT":"JET"}
+{"NodeXL":"NodeXL"}
+{"Mallet":"MALLET"}
+{"ConText":"ConText"}
+{"CapsNet":"Capsule Network"}
+{"Collective Search":"Collective Search"}
+{"jieba":"jieba"}
+{"Spyder":"Spyder"}
+{"gooseeker":"GooSeeker"}
+{"Gephi":"Gephi"}
+{"Non-Negative Matrix Factorization (NMF)":"NMF"}
+{"Singular Value Decomposition (SVD)":"Singular Value Decomposition"}
+{"Autoencoders":"Autoencoder"}
+{"RapidMiner v9.9":"RapidMiner"}
+{"GREEK-BERT":"GreekBERT"}
+{"Gensim":"Gensim"}
+{"rwalk/gsdmm":"GSDMM"}
+{"spaCy":"spaCy"}
+{"User-Review-Item (URI) Framework":"URI"}
+{"URI Framework":"URI"}
+{"DNN":"DNN"}
+{"Social Bearing":"Social Bearing"}
+{"Bag of Word":"Bag-of-Words"}
+{"SMOTE":"SMOTE"}
+{"Naïve Bayes Classifier":"Naive Bayes"}
+{"BERT+BiLSTM+CNN":"BERT-BiLSTM-CNN"}
+{"PhoBERT":"PhoBERT"}
+{"BERT-RCNN":"BERT-RCNN"}
+{"Weka":"WEKA"}
+{"Linguistic Inquiry Word Count":"LIWC"}
+{"SentiStrength 3.0":"SentiStrength"}
+{"Affective Norms for English Words":"ANEW"}
+{"SenticNet":"SenticNet"}
+{"Stochastic Gradient Descent (SGD)":"SGD"}
+{"Textom":"TEXTOM"}
+{"UCINET 6.0":"UCINET"}
+{"USTM":"USTM"}
+{"JST":"JST"}
+{"Reverse-JST":"RJST"}
+{"ASUM":"ASUM"}
+{"sentimentr":"sentimentr"}
+{"tidytext":"tidytext"}
+{"Jockers–Rinker":"Jockers-Rinker"}
+{"Bing":"Bing"}
+{"AFINN":"AFINN"}
+{"National Research Council Emotion":"NRC Emotion Lexicon"}
+{"Doc2Vec":"doc2vec"}
+{"Stanford POS Tagger":"Stanford POS Tagger"}
+{"Senti Word Net":"SentiWordNet"}
+{"LIBSVM":"LIBSVM"}
+{"Multilayer Perceptron":"MLP"}
+{"Porter Stemmer":"Porter Stemmer"}
+{"KOSELF":"KOSELF"}
+{"Loughran and McDonald (2011) financial dictionary":"Loughran-McDonald Financial Sentiment Lexicon"}
+{"POS2Vec":"POS2Vec"}
+{"Lexicon2VEC":"Lexicon2Vec"}
+{"Word-position2Vec":"word2vec"}
+{"Bi-GRU End-to-End Model with self-attention":"BiGRU"}
+{"Python 3":"Python"}
+{"VADER Sentiment Analyzer":"VADER"}
+{"K Nearest Neighbour":"KNN"}
+{"Extra Tree":"Extra-Trees"}
+{"SGD":"SGD"}
+{"Lexicon-based technique":"Lexicon-based Sentiment Analysis"}
+{"Multimodal Interaction and Fused Graph Convolutional Network (MIFGCN)":"MIFGCN"}
+{"HAN":"HAN"}
+{"VistaNet":"VistaNet"}
+{"LD-MAN":"LD-MAN"}
+{"GAFN":"GAFN"}
+{"HGLNET":"HGLNet"}
+{"Naive Bayes Algorithm":"Naive Bayes"}
+{"Genetic Algorithms":"Genetic Algorithm"}
+{"Dynamic Case-Based Reasoning":"Case-Based Reasoning"}
+{"EBSVM":"SVM"}
+{"Rapid Miner Studio version 9.9":"RapidMiner"}
+{"FBProphet":"Prophet"}
+{"ARIMA":"ARIMA"}
+{"BiLSTMs":"BiLSTM"}
+{"GARCH":"GARCH"}
+{"SEIR":"SEIR"}
+{"decision trees":"Decision Tree"}
+{"artificial neural networks":"ANN"}
+{"Microsoft Azure Sentiment Analysis":"Azure Text Analytics"}
+{"Microsoft Teams":"Microsoft Teams"}
+{"Rapid Miner":"RapidMiner"}
+{"Deep Learning model":"Deep Learning"}
+{"Support Vector Classification (SVC)":"SVC"}
+{"Naive Bayes Classification":"Naive Bayes"}
+{"Sequential minimal optimization with decision tree":"SMO-Decision Tree"}
+{"Multivariate vehicle regression models":"Multivariate Regression"}
+{"Naïve Bayes algorithm":"Naive Bayes"}
+{"Support Vector Machine (SVM) algorithm":"SVM"}
+{"Static and dynamic embedding models":"Word Embeddings"}
+{"ExportComments":"ExportComments"}
+{"Naïve Bayesian":"Naive Bayes"}
+{"CLSTM":"C-LSTM"}
+{"MNB":"Multinomial Naive Bayes"}
+{"DT":"Decision Tree"}
+{"CoreNLP":"Stanford CoreNLP"}
+{"SentiCircles":"SentiCircles"}
+{"ERF-XGB":"Extra-Trees-XGBoost"}
+{"LSIBA-ENN":"LSIBA-ENN"}
+{"CNBL":"CNBL"}
+{"BH-GWO":"BH-GWO"}
+{"SLCABG":"SLCABG"}
+{"Fuzz Sort":"fuzzysort"}
+{"Fuzz Set":"FuzzySet"}
+{"Levenshtein":"Levenshtein distance"}
+{"Bag of Words":"Bag-of-Words"}
+{"Agglomerative Hierarchical Clustering":"Hierarchical Agglomerative Clustering"}
+{"HDBSCAN":"HDBSCAN"}
+{"PyFin-sentiment":"PyFin-Sentiment"}
+{"NTUSD-Fin":"NTUSD-Fin"}
+{"FinBERT":"FinBERT"}
+{"TwitterRoBERTa":"Twitter-roBERTa"}
+{"Self-training through Classifier Disagreement (SCD)":"SCD"}
+{"Domain Adversarial Neural Networks (DANN)":"DANN"}
+{"AHF":"AHF"}
+{"Hier-Joint":"Hier-Joint"}
+{"BERTE-UDA":"BERT-UDA"}
+{"BERTE-CDRG":"BERT-CDRG"}
+{"FEMA":"FEMA"}
+{"RNSCN":"RNSCN"}
+{"AD-SAL":"AD-SAL"}
+{"BERTB":"BERT"}
+{"BERTE":"BERT"}
+{"Vader Lexicon":"VADER"}
+{"SKEP":"SKEP"}
+{"BERT-based machine learning classifier":"BERT"}
+{"VADER analysis tool":"VADER"}
+{"Gibbs Sampling Dirichlet Multinomial Mixture (GSDMM) model":"GSDMM"}
+{"TextBlob package":"TextBlob"}
+{"Multi-instance Attribute-Sentiment (MAS) inference model":"MAS"}
+{"TWINT":"Twint"}
+{"Botometer":"Botometer"}
+{"M3-Inference":"M3inference"}
+{"Ethnicolr":"ethnicolr"}
+{"text2emotion":"text2emotion"}
+{"LDA (Latent Dirichlet Allocation)":"LDA"}
+{"CNN-LSTM":"CNN-LSTM"}
+{"Deep Belief Network":"DBN"}
+{"Python 3.10.0":"Python"}
+{"NVivo 12 Plus":"NVivo"}
+{"Twitter streaming API":"Twitter Streaming API"}
+{"Pytorch-ABSA":"PyABSA"}
+{"StanceRel":"StanceRel"}
+{"RGCN":"R-GCN"}
+{"DistMult":"DistMult"}
+{"Multinomial Naïve Bayes":"Multinomial Naive Bayes"}
+{"BoW":"Bag-of-Words"}
+{"ANN":"ANN"}
+{"AGSK optimization algorithm":"AGSK"}
+{"neuro-fuzzy classifiers":"ANFIS"}
+{"Neural networks":"ANN"}
+{"Fuzzy rule-based classifiers":"Fuzzy Rule-Based Classifier"}
+{"HEFCA":"HEFCA"}
+{"Lexicon":"Lexicon"}
+{"Machine learning":"Machine Learning"}
+{"SentiViT":"SentiViT"}
+{"ViT":"Vision Transformer"}
+{"VS-CNN":"VS-CNN"}
+{"Stochastic Gradient Descent Optimization Algorithm":"SGD"}
+{"SnowNLP":"SnowNLP"}
+{"N-UDDP":"N-UDDP"}
+{"ontology-driven feature engineering":"Ontology-driven Feature Engineering"}
+{"multi-task learning framework":"Multi-Task Learning"}
+{"NA-DLSTM":"NA-DLSTM"}
+{"autoencoder":"Autoencoder"}
+{"MV-DNN":"MV-DNN"}
+{"MLBTWCR":"MLBTWCR"}
+{"AMLDA":"AMLDA"}
+{"Bi-DLSTM":"BiLSTM"}
+{"3W3DT":"3W3DT"}
+{"ABCDM":"ABCDM"}
+{"COXL-net":"COXL-Net"}
+{"Bi-ConvLSTM":"BiConvLSTM"}
+{"Skip-Gram":"skip-gram"}
+{"CenterNet":"CenterNet"}
+{"ACL-SA":"ACL-SA"}
+{"Sentic GCN":"SenticGCN"}
+{"Random Forests":"Random Forest"}
+{"H-SVM":"SVM"}
+{"SVM-RBF":"SVM"}
+{"SVM-IRBF":"SVM"}
+{"Bagging":"Bagging"}
+{"GLMNet":"glmnet"}
+{"Max.Entropy":"Maximum Entropy"}
+{"Linear SVM":"SVM"}
+{"Easy Data Augmentation (EDA)":"EDA"}
+{"Backtranslation":"Back-translation"}
+{"Aspect-level Recurrent Convolutional Neural Network (AARCNN)":"AARCNN"}
+{"Gated-Recurrent Unit (GRU)":"GRU"}
+{"Convolutional Neural Network (CNN)":"CNN"}
+{"Bidirectional Gated Recurrent Unit (Bi-GRU)":"BiGRU"}
+{"Latent Dirichlet Allocation (LDA)":"LDA"}
+{"Recurrent Neural Network (RNN)":"RNN"}
+{"unsupervised convolutional neural network":"CNN"}
+{"latent Dirichlet allocation":"LDA"}
+{"ElecBERT":"ElecBERT"}
+{"PyABSA":"PyABSA"}
+{"COPYCAT":"Copycat"}
+{"SELSUM":"SELSUM"}
+{"SBAD":"SBAD"}
+{"Two-Stage":"Two-Stage"}
+{"JET":"JET"}
+{"GTS":"GTS"}
+{"BMRC":"BERT-MRC"}
+{"Span-ASTE":"Span-ASTE"}
+{"SN-GAT":"SN-GAT"}
+{"Minkowski":"Minkowski distance"}
+{"Euclidean":"Euclidean distance"}
+{"Manhattan":"Manhattan distance"}
+{"Chebyshev":"Chebyshev distance"}
+{"Cosine":"Cosine similarity"}
+{"Jaccard":"Jaccard similarity"}
+{"Hamming":"Hamming distance"}
+{"Chi-square":"Chi-squared test"}
+{"Syuzhet":"syuzhet"}
+{"academictwitteR":"academictwitteR"}
+{"Machine Learning models":"Machine Learning"}
+{"Zhiwang Sentiment Dictionary":"HowNet Sentiment Dictionary"}
+{"bert-base-multilingual-uncased":"mBERT"}
+{"RoBERTuito":"RoBERTuito"}
+{"RuBERT":"RuBERT"}
+{"FCM":"Fuzzy c-means"}
+{"PSO-FCM":"PSO-Fuzzy c-means"}
+{"GA-FCM":"GA-Fuzzy c-means"}
+{"UI-SFI dynamic model":"UI-SFI"}
+{"SIR":"SIR"}
+{"SIS":"SIS"}
+{"VAE-GANs":"VAE-GAN"}
+{"DeepBot":"DeepBot"}
+{"Apache Spark MLlib":"MLlib"}
+{"Apache Hadoop":"Apache Hadoop"}
+{"FAST-LCF-ATEPC":"Fast-LCF-ATEPC"}
+{"AraBERT":"AraBERT"}
+{"MARBERT":"MARBERT"}
+{"QARiB":"QARiB"}
+{"Sent2Bayes":"Sent2Bayes"}
+{"Multinomial Naive Bayes Classifier":"Multinomial Naive Bayes"}
+{"Character to Sentence CNN":"CNN"}
+{"Adaptive Recursive Neural Network":"Recursive Neural Network"}
+{"Lexicon-enhanced neural network":"ANN"}
+{"Neural pooling":"Neural Pooling"}
+{"Tweet-level neural network":"ANN"}
+{"CNN-LSTM hybrid model":"CNN-LSTM"}
+{"CNN and LSTM":"CNN-LSTM"}
+{"Random walk network":"Random Walk"}
+{"CNN and GRU combination":"CNN-GRU"}
+{"Pre-trained word embedding and LSTMs":"Pre-trained Word Embeddings-LSTM"}
+{"Enhanced word vector ensemble":"Word Embeddings Ensemble"}
+{"Convolutional layer with attention and bi-directional LSTM":"CNN-Attention-BiLSTM"}
+{"PLSO":"PLSO"}
+{"NBSVM":"NB-SVM"}
+{"MCCNN":"MCCNN"}
+{"gMLP":"gMLP"}
+{"SCLFT":"SCL-FT"}
+{"Neutrosophic-Aspect-Based Sentiment Analysis (NABSA)":"NABSA"}
+{"Hierarchical LSTM":"Hierarchical LSTM"}
+{"HMM":"HMM"}
+{"HSMM":"HSMM"}
+{"DBNN":"DBN"}
+{"Decision Tree Classifier":"Decision Tree"}
+{"TextBlob Python Library":"TextBlob"}
+{"Naive Bayesian":"Naive Bayes"}
+{"Multinomial Naive Bayesian":"Multinomial Naive Bayes"}
+{"Bernoulli Naive Bayesian":"Bernoulli Naive Bayes"}
+{"K-Nearest Neighbours":"KNN"}
+{"Naive Bayes (NB)":"Naive Bayes"}
+{"Maximum Entropy (ME)":"Maximum Entropy"}
+{"Stochastic Gradient Descent (SGD) classifier":"SGDClassifier"}
+{"Support Vector Classifier (SVC)":"SVC"}
+{"nuSVC":"NuSVC"}
+{"Hybrid R System":"R"}
+{"Cosine Similarity":"Cosine similarity"}
+{"Collaborative Filtering":"Collaborative Filtering"}
+{"Item-based Collaborative Filtering":"Item-based Collaborative Filtering"}
+{"Stochastic Gradient Descent":"SGD"}
+{"Persuasive Argument Prediction Model":"Persuasive Argument Prediction"}
+{"SENSECOR":"SENSECOR"}
+{"IEGA":"IEGA"}
+{"BERT-SPC":"BERT-SPC"}
+{"RGAT-BERT":"RGAT"}
+{"AEN-BERT":"AEN-BERT"}
+{"LCF-BERT":"LCF-BERT"}
+{"Stanford NLP Parser":"Stanford Parser"}
+{"Amazon embedding":"Amazon Titan Embeddings"}
+{"Bag of Words (BoW)":"Bag-of-Words"}
+{"Hierarchical Clustering Techniques":"Hierarchical Clustering"}
+{"LMAEB-CNN":"LMAEB-CNN"}
+{"Intelligent system for public positions on vaccination":"Intelligent System for Public Positions on Vaccination"}
+{"Hybrid model":"Hybrid Model"}
+{"Dynamic topic-sentiment hybrid model":"Dynamic Topic-Sentiment Hybrid Model"}
+{"Valence Aware Dictionary":"VADER"}
+{"Social media analytics":"Social Media Analytics"}
+{"Neural Network":"ANN"}
+{"Fuzzy Control System":"Fuzzy Control System"}
+{"Adaptive Neuro-Fuzzy Inference System":"ANFIS"}
+{"libshorttext":"LibShortText"}
+{"Stanford Tagger":"Stanford POS Tagger"}
+{"Text Blob":"TextBlob"}
+{"Recurrent Neural Networks":"RNN"}
+{"TLI-ASTE":"TLI-ASTE"}
+{"FlauBERT":"FlauBERT"}
+{"CamemBERT":"CamemBERT"}
+{"DistilCamemBERT":"DistilCamemBERT"}
+{"EHO":"Elephant Herding Optimization"}
+{"Link Regression":"Logistic Regression"}
+{"ML":"Machine Learning"}
+{"BD-LSTM":"BiLSTM"}
+{"Gaussian Naïve Bayes":"Gaussian Naive Bayes"}
+{"Selenium":"Selenium"}
+{"Transformer architecture":"Transformer"}
+{"CNN-sigTan-Beta":"CNN"}
+{"ABO-RF":"African Buffalo Optimization-Random Forest"}
+{"Supervised":"Supervised Learning"}
+{"Unsupervised":"Unsupervised Learning"}
+{"Stacked Auto-encoders":"Stacked Autoencoder"}
+{"Aspect Extraction Knowledge Transfer":"Aspect Extraction Knowledge Transfer"}
+{"Fine-tuning BERT":"BERT"}
+{"Supervised Emotional Affect Integration":"Supervised Emotional Affect Integration"}
+{"Domain-independent ABSA Model":"ABSA"}
+{"Graph-based Semi-supervised Learning":"Graph-based Semi-supervised Learning"}
+{"NVivo":"NVivo"}
+{"GPT-3.5":"GPT-3.5"}
+{"bloomz-mt":"BLOOMZ-mt"}
+{"mt0-xxl-mt":"mT0"}
+{"BigScience":"BigScience"}
+{"Unigram":"unigram"}
+{"Bigram":"bigram"}
+{"Trigram":"trigram"}
+{"K-Neighbors":"KNN"}
+{"Linear Support Vector Machine":"SVM"}
+{"AFINN lexicon":"AFINN"}
+{"Bing lexicon":"Bing"}
+{"VOTEBOT":"VoteBot"}
+{"TextCNN":"CNN"}
+{"SI-TS":"SI-TS"}
+{"GAS-ACOS":"GAS"}
+{"USI":"USI"}
+{"Double Propagation-ACOS":"Double Propagation"}
+{"Dash":"Dash"}
+{"TCN":"TCN"}
+{"YouTube Data API":"YouTube Data API"}
+{"Local Sentiment Aggregation (LSA)":"LSA"}
+{"Aspect-based Sentiment Analysis":"ABSA"}
+{"Attention-based LSTM for Aspect-level Sentiment Classification":"AT-LSTM"}
+{"Fuzzy Domain Ontology":"Fuzzy Domain Ontology"}
+{"Ali Xiaomi":"Ali Xiaomi"}
+{"Weibo":"Sina Weibo"}
+{"SentimentIntensityAnalyzer":"VADER"}
+{"SnowballStemmer":"Snowball Stemmer"}
+{"WordNetLemmatizer":"WordNet Lemmatizer"}
+{"ChatGPT":"ChatGPT"}
+{"Araelectra":"AraELECTRA"}
+{"SEN-GAT":"SEN-GAT"}
+{"MGAN":"MGAN"}
+{"AEN":"AEN"}
+{"ASGCN":"ASGCN"}
+{"CDT":"Causal Discovery Toolbox"}
+{"T-GCN":"T-GCN"}
+{"DGEDT":"DGEDT"}
+{"zhconv":"zhconv"}
+{"DBSCAN":"DBSCAN"}
+{"WordNet-Affect":"WordNet-Affect"}
+{"ANEW":"ANEW"}
+{"Dynamic Topic Models":"Dynamic Topic Model"}
+{"Semantic Network Analysis":"Semantic Network Analysis"}
+{"Local Context Focus (LCF)":"LCF"}
+{"RAM":"RAM"}
+{"PyLDAvis":"pyLDAvis"}
+{"NMF":"NMF"}
+{"Fuzzy Logic":"Fuzzy logic"}
+{"SentiStrength_ID":"SentiStrength-ID"}
+{"KeyBERT":"KeyBERT"}
+{"BranchLSTM":"Branch-LSTM"}
+{"Temporal ATT":"Temporal Attention"}
+{"Conversational-GCN":"Conversational GCN"}
+{"Hierarchical Transformer":"Hierarchical Transformer"}
+{"Word Embedding and Ensemble Learning":["Word Embeddings", "Ensemble Learning"]}
+{"Multilayer Perceptron using Emoticon Space Model":"MLP"}
+{"Tweetdeck":"TweetDeck"}
+{"NetBase":"NetBase"}
+{"TalkWalker":"Talkwalker"}
+{"SWNetTR++":"SWNetTR++"}
+{"SentiTurkNet":"SentiTurkNet"}
+{"Naive Bayesian classification":"Naive Bayes"}
+{"Linear Support Vector Classification":"LinearSVC"}
+{"Support Vector Classifier":"SVC"}
+{"VGG16":"VGG-16"}
+{"TextCNN-att":"CNN"}
+{"ATV":"ATV"}
+{"ATVF":"ATVF"}
+{"SparkML":"MLlib"}
+{"NRC Emotion Lexicon":"NRC Emotion Lexicon"}
+{"CAMelBERT":"CAMeLBERT"}
+{"FuzzySentClass":"FuzzySentClass"}
+{"Apache OpenNLP":"Apache OpenNLP"}
+{"NPS4SD":"NPS4SD"}
+{"RoBERTa-FT":"RoBERTa"}
+{"MPT":"MPT"}
+{"AutoP":"AutoP"}
+{"KGCapsAN":"KGCapsAN"}
+{"TPDG":"TPDG"}
+{"LTNBERT":"LTN-BERT"}
+{"SOLMAT":"SOLMAT"}
+{"Odia Morphological Analyzer (OMA)":"Odia Morphological Analyzer"}
+{"OriNet":"OriNet"}
+{"SentiWordNet for Hindi":"Hindi SentiWordNet"}
+{"Hindi Subjective Lexicon (HSL)":"Hindi Subjective Lexicon"}
+{"Hindi Wordnet Affect (HWA)":"Hindi WordNet-Affect"}
+{"ARDOC":"ARDOC"}
+{"Natural Language Toolkit (NLTK)":"NLTK"}
+{"XG-Boost":"XGBoost"}
+{"Recurrent Neural Networks (RNN)":"RNN"}
+{"Google Translate":"Google Translate"}
+{"Yandex Translate":"Yandex Translate"}
+{"Geo-Linguistic Computational Mapping Analysis (G-LCMA)":"G-LCMA"}
+{"SCA":"Sine Cosine Algorithm"}
+{"MA":"Moving Average"}
+{"L-BSJ":"L-BSJ"}
+{"CALD":"Cambridge Advanced Learner's Dictionary"}
+{"RoBERTa-BiLSTM-Attention":"RoBERTa-BiLSTM-Attention"}
+{"W2V":"word2vec"}
+{"ATT-LSTM":"AT-LSTM"}
+{"Text-CNN-ATT":"CNN"}
+{"BER-BiLSTM-ATT":"BERT-BiLSTM-Attention"}
+{"BERT-CNN":"BERT-CNN"}
+{"Recurrent Neural Networks with Attention Mechanism (RNN-AM)":"Attention-based RNN"}
+{"Random Forests (RF)":"Random Forest"}
+{"Sentiment Analysis Engine":"Sentiment Analysis"}
+{"Hybrid Naïve Bayes":"Naive Bayes"}
+{"K-Nearest Neighbor (K-NN)":"KNN"}
+{"LIME":"LIME"}
+{"CountVectorizer":"CountVectorizer"}
+{"TfidfVectorizer":"TF-IDF"}
+{"Multi-Layer Perceptron":"MLP"}
+{"Alchemy API":"AlchemyAPI"}
+{"ELMo":"ELMo"}
+{"SentiBERT":"SentiBERT"}
+{"Multinomial Logistic Regression":"Logistic Regression"}
+{"Light Gradient Boosting Machine":"LightGBM"}
+{"simple neural network":"ANN"}
+{"CONV1D":"Conv1D"}
+{"RUS":"Random Under-Sampling"}
+{"SMOTE-Tomek":"SMOTE-Tomek"}
+{"Octopus Data Collector":"Octoparse"}
+{"Attention-Bi-LSTM":"Attention-BiLSTM"}
+{"Chinese futures financial sentiment dictionary":"Chinese Futures Financial Sentiment Dictionary"}
+{"Exponential Smoothing":"Exponential Smoothing"}
+{"Holt-Winters":"Holt-Winters"}
+{"Support Vector Machine Regression":"SVR"}
+{"BERTimbau":"BERTimbau"}
+{"Learnable Conjunctions Enhanced Model (LCEM)":"LCEM"}
+{"BERT_wwm":"BERT-wwm"}
+{"EBi-SAN":"EBi-SAN"}
+{"DPCNN":"DPCNN"}
+{"BiLSTM+Att":"Attention-BiLSTM"}
+{"MemNet":"MemNet"}
+{"AOA":"AOA"}
+{"Tnet":"TNet"}
+{"QA-B":"QA-BERT"}
+{"NLI-B":"NLI-BERT"}
+{"MacBERT":"MacBERT"}
+{"CRF-Extract-Classify":"Extract-Classify"}
+{"SpERT":"SpERT"}
+{"DiaASQ":"DiaASQ"}
+{"DLUIO":"DLUIO"}
+{"Buy-and-hold SPY":"Buy and Hold (SPY)"}
+{"FollowExpert":"FollowExpert"}
+{"TradML":"Traditional Machine Learning"}
+{"Factorization machines":"Factorization Machines"}
+{"NBR algorithm":"Naive Bayes Regression"}
+{"CBiLSTM":"CNN-BiLSTM"}
+{"AdaBoostM1":"AdaBoost.M1"}
+{"J48":"J48"}
+{"REPTree":"REPTree"}
+{"Media Frame Corpus (MFC)":"Media Frames Corpus"}
+{"TinyML":"TinyML"}
+{"EdgeImpulse":"Edge Impulse"}
+{"TensorFlow Lite":"TensorFlow Lite"}
+{"CNN-LSTM Hybrid":"CNN-LSTM"}
+{"LGBM":"LightGBM"}
+{"KNIME Lexicon-based":"KNIME"}
+{"MPQA":"MPQA"}
+{"Lexicon-based approaches":"Lexicon-based Sentiment Analysis"}
+{"TFIDF Vectorizer":"TF-IDF"}
+{"NLP Tool Kits":"NLTK"}
+{"XGB Classifier":"XGBoost"}
+{"Hadoop MapReduce":"Apache Hadoop MapReduce"}
+{"Binary Brain Storm Optimization (BBSO) algorithm":"BBSO"}
+{"TermFrequency-Inverse Document Frequency (TF-IDF)":"TF-IDF"}
+{"Bi-LSTM based attention network":"Attention-BiLSTM"}
+{"MOSI":"CMU-MOSI"}
+{"federated deep neural network":"Federated Learning"}
+{"Bi-Sense Emoji Embedding (BSEE)":"BSEE"}
+{"Keras Tokenizer":"Tokenizer"}
+{"Word-Guide Attention-Based LSTM":"AT-LSTM"}
+{"Multi-level Attention-Based LSTM":"AT-LSTM"}
+{"Context Fusion Encoding Method":"Context Fusion Encoding"}
+{"ASQP":"Aspect Sentiment Quad Prediction"}
+{"DiaASQMTV":"DiaASQ"}
+{"tweepy.py":"Tweepy"}
+{"SentiWordNet Lexicon":"SentiWordNet"}
+{"TextBlob Lexicon":"TextBlob"}
+{"A Deep Learning-Based Sentiment Analysis System for Tweets in Indonesian Language":"Deep Learning-Based Sentiment Analysis System for Tweets in Indonesian Language"}
+{"A Comparative Analysis of Sentiment Analysis Approaches for Twitter Data":"Comparative Analysis of Sentiment Analysis Approaches for Twitter Data"}
+{"Sentiment Analysis of COVID-19 Tweets Using Machine Learning Techniques":"Sentiment Analysis of COVID-19 Tweets Using Machine Learning Techniques"}
+{"Twitter Sentiment Analysis: A Survey":"Twitter Sentiment Analysis: A Survey"}
+{"COVID-19 Tweet Classification Using Hybrid Machine Learning Techniques":"COVID-19 Tweet Classification Using Hybrid Machine Learning Techniques"}
+{"Adaptive Synthetic Multinomial Naive Bayes":"Multinomial Naive Bayes"}
+{"Adaptive Synthetic k-nearest neighbours":"ADASYN"}
+{"Adaptive Synthetic Random Forest":"ADASYN-Random Forest"}
+{"D-SPAN-ASTE":"D-SPAN-ASTE"}
+{"CMLA+":"CMLA"}
+{"JETt":"JET"}
+{"GTS-BERT":"GTS"}
+{"B-MRC":"BERT-MRC"}
+{"TaKIPI":"Takipi"}
+{"Słowosieć":"plWordNet"}
+{"Sentiment140":"Sentiment140"}
+{"Twittratr":"Twitrratr"}
+{"SocialMention":"Social Mention"}
+{"TipTop":"TipTop"}
+{"TweetFeel":"TweetFeel"}
+{"Bing Liu lexicon":"Bing Liu Opinion Lexicon"}
+{"1DCNN":"CNN"}
+{"Apache Spark":"Apache Spark"}
+{"Natural Language Processing tools":"Natural Language Processing"}
+{"VGG-16":"VGG-16"}
+{"ResNet":"ResNet"}
+{"U-Net":"U-Net"}
+{"Mobile Net":"MobileNet"}
+{"Dense Net":"DenseNet"}
+{"Link Prediction methods":"Link Prediction"}
+{"Neural Network Intelligence":"NNI"}
+{"Roformer":"RoFormer"}
+{"FGM":"Fast Gradient Method"}
+{"RoBERTa-wwm":"RoBERTa-wwm"}
+{"PERT":"PERT"}
+{"Span-based CNN":"CNN"}
+{"Machine learning techniques":"Machine Learning"}
+{"Natural language processing":"Natural Language Processing"}
+{"Lexicon-based methods":"Lexicon-based Sentiment Analysis"}
+{"Cartesian-ASQP":"Cartesian-ASQP"}
+{"TASO-BERT-Linear":"TASO-BERT"}
+{"TASO-BERT-CRF":"TASO-BERT"}
+{"GAS":"GAS"}
+{"MATLAB":"MATLAB"}
+{"OPINE":"OPINE"}
+{"Sentiment analysis: Adjectives and adverbs":"Sentiment Analysis"}
+{"Opinion digger":"OpinionDigger"}
+{"Sentiment classification using lexical contextual sentence structure":"Sentiment Analysis"}
+{"Interdependent latent Dirichlet allocation":"Interdependent LDA"}
+{"A joint model of feature mining and sentiment analysis for product review rating":"Joint Model of Feature Mining and Sentiment Analysis"}
+{"Transformer-CNN-BiLSTM":"Transformer-CNN-BiLSTM"}
+{"Deep Learning":"Deep Learning"}
+{"TunRoBERTa":"TunRoBERTa"}
+{"BERT-LDA":"BERT-LDA"}
+{"GraphSAGE":"GraphSAGE"}
+{"W2VLDA":"W2VLDA"}
+{"PSO":"PSO"}
+{"SentiCRF":"SentiCRF"}
+{"Attention-based LSTM":"AT-LSTM"}
+{"Co-clustering":"Co-clustering"}
+{"MaxEnt-JABST":"Maximum Entropy-JABST"}
+{"JABST":"JABST"}
+{"Sci-kit Learn":"scikit-learn"}
+{"Google word2vec":"word2vec"}
+{"CABASC":"CABASC"}
+{"SDGCN":"SDGCN"}
+{"ASCNN":"ASCNN"}
+{"ASTCN":"ASTCN"}
+{"AFFGCN":"AFFGCN"}
+{"SenticGCN":"SenticGCN"}
+{"SenticGCN BERT":"SenticGCN-BERT"}
+{"Probabilistic Neural Network (PNN)":"PNN"}
+{"MaxE":"Maximum Entropy"}
+{"PBF":"PBF"}
+{"FTOP":"FTOP"}
+{"JET_t":"JET"}
+{"JET_o":"JET"}
+{"SAMBERT":"SAMBERT"}
+{"SBC":"SBC"}
+{"CoFO":"CoFO"}
+{"RMI-BSSL":"RMI-BSSL"}
+{"GWU-Clustering":"GWU-Clustering"}
+{"FF":"Feedforward Neural Network"}
+{"IFI":"IFI"}
+{"PSWAM":"PSWAM"}
+{"ABSA":"ABSA"}
+{"OAR":"OAR"}
+{"Liu's lexicon":"Bing Liu Opinion Lexicon"}
+{"Filtered-LDA":"LDA"}
+{"Multi-Attention Fusion Modeling (Multi-AFM)":"Multi-AFM"}
+{"LDA Models":"LDA"}
+{"Topic Model":"Topic Modeling"}
+{"Deep-ABSA":"ABSA"}
+{"Attention":"Attention"}
+{"Pattern for Python":"Pattern"}
+{"python-based valence aware dictionary for sentiment reasoning":"VADER"}
+{"Transformer based models":"Transformer"}
+{"Opinion Finder":"OpinionFinder"}
+{"Google Profile of Mood States":"GPOMS"}
+{"Voting Ensemble":"Voting"}
+{"Haar Cascade Classifier":"Haar Cascade"}
+{"Beautiful Soup4":"Beautiful Soup"}
+{"LSTM-CNN":"CNN-LSTM"}
+{"lexicon-based method":"Lexicon-based Sentiment Analysis"}
+{"BiGRU-attention model":"Attention-BiGRU"}
+{"Tensor Blending Network (TBN)":"Tensor Blending Network"}
+{"SECA":"SECA"}
+{"MMSC":"MMSC"}
+{"CV":"Cross-Validation"}
+{"PAG":"Partial Ancestral Graph"}
+{"TF-IDF + SVM":"TF-IDF-SVM"}
+{"TF-IDF + Logistic regression":"TF-IDF-Logistic Regression"}
+{"TF-IDF + Random forest":"TF-IDF-Random Forest"}
+{"TF-IDF + Multinomial Naive Bayes":"TF-IDF-Multinomial Naive Bayes"}
+{"IndicBERT":"IndicBERT"}
+{"BP Neural Network":"BPNN"}
+{"Bernoulli’s Naive Bayes":"Bernoulli Naive Bayes"}
+{"Complement Naive Bayes":"Complement Naive Bayes"}
+{"Opinion mining":"Opinion Mining"}
+{"Linear Regression":"Linear Regression"}
+{"K-means clustering":"k-means"}
+{"Gaussian mixture":"Gaussian Mixture Model"}
+{"WangchanBERTa":"WangchanBERTa"}
+{"BERT-family language model":"BERT"}
+{"LCF-ATEPC":"LCF-ATEPC"}
+{"DeBERTa-MLP":"DeBERTa-MLP"}
+{"InstructABSA":"InstructABSA"}
+{"LSTM-RNN":"LSTM"}
+{"N-gram":"n-gram"}
+{"Review Supervised Approaches: RF, NB, NBM, SVM":["Random Forest", "Naive Bayes", "Multinomial Naive Bayes", "SVM"]}
+{"Review Supervised Approaches: NBM and Multi-criteria heuristic function":["Multinomial Naive Bayes", "Multi-criteria heuristic function"]}
+{"Li-unified":"Li-unified"}
+{"GCN":"GCN"}
+{"BERT":"BERT","Refined Rules":"Rule-based Approach","Rank-based TF-IDF":"TF-IDF"}
+{"PARAPHRASE":"Paraphrase"}
+{"BERT-ADA":"BERT-ADA"}
+{"SILTN":"SILTN"}
+{"MFCC":"MFCC"}
+{"Sentiment Connection Weights":"Sentiment Connection Weights"}
+{"MAAM":"MAAM"}
+{"HyperGCN":"HyperGCN"}
+{"DualGCN":"DualGCN"}
+{"LAL-Parser":"LAL-Parser"}
+{"rtweet package":"rtweet"}
+{"BanglaBERT":"BanglaBERT"}
+{"BanglishBERT":"BanglishBERT"}
+{"Stochastic Submodular Summarization (SGS)":"SGS"}
+{"Integer Linear Programming":"ILP"}
+{"SenticNet 6":"SenticNet"}
+{"KryptoOracle":"KryptoOracle"}
+{"SRNN-MAFM":"SRNN-MAFM"}
+{"CSO-LSTMNN":"CSO-LSTM"}
+{"PSO-LSTM":"PSO-LSTM"}
+{"SAPCP":"SAP Cloud Platform"}
+{"SCN":"SCN"}
+{"SWN":"SentiWordNet"}
+{"Amazon Web Analysis App":"Amazon Web Analysis"}
+{"attention mechanism":"Attention"}
+{"Random Forest Classifier":"Random Forest"}
+{"Support Vector Machine-Classifier":"SVM"}
+{"Naïve bays":"Naive Bayes"}
+{"Bayesian Logistic Regression":"Bayesian Logistic Regression"}
+{"DMNB":"Discriminative Multinomial Naive Bayes"}
+{"Inception-V3":"Inception-v3"}
+{"Issue Supervised Approaches: Random Forest (RF), Naïve Bayes (NB), fastText":["Random Forest", "Naive Bayes", "fastText"]}
+{"Review Supervised Approaches: k-Nearest Neighbors (kNN), Multinomial NB (MNB), Support Vector Machines (SVM), Multilayer Perceptron (MLP), and One-Class SVM (OCSVM)":["KNN", "Multinomial Naive Bayes", "SVM", "MLP", "One-Class SVM"]}
+{"RF":"Random Forest"}
+{"Machine Learning, Deep Learning and genetics Algorithms":["Machine Learning", "Deep Learning", "Genetic Algorithm"]}
+{"Naive Bayes and Random Forest, Logistic Regression":["Naive Bayes", "Random Forest", "Logistic Regression"]}
+{"Naïve Bayes (NB)":"Naive Bayes"}
+{"NB":"Naive Bayes"}
+{"Python Libraries (Pandas, NumPy, Requests, BeautifulSoup, NLTK, spaCy, gensim, TextBlob)":["pandas", "NumPy", "Requests", "Beautiful Soup", "NLTK", "spaCy", "Gensim", "TextBlob"]}
+{"Requests":"Requests"}
+{"Transfer Learning":"Transfer Learning"}
+{"Twitter Search API":"Twitter Search API"}
+{"IndoBERT":"IndoBERT"}
+{"R package rvest":"rvest"}
+{"Web scraping R package rvest":"rvest"}
+{"R Tool":"R"}
+{"Semi-supervised CNN":"CNN"}
+{"Probabilistic Neural Network":"PNN"}
+{"Soft Voting":"Soft Voting"}
+{"Sentiment Selector":"Sentiment Selector"}
+{"CNN-BiLSTM-Attention model":"CNN-BiLSTM-Attention"}
+{"Senti-LSTM":"Senti-LSTM"}
+{"CNN-BiLSTM":"CNN-BiLSTM"}
+{"TFIDF":"TF-IDF"}
+{"Hard Voting Classifier":"Hard Voting"}
+{"Tweet feel":"TweetFeel"}
+{"ME":"Maximum Entropy"}
+{"Boosted Random Forest":"Boosted Random Forest"}
+{"Maximum Entropy Method":"Maximum Entropy"}
+{"Twitter sentiment tools":"Twitter Sentiment Tools"}
+{"Valence Aware Dictionary and sEntiment Reasoner (VADER)":"VADER"}
+{"sklearn":"scikit-learn"}
+{"W-WSD":"W-WSD"}
+{"Bidirectional GRU":"BiGRU"}
+{"RNN with LSTM":"LSTM"}
+{"SentiCNN":"SentiCNN"}
+{"Apache Kafka":"Apache Kafka"}
+{"BERT base":"BERT"}
+{"BERT big":"BERT"}
+{"Emoji-Based Models":"Emoji-Based Models"}
+{"TensorFlow Datasets":"TensorFlow Datasets"}
+{"Grounded Theory":"Grounded Theory"}
+{"Discriminative multinomial naive Bayes":"Discriminative Multinomial Naive Bayes"}
+{"n-gram analysis":"n-gram"}
+{"machine learning algorithms":"Machine Learning"}
+{"restricted Boltzmann machine":"RBM"}
+{"Microsoft Azure Machine Learning Studio":"Azure Machine Learning Studio"}
+{"Bayes Point Machine":"Bayes Point Machine"}
+{"MoviePy":"MoviePy"}
+{"Hugging Face NLP package":"Transformers"}
+{"SENTA":"SENTA"}
+{"GraphBERT":"GraphBERT"}
+{"Ensemble Classifier":"Ensemble Learning"}
+{"Python Fastai":"fastai"}
+{"ULMFiT":"ULMFiT"}
+{"AWD-LSTM":"AWD-LSTM"}
+{"PostgreSQL":"PostgreSQL"}
+{"Adam":"Adam"}
+{"GBM":"Gradient Boosting Machine"}
+{"CNN-Bi-GRU":"CNN-BiGRU"}
+{"CNN-Bi-LSTM":"CNN-BiLSTM"}
+{"Logistic Regression (LR)":"Logistic Regression"}
+{"Decision Tree (DT)":"Decision Tree"}
+{"Rocchio classifier":"Rocchio"}
+{"MPQA corpus":"MPQA"}
+{"Lexicon-based system":"Lexicon-based Sentiment Analysis"}
+{"SW dictionary":"SentiWordNet"}
+{"Google cloud prediction":"Google Cloud Prediction API"}
+{"IBM Watson text analytics":"IBM Watson"}
+{"Meaning cloud":"MeaningCloud"}
+{"StreamCrab":"StreamCrab"}
+{"LMD":"Loughran-McDonald Financial Sentiment Lexicon"}
+{"HIV-4":"Harvard IV-4"}
+{"Dynamic Architecture for Artificial Neural Networks (DAN2)":"DAN2"}
+{"Voting classifier":"Voting"}
+{"Random Forests Classifier":"Random Forest"}
+{"CIPTA":"CIPTA"}
+{"RoBERTa-Base":"RoBERTa"}
+{"PET-BERT":"PET"}
+{"GPT2":"GPT-2"}
+{"IPET-BERT":"iPET"}
+{"GPT-3.5-Turbo":"GPT-3.5"}
+{"ChatGLM-6B":"ChatGLM"}
+{"PTT Tool":"PTT"}
+{"Stanford Dissertation Browser":"Stanford Dissertation Browser"}
+{"Jigsaw":"Jigsaw"}
+{"Scatterblogs":"Scatterblogs"}
+{"Double Tree":"DoubleTree"}
+{"Bi-directional Long Short-Term Memory":"BiLSTM"}
+{"Convolutional Neural Network Long Short-Term Memory":"CNN-LSTM"}
+{"Enhanced XG Boost":"XGBoost"}
+{"Tailored Random Forest":"Random Forest"}
+{"Ada Boost":"AdaBoost"}
+{"Gradient Boost":"Gradient Boosting"}
+{"Sentiment Analysis System":"Sentiment Analysis"}
+{"One-Class SVM":"One-Class SVM"}
+{"OCSVM":"One-Class SVM"}
+{"rvest":"rvest"}
+{"fastai":"fastai"}
+{"RBM":"RBM"}
+{"PNN":"PNN"}
+{"Hard Voting":"Hard Voting"}
+{"Soft Voting Classifier":"Soft Voting"}
+{"Voting Ensemble Classifier":"Voting"}
+{"Machine learning applications":"Machine Learning"}
+{"Bayesian Network":"Bayesian Network"}
+{"CNN-BiGRU":"CNN-BiGRU"}
+{"MCNN-MA":"MCNN-MA"}
+{"Encoder-decoder LSTM":"Encoder-Decoder LSTM"}
+{"Squeeze-and-excitation attention layer":"Squeeze-and-Excitation"}
+{"CNN with Attention network":"CNN-Attention"}
+{"CNN+Bi-LSTM":"CNN-BiLSTM"}
+{"Active Community Opinion Network Mining and Maximization (ACOMax)":"ACOMax"}
+{"Opinion Based Influence Network (OBIN)":"OBIN"}
+{"aCtive Opinion Estimator (CONE)":"CONE"}
+{"Social Post Opinion Miner (SPOM)":"SPOM"}
+{"Joint Opinion Miner":"Joint Opinion Miner"}
+{"OpinionMiner":"OpinionMiner"}
+{"Fuzzy NN":"Fuzzy Neural Network"}
+{"Hadoop":"Apache Hadoop"}
+{"Hive":"Apache Hive"}
+{"Pig":"Apache Pig"}
+{"Flask":"Flask"}
+{"CNN_LSTM model":"CNN-LSTM"}
+{"WLDA-Apriori model":"WLDA-Apriori"}
+{"WAM":"WAM"}
+{"Affective Model":"Affective Model"}
+{"Twitter Crawler":"Twitter Crawler"}
+{"Russell Circumplex Model":"Russell's Circumplex Model"}
+{"Syntax-Aware Transformer (SA-Transformer)":"SA-Transformer"}
+{"Graph Convolution Networks (GCN)":"GCN"}
+{"LDA model":"LDA"}
+{"Ant Colony Optimization":"Ant Colony Optimization"}
+{"Expert Systems":"Expert Systems"}
+{"Knowledge Graphs":"Knowledge Graph"}
+{"Rule-based Expert System":"Rule-based Expert System"}
+{"LDAvis":"pyLDAvis"}
+{"ML classification algorithms (Logistics Regression, Tuned Logistics Regression, Support Vector Classifier, Tuned Support Vector Classifier)":["Logistic Regression", "SVC"]}
+{"Random Logistic Vector (RLV)":"RLV"}
+{"Auto-labeled Max-Ent Model (AMEM)":"AMEM"}
+{"Item-based Collaborative Filtering (ITEMCF)":"Item-based Collaborative Filtering"}
+{"Embedding layer":"Embedding Layer"}
+{"Gaussian":"Gaussian"}
+{"ranking algorithm":"Ranking Algorithm"}
+{"VADER Sentiment Intensity Analyzer":"VADER"}
+{"Textblob Naive Bayes Analyzer":"TextBlob"}
+{"Porter Stemmer Algorithm":"Porter Stemmer"}
+{"Association Rule Mining":"Association Rule Mining"}
+{"Hybrid CNN-LSTM":"CNN-LSTM"}
+{"GRU-LSTM":"GRU-LSTM"}
+{"Deep Learning models":"Deep Learning"}
+{"Term Frequency-Inverse Document Frequency":"TF-IDF"}
+{"Generative Adversarial Networks":"GAN"}
+{"Support Expectation-Maximization (SEM)":"SEM"}
+{"Universal Dependency (UD) Project":"Universal Dependencies"}
+{"ufal.udpipe":"UDPipe"}
+{"Stanford Dependency Parser":"Stanford Parser"}
+{"Tule":"Tule"}
+{"Recursive Neural Tensor Network":"RNTN"}
+{"ConceptNet ontology":"ConceptNet"}
+{"Gaussian mixture vectors":"Gaussian Mixture Model"}
+{"EMLo Embedding":"ELMo"}
+{"Negative Stopwords Aware Sentiment Analysis (NSASA)":"NSASA"}
+{"Lexicon-based approach":"Lexicon-based Sentiment Analysis"}
+{"Deep Learning Technology":"Deep Learning"}
+{"Simple Sequential LSTM":"LSTM"}
+{"Unigram Sentiwordnet":"SentiWordNet"}
+{"Multiple Stacked Attention Mechanism (MSAM)":"MSAM"}
+{"GME-LSTM":"GME-LSTM"}
+{"MARN":"MARN"}
+{"DialogueRNN":"DialogueRNN"}
+{"BC-LSTM":"BC-LSTM"}
+{"Multilogue-Net":"Multilogue-Net"}
+{"Con-BIAM":"Con-BIAM"}
+{"AMF-BiGRU":"AMF-BiGRU"}
+{"MMMU-BA":"MMMU-BA"}
+{"MAM":"MAM"}
+{"CIM-Att":"CIM-Att"}
+{"Graph-MFN":"Graph-MFN"}
+{"Long Short-Term Memory (LSTM)":"LSTM"}
+{"R language":"R"}
+{"python lexicon dictionary":"Lexicon"}
+{"LCR-Rot-hop++":"LCR-Rot-hop++"}
+{"LCR-Rot-hop":"LCR-Rot-hop"}
+{"NLTK's Vader Analyzer":"VADER"}
+{"Yahoo! Finance API":"Yahoo Finance API"}
+{"Auto-Regressive Moving Average (ARIMA)":"ARIMA"}
+{"Delta Naive Bayes":"Delta Naive Bayes"}
+{"Decision Trees (DT)":"Decision Tree"}
+{"K-means clustering detection algorithm":"k-means"}
+{"BM25 model":"BM25"}
+{"Singular Value Decomposition":"Singular Value Decomposition"}
+{"Octopus collector":"Octoparse"}
+{"deep_translator":"deep-translator"}
+{"Multinomial-NB":"Multinomial Naive Bayes"}
+{"Ridge Classifier":"Ridge Classifier"}
+{"AdaBoostClassifier":"AdaBoost"}
+{"Cognitive Dictionary":"Cognitive Dictionary"}
+{"Python SeleniumWebDriver":"Selenium"}
+{"CatBoost Classifier":"CatBoost"}
+{"Catboost Recurrent Neural Framework (CRNF)":"CRNF"}
+{"SocialGrep Exports":"SocialGrep"}
+{"N-grams":"n-gram"}
+{"Label Encoder":"LabelEncoder"}
+{"Latent Semantic Analysis":"LSA"}
+{"BiAffine":"Biaffine"}
+{"Multi Layer Perceptron (MLP)":"MLP"}
+{"Lexicon-Enhanced Sentiment Analysis Framework":"Lexicon-Enhanced Sentiment Analysis"}
+{"Twitter Sentiment Analysis Framework Using A Hybrid Classification Scheme":"Hybrid Classification Scheme"}
+{"SEBA":"SEBA"}
+{"Hyperparameter Tuning with Grid Search":"Grid Search"}
+{"Support Vector Machine Radial Basis Function":"SVM-RBF"}
+{"eXtreme Gradient Boosting":"XGBoost"}
+{"Python software":"Python"}
+{"AraWord2Vec":"AraWord2Vec"}
+{"AraVec":"AraVec"}
+{"Megaptera Whale Optimization-based Adaptive LSTM":"Megaptera Whale Optimization-LSTM"}
+{"Spider Monkey Crow Optimization Algorithm":"Spider Monkey Crow Optimization"}
+{"Multi-layer Convolutional Neural Network":"CNN"}
+{"Multitask Learning Model":"Multi-Task Learning"}
+{"ParsBERT":"ParsBERT"}
+{"CNN+BiLSTM":"CNN-BiLSTM"}
+{"Bag-of-words":"Bag-of-Words"}
+{"Word Embeddings":"Word Embeddings"}
+{"Deep Neural Network":"DNN"}
+{"Lexicon Based":"Lexicon-based Sentiment Analysis"}
+{"Python crawler":"web crawler"}
+{"Pyecharts":"pyecharts"}
+{"Lesk Algorithm":"Lesk Algorithm"}
+{"Char-CNN":"CharCNN"}
+{"ZEN":"ZEN"}
+{"xlm-roberta-large-xnli":"XLM-RoBERTa"}
+{"XML-RoBERTa-large":"XLM-RoBERTa"}
+{"ABWE":"ABWE"}
+{"Embedding-100":"Word Embeddings"}
+{"CNN-Maxpooling":"CNN"}
+{"KNeighbors":"KNN"}
+{"LogisticRegression":"Logistic Regression"}
+{"RandonForest":"Random Forest"}
+{"DecisionTree":"Decision Tree"}
+{"Simple10":"Simple10"}
+{"Embedding-32-":"Word Embeddings"}
+{"Embedding-32-Maxpooling":"Word Embeddings"}
+{"OPSUM":"OPSUM"}
+{"XLNet-CNN":"XLNet-CNN"}
+{"XLNet-BiLSTM":"XLNet-BiLSTM"}
+{"BiLSTM-CNN":"BiLSTM-CNN"}
+{"DistilBERT-base-uncased":"DistilBERT"}
+{"Python request library":"Requests"}
+{"Elasticsearch":"Elasticsearch"}
+{"DeepFinancial":"DeepFinancial"}
+{"Google-Profile Mood State":"GPOMS"}
+{"WoBERT":"WoBERT"}
+{"Simple RNN":"RNN"}
+{"spaCy Dependency Parser":"spaCy"}
+{"Opinion lexicon":"Bing Liu Opinion Lexicon"}
+{"Action-verb lexicon":"Action-Verb Lexicon"}
+{"Non-aspect noun lexicon":"Non-Aspect Noun Lexicon"}
+{"word2vector":"word2vec"}
+{"Deep Neural Networks":"DNN"}
+{"iCARE":"iCARE"}
+{"W-InCF":"W-InCF"}
+{"IRS-T2D":"IRS-T2D"}
+{"LR-CNN":"LR-CNN"}
+{"SDRN":"SDRN"}
+{"SpanMlt":"SpanMlt"}
+{"OTE-MTL":"OTE-MTL"}
+{"Word Embedding":"Word Embeddings"}
+{"Hedonometer":"Hedonometer"}
+{"K-Nearest Neighbors (KNN)":"KNN"}
+{"Naive Bayes Classifier (NBC)":"Naive Bayes"}
+{"SciBERT":"SciBERT"}
+{"Convolutional Neural Networks":"CNN"}
+{"XGBoost Classifier":"XGBoost"}
+{"Lexicoder Sentiment Dictionary":"Lexicoder Sentiment Dictionary"}
+{"Twitter Developer API":"Twitter API"}
+{"News API":"News API"}
+{"XGB":"XGBoost"}
+{"Adaptive Rider Feedback Artificial Tree Optimization-Based Deep Neuro-Fuzzy Network (A-RFATO-based DNFN)":"A-RFATO-DNFN"}
+{"AL-SSVAE":"AL-SSVAE"}
+{"GRNN-SR":"GRNN-SR"}
+{"RFATO-based deep RNN":"RFATO-RNN"}
+{"cosine function-based algorithm":"Cosine similarity"}
+{"Xatkit":"Xatkit"}
+{"Evatalk":"Evatalk"}
+{"RTweet":"rtweet"}
+{"Hootsuite":"Hootsuite"}
+{"Digimind":"Digimind"}
+{"Google Natural Language API":"Google Cloud Natural Language API"}
+{"Brandwatch":"Brandwatch"}
+{"Mentionlytics":"Mentionlytics"}
+{"Textrics":"Textrics"}
+{"Emotional dictionary":"Emotion Lexicon"}
+{"Word2vec-LSTM":"word2vec-LSTM"}
+{"BERT-BextCNN":"BERT-TextCNN"}
+{"BERT-BiLSTM":"BERT-BiLSTM"}
+{"DL":"Deep Learning"}
+{"SEM":"Structural Equation Modeling"}
+{"Neural Networks (NN)":"ANN"}
+{"LDA-Bert":"LDA-BERT"}
+{"TextRank":"TextRank"}
+{"Logistic Regression Model":"Logistic Regression"}
+{"Linear SVC Model":"LinearSVC"}
+{"Bernoulli NB Model":"Bernoulli Naive Bayes"}
+{"RNSA":"RNSA"}
+{"Contextual Analysis (CA)":"Contextual Analysis"}
+{"Deep Intelligent Contextual Embedding for Twitter (DICET)":"DICET"}
+{"Some-Trend":"Some-Trend"}
+{"Hashing Vector":"HashingVectorizer"}
+{"Amazon's online product reviews":"Amazon Product Reviews"}
+{"STRUMKNN":"STRUMKNN"}
+{"Linear Support Vector Classifiers":"LinearSVC"}
+{"Pachinko Allocation Model (PAM)":"PAM"}
+{"Probabilistic Latent Semantic Analysis (PLSA)":"PLSA"}
+{"Latent Semantic Analysis (LSA)":"LSA"}
+{"seq2seq":"Seq2Seq"}
+{"M-BERT":"mBERT"}
+{"Semantic Role Labeling (SRL)":"Semantic Role Labeling"}
+{"SWRL method":"SWRL"}
+{"S-LSTM":"S-LSTM"}
+{"ROS-NCL":"ROS-NCL"}
+{"ENN":"Edited Nearest Neighbors"}
+{"Tomek Links":"Tomek Links"}
+{"SMOTE-RkNN":"SMOTE-RkNN"}
+{"CSMOUTE":"CSMOUTE"}
+{"MC-CCR":"MC-CCR"}
+{"MCMTD":"MCMTD"}
+{"HybridDA":"HybridDA"}
+{"Gradient Boosting Classifier":"Gradient Boosting"}
+{"Ensemble Learning":"Ensemble Learning"}
+{"Deep neural network with glove embedding":"DNN-GloVe"}
+{"Django":"Django"}
+{"Bootstrap":"Bootstrap"}
+{"Scrapy-Redis":"Scrapy-Redis"}
+{"SRD-OSGRU":"SRD-OSGRU"}
+{"White Shark Optimizer":"White Shark Optimizer"}
+{"Stacked Gated Recurrent Unit":"Stacked GRU"}
+{"Firefly with Levy and Multilayer Perceptron (FF-MLP)":"FF-MLP"}
+{"MaxEnt":"Maximum Entropy"}
+{"Rocchio's Algorithm":"Rocchio"}
+{"Decision Tree Algorithm":"Decision Tree"}
+{"MLformer":"MLformer"}
+{"Deep Average Network":"DAN"}
+{"RegEx":"regular expressions"}
+{"Seaborn":"seaborn"}
+{"VAD":"VAD"}
+{"Count Vectorizer":"CountVectorizer"}
+{"Amazon Comprehend":"Amazon Comprehend"}
+{"Google Cloud Services":"Google Cloud"}
+{"SentiWordNet 3.0":"SentiWordNet"}
+{"k-Nearest Neighbors (k-NN)":"KNN"}
+{"Semi-supervised Sequence Learning":"Semi-supervised Learning"}
+{"Embeddings from Language Models (ELMo)":"ELMo"}
+{"Universal Language Model Fine-tuning (ULMFit)":"ULMFiT"}
+{"Cross-view Recurrent Neural Network Pair":"Cross-view RNN"}
+{"FACET":"FACET"}
+{"COVAREP":"COVAREP"}
+{"Sentiment140 Dataset":"Sentiment140"}
+{"Python Twitter API":"Twitter API"}
+{"Lexicon based techniques":"Lexicon-based Sentiment Analysis"}
+{"Machine learning based approach":"Machine Learning"}
+{"RemBERT":"RemBERT"}
+{"Simple Transformers":"Simple Transformers"}
+{"tm":"tm"}
+{"Gradient Boosting Machines":"Gradient Boosting Machine"}
+{"EEAS":"EEAS"}
+{"JRoBERTa":"JRoBERTa"}
+{"JSBERT":"JSBERT"}
+{"Moroccan YouTube Corpus (MYC)":"MYC"}
+{"SANA":"SANA"}
+{"Tharwa":"Tharwa"}
+{"SIAAC":"SIAAC"}
+{"SauDiSenti":"SauDiSenti"}
+{"ASA":"ASA"}
+{"ArSAS":"ArSAS"}
+{"HARD":"HARD"}
+{"Aylien Text API":"AYLIEN"}
+{"Text Analytics API":"Azure Text Analytics"}
+{"Alchemy Language API":"AlchemyAPI"}
+{"TF-IDF with Domain Specific Lexicon":"TF-IDF"}
+{"NLTK packages 'punkt' and 'stopwords'":"NLTK"}
+{"TF–IDF":"TF-IDF"}
+{"BERT-Base-uncased":"BERT"}
+{"Hybrid Support Vector Machine with Ant Colony Optimization (HSVMACO)":"HSVMACO"}
+{"Adaboosting with SVM":"AdaBoost-SVM"}
+{"Public Maturity Assessment on Official Statistics (PMAOS)":"PMAOS"}
+{"Intelligence Media Analysis (IMA) software":"IMA"}
+{"Natural Language Processing (NLP)":"Natural Language Processing"}
+{"SentiBERT-BiLSTM-CNN":"SentiBERT-BiLSTM-CNN"}
+{"Ticket":"Ticket"}
+{"Recommendation systems":"Recommender Systems"}
+{"Sentiment analyzers":"Sentiment Analysis"}
+{"DFM (Deep Fusion Model)":"DFM"}
+{"Stacked LSTM":"Stacked LSTM"}
+{"Stacked GRU":"Stacked GRU"}
+{"LSTM + CNN":"CNN-LSTM"}
+{"GRU + CNN":"CNN-GRU"}
+{"CRbSA":"CRbSA"}
+{"General word counting":"Word Count"}
+{"WordCloud":"WordCloud"}
+{"CNN+LSTM":"CNN-LSTM"}
+{"Hidden Markov Model":"HMM"}
+{"KoBERT":"KoBERT"}
+{"Arabvec":"AraVec"}
+{"attention-based CNN-LSTM model":"Attention-CNN-LSTM"}
+{"Long Short-Term Memory Networks":"LSTM"}
+{"Attention Networks":"Attention"}
+{"AFINN-111":"AFINN"}
+{"AraFT":"AraFT"}
+{"Arabic_news":"Arabic News Dataset"}
+{"ASA (Arabic Sentiment Analysis) framework":"ASA"}
+{"Moroccan Sentiment Analysis Corpus (MSAC)":"MSAC"}
+{"SentiStrength3":"SentiStrength"}
+{"Machine learning approach":"Machine Learning"}
+{"Emo2Vec":"Emo2Vec"}
+{"HyRank":"HyRank"}
+{"Modified Salp Swarm Algorithm":"Salp Swarm Algorithm"}
+{"Decision Table":"Decision Table"}
+{"Genetic Algorithm":"Genetic Algorithm"}
+{"CatBoost":"CatBoost"}
+{"MapReduce":"Apache Hadoop MapReduce"}
+{"Issue Supervised Approaches: Random Forest (RF), Naïve Bayes (NB), fastText":["Random Forest", "Naive Bayes", "fastText"]}
+{"Review Supervised Approaches: k-Nearest Neighbors (kNN), Multinomial NB (MNB), Support Vector Machines (SVM), Multilayer Perceptron (MLP), and One-Class SVM (OCSVM)":["KNN", "Multinomial Naive Bayes", "SVM", "MLP", "One-Class SVM"]}
+{"Review Multi-label Active Learning with Auxiliary Learner (Logistic Regression, SVM)":["Multi-label Active Learning with Auxiliary Learner", "Logistic Regression", "SVM"]}
+{"Review Supervised Approaches: RF, NB, NBM, SVM":["Random Forest", "Naive Bayes", "Multinomial Naive Bayes", "SVM"]}
+{"Machine Learning, Deep Learning and genetics Algorithms":["Machine Learning", "Deep Learning", "Genetic Algorithm"]}
+{"Naive Bayes and Random Forest, Logistic Regression":["Naive Bayes", "Random Forest", "Logistic Regression"]}
+{"Support Vector Machines (SVM)":"SVM"}
+{"BERT, Refined Rules, Rank-based TF-IDF":["BERT", "Rule-based Approach", "TF-IDF"]}
+{"Python Libraries (Pandas, NumPy, Requests, BeautifulSoup, NLTK, spaCy, gensim, TextBlob)":["pandas", "NumPy", "Requests", "Beautiful Soup", "NLTK", "spaCy", "Gensim", "TextBlob"]}
+{"Word Embedding and Ensemble Learning":["Word Embeddings", "Ensemble Learning"]}
+{"ML classification algorithms (Logistics Regression, Tuned Logistics Regression, Support Vector Classifier, Tuned Support Vector Classifier)":["Logistic Regression", "SVC"]}
+{"Bidirectional Gated Recurrent Unit (BiGRU)":"BiGRU"}
+{"Extra-Trees":"Extra-Trees"}
+{"Gradient Boosting Machine":"Gradient Boosting Machine"}
+{"OpinionFinder":"OpinionFinder"}
+{"SVC":"SVC"}
+{"Amazon's online product reviews":"Amazon Product Reviews"}
+{"NRC":"NRC Emotion Lexicon"}
+{"C-LSTM":"C-LSTM"}
+{"Pattern":"Pattern"}
+{"CNN-GRU":"CNN-GRU"}
+{"NLTK packages 'punkt' and 'stopwords'":"NLTK"}
+{"Attention-based Convolutional Neural Network":"Attention-CNN"}
+{"Nu SVC":"NuSVC"}
+{"SOMPY":"SOMPY"}
+{"Self-Organizing Maps":"Self-Organizing Map"}
+{"Association Rules":"Association Rule Mining"}
+{"Lexi-Augmenter":"Lexi-Augmenter"}
+{"AraSenTi":"AraSenTi"}
+{"ArSenL":"ArSenL"}
+{"Feed Forward Neural Network":"Feedforward Neural Network"}
+{"Machine learning approaches":"Machine Learning"}
+{"Hybrid approaches":"Hybrid Model"}
+{"Passive Aggressive":"Passive Aggressive Classifier"}
+{"Adaptive Boosting":"AdaBoost"}
+{"Bernoulli NB":"Bernoulli Naive Bayes"}
+{"Ridge Regression":"Ridge Regression"}
+{"convolution neural networks (CNN)":"CNN"}
+{"CNN-LSTM architecture":"CNN-LSTM"}
+{"GloVe word embedding":"GloVe"}
+{"LDA2Vec":"LDA2Vec"}
+{"Attention-BGRU":"Attention-BiGRU"}
+{"BLSTM":"BiLSTM"}
+{"Attention-BLSTM":"Attention-BiLSTM"}
+{"PMTL":"PMTL"}
+{"SMTL":"SMTL"}
+{"MTIN":"MTIN"}
+{"AT-JSS-Lex":"AT-JSS-Lex"}
+{"MT-LRM-BERT":"MT-LRM-BERT"}
+{"NegAIT":"NegAIT"}
+{"EvoMSA":"EvoMSA"}
+{"DL4J":"Deeplearning4j"}
+{"CNTK":"CNTK"}
+{"Caffe":"Caffe"}
+{"BigDL":"BigDL"}
+{"PyTorch":"PyTorch"}
+{"MXNet":"MXNet"}
+{"LSA":"LSA"}
+{"Libnsa":"Libnsa"}
+{"ImageNet":"ImageNet"}
+{"Nepali SentiWordNet":"Nepali SentiWordNet"}
+{"Nepali SenticNet":"Nepali SenticNet"}
+{"Domain Specific Sentiment Lexicon":"Domain-Specific Sentiment Lexicon"}
+{"CRFs":"CRF"}
+{"CRF++":"CRF++"}
+{"Senti-Word-Net":"SentiWordNet"}
+{"BFTree":"BFTree"}
+{"OneR":"OneR"}
+{"ID3":"ID3"}
+{"Gradient Boost Tree":"Gradient Boosting"}
+{"FARASA":"FARASA"}
+{"Polyglot-NER":"Polyglot-NER"}
+{"Stochastic Gradient Decent":"SGD"}
+{"SSWE":"SSWE"}
+{"HSWN":"Hindi SentiWordNet"}
+{"Hindi SentiWordNet":"Hindi SentiWordNet"}
+{"HSAuNN":"HSAuNN"}
+{"FWLSA-score":"FWLSA-score"}
+{"FEEL":"FEEL"}
+{"MPQA Subjectivity Lexicon":"MPQA"}
+{"MADAMIRA":"MADAMIRA"}
+{"JRip":"JRip"}
+{"Maximum Entropy (MaxEnt)":"Maximum Entropy"}
+{"Lexicon-enhanced LSTM with attention":"Lexicon-enhanced AT-LSTM"}
+{"GAGRUCNN":"GAGRUCNN"}
+{"GAGRUAMCNN":"GAGRUAMCNN"}
+{"AGRUAMCNN":"AGRUAMCNN"}
+{"GPTAGRUAMCNN":"GPTAGRUAMCNN"}
+{"Xerox POS Tagger":"Xerox POS Tagger"}
+{"SenticNet MA-LSTM":"SenticNet MA-LSTM"}
+{"AE-LSTM":"AE-LSTM"}
+{"standard LSTM":"LSTM"}
+{"Multi-head Self-Attention (MSHA)":"Multi-head Self-Attention"}
+{"Fast Text":"fastText"}
+{"Term Frequency-Inverse Document Frequency (TF-IDF)":"TF-IDF"}
+{"Multinomial Naive Bayes (MNB)":"Multinomial Naive Bayes"}
+{"Multi-Grain Topic model (MG-LDA)":"MG-LDA"}
+{"PLSA":"PLSA"}
+{"Max-Entropy":"Maximum Entropy"}
+{"Recursive Neural Tensor Network (RNTN)":"RNTN"}
+{"Matrix-Vector RNN (MV-RNN)":"MV-RNN"}
+{"Paragraph Vector":"doc2vec"}
+{"LING PIPE":"LingPipe"}
+{"DSociaL":"DSociaL"}
+{"ELSTM":"ELSTM"}
+{"Stacked Autoencoders":"Stacked Autoencoder"}
+{"Wavelet Transforms":"Wavelet Transform"}
+{"conditional random field classifier":"CRF"}
+{"Aspect-Opinion Target Expression":"Aspect-Opinion Target Expression"}
+{"Memristive LSTM":"Memristive LSTM"}
+{"Deep Learning Hierarchical Decision Model":"Deep Learning Hierarchical Decision Model"}
+{"Graph Convolutional Feature-based Convolutional Neural Network":"GCF-CNN"}
+{"NgramCNN":"NgramCNN"}
+{"ConvLSTM":"ConvLSTM"}
+{"Modified Red Deer Algorithm (MRDA) Extreme Learning Machine Sparse Autoencoder (ELMSAE)":["MRDA", "ELM-SAE"]}
+{"ELM sparse autoencoder":"ELM-SAE"}
+{"Two State GRU (TS-GRU)":"TS-GRU"}
+{"FARNN-Att":"FARNN-Att"}
+{"BiGRU + CNN":"BiGRU-CNN"}
+{"Fuzzy Deep Learning Classifier (FDLC)":"FDLC"}
+{"Naive Bayesian (NB)":"Naive Bayes"}
+{"Feedforward Neural Network (FFNN)":"Feedforward Neural Network"}
+{"Jieba Chinese text segmentation":"jieba"}
+{"CKIP word segmentation system":"CKIP"}
+{"NTUSD_NB":"NTUSD"}
+{"FerdowsNet":"FerdowsNet"}
+{"Persian SentiWordNet (PSWN)":"Persian SentiWordNet"}
+{"Persian Sentiment Word Miner (PSWM)":"PSWM"}
+{"Multistrategy Sentiment Analysis Of Consumer Reviews":"Multistrategy Sentiment Analysis"}
+{"Twitter Sentiment Analysis":"Sentiment Analysis"}
+{"Text Pre-Processing Methods On Twitter Sentiment Analysis":"Text Preprocessing"}
+{"A Pattern-Based Approach For Multi-Class Sentiment Analysis In Twitter":"Pattern-based Sentiment Analysis"}
+{"Rating Prediction Based On Social Sentiment From Textual Reviews":"Sentiment-based Rating Prediction"}
+{"labeling tool for aspect-based sentiment analysis":"ABSA Labeling Tool"}
+{"Conv-char-Emb":"Conv-char-Emb"}
+{"DBN":"DBN"}
+{"HiEd-Sent":"HiEd-Sent"}
+{"HiEd-Sent corpus":"HiEd-Sent"}
+{"Oceni Profesora":"Oceni Profesora"}
+{"Bayesian":"Bayesian Classifier"}
+{"MultinomialNB":"Multinomial Naive Bayes"}
+{"Vader Sentiment":"VADER"}
+{"NSLinguisticTagger":"NSLinguisticTagger"}
+{"Parsimmon":"Parsimmon"}
+{"Lexicon Based Unsupervised":"Lexicon-based Sentiment Analysis"}
+{"GreekBERT":"GreekBERT"}
+{"PaloBERT":"PaloBERT"}
+{"GreekSocialBERT":"GreekSocialBERT"}
+{"RNN with attention mechanism":"Attention-based RNN"}
+{"Random Subspace":"Random Subspace"}
+{"Customer Loyalty Improvement Recommender System (CLIRS)":"CLIRS"}
+{"Attensity":"Attensity"}
+{"OdinText":"OdinText"}
+{"Clarabridge":"Clarabridge"}
+{"Kana":"Kana"}
+{"SAS Institute":"SAS"}
+{"IBM SPSS":"IBM SPSS Statistics"}
+{"SAP (Insight)":"SAP Insight"}
+{"Tibco (Insightful)":"TIBCO Spotfire"}
+{"Lexalytics":"Lexalytics"}
+{"Nstein":"Nstein"}
+{"Teragram":"Teragram"}
+{"Verint Systems":"Verint"}
+{"Rosetta Stone":"Rosetta Stone"}
+{"VERY-NEG":"VERY-NEG"}
+{"VERY-POS":"VERY-POS"}
+{"TreeTagger":"TreeTagger"}
+{"Stanford NLP":"Stanford CoreNLP"}
+{"OCC model":"OCC Model"}
+{"Arabic senti-lexicon":"Arabic Sentiment Lexicon"}
+{"Multi-domain Arabic Sentiment Corpus (MASC)":"MASC"}
+{"MPQA sentiment lexicon":"MPQA"}
+{"SentiSense":"SentiSense"}
+{"Voting Classifier (LR-SGD)":"Voting"}
+{"Decision Tree Classifier (DTC)":"Decision Tree"}
+{"Gradient Boosting Machine (GBM)":"Gradient Boosting Machine"}
+{"Stanford Sentiment Treebank":"Stanford Sentiment Treebank"}
+{"Movie Review Data":"Movie Review Dataset"}
+{"Khoja":"Khoja Stemmer"}
+{"ISRI":"ISRI Stemmer"}
+{"Tashaphyne":"Tashaphyne"}
+{"Light10":"Light10 Stemmer"}
+{"MOTAZ":"MOTAZ"}
+{"SentiXGboost":"XGBoost"}
+{"Gradient Tree Boosting":"Gradient Boosting"}
+{"Backpropagation Neural Networks (BNN)":"BPNN"}
+{"Apache Hive":"Apache Hive"}
+{"Hadoop Cloud":"Apache Hadoop"}
+{"CREDBANK":"CREDBANK"}
+{"PHEME":"PHEME"}
+{"LingPipe Library":"LingPipe"}
+{"ASAD":"ASAD"}
+{"ATSAD":"ATSAD"}
+{"TSAC":"TSAC"}
+{"SIACC":"SIACC"}
+{"TWIFIL":"TWIFIL"}
+{"SentiALG":"SentiALG"}
+{"ROUGE":"ROUGE"}
+{"structured prediction models":"Structured Prediction"}
+{"deep learning, chain classifier, and joint learning models":["Deep Learning", "Chain Classifier", "Joint Learning"]}
+{"Conditional Random Fields (CRF)":"CRF"}
+{"Long short-term memory network (LSTM)":"LSTM"}
+{"Deep Neural Network (DNN)":"DNN"}
+{"Region-based CNN (R-CNN)":"R-CNN"}
+{"Fast R-CNN":"Fast R-CNN"}
+{"GloVe DCNN":"GloVe-DCNN"}
+{"SAS Enterprise Miner":"SAS Enterprise Miner"}
+{"Deep Learning Classification Algorithm":"Deep Learning"}
+{"Random Tree":"Random Tree"}
+{"Neural Net":"ANN"}
+{"POS-AttWD-BLSTM-CRF":"POS-AttWD-BiLSTM-CRF"}
+{"Poria":"Poria"}
+{"Li":"Li"}
+{"IHS RD":"IHS RD"}
+{"DLIREC":"DLIREC"}
+{"NLANGP":"NLANGP"}
+{"BLSTM-CRF":"BiLSTM-CRF"}
+{"DE-CNN":"DE-CNN"}
+{"Ctrl":"CTRL"}
+{"Gated Convolutional Networks":"Gated CNN"}
+{"BiLSTM-ATT":"Attention-BiLSTM"}
+{"Samar embeddings":"Samar Embeddings"}
+{"Affin Dictionary":"AFINN"}
+{"Dense Neural Network":"DNN"}
+{"Multichannel CNN":"Multichannel CNN"}
+{"ABSA system":"ABSA"}
+{"Thet et al. (2010)":"Thet et al. (2010)"}
+{"Liu (2017)":"Liu (2017)"}
+{"Tang (2015)":"Tang (2015)"}
+{"Popescu and Etzioni (2007)":"Popescu and Etzioni (2007)"}
+{"Yi et al. (2003)":"Yi et al. (2003)"}
+{"MEC model":"MEC"}
+{"Ensemble-TextHMM":"Ensemble-TextHMM"}
+{"Bayes Net":"Bayesian Network"}
+{"Complement Naïve Bayes":"Complement Naive Bayes"}
+{"Naïve Bayes Multinomial":"Multinomial Naive Bayes"}
+{"Naïve Bayes Multinomial Text":"Multinomial Naive Bayes"}
+{"Naïve Bayes Multinomial Updateable":"Multinomial Naive Bayes"}
+{"Naïve Bayes Updateable":"Naive Bayes"}
+{"Logistic":"Logistic Regression"}
+{"RBF Classifier":"RBFN"}
+{"RBF Network":"RBFN"}
+{"SGD Text":"SGDClassifier"}
+{"Simple Logistic":"Logistic Regression"}
+{"SMO":"SMO"}
+{"Voted Perceptron":"Voted Perceptron"}
+{"IB1":"IB1"}
+{"IBK":"IBk"}
+{"Kstar":"K*"}
+{"LWL":"LWL"}
+{"AdaBoost M1":"AdaBoost.M1"}
+{"Attribute Selected Classifier":"AttributeSelectedClassifier"}
+{"Classification Via Regression":"ClassificationViaRegression"}
+{"Filtered Classifier":"FilteredClassifier"}
+{"Interactive Classifier Optimizer":"InteractiveClassifierOptimizer"}
+{"Logit Booster":"LogitBoost"}
+{"Multi Class Classifier":"MultiClassClassifier"}
+{"Multi Class Classifier Updateable":"MultiClassClassifierUpdateable"}
+{"Random Committee":"RandomCommittee"}
+{"Randomizable Filtered Classifier":"RandomizableFilteredClassifier"}
+{"Random Sub Space":"RandomSubSpace"}
+{"Real Ada Boost":"RealAdaBoost"}
+{"Vote":"Vote"}
+{"FLR":"FLR"}
+{"Hyper Pipes":"HyperPipes"}
+{"Input Mapped Classifier":"InputMappedClassifier"}
+{"Conjunctive Rule":"ConjunctiveRule"}
+{"NNge":"NNge"}
+{"PART":"PART"}
+{"Ridor":"Ridor"}
+{"ZeroR":"ZeroR"}
+{"Decision Stump":"DecisionStump"}
+{"HoeffdingTree":"Hoeffding Tree"}
+{"LMT":"LMT"}
+{"SimpleCart":"SimpleCart"}
+{"Attention-based LSTM model with the Aspect information (ALA)":"ALA"}
+{"Deep Memory Network":"MemNet"}
+{"BoW-base":"Bag-of-Words"}
+{"Rule-Based Model (RBM)":"Rule-based Model"}
+{"General Inquirer (GI)":"General Inquirer"}
+{"General Inquirer":"General Inquirer"}
+{"Word-sense disambiguation (WSD)":"WSD"}
+{"Hu-Liu04 opinion lexicon":"Bing Liu Opinion Lexicon"}
+{"SignalSentiWord (SSW)":"SignalSentiWord"}
+{"Keras with TensorFlow":["Keras", "TensorFlow"]}
+{"Recursive deep learning":"Recursive Neural Network"}
+{"CNN with residual connection":"ResNet"}
+{"Convolution Neural Network":"CNN"}
+{"SEL":"SEL"}
+{"DICO":"DICO"}
+{"DICO-2":"DICO-2"}
+{"WOLF":"WOLF"}
+{"RNN-LSTM":"LSTM"}
+{"CNNSC":"CNNSC"}
+{"IWVSA":"IWVSA"}
+{"DLUSA":"DLUSA"}
+{"CSNSA":"CSNSA"}
+{"TSND":"TSND"}
+{"CCRSA":"CCRSA"}
+{"ETAT-LSTM":"ETAT-LSTM"}
+{"TAT-LSTM":"TAT-LSTM"}
+{"EAT-LSTM":"EAT-LSTM"}
+{"ConvNet":"CNN"}
+{"AllenNLP":"AllenNLP"}
+{"Dynamic Convolutional Neural Network":"DCNN"}
+{"Wang2vec":"wang2vec"}
+{"NILC-Embeddings":"NILC Embeddings"}
+{"Rainbow":"Rainbow"}
+{"Laplace":"Laplace"}
+{"Term frequency–inverse document frequency (TF–IDF)":"TF-IDF"}
+{"Waikato Environment for Knowledge Analysis (Weka)":"WEKA"}
+{"ICTCLAS":"ICTCLAS"}
+{"Differential Evolution algorithm":"Differential Evolution"}
+{"Recurrent Neural Networks with word embeddings":["RNN", "Word Embeddings"]}
+{"MILSentic":"MILSentic"}
+{"HowNet":"HowNet"}
+{"Deep Neural Network model":"DNN"}
+{"Statistical Bayesian classifier":"Bayesian Classifier"}
+{"Gaussian mixture distribution model":"Gaussian Mixture Model"}
+{"Simple Embedding + Average Pooling":"Simple Embedding Average Pooling"}
+{"Gradient Boosting Decision Tree":"GBDT"}
+{"LML":"LML"}
+{"Liu lexicon":"Bing Liu Opinion Lexicon"}
+{"ORANGE":"Orange"}
+{"DAE":"Denoising Autoencoder"}
+{"RAE":"Recursive Autoencoder"}
+{"DT-FNN":"DT-FNN"}
+{"emojis features":"Emoji Features"}
+{"lexicon-based features":"Lexicon-based Features"}
+{"emoji embedding":"Emoji Embeddings"}
+{"OpCluster-PT":"OpCluster-PT"}
+{"NILC word embeddings":"NILC Embeddings"}
+{"Onto-PT":"Onto.PT"}
+{"CORP":"CORP"}
+{"iLteC lexicon":"iLteC"}
+{"Senti-NSetPSO":"Senti-NSetPSO"}
+{"Multi-Channel Embedding Convolutional Neural Network (MCE-CNN)":"MCE-CNN"}
+{"Joint Model of Sentiment and Topic (JST)":"JST"}
+{"enhanced feature-based sentiment analysis":"Feature-based Sentiment Analysis"}
+{"Gradient-Boosted Trees":"Gradient Boosting"}
+{"Microblog Aspect Miner (MAM)":"MAM"}
+{"Aspect Mining Module (AMM)":"AMM"}
+{"Aspect Opinion Mining Module (AOM)":"AOM"}
+{"Twitter Aspect Classifier (TAC)":"TAC"}
+{"USSPAD":"USSPAD"}
+{"Deep Feedforward Network":"Feedforward Neural Network"}
+{"Autoencoder structural correspondence learning (AE-SCL)":"AE-SCL"}
+{"Swivel 20":"Swivel"}
+{"MLP Multilayer Perceptron Structure 1":"MLP"}
+{"MLP Multilayer Perceptron Structure 2":"MLP"}
+{"Swivel":"Swivel"}
+{"IMDB":"IMDB Dataset"}
+{"Multi-view Deep Network":"Multi-view Deep Network"}
+{"WARM":"WARM"}
+{"Subjectivity Lexicon":"MPQA"}
+{"Twitris 2.0":"Twitris"}
+{"DecisionTreeClassifier":"Decision Tree"}
+{"SentiBank":"SentiBank"}
+{"Hybrid Adaptive Neuro-Fuzzy Interface and Support Vector Machine (ANFIS-SVM)":"ANFIS-SVM"}
+{"ASFul":"ASFul"}
+{"ANFIS-SVM":"ANFIS-SVM"}
+{"ICNN-LSTM-DNN":"ICNN-LSTM-DNN"}
+{"MTVAE":"MTVAE"}
+{"PV":"doc2vec"}
+{"Real-Time Social Knowledge Discovery Algorithm (RT-SKDA)":"RT-SKDA"}
+{"ITU Turkish NLP Web Service":"ITU Turkish NLP"}
+{"Google APIs":"Google API"}
+{"Choquet Fuzzy Integral":"Choquet Fuzzy Integral"}
+{"domain-based lexicons":"Domain-Specific Sentiment Lexicon"}
+{"S2AP":"S2AP"}
+{"weibo-preprocess-toolkit":"weibo-preprocess-toolkit"}
+{"Piecewise Convolutional Neural Network (PCNN)":"PCNN"}
+{"Generative Adversarial Network (GAN)":"GAN"}
+{"Lexicon integrated two-channel CNN–BiLSTM":"Lexicon-CNN-BiLSTM"}
+{"TutorAlert":"TutorAlert"}
+{"Lovins Stemmer":"Lovins Stemmer"}
+{"Telugu SentiWordNet":"Telugu SentiWordNet"}
+{"HOMPer":"HOMPer"}
+{"ROAuth":"ROAuth"}
+{"httr":"httr"}
+{"plyr":"plyr"}
+{"stringr":"stringr"}
+{"plotrix":"plotrix"}
+{"tidyverse":"tidyverse"}
+{"lubridate":"lubridate"}
+{"broom":"broom"}
+{"scales":"scales"}
+{"Nearest Neighbor":"KNN"}
+{"MOA-TweetReader":"MOA-TweetReader"}
+{"RNNLM":"RNNLM"}
+{"RNN-highway":"Highway RNN"}
+{"Variational RHN":"Variational RHN"}
+{"Variational LSTM":"Variational LSTM"}
+{"NLP-SEM":"SemEval"}
+{"UMLS Metathesaurus":"UMLS Metathesaurus"}
+{"Hybrid Educational Platform":"Hybrid Educational Platform"}
+{"Big BlueButton":"BigBlueButton"}
+{"AYLIEN Text Analysis API":"AYLIEN"}
+{"Enrich-GHSOM":"Enrich-GHSOM"}
+{"Self-organizing Map (SOM)":"Self-Organizing Map"}
+{"Learning Vector Quantization (LVQ)":"LVQ"}
+{"Yandex Translator API":"Yandex Translate"}
+{"Selective memory architecture-based convolutional neural network (SMA-CNN)":"SMA-CNN"}
+{"Modified Possibilistic Fuzzy C-Means (PFCM)":"PFCM"}
+{"Possibilistic Fuzzy C-Means (PFCM)":"PFCM"}
+{"Sparse Self-Attention LSTM (SSALSTM)":"SSALSTM"}
+{"Bing Liu's lexicon":"Bing Liu Opinion Lexicon"}
+{"Nile University's Arabic sentiment Lexicon (NilULex)":"NilULex"}
+{"unified model":"Unified Model"}
+{"TF":"Term Frequency"}
+{"DROP3":"DROP3"}
+{"IB3":"IB3"}
+{"Html Agility Pack":"Html Agility Pack"}
+{"Naïve Bias":"Naive Bayes"}
+{"Logistic Regression SVM":["Logistic Regression", "SVM"]}
+{"N-Gram Language Model":"n-gram"}
+{"Bi-directional LSTM-CNN":"BiLSTM-CNN"}
+{"KLOSURE":"KLOSURE"}
+{"Multichannel Convolutional Neural Network (MCNN)":"Multichannel CNN"}
+{"Conditional Random Field (CRF)":"CRF"}
+{"ASEGCN":"ASEGCN"}
+{"TD-GAT":"TD-GAT"}
+{"Twitter4J":"Twitter4J"}
+{"MAC":"MAC"}
+{"MSTD":"MSTD"}
+{"RCNN":"R-CNN"}
+{"Restricted Boltzmann Machine (RBM)":"RBM"}
+{"Neural Autoregressive Distribution Estimation (NADE)":"NADE"}
+{"Replicated Softmax Model (RS)":"Replicated Softmax"}
+{"Document Neural Autoregressive Distribution Estimation (DocNADE)":"DocNADE"}
+{"Aspect-Sentiment Unification Model (ASUM)":"ASUM"}
+{"Joint Sentiment-Topic (JST) detection model":"JST"}
+{"GRU-CNN":"GRU-CNN"}
+{"OCA":"OCA"}
+{"POS Tagger":"POS Tagger"}
+{"Sensitive Information Topics-Based Sentiment Analysis Model (SITSAM)":"SITSAM"}
+{"SW-LDA":"SW-LDA"}
+{"Sum Votes":"Sum Votes"}
+{"MaxDiffTwitter":"MaxDiffTwitter"}
+{"HuAndLiu":"Bing Liu Opinion Lexicon"}
+{"Fuzzy sentiment analysis":"Fuzzy Sentiment Analysis"}
+{"Neo4j":"Neo4j"}
+{"MongoDB":"MongoDB"}
+{"OMLML":"OMLML"}
+{"Google-Profile of Mood States API":"GPOMS"}
+{"Academia Sinica Bilingual Ontological Wordnet (BOW-Wordnet)":"BOW-Wordnet"}
+{"National Taiwan University Sentiment Dictionary (NTUSD)":"NTUSD"}
+{"Python-Jieba":"jieba"}
+{"Duwairi and Qarqaz model":"Duwairi and Qarqaz Model"}
+{"SAMAR":"SAMAR"}
+{"sentiment analysis models for Jordanian Arabic":"Jordanian Arabic Sentiment Analysis"}
+{"sentiment analysis on Arabic hotel reviews":"Arabic Hotel Reviews Sentiment Analysis"}
+{"stemming, feature correlation, n-gram models":["Stemming", "Feature Correlation", "n-gram"]}
+{"Arab Jordanian twitter corpus":"Arab Jordanian Twitter Corpus"}
+{"root based stemmers":"Root-based Stemmer"}
+{"Conditional Random Field":"CRF"}
+{"VD-CNN":"VDCNN"}
+{"Gabor features with SVMs":["Gabor Features", "SVM"]}
+{"CNNs":"CNN"}
+{"RNNs":"RNN"}
+{"NLTK POS tagger":"NLTK"}
+{"Twython API":"Twython"}
+{"Google search engine":"Google Search"}
+{"BertViz":"BertViz"}
+{"AYLIEN Sentiment Analysis":"AYLIEN"}
+{"Multinomial Naïve Bayes Classifier":"Multinomial Naive Bayes"}
+{"Sentiment Information Collector-Extractor Neural Network (SICENN)":"SICENN"}
+{"SIA":"SIA"}
+{"Linguistic Inquiry and Word Count (LIWC)":"LIWC"}
+{"Valence Aware Dictionary for Sentiment Reasoning (VADER)":"VADER"}
+{"CCRO":"CCRO"}
+{"Latent Semantic Indexing (LSI)":"LSA"}
+{"CADEN":"CADEN"}
+{"StockTwits":"StockTwits"}
+{"deep learning, chain classifier, and joint learning models":["Deep Learning", "Chain Classifier", "Joint Learning"]}
+{"LogitBoost":"LogitBoost"}
+{"Twython":"Twython"}
+{"ALA":"ALA"}
+{"SignalSentiWord":"SignalSentiWord"}
+{"DCNN":"DCNN"}
+{"wang2vec":"wang2vec"}
+{"GBDT":"GBDT"}
+{"Denoising Autoencoder":"Denoising Autoencoder"}
+{"Recursive Autoencoder":"Recursive Autoencoder"}
+{"MCE-CNN":"MCE-CNN"}
+{"Feature-based Sentiment Analysis":"Feature-based Sentiment Analysis"}
+{"MAM":"MAM"}
+{"AMM":"AMM"}
+{"AOM":"AOM"}
+{"TAC":"TAC"}
+{"AE-SCL":"AE-SCL"}
+{"Twitris":"Twitris"}
+{"RT-SKDA":"RT-SKDA"}
+{"ITU Turkish NLP":"ITU Turkish NLP"}
+{"PCNN":"PCNN"}
+{"GAN":"GAN"}
+{"Lexicon-CNN-BiLSTM":"Lexicon-CNN-BiLSTM"}
+{"Highway RNN":"Highway RNN"}
+{"SMA-CNN":"SMA-CNN"}
+{"PFCM":"PFCM"}
+{"SSALSTM":"SSALSTM"}
+{"NilULex":"NilULex"}
+{"VDCNN":"VDCNN"}
+{"Gabor Features":"Gabor Features"}
+{"SICENN":"SICENN"}
+{"BigBlueButton":"BigBlueButton"}
+{"LVQ":"LVQ"}
+{"Enrich-GHSOM":"Enrich-GHSOM"}
+{"Self-Organizing Map":"Self-Organizing Map"}
+{"SOM":"Self-Organizing Map"}
+{"NADE":"NADE"}
+{"Replicated Softmax":"Replicated Softmax"}
+{"DocNADE":"DocNADE"}
+{"SITSAM":"SITSAM"}
+{"TD-GAT":"TD-GAT"}
+{"GRU-CNN":"GRU-CNN"}
+{"Multichannel CNN":"Multichannel CNN"}
+{"BOW-Wordnet":"BOW-Wordnet"}
+{"Fuzzy Sentiment Analysis":"Fuzzy Sentiment Analysis"}
+{"Root-based Stemmer":"Root-based Stemmer"}
+{"Chain Classifier":"Chain Classifier"}
+{"Joint Learning":"Joint Learning"}
+{"Affective norms for English words (ANEW)":"ANEW"}
+{"SenticNet (SCN)":"SenticNet"}
+{"NTUSD":"NTUSD"}
+{"HSL":"HSL"}
+{"DBN (Deep Belief Network)":"DBN"}
+{"KNIME":"KNIME"}
+{"Recursive Neural Network":"Recursive Neural Network"}
+{"LinearSVC":"LinearSVC"}
+{"RNTN":"RNTN"}
+{"PBAN":"PBAN"}
+{"Twitter tokenizer":"Twitter Tokenizer"}
+{"GetOldTweets3":"GetOldTweets3"}
+{"long short-term memory with attention mechanism":"Attention-LSTM"}
+{"Bernoulli Naïve Bayes":"Bernoulli Naive Bayes"}
+{"Qalsadi stemmer":"Qalsadi"}
+{"morphological analyzer":"Morphological Analyzer"}
+{"LEP-SDL":"LEP-SDL"}
+{"ALBM":"ALBM"}
+{"EWGA":"EWGA"}
+{"RBEM":"RBEM"}
+{"Emotion Tracker":"Emotion Tracker"}
+{"CaffeNet":"CaffeNet"}
+{"Enhanced Bootstrapping Algorithm":"Enhanced Bootstrapping Algorithm"}
+{"BCBL":"BCBL"}
+{"BCBL-Att":"BCBL-Att"}
+{"BERT-Bi-LSTM":"BERT-BiLSTM"}
+{"CBRNN":"CBRNN"}
+{"BGRU":"BiGRU"}
+{"KPRO":"KPRO"}
+{"WordPiece":"WordPiece"}
+{"Bing-Liu opinion lexicon":"Bing Liu Opinion Lexicon"}
+{"contextual sentiment lexicon":"Contextual Sentiment Lexicon"}
+{"ArabicDialects framework":"ArabicDialects"}
+{"mLSTM":"mLSTM"}
+{"soundex":"Soundex"}
+{"Levenshtein distance":"Levenshtein Distance"}
+{"SVM.SVC":"SVC"}
+{"contraLDA":"ContraLDA"}
+{"ccLDA":"ccLDA"}
+{"TAM":"TAM"}
+{"VODUM":"VODUM"}
+{"Senti2Vec":"Senti2Vec"}
+{"CNN_Bidirectional LSTM":"CNN-BiLSTM"}
+{"Hu and Liu opinion words list":"Bing Liu Opinion Lexicon"}
+{"EIE-CBiL-Att":"EIE-CBiL-Att"}
+{"H-LSTM":"H-LSTM"}
+{"HP-LSTM":"HP-LSTM"}
+{"SA-LSTM":"SA-LSTM"}
+{"SA-LSTM-P":"SA-LSTM-P"}
+{"CueNet-DL":"CueNet-DL"}
+{"Bi-LSTM-ATT-G":"Bi-LSTM-ATT-G"}
+{"Hidden Markov Models":"HMM"}
+{"APSO-LSTM":"APSO-LSTM"}
+{"Lexicon Based Approach (LBA)":"Lexicon-based Sentiment Analysis"}
+{"Hybrid Based Approach (HBA)":"Hybrid Sentiment Analysis"}
+{"LRCWG":"LRCWG"}
+{"AEN-Glove":"AEN-GloVe"}
+{"ASGCN-DT":"ASGCN-DT"}
+{"Feature-based SVM":"SVM"}
+{"Deep Belief Networks":"DBN"}
+{"Stacked Auto-encoder":"Stacked Autoencoder"}
+{"Contextual Recursive Auto-Encoders (CoRAE)":"CoRAE"}
+{"Recursive Neural Network (RNN)":"Recursive Neural Network"}
+{"Unfolding Recursive Auto-Encoders":"Unfolding Recursive Autoencoder"}
+{"Naïve Bayes classification":"Naive Bayes"}
+{"Generalized Sequential Pattern (GSP)":"GSP"}
+{"Online sentiment analyzers":"Online Sentiment Analyzer"}
+{"VAE-ATT":"VAE-ATT"}
+{"CFF-ATT":"CFF-ATT"}
+{"SentiBank + SentiStrength":["SentiBank", "SentiStrength"]}
+{"CBOW + DA + LR":["CBOW", "Data Augmentation", "Logistic Regression"]}
+{"CNN-Multi":"CNN-Multi"}
+{"DNN-LR":"DNN-LR"}
+{"MultiSentiNet":"MultiSentiNet"}
+{"CoMn":"CoMn"}
+{"Convolutional Neural Networks (CNN)":"CNN"}
+{"CNN-rand":"CNN-rand"}
+{"CNN-static":"CNN-static"}
+{"CNN-non-static":"CNN-non-static"}
+{"Automated Synonym Dictionary (ASDICT)":"ASDICT"}
+{"Description Logic (DLs)":"Description Logic"}
+{"HAAD Dataset":"HAAD Dataset"}
+{"ERNIE-BiLSTM":"ERNIE-BiLSTM"}
+{"IAN-INF":"IAN-INF"}
+{"Support Vectorial Machine":"SVM"}
+{"Tree Decision":"Decision Tree"}
+{"Perceptron":"Perceptron"}
+{"HF-Conv-BiLSTM":"HF-Conv-BiLSTM"}
+{"SVM-unigrams":"SVM-unigrams"}
+{"SVM-ngrams":"SVM-ngrams"}
+{"Genetic algorithm based ensemble":"Genetic Algorithm Ensemble"}
+{"weakly supervised topic sentiment joint model with word embeddings (WS-TSWE)":"WS-TSWE"}
+{"Bayesian Nonparametric Relational Topic Model":"Bayesian Nonparametric Relational Topic Model"}
+{"joint sentiment topic models (JST)":"JST"}
+{"Topic sentiment mixture (TSM)":"TSM"}
+{"Hidden Topic Sentiment Model (HTSM)":"HTSM"}
+{"Dependency-Sentiment-LDA (DSLDA)":"DSLDA"}
+{"latent feature LDA model (LFLDA)":"LFLDA"}
+{"LSTM Neural Networks":"LSTM"}
+{"Nearest Centroid":"Nearest Centroid"}
+{"Biaffine Attention Model (BAM)":"BAM"}
+{"Mask Language Model (MLM)":"MLM"}
+{"MuLeHyABSC":"MuLeHyABSC"}
+{"K Nearest Neighbors classifier":"KNN"}
+{"Gaussian NB":"Gaussian Naive Bayes"}
+{"Ada Boost classifier":"AdaBoost"}
+{"Extra Tree classifier":"Extra-Trees"}
+{"GAWA":"GAWA"}
+{"Wrapper Approaches":"Wrapper Methods"}
+{"Principal Component Analysis":"PCA"}
+{"Fire Fly-oriented Multi-Verse Optimizer (FF-MVO)":"FF-MVO"}
+{"Aspect-Level Sentiment Analysis":"ABSA"}
+{"Stanford Core NLP":"Stanford CoreNLP"}
+{"OpenNLP":"Apache OpenNLP"}
+{"pylogsentiment":"pylogsentiment"}
+{"BRNN":"BRNN"}
+{"Event Attention Network (EAN)":"EAN"}
+{"Multi Refined Neutrosophic Set (MRNS)":"MRNS"}
+{"Single Valued Neutrosophic Set (SVNS)":"SVNS"}
+{"Triple Refined Indeterminate Neutrosophic Set (TRINS)":"TRINS"}
+{"SVM + TF-IDF":["SVM", "TF-IDF"]}
+{"DistilBERT + FFNN":["DistilBERT", "Feedforward Neural Network"]}
+{"Google Translate API":"Google Translate"}
+{"FFNN":"Feedforward Neural Network"}
+{"AFINN-III":"AFINN"}
+{"General purpose lexicons":"General Purpose Lexicon"}
+{"Feature Ensemble Model":"Feature Ensemble Model"}
+{"Ordinal Regression":"Ordinal Regression"}
+{"Pattern-Based Approach":"Pattern-based Sentiment Analysis"}
+{"Weighing Scheme":"Weighting Scheme"}
+{"Hybrid Sentiment Classification":"Hybrid Sentiment Classification"}
+{"Quantum-Inspired Sentiment Representation Model":"Quantum-Inspired Sentiment Model"}
+{"Hybrid Spider Monkey Optimization Method":"Spider Monkey Optimization"}
+{"Deep Convolution Neural Networks":"DCNN"}
+{"RNN with GRU":"GRU"}
+{"Twitter dataset":"Twitter Dataset"}
+{"BookCorpus":"BookCorpus"}
+{"English Wikipedia":"Wikipedia"}
+{"Semantria":"Semantria"}
+{"SVMlight":"SVM-Light"}
+{"ConceptNet":"ConceptNet"}
+{"evolutionary strategy algorithm":"Evolution Strategy"}
+{"SINICA CKIP":"CKIP"}
+{"SVM (support vector machine)":"SVM"}
+{"CEOM":"CEOM"}
+{"CAMF":"CAMF"}
+{"CIET.5embed":"CIET.5embed"}
+{"RulesContext":"RulesContext"}
+{"GATE":"GATE"}
+{"SSVHT ontology":"SSVHT"}
+{"BRNN-CRF":"BRNN-CRF"}
+{"SRNN":"SRNN"}
+{"Hebrew POS tagger":"Hebrew POS Tagger"}
+{"Voted Perceptron (VP)":"Voted Perceptron"}
+{"Bayesian Logistic Regression (BLR)":"Bayesian Logistic Regression"}
+{"Stanford NER":"Stanford NER"}
+{"NeuroSent":"NeuroSent"}
+{"Stanford CoreNLP Toolkit":"Stanford CoreNLP"}
+{"Deeplearning4j":"Deeplearning4j"}
+{"Ant Lion Optimization (ALO)":"Ant Lion Optimizer"}
+{"Moth Flame Optimization (MFO)":"Moth Flame Optimization"}
+{"Social Spider Optimization (SSO)":"Social Spider Optimization"}
+{"LSTMs":"LSTM"}
+{"LinearSVMs":"LinearSVC"}
+{"CNN+GRU":"CNN-GRU"}
+{"ANN (Backpropagation)":"BPNN"}
+{"LSTM+MLP":"LSTM-MLP"}
+{"Quadratic Discriminant Analysis":"QDA"}
+{"Linear Discriminant Analysis":"LDA-Classifier"}
+{"Hierarchical attention-LSTM":"Hierarchical Attention-LSTM"}
+{"RNN+LSTM":"LSTM"}
+{"RNN+GRU":"GRU"}
+{"Gradient Boosted Decision Trees":"GBDT"}
+{"Sequential Minimal Optimization":"SMO"}
+{"LSVM":"SVM"}
+{"Attention-based Separate Pooling BRNN (ASP-BRNN)":"ASP-BRNN"}
+{"MT-RNN-I":"MT-RNN-I"}
+{"MT-ARC-II":"MT-ARC-II"}
+{"MT-RNN-III":"MT-RNN-III"}
+{"MT-CNN":"MT-CNN"}
+{"MT-GRNA":"MT-GRNA"}
+{"ASP-MTL":"ASP-MTL"}
+{"Multinomial Naïve Bayes using Similarity based Conditional Probability (SECP-MNB)":"SECP-MNB"}
+{"Pointwise Mutual Information (PMI)":"PMI"}
+{"Term Frequency (TF)":"Term Frequency"}
+{"HAABSA++":"HAABSA++"}
+{"LCR-Rot":"LCR-Rot"}
+{"Inversed LCR-Rot":"Inversed LCR-Rot"}
+{"Multi-hop LCR-Rot":"Multi-hop LCR-Rot"}
+{"HAABSA":"HAABSA"}
+{"BNB":"Bernoulli Naive Bayes"}
+{"NN":"ANN"}
+{"ASTD":"ASTD"}
+{"LABR":"LABR"}
+{"LDA-POS":"LDA-POS"}
+{"Human sentiment method":"Human Sentiment Method"}
+{"Aspect-based sentiment":"ABSA"}
+{"LDA-based method":"LDA"}
+{"Neural network method":"ANN"}
+{"Most Persistent Feature Selection (MPFS)":"MPFS"}
+{"Tweepy API":"Tweepy"}
+{"SODA":"SODA"}
+{"ID3 decision tree":"ID3"}
+{"Information Gain":"Information Gain"}
+{"Gain Ratio":"Gain Ratio"}
+{"Gini Index":"Gini Index"}
+{"VGG Network-based Intermodal Sentiment Analysis Model (VGGNET-ISAM)":"VGGNET-ISAM"}
+{"Active Deep Learning (ADL) classifier":"ADL"}
+{"Weakly Supervised Coupled Convolutional Network (WSCCN)":"WSCCN"}
+{"Visual Sentiment Analysis Framework (VSAF)":"VSAF"}
+{"Deep Coupled Adjective-Noun Neural Network (DCANN)":"DCANN"}
+{"Machine Learning methods to construct Emotional Arcs (ML-EA)":"ML-EA"}
+{"Correlation Feature Selection (CFS)":"CFS"}
+{"Recursive Feature Elimination (RFE)":"RFE"}
+{"Stanford Parser":"Stanford Parser"}
+{"Double Propagation":"Double Propagation"}
+{"Python libraries":"Python"}
+{"Educational Resources Assessment System (ERAS)":"ERAS"}
+{"TASS":"TASS"}
+{"Attentive Deep Neural Network":"Attentive DNN"}
+{"Capsule Network with Gravitational Search Algorithm (CN-GSA)":"CN-GSA"}
+{"Gravitational Search Algorithm (GSA)":"GSA"}
+{"Recurrent Neural Network (RNN), Long Short-Term Memory (LSTM), Restricted Boltzmann Machine (RBM)":["RNN", "LSTM", "RBM"]}
+{"Deep learning-based model":"Deep Learning"}
+{"Classification algorithms":"Classification Algorithms"}
+{"SQL":"SQL"}
+{"Spring XD":"Spring XD"}
+{"MELex":"MELex"}
+{"IBM Watson's Natural Language Understanding":"IBM Watson NLU"}
+{"VSO":"VSO"}
+{"Senti-lexicon":"Sentiment Lexicon"}
+{"Lexical approach":"Lexicon-based Sentiment Analysis"}
+{"Freeling":"FreeLing"}
+{"Standford CoreNLP":"Stanford CoreNLP"}
+{"Text mining":"Text Mining"}
+{"Socio Monitoring Framework (SMF)":"SMF"}
+{"Noslang":"NoSlang"}
+{"Non-negative Matrix Factorization":"NMF"}
+{"Aspect-map extraction network (AMEN)":"AMEN"}
+{"Aspect map-based sentiment analysis network (AMSAN)":"AMSAN"}
+{"Multichannel Deep Convolutional Neural Network (MCNN)":"MCNN"}
+{"Tensor Factorization (TF)":"Tensor Factorization"}
+{"Matrix Factorization":"Matrix Factorization"}
+{"Conditional Random Fields":"CRF"}
+{"ConvLSTMConv":"ConvLSTM"}
+{"CNN + CNN-Word2Vec + RNN with LSTM+Word2Vec":["CNN", "word2vec", "LSTM"]}
+{"Unigram with Sentiwordnet":["Unigram", "SentiWordNet"]}
+{"R-SA":"R-SA"}
+{"Jess":"Jess"}
+{"IBM MS-BRE":"IBM MS-BRE"}
+{"Drools":"Drools"}
+{"Domain Focused (DF) lexicon":"Domain-Specific Lexicon"}
+{"Synthetic Minority Oversampling Technique (SMOTE)":"SMOTE"}
+{"Genetic Algorithm (GA)":"Genetic Algorithm"}
+{"Stabilized Discriminant Analysis":"Stabilized Discriminant Analysis"}
+{"Generalized Linear Model":"GLM"}
+{"SentiWordNet3.0":"SentiWordNet"}
+{"AFFIN-111":"AFINN"}
+{"Bag of Words (BOW) Approach":"Bag-of-Words"}
+{"Naïve Bayes with Kernel Density Estimator (NB-KDE)":"NB-KDE"}
+{"Hidden Markov Model (TextHMM)":"TextHMM"}
+{"Hebb Rule Feature Selection (HRFS)":"HRFS"}
+{"RTextTools":"RTextTools"}
+{"ParallelDots AI APIs":"ParallelDots"}
+{"tree-convolutional neural network":"Tree-CNN"}
+{"Heterogeneous graph model":"Heterogeneous Graph Model"}
+{"Heterogenous Influence graph model":"Heterogeneous Influence Graph"}
+{"Binary SVM classifier":"SVM"}
+{"ProductSentiRus":"ProductSentiRus"}
+{"Blinov et al.'s Lexicon":"Blinov Lexicon"}
+{"EmoLex":"NRC Emotion Lexicon"}
+{"Chen-Skiena's Lexicon":"Chen-Skiena Lexicon"}
+{"Tutubalina's Lexicon":"Tutubalina Lexicon"}
+{"Kotelnikov et al.'s Lexicon (large)":"Kotelnikov Lexicon"}
+{"Kotelnikov et al.'s Lexicon (small)":"Kotelnikov Lexicon"}
+{"LinisCrowd":"LinisCrowd"}
+{"RuSentiLex (large)":"RuSentiLex"}
+{"RuSentiLex (small)":"RuSentiLex"}
+{"LIWC 2015":"LIWC"}
+{"QDAP":"QDAP"}
+{"SN":"SN"}
+{"COMB":"COMB"}
+{"SPGSB":"SPGSB"}
+{"Semantic Orientation of Words":"Semantic Orientation"}
+{"Polarity Lexicon":"Polarity Lexicon"}
+{"GermanPolarityClues":"GermanPolarityClues"}
+{"Domain-Independent Automatic Labeling System (DIALS)":"DIALS"}
+{"Q-WordNet":"Q-WordNet"}
+{"Joint Sentiment Topic Detection with MEDLDA":"MEDLDA"}
+{"Labelled LDA":"Labeled LDA"}
+{"Sentiment Sensitive Thesaurus":"Sentiment Sensitive Thesaurus"}
+{"MEDLDA":"MEDLDA"}
+{"MOGW optimization algorithm":"MOGW"}
+{"PyMorphy2":"pymorphy2"}
+{"RuSentiLex":"RuSentiLex"}
+{"RuWordNet":"RuWordNet"}
+{"RFC":"Random Forest"}
+{"DTC":"Decision Tree"}
+{"GeoVec":"GeoVec"}
+{"Deep learning techniques":"Deep Learning"}
+{"MLP Classifier":"MLP"}
+{"SOAP":"SOAP"}
+{"Bayesian filter":"Bayesian Filter"}
+{"R-CNN":"R-CNN"}
+{"C-RNN":"C-RNN"}
+{"MV-RNN":"MV-RNN"}
+{"VADER Sentiment Analysis":"VADER"}
+{"Hu and Liu's method":"Bing Liu Opinion Lexicon"}
+{"Machine-learning prediction model":"Machine Learning"}
+{"IBM SPSS 24.0":"IBM SPSS Statistics"}
+{"R 3.4.2":"R"}
+{"Prolog":"Prolog"}
+{"NRC sentiment":"NRC Emotion Lexicon"}
+{"Pattern Library":"Pattern"}
+{"TextBlob API":"TextBlob"}
+{"MTNN framework":"MTNN"}
+{"ILP framework":"ILP"}
+{"lexicon dictionary":"Lexicon"}
+{"VEDER dictionary":"VADER"}
+{"CART":"CART"}
+{"ontology-driven aspect-based sentiment analysis":"Ontology-driven ABSA"}
+{"Category Discriminative Strength (CDS)":"CDS"}
+{"Chi-square statistics model":"Chi-squared Test"}
+{"Part-of-Speech feature-based Weighting (PSW)":"PSW"}
+{"Aspect-based opinion mining framework":"ABSA"}
+{"Apriori":"Apriori"}
+{"Emoji":"Emoji"}
+{"Exponential-Salp Swarm Algorithm (ESSA)-ACNN":"ESSA-ACNN"}
+{"Linguistic Inquiry and Word Count":"LIWC"}
+{"Positive and Negative Affect Schedule-Twitter":"PANAS-t"}
+{"Entropy Weighted Genetic Algorithm":"EWGA"}
+{"Feature Relation Network (FRN)":"FRN"}
+{"GBDT":"GBDT"}
+{"Modified Altman's Z-score model":"Altman Z-score"}
+{"Rasa Open Source":"Rasa"}
+{"VADER NLTK Sentiment Analyser":"VADER"}
+{"SVMs":"SVM"}
+{"E2SAM":"E2SAM"}
+{"MeaningCloud":"MeaningCloud"}
+{"Google Cloud sentiment analysis":"Google Cloud Natural Language API"}
+{"spaCy entity analysis":"spaCy"}
+{"HashingVectorizer":"HashingVectorizer"}
+{"jRiebaR":"jiebaR"}
+{"Azure Data Lake tools Plug-in":"Azure Data Lake"}
+{"Deepcut":"DeepCut"}
+{"Crime2Vec":"Crime2Vec"}
+{"Thai2Vec":"Thai2Vec"}
+{"Fuzzy Lattice Reasoning (FLR)":"FLR"}
+{"Gibbs Sampling":"Gibbs Sampling"}
+{"CLSA-CapsNet":"CLSA-CapsNet"}
+{"DSLDA":"DSLDA"}
+{"ADSLDA":"ADSLDA"}
+{"PADSLDA":"PADSLDA"}
+{"MJST":"MJST"}
+{"RJST":"RJST"}
+{"TS":"TS"}
+{"SRJST":"SRJST"}
+{"JAST":"JAST"}
+{"JMTS":"JMTS"}
+{"MSTM":"MSTM"}
+{"SLTM":"SLTM"}
+{"STDP":"STDP"}
+{"WSTM":"WSTM"}
+{"Zemberek":"Zemberek"}
+{"SentiRank":"SentiRank"}
+{"ELECTRE":"ELECTRE"}
+{"Yelp Restaurant Sentiment Lexicon":"Yelp Sentiment Lexicon"}
+{"NRC Hashtag Sentiment Lexicon":"NRC Hashtag Sentiment Lexicon"}
+{"NRC Yelp Word-Aspect Association":"NRC Yelp Word-Aspect"}
+{"NRC sentiment dictionary":"NRC Emotion Lexicon"}
+{"SENTI-METER":"SENTI-METER"}
+{"Hybrid Deep Learning Model":"Hybrid Deep Learning"}
+{"Bidirectional recurrent neural networks (Bi-RNNs)":"BiRNN"}
+{"RNN capsule":"RNN Capsule"}
+{"Document Vector Representation (Doc2vec)":"doc2vec"}
+{"Gated Recurrent Units (GRU)":"GRU"}
+{"Neural Collaborative Filtering (NCF)":"NCF"}
+{"Neural Factorization Machine (NFM)":"NFM"}
+{"Convolutional Matrix Factorization (ConvMF)":"ConvMF"}
+{"Deep Cooperative Neural Network (DeepCoNN)":"DeepCoNN"}
+{"Structural Topic Modelling (STM)":"STM"}
+{"Hierarchical Self-Attention Network":"Hierarchical Self-Attention"}
+{"Domain-BiLSTM":"Domain-BiLSTM"}
+{"Domain-GloVe-BiLSTM":"Domain-GloVe-BiLSTM"}
+{"Domain-GloVe-BiLSTM-CRF":"Domain-GloVe-BiLSTM-CRF"}
+{"Char-Domain-BiLSTM-POS-CRF":"Char-Domain-BiLSTM-POS-CRF"}
+{"CNN+Softmax":"CNN-Softmax"}
+{"CNN+CRF":"CNN-CRF"}
+{"Stacked Neural Network (CNN-BiLSTM-CRF)":"CNN-BiLSTM-CRF"}
+{"WDEmb":"WDEmb"}
+{"RNCRF":"RNCRF"}
+{"HAST":"HAST"}
+{"RINANTE":"RINANTE"}
+{"BERT+CRF":"BERT-CRF"}
+{"SPAN":"SPAN"}
+{"DECNN+SoftProtoB (BASE)":"DECNN-SoftProtoB"}
+{"DECNN+SoftProtoB (PT)":"DECNN-SoftProtoB"}
+{"DECNN+SoftProtoE":"DECNN-SoftProtoE"}
+{"Attentive LSTM with social context embeddings":"Attentive LSTM"}
+{"LS":"Least Squares"}
+{"LASSO":"LASSO"}
+{"Perception":"Perceptron"}
+{"SANT":"SANT"}
+{"SMSC":"SMSC"}
+{"SASS":"SASS"}
+{"PMSA":"PMSA"}
+{"ALSTM":"ALSTM"}
+{"Datastories":"Datastories"}
+{"Stanford Natural Language Processing Group":"Stanford NLP"}
+{"genism":"Gensim"}
+{"NRC-Canada":"NRC-Canada"}
+{"LexiPers":"LexiPers"}
+{"Deep CNN":"DCNN"}
+{"Image Segmentation":"Image Segmentation"}
+{"Artificial Intelligence":"AI"}
+{"Finer Semantic Analysis":"Semantic Analysis"}
+{"Lexical Semantics":"Lexical Semantics"}
+{"Computational Linguistic Analyses":"Computational Linguistics"}
+{"Random Indexing":"Random Indexing"}
+{"Independent Component Analysis":"ICA"}
+{"TRNMF Integration":"TRNMF"}
+{"Bibliometric Analysis":"Bibliometric Analysis"}
+{"Deep Recurrent Neural Network":"Deep RNN"}
+{"BGRU-CapsNet":"BiGRU-CapsNet"}
+{"SentiVerb":"SentiVerb"}
+{"SO-CAL":"SO-CAL"}
+{"Light Gradient Boosted Machine":"LightGBM"}
+{"Deep Learning Neural Network":"DNN"}
+{"TF-IDF Vectorization":"TF-IDF"}
+{"Count Vectorization":"CountVectorizer"}
+{"Zapier":"Zapier"}
+{"SASA":"SASA"}
+{"Happiness Index":"Happiness Index"}
+{"PANAS-t":"PANAS-t"}
+{"Deep Convolutional Neural Networks":"DCNN"}
+{"Intel Data Analytics Acceleration Library":"Intel DAAL"}
+{"UAMSA":"UAMSA"}
+{"BRAE":"BRAE"}
+{"SVMTool":"SVMTool"}
+{"CMML":"CMML"}
+{"ANNIE":"ANNIE"}
+{"SALOM":"SALOM"}
+{"Stanford part of speech (POS) tagger":"Stanford POS Tagger"}
+{"EmoTxt":"EmoTxt"}
+{"NLTK/VADER":"VADER"}
+{"SentiStrength - SE":"SentiStrength-SE"}
+{"Uddin and Khomh Sentiment Orientation":"Uddin-Khomh"}
+{"Deep Multimodal Attentive Fusion (DMAF)":"DMAF"}
+{"CCR":"CCR"}
+{"T-LSTM":"T-LSTM"}
+{"VGG19":"VGG-19"}
+{"Convolution Neural Network (CNN)":"CNN"}
+{"Bi-directional LSTM":"BiLSTM"}
+{"CKIP Chinese Word Segmentation System":"CKIP"}
+{"Clustering analysis":"Clustering"}
+{"Python script for data extraction":"Python"}
+{"NLTK ISRI Stemmer":"ISRI Stemmer"}
+{"Tw-StAR SA system":"Tw-StAR"}
+{"Supervised learning models (SVM, Naive Bayes, Logistic Regression, K-Nearest Neighbors)":["SVM", "Naive Bayes", "Logistic Regression", "KNN"]}
+{"Lexicon-based models":"Lexicon-based Sentiment Analysis"}
+{"LRSGD":"LRSGD"}
+{"Rough Set Theory":"Rough Set Theory"}
+{"Multilayer Perceptron Neural Network":"MLP"}
+{"QSR NVivo 11":"NVivo"}
+{"Deep Learning-based Intermodal (DLBI)":"DLBI"}
+{"VGG network":"VGG"}
+{"ADL classifier":"ADL"}
+{"WSCCN":"WSCCN"}
+{"VSAF":"VSAF"}
+{"DCANN":"DCANN"}
+{"ML-EA":"ML-EA"}
+{"three-layer sentiment dictionary":"Three-layer Sentiment Dictionary"}
+{"SpanishSentiWordNet":"Spanish SentiWordNet"}
+{"SMOTENC":"SMOTE-NC"}
+{"LABSA":"LABSA"}
+{"Henry (2008)":"Henry Dictionary"}
+{"Loughran and McDonald (2011)":"Loughran-McDonald"}
+{"Multinomial Logistic Regression Model":"Logistic Regression"}
+{"RCurl":"RCurl"}
+{"Hybrid Approach":"Hybrid Sentiment Analysis"}
+{"Vender Sentiment":"Vendor Sentiment"}
+{"LexToPlus":"LexToPlus"}
+{"Semi-Supervised Convolutional Neural Network (SSC)":"SSC"}
+{"Hazm":"Hazm"}
+{"Lexipres":"LexiPers"}
+{"Persian corpus with polarities":"Persian Sentiment Corpus"}
+{"Repustate":"Repustate"}
+{"NLTK 2.0.4":"NLTK"}
+{"NLTK 3.0":"NLTK"}
+{"Cognitive-inspired Domain Adaptation with Higher-level Supervision (CDAHS)":"CDAHS"}
+{"Loughran & McDonald dictionary":"Loughran-McDonald"}
+{"Stanford NLP Library":"Stanford CoreNLP"}
+{"Pyvi":"Pyvi"}
+{"S-AESC":"S-AESC"}
+{"Span-based extraction and classification models":"Span-based Model"}
+{"SS-LDA":"SS-LDA"}
+{"Sentence-LDA":"Sentence-LDA"}
+{"Biterm Topic Model":"BTM"}
+{"GRNN":"GRNN"}
+{"DKPro WSD API":"DKPro WSD"}
+{"MDA Stemmer":"MDA Stemmer"}
+{"MSA Stemmer":"MSA Stemmer"}
+{"Machine Learning Model for RTI Prioritization":"ML RTI Model"}
+{"SAP BW":"SAP BW"}
+{"SAP ECC":"SAP ECC"}
+{"Dython":"dython"}
+{"Featurewiz":"featurewiz"}
+{"Transformer Encoders":"Transformer"}
+{"Attentional BLSTM models":"Attention-BiLSTM"}
+{"Microsoft Text Analytics":"Azure Text Analytics"}
+{"Google Cloud":"Google Cloud"}
+{"NLProcessor;Text to Matrix Generator":["NLProcessor", "Text to Matrix Generator"]}
+{"RNN/LSTM":"LSTM"}
+{"SAM-OWA":"SAM-OWA"}
+{"MA-OWA":"MA-OWA"}
+{"WSAM-OWA":"WSAM-OWA"}
+{"online latent semantic indexing":"Online LSI"}
+{"BERT-BiLSTM-TextCNN":"BERT-BiLSTM-TextCNN"}
+{"BERT-BiGRU-TextCNN":"BERT-BiGRU-TextCNN"}
+{"BERT-LSTM-TextCNN":"BERT-LSTM-TextCNN"}
+{"Word2Vec-BiLSTM-TextCNN":"Word2Vec-BiLSTM-TextCNN"}
+{"Twitter Intelligence Tool (TWINT)":"Twint"}
+{"Distributed Evolutionary Algorithms in Python (DEAP)":"DEAP"}
+{"Sequential Least-Squares Programming (SLSQP)":"SLSQP"}
+{"Senpy":"Senpy"}
+{"NMF (Non-negative Matrix Factorization)":"NMF"}
+{"LSI (Latent Semantic Analysis)":"LSA"}
+{"Regular Expressions":"Regular Expressions"}
+{"Autocorrect":"Autocorrect"}
+{"Pycontractions":"pycontractions"}
+{"Emoji Library":"emoji"}
+{"Natural Language Tool Kit":"NLTK"}
+{"Pickle":"pickle"}
+{"Bayesian network based Extreme Learning Machine (BNELM)":"BNELM"}
+{"Google Cloud Natural Language API":"Google Cloud Natural Language API"}
+{"Valence Aware Dictionary and sEntiment Reasoner":"VADER"}
+{"Stanford Part of Speech tagger":"Stanford POS Tagger"}
+{"UMUTextStats":"UMUTextStats"}
+{"Porter's stemming algorithm":"Porter Stemmer"}
+{"Snowball language":"Snowball Stemmer"}
+{"Polarity-Enriched Tree Kernel (PETK)":"PETK"}
+{"Semantic Tree Kernels (STK)":"STK"}
+{"Subset Tree Kernel (SSTK)":"SSTK"}
+{"Partial Tree Kernel (PTK)":"PTK"}
+{"Smoothed Partial Tree Kernel (SPTK)":"SPTK"}
+{"Global-Att-LSTM":"Global-Att-LSTM"}
+{"Self-Att-LSTM":"Self-Att-LSTM"}
+{"Hierarchical-Att-GRU":"Hierarchical-Att-GRU"}
+{"Neural Tree Indexer (NTI)":"NTI"}
+{"Hierarchical Attention Network (HAN)":"HAN"}
+{"Hybrid Fuzzy-BiLSTM Model":"Fuzzy-BiLSTM"}
+{"R-Program":"R"}
+{"Beto":"BETO"}
+{"Mahout":"Apache Mahout"}
+{"CoSchedule Content Analyzer":"CoSchedule"}
+{"Sharethrough Content Analyzer":"Sharethrough"}
+{"PageRank":"PageRank"}
+{"REST API":"REST API"}
+{"GraphML":"GraphML"}
+{"Sentiment analysis algorithm":"Sentiment Analysis"}
+{"Google Cloud Natural Language":"Google Cloud Natural Language API"}
+{"IBM Watson Natural Language Understanding":"IBM Watson NLU"}
+{"Sphinx_align":"Sphinx Align"}
+{"Sentiment Parser based on X-Bar Theory":"X-Bar Sentiment Parser"}
+{"SentiLex-PT":"SentiLex-PT"}
+{"SentWordNet":"SentiWordNet"}
+{"DRFA":"DRFA"}
+{"CSR":"CSR"}
+{"Scikit-Learn (sklearn)":"scikit-learn"}
+{"Maximum-entropy-based classification":"Maximum Entropy"}
+{"Structural Support Vector Machines":"Structural SVM"}
+{"WEKA Naïve Bayes Classifier":"Naive Bayes"}
+{"Naïve Bayes Analyzer":"Naive Bayes"}
+{"AIN":"AIN"}
+{"Senti strength Approach":"SentiStrength"}
+{"Instagram-scraper":"instagram-scraper"}
+{"Langdetect":"langdetect"}
+{"Salp Swarm Algorithm (SSA)":"Salp Swarm Algorithm"}
+{"unsupervised lexicon based system":"Lexicon-based Sentiment Analysis"}
+{"Fuzzy Classifier":"Fuzzy Classifier"}
+{"Lexicon-pointed hybrid N-gram Features Extraction Model (LeNFEM)":"LeNFEM"}
+{"N-gram2vec":"N-gram2vec"}
+{"Continuous Bag of Words":"CBOW"}
+{"Tweets sentimental analyzers (TSA)":"TSA"}
+{"NCapture":"NCapture"}
+{"IBM Social Media Capture Four":"IBM Social Media Capture"}
+{"Nivivo":"NVivo"}
+{"XI Social Discovery":"XI Social Discovery"}
+{"WOLF 0.6":"WOLF"}
+{"CoNBiLSTM":"CoNBiLSTM"}
+{"STRUCT":"STRUCT"}
+{"SVM with shallow syntactic structures":"SVM"}
+{"Linguistic-based Augmentation Dataset":"Linguistic Augmentation"}
+{"Underthesea":"Underthesea"}
+{"Glasgow":"Glasgow"}
+{"Semi-Markov Conditional Random Field (Semi-CRF)":"Semi-CRF"}
+{"Integer Linear Programming (ILP)":"ILP"}
+{"multilayer bi-directional recurrent neural network":"BiRNN"}
+{"encoder-decoder model":"Encoder-Decoder"}
+{"Whale Optimization Algorithm":"Whale Optimization Algorithm"}
+{"Social Impact Theory based Optimization":"Social Impact Optimization"}
+{"Thirty-three supervised learning algorithms":"Supervised Learning"}
+{"ALGA":"ALGA"}
+{"ABFBSA":"ABFBSA"}
+{"AFFIN":"AFINN"}
+{"wink-sentiment":"wink-sentiment"}
+{"compromise":"compromise"}
+{"eSM2":"eSM2"}
+{"eSM":"eSM"}
+{"DHOA-FNN":"DHOA-FNN"}
+{"DiSSBUS":"DiSSBUS"}
+{"probabilistic topic modeling":"Topic Modeling"}
+{"Adblock Plus":"Adblock Plus"}
+{"Standford Natural Language Processing":"Stanford CoreNLP"}
+{"twitteroauth":"twitteroauth"}
+{"Apache Lucene and Solr":["Apache Lucene", "Apache Solr"]}
+{"Ensemble RNN":"Ensemble RNN"}
+{"Fuzzy Ontology":"Fuzzy Ontology"}
+{"CrystalFeel":"CrystalFeel"}
+{"Stanford's CoreNLP":"Stanford CoreNLP"}
+{"FBIOP-based model":"FBIOP"}
+{"CNN-L2-SVM":"CNN-L2-SVM"}
+{"Backpropagation":"Backpropagation"}
+{"Single-Pass algorithm":"Single-Pass Clustering"}
+{"Text Mining procedure":"Text Mining"}
+{"QSR NVivo Pro 11.0":"NVivo"}
+{"M-adaptive software":"M-Adaptive"}
+{"BFE":"BFE"}
+{"WordNet.Net Library":"WordNet"}
+{"ReliefF":"ReliefF"}
+{"Multi-Verse Optimizer":"Multi-Verse Optimizer"}
+{"SWIM":"SWIM"}
+{"SentiWords":"SentiWords"}
+{"Loughran and McDonald":"Loughran-McDonald"}
+{"Henry":"Henry Dictionary"}
+{"IBM Watson Tone Analyzer":"IBM Watson Tone Analyzer"}
+{"CharCNN-SVM":"CharCNN-SVM"}
+{"Apache Zeppelin":"Apache Zeppelin"}
+{"bert-base-multilingual-cased":"mBERT"}
+{"NegBERT":"NegBERT"}
+{"Python library from the Computational Linguistics and Psycholinguistics Research Center":"CLiPS"}
+{"Loughran and McDonald's dictionary":"Loughran-McDonald"}
+{"semantic orientation by the point-wise mutual information method":"PMI-SO"}
+{"ODCNN-BiLSTM-CRF":"ODCNN-BiLSTM-CRF"}
+{"BiGRU-CRF":"BiGRU-CRF"}
+{"BERT-CRF":"BERT-CRF"}
+{"SPDFC":"SPDFC"}
+{"Tsing Hua (TH)":"Tsing Hua"}
+{"LCWCC":"LCWCC"}
+{"SenticNet 5":"SenticNet"}
+{"HMDSAD":"HMDSAD"}
+{"AROA":"AROA"}
+{"CRF models":"CRF"}
+{"Hybrid Feature Extraction Method":"Hybrid Feature Extraction"}
+{"Attention-based neural model":"Attention"}
+{"TOM":"TOM"}
+{"Sentitext":"Sentitext"}
+{"GPU-based active shape model":"Active Shape Model"}
+{"EmoSenticNet":"EmoSenticNet"}
+{"GpSense":"GpSense"}
+{"MCMK":"MCMK"}
+{"Joint-MCMK":"Joint-MCMK"}
+{"DCNN":"DCNN"}
+{"CNN-MC":"CNN-MC"}
+{"TBCNN":"TBCNN"}
+{"CNN-Ana":"CNN-Ana"}
+{"BSLTM-Att":"BiLSTM-Attention"}
+{"BLSTM-2DPooling":"BiLSTM-2DPooling"}
+{"Combine-skip":"Combine-skip"}
+{"AdaSent":"AdaSent"}
+{"DSCNN":"DSCNN"}
+{"BLSTM-2DCNN":"BiLSTM-2DCNN"}
+{"AC_BLSTM":"AC-BiLSTM"}
+{"SP-MTL":"SP-MTL"}
+{"SPLM":"SPLM"}
+{"PV-DM-NS-NB":"PV-DM"}
+{"VGG Net":"VGG"}
+{"GCC":"GCC"}
+{"LIWC2015":"LIWC"}
+{"DeepPavlov":"DeepPavlov"}
+{"Rubtsova's corpus":"Rubtsova Corpus"}
+{"RuSentiment corpus":"RuSentiment"}
+{"EmoSpell":"EmoSpell"}
+{"Jspell":"jspell"}
+{"EMOTAIX.PT":"EMOTAIX.PT"}
+{"DHBK":"DHBK"}
+{"DKL":"DKL"}
+{"DKG":"DKG"}
+{"KWEM":"KWEM"}
+{"Lasso-based ensemble model":"LASSO Ensemble"}
+{"adaptive instance-based learning":"Instance-based Learning"}
+{"openAI GPT":"GPT"}
+{"probabilistic automata":"Probabilistic Automata"}
+{"Finite State Automata":"FSA"}
+{"Dynamic Lexicons":"Dynamic Lexicon"}
+{"Senti-TFIDF":"Senti-TF-IDF"}
+{"SentProp":"SentProp"}
+{"Alkhalil Morpho Sys":"Alkhalil Morpho Sys"}
+{"ESGCN":"ESGCN"}
+{"StreamKM++":"StreamKM++"}
+{"MOA":"MOA"}
+{"Time+User Dual Attention Mechanism":"Time-User Dual Attention"}
+{"Numeral-Aware Model (NAM)":"NAM"}
+{"Syntax-based GCN model":"Syntax-GCN"}
+{"LSTM+CNN":"LSTM-CNN"}
+{"LSTM+GCN":"LSTM-GCN"}
+{"BRAD 2.0":"BRAD"}
+{"AWATIF":"AWATIF"}
+{"BRAD 1.0":"BRAD"}
+{"StandfordCoreNLP":"Stanford CoreNLP"}
+{"Two-pass classifier (SVMNN)":"SVMNN"}
+{"Rule-based system":"Rule-based System"}
+{"Probabilistic aspect mining":"Probabilistic Aspect Mining"}
+{"Text REtrieval Conference (TREC) Blogs 06":"TREC Blogs 06"}
+{"Internet Movie Data Bases (IMDB)":"IMDB Dataset"}
+{"Multi-Perspective Question Answering (MPQA)":"MPQA"}
+{"CHESLY":"CHESLY"}
+{"OPSCIENCE":"OPSCIENCE"}
+{"Sci-Learn":"scikit-learn"}
+{"Python API for Twitter":"Twitter API"}
+{"DLMNN":"DLMNN"}
+{"IANFIS":"IANFIS"}
+{"MaxEnt–JABST":"Maximum Entropy-JABST"}
+{"Aspect-level SA":"ABSA"}
+{"emotion classification algorithm":"Emotion Classification"}
+{"Hybridized Attribute-centric Sentiment Classification":"Hybridized Attribute-centric Classification"}
+{"LDA ranking method":"LDA"}
+{"interval type-2 fuzzy numbers":"Type-2 Fuzzy"}
+{"DiscoverText":"DiscoverText"}
+{"Scup":"Scup"}
+{"Hybrid methods":"Hybrid Sentiment Analysis"}
+{"Word2Vec+GCN":"Word2Vec-GCN"}
+{"Text GCN":"TextGCN"}
+{"Text CNN":"TextCNN"}
+{"Stacked Convolutional Neural Network":"Stacked CNN"}
+{"Lucene":"Apache Lucene"}
+{"LPProcessor":"LPProcessor"}
+{"Attention-Based Hawkes Process Model":"Hawkes Process"}
+{"PERSEUS":"PERSEUS"}
+{"Twitter Sentiment Corpus":"Twitter Sentiment Corpus"}
+{"SemEval-2017 Task 4-C Corpus":"SemEval-2017"}
+{"Word Cloud":"WordCloud"}
+{"WordEmbedding":"Word Embeddings"}
+{"GraphEDM":"GraphEDM"}
+{"AIDA":"AIDA"}
+{"WAT-API":"WAT"}
+{"ELTDS":"ELTDS"}
+{"two layered LSTM model":"Stacked LSTM"}
+{"DEMLOnto":"DEMLOnto"}
+{"OWL":"OWL"}
+{"OWL2":"OWL 2"}
+{"Hawkes process":"Hawkes Process"}
+{"XLM-RoBERTa-sag":"XLM-RoBERTa"}
+{"XLM-Roberta-large":"XLM-RoBERTa"}
+{"Rubert-base-cased":"RuBERT"}
+{"Tree-LSTM":"Tree-LSTM"}
+{"Discourse-LSTM":"Discourse-LSTM"}
+{"simple RNN (SRN)":"RNN"}
+{"Deep Belief Network (DBN)":"DBN"}
+{"Opinion Mining (OM)":"Opinion Mining"}
+{"educational data mining":"Educational Data Mining"}
+{"learning analytics":"Learning Analytics"}
+{"Term Co-occurrence Fitness Evolution (TCFE)":"TCFE"}
+{"Genetic Rank Aggregation":"Genetic Rank Aggregation"}
+{"TextRNN":"TextRNN"}
+{"TextRCNN":"TextRCNN"}
+{"LTP":"LTP"}
+{"LSI":"LSA"}
+{"WebChild":"WebChild"}
+{"Fine-Grained Topic Sentiment Unification (FG-TSU)":"FG-TSU"}
+{"MG-LDA":"MG-LDA"}
+{"domain-specific sentiment analysis":"Domain-Specific Sentiment Analysis"}
+{"supervised machine learning for text classification":"Supervised Text Classification"}
+{"MaxQDA":"MAXQDA"}
+{"R-Text Mining Solution (R.TeMiS)":"R.TeMiS"}
+{"BroXLNet":"BroXLNet"}
+{"Tag Score model with improved K-means":"Tag Score K-means"}
+{"Linguistic Inquiry":"LIWC"}
+{"Word Count":"Word Count"}
+{"Multi Perspective Question Answering Subjectivity Lexicon (MPQA)":"MPQA"}
+{"clustering":"Clustering"}
+{"UCINET":"UCINET"}
+{"Type1 Fuzzy Logic":"Type-1 Fuzzy Logic"}
+{"Type2 Fuzzy Logic":"Type-2 Fuzzy Logic"}
+{"Neutrosophic Logic":"Neutrosophic Logic"}
+{"Stanford Log-Linear Part-Of-Speech Tagger":"Stanford POS Tagger"}
+{"Chi-Square (X2)":"Chi-squared Test"}
+{"Information Gain (IG)":"Information Gain"}
+{"SentiWordsNet":"SentiWordNet"}
+{"Service Quality-Based Text Analytics (SQTA) model":"SQTA"}
+{"Online Non-negative Matrix Factorization (ONMF) topic model":"ONMF"}
+{"SERVQUAL model":"SERVQUAL"}
+{"Fuzzy rule-based system":"Fuzzy Rule-based System"}
+{"CNN model GMEI":"CNN-GMEI"}
+{"CNN model LRMSI":"CNN-LRMSI"}
+{"VGGNet":"VGG"}
+{"PCNN":"PCNN"}
+{"DeepSentiBank":"DeepSentiBank"}
+{"Yang's method":"Yang's Method"}
+{"entropy":"Entropy"}
+{"mutual information":"Mutual Information"}
+{"Gradient Booting":"Gradient Boosting"}
+{"emot":"emot"}
+{"Stanza":"Stanza"}
+{"Adaptive Ensemble":"Adaptive Ensemble"}
+{"Linear Four Rates (LFR)":"LFR"}
+{"DDM":"DDM"}
+{"EDDM":"EDDM"}
+{"ADWIN":"ADWIN"}
+{"OzaBaggingADWINClassifier":"OzaBagging-ADWIN"}
+{"Accuracy Weighted Ensemble":"AWE"}
+{"Additive Expert Ensemble":"AEE"}
+{"Streaming Random Patches":"Streaming Random Patches"}
+{"Adaptive Random Forest Classifier":"Adaptive Random Forest"}
+{"Bidirectional Gated Recurrent Neural Network":"BiGRU"}
+{"Softmax":"Softmax"}
+{"Okapi BM25":"BM25"}
+{"Hypex":"Hypex"}
+{"Dynamic Artificial Neural Network (DAN2)":"DAN2"}
+{"NileULex":"NilULex"}
+{"Shuffled Frog Leaping Algorithm (SFLA)":"SFLA"}
+{"Improved Shuffled Frog Leaping Algorithm (ISFLA)":"ISFLA"}
+{"SFLA-based fuzzy classification systems":"SFLA-Fuzzy"}
+{"HILATSA":"HILATSA"}
+{"BTM":"BTM"}
+{"Harvard IV-4 Psychosocial Dictionary":"Harvard IV-4"}
+{"Loughran-McDonald dictionary":"Loughran-McDonald"}
+{"Genetic Programming":"Genetic Programming"}
+{"LexTo":"LexTo"}
+{"S-Sense":"S-Sense"}
+{"ACE":"ACE"}
+{"Google Cloud SDK":"Google Cloud SDK"}
+{"UCRNN":"UCRNN"}
+{"CharCNN":"CharCNN"}
+{"SENTiVENT":"SENTiVENT"}
+{"Word2vec by weighted average":"word2vec"}
+{"MONPA":"MONPA"}
+{"E-HowNet":"E-HowNet"}
+{"Hybrid Fusion Network":"Hybrid Fusion Network"}
+{"Tensor Fusion Network":"TFN"}
+{"Hierarchical Attention Network":"HAN"}
+{"Visual Aspect Attention Network":"Visual Aspect Attention Network"}
+{"CD-E2EABSA":"CD-E2EABSA"}
+{"ALBANA":"ALBANA"}
+{"Google's natural language application programming interface":"Google Cloud Natural Language API"}
+{"back propagation neural networks":"BPNN"}
+{"general regression neural networks":"GRNN"}
+{"least square support vector regression":"LS-SVR"}
+{"gaussian process regression":"GPR"}
+{"Natural Language Processing pipeline":"NLP Pipeline"}
+{"Hu&Liu":"Bing Liu Opinion Lexicon"}
+{"Dictionary of Affect in Language":"DAL"}
+{"CT-BERT":"CT-BERT"}
+{"Streaming API":"Streaming API"}
+{"Microsoft Azure Blob storage":"Azure Blob Storage"}
+{"Framester":"Framester"}
+{"BabelNet":"BabelNet"}
+{"TF.IDF":"TF-IDF"}
+{"TEAD":"TEAD"}
+{"AraSenti-Tweets":"AraSenti-Tweets"}
+{"SemEval":"SemEval"}
+{"R programming software":"R"}
+{"SVD":"SVD"}
+{"SVD++":"SVD++"}
+{"NaiveBayes Classifier":"Naive Bayes"}
+{"Lexicon-Based Linguistic Tweet Analysis Algorithm":"Lexicon-based Tweet Analysis"}
+{"LLA":"LLA"}
+{"SAOM":"SAOM"}
+{"MSR":"MSR"}
+{"DSO":"DSO"}
+{"Snippext":"Snippext"}
+{"Bag-Of-Words (BOW)":"Bag-of-Words"}
+{"TreeLSTM":"Tree-LSTM"}
+{"HCopy-GAT":"HCopy-GAT"}
+{"HRED":"HRED"}
+{"GAT":"GAT"}
+{"CopyRNN":"CopyRNN"}
+{"TG-Net":"TG-Net"}
+{"CatSeq":"CatSeq"}
+{"CorrRNN":"CorrRNN"}
+{"Latent Dirichlet Allocation model":"LDA"}
+{"WPAM-ACS":"WPAM-ACS"}
+{"FDNN":"FDNN"}
+{"TIM":"TIM"}
+{"ILLR":"ILLR"}
+{"natural language processing techniques":"Natural Language Processing"}
+{"neural nets":"ANN"}
+{"geocoding":"Geocoding"}
+{"ASCF":"ASCF"}
+{"ItemCF":"ItemCF"}
+{"UserCF":"UserCF"}
+{"Latent Aspect Rating Analysis":"LARA"}
+{"Explicit Factor Model":"Explicit Factor Model"}
+{"Opinion-enhanced collaborative filtering":"Opinion-enhanced CF"}
+{"RelNet":"RelNet"}
+{"MITRE":"MITRE"}
+{"BiCond":"BiCond"}
+{"TAN":"TAN"}
+{"CKEMN":"CKEMN"}
+{"Bertbase":"BERT"}
+{"POS grammar rules":"POS Grammar Rules"}
+{"IBM SPSS Modeler Text Analytics":"IBM SPSS Modeler"}
+{"AARCNN":"AARCNN"}
+{"AT-CNN":"AT-CNN"}
+{"RCNN-LSTM":"RCNN-LSTM"}
+{"scikit-learn python package":"scikit-learn"}
+{"SentPOSLDA":"SentPOSLDA"}
+{"Joint Sentiment/Topic (JST)":"JST"}
+{"Aspect and Sentiment Unification Model (ASUM)":"ASUM"}
+{"Sentiment Topic Model with Decomposed Prior (STDP)":"STDP"}
+{"Latent Rating Regression (LRR)":"LRR"}
+{"Latent Aspect Rating Analysis Model (LARAM)":"LARAM"}
+{"Part of Speech LDA (POSLDA)":"POSLDA"}
+{"Softmax regression":"Softmax Regression"}
+{"Restricted Boltzmann machines":"RBM"}
+{"DNet":"DNet"}
+{"MemNN":"MemNet"}
+{"DAuM":"DAuM"}
+{"SSCWE":"SSCWE"}
+{"SCWE-d":"SCWE-d"}
+{"Drift Detection-based Adaptive Windowing (DDAW)":"DDAW"}
+{"LibSVM (SVM)":"LIBSVM"}
+{"RDDM":"RDDM"}
+{"Page-Hinkley":"Page-Hinkley"}
+{"AEE":"AEE"}
+{"iSOL":"iSOL"}
+{"NVivo Pro 12":"NVivo"}
+{"SANET":"SANET"}
+{"AE-DLSTM":"AE-DLSTM"}
+{"Formal Concept Analysis (FCA)":"FCA"}
+{"Python NLTK":"NLTK"}
+{"Persian Sentence Dependency Parser":"Persian Dependency Parser"}
+{"Capsule Network":"Capsule Network"}
+{"Bidirectional LSTM (Bi-LSTM)":"BiLSTM"}
+{"ROST Content Mining 6.0":"ROST Content Mining"}
+{"Octopus":"Octoparse"}
+{"LimeSurvey":"LimeSurvey"}
+{"Coupled Multi-layer Attentions":"Coupled Multi-layer Attention"}
+{"Boosting Support Vector Machine (BSVM)":"Boosting SVM"}
+{"Levenshtein distance algorithm":"Levenshtein Distance"}
+{"Adaptive Neuro-Fuzzy Inference System (ANFIS)":"ANFIS"}
+{"N-TF-IDF Algorithm":"N-TF-IDF"}
+{"Stanford University's Natural Language Processing Toolkit":"Stanford CoreNLP"}
+{"OCC sentiment rule system":"OCC Model"}
+{"SVM classifier":"SVM"}
+{"R Statistical Software":"R"}
+{"Project Essay Grade (PEG)":"PEG"}
+{"e-rater":"e-rater"}
+{"Automated Essay Scoring (AES)":"AES"}
+{"Sastrawi":"Sastrawi"}
+{"deep_translation":"deep-translator"}
+{"Chinese emotional vocabulary ontology database of Dalian University of Technology":"Dalian Emotion Ontology"}
+{"Supervised LDA":"Supervised LDA"}
+{"Supervised Anchor Topic Models":"Supervised Anchor Topic Model"}
+{"Supervised Nested LDA":"Supervised Nested LDA"}
+{"voc method":"VOC Method"}
+{"SABRE":"SABRE"}
+{"HTF":"HTF"}
+{"ABSA-PER":"ABSA-PER"}
+{"MaxentTagger":"Stanford POS Tagger"}
+{"Twitter-Scraper":"Twitter Scraper"}
+{"DOM4J":"DOM4J"}
+{"JSOUP":"jsoup"}
+{"TDT (Topic Detection and Tracking)":"TDT"}
+{"Buzzlogic":"Buzzlogic"}
+{"Radian6":"Radian6"}
+{"Nielsen":"Nielsen"}
+{"autonomy network public opinion system":"Autonomy Network Public Opinion"}
+{"founder intelligent public opinion monitoring and analysis system":"Founder Public Opinion System"}
+{"TRS internet public opinion information monitoring system":"TRS Public Opinion System"}
+{"Rwordseg":"Rwordseg"}
+{"PSA system":"PSA"}
+{"KALDI":"Kaldi"}
+{"Cloud Speech-to-Text":"Google Cloud Speech-to-Text"}
+{"Artificial Neural Network (ANN)":"ANN"}
+{"Cuckoo search":"Cuckoo Search"}
+{"K-mean algorithm":"k-means"}
+{"Differential Evolution (DE)":"Differential Evolution"}
+{"Cuckoo Search (CS)":"Cuckoo Search"}
+{"Long- and Short-Term Memory Network":"LSTM"}
+{"STViewer":"STViewer"}
+{"Theme River":"ThemeRiver"}
+{"Text Flow":"TextFlow"}
+{"DAViewer":"DAViewer"}
+{"DocuBurst":"DocuBurst"}
+{"Word Tree":"Word Tree"}
+{"Shared Multitask Learning Network (SMLN)":"SMLN"}
+{"TG-SAN":"TG-SAN"}
+{"IMN":"IMN"}
+{"PRET+MULT":"PRET+MULT"}
+{"BERT-FC":"BERT-FC"}
+{"TD-BERT":"TD-BERT"}
+{"BERT-PT":"BERT-PT"}
+{"BERT-pair-QA-M":"BERT-pair-QA-M"}
+{"SK-GCN-BERT":"SK-GCN-BERT"}
+{"SPRN-BERT":"SPRN-BERT"}
+{"CRAFT":"CRAFT"}
+{"CNN+LP":"CNN-LP"}
+{"Popscu":"Popescu"}
+{"TF-RBM":"TF-RBM"}
+{"Shiny":"Shiny"}
+{"Serendio Lexicon":"Serendio Lexicon"}
+{"Serendio Sentiment Engine":"Serendio"}
+{"TSVM":"Transductive SVM"}
+{"Porter Algorithm":"Porter Stemmer"}
+{"Hypergraph with Helly property":"Hypergraph"}
+{"Map-Reduce":"MapReduce"}
+{"heuristic deep learning method":"Heuristic Deep Learning"}
+{"questionnaire survey":"Questionnaire Survey"}
+{"EViews":"EViews"}
+{"DidaxTo":"DidaxTo"}
+{"NiosTo":"NiosTo"}
+{"MOWOT":"MOWOT"}
+{"RSentiment":"RSentiment"}
+{"Gradient Boosted Decision Tree classifier (GBDT)":"GBDT"}
+{"Improved Elephant Herd Optimization (I-EHO)":"I-EHO"}
+{"HDFS MapReduce":"Hadoop MapReduce"}
+{"POS tags":"POS Tags"}
+{"Twitter Stream Application Programming Interface (API)":"Twitter Streaming API"}
+{"RabbitMQ":"RabbitMQ"}
+{"Kafka":"Apache Kafka"}
+{"DOC-ABSADeepL":"DOC-ABSADeepL"}
+{"Tag Sentiment Aspect (TSA)":"TSA"}
+{"Information Gain based Feature Selection (IGbFS)":"IGbFS"}
+{"Random Forest with Gini Index":"Random Forest"}
+{"Stanford Lex parser":"Stanford Parser"}
+{"Google API":"Google API"}
+{"IBM voice recognition":"IBM Watson Speech to Text"}
+{"SoftMax based User Attitude Detection Algorithm":"Softmax User Attitude Detection"}
+{"Lexicon based opinion mining":"Lexicon-based Sentiment Analysis"}
+{"Machine learning based methods":"Machine Learning"}
+{"Domain-specific sentiment dictionary":"Domain-Specific Sentiment Lexicon"}
+{"ML-SentiCON":"ML-SentiCon"}
+{"SATALex":"SATALex"}
+{"3-RBC":"3-RBC"}
+{"Logistic Regression with Stochastic Gradient Descent":"SGDClassifier"}
+{"Fuzzy Clustering":"Fuzzy Clustering"}
+{"R programming":"R"}
+{"Facebook API":"Facebook Graph API"}
+{"Facebook's graph API":"Facebook Graph API"}
+{"Natural Language Processing (NLG)":"NLG"}
+{"TOMAS":"TOMAS"}
+{"EOP":"EOP"}
+{"Goudas model":"Goudas Model"}
+{"epicure":"Epicure"}
+{"bi-directional LSTM with CRF":"BiLSTM-CRF"}
+{"Deep Speech":"DeepSpeech"}
+{"SVM+":"SVM+"}
+{"SVM+MTL":"SVM+MTL"}
+{"BPSO random subspace integrated learning method":"BPSO Random Subspace"}
+{"Natural Language Toolkits":"NLTK"}
+{"POS-Tagger elimination methodology":"POS Tagger Elimination"}
+{"Custom sentiment lexicon":"Custom Sentiment Lexicon"}
+{"Machine learning methods":"Machine Learning"}
+{"M-Adaptive":"M-Adaptive"}
+{"uClassify":"uClassify"}
+{"Senti":"Senti"}
+{"Greek Sentiment Lexicon":"Greek Sentiment Lexicon"}
+{"Twinword Sentiment Analysis API":"Twinword"}
+{"Topic Keyword Model (TKM)":"TKM"}
+{"Twitter Rest API":"Twitter API"}
+{"Text2Onto":"Text2Onto"}
+{"Wu and Palmer Measure":"Wu-Palmer Similarity"}
+{"WS4J":"WS4J"}
+{"Rosette Entity Extractor":"Rosette"}
+{"Stanford CoreNLP Named Entity Recognition":"Stanford NER"}
+{"NRC Emotion Lexicon (EmoLex)":"NRC Emotion Lexicon"}
+{"Aspect-based analysis ontology":"Aspect-based Ontology"}
+{"Semantic Web technologies":"Semantic Web"}
+{"Emotion ontology":"Emotion Ontology"}
+{"Social graph clustering":"Social Graph Clustering"}
+{"CommuteClub App":"CommuteClub"}
+{"OpenNLP1":"Apache OpenNLP"}
+{"ark-tweet-nlp":"ark-tweet-nlp"}
+{"SentiSense Synset":"SentiSense"}
+{"Effect WordNet":"EffectWordNet"}
+{"AFINN dictionary":"AFINN"}
+{"NRC Word-Emotion Association Lexicon":"NRC Emotion Lexicon"}
+{"Taboada adjective list":"Taboada Adjective List"}
+{"Whissell dictionary":"Whissell Dictionary"}
+{"Cat Swarm Optimization-based Long Short-Term Memory Neural Network (CSO-LSTMNN)":"CSO-LSTM"}
+{"Simulated Annealing (SA)":"Simulated Annealing"}
+{"Firefly Algorithm (FA)":"Firefly Algorithm"}
+{"statistical model":"Statistical Model"}
+{"fuzzy linguistic hedges":"Fuzzy Linguistic Hedges"}
+{"Multilingual BERT":"mBERT"}
+{"Neural Transition-Based Model":"Neural Transition Model"}
+{"Base Model":"Base Model"}
+{"SentiNet":"SentiNet"}
+{"H-TFIDF":"H-TFIDF"}
+{"BH-TFIDF":"BH-TFIDF"}
+{"multi-objective PSO":"Multi-objective PSO"}
+{"neural variational inference":"Neural Variational Inference"}
+{"Kahoot!":"Kahoot"}
+{"SCA model":"SCA"}
+{"Bi-LSTM and Attention-based sentiment classifier":"Attention-BiLSTM"}
+{"H2CBi":"H2CBi"}
+{"Stanford Typed Dependencies":"Stanford Typed Dependencies"}
+{"Client Heartbeat":"Client Heartbeat"}
+{"SurveyMonkey":"SurveyMonkey"}
+{"Customer Sure":"CustomerSure"}
+{"Floqapp":"Floq"}
+{"SurveyGizmo":"Alchemer"}
+{"Temper":"Temper"}
+{"Qualtrics Insight Platform":"Qualtrics"}
+{"EfficientNet":"EfficientNet"}
+{"YT8M":"YouTube-8M"}
+{"Signatures":"Signatures"}
+{"Graph Convolutional Network":"GCN"}
+{"Teddy":"Teddy"}
+{"OpineDB":"OpineDB"}
+{"SD (Sentiment Dictionary)":"Sentiment Dictionary"}
+{"SDD (Sentiment Degree Dictionary)":"Sentiment Degree Dictionary"}
+{"ND (Negation Dictionary)":"Negation Dictionary"}
+{"Opinion":"Opinion"}
+{"RABERT":"RABERT"}
+{"IO-BiLSTM":"IO-BiLSTM"}
+{"Graph Neural Networks":"GNN"}
+{"SDRN+BERT":"SDRN-BERT"}
+{"ONG":"ONG"}
+{"ARGCN+BERT":"ARGCN-BERT"}
+{"TABERT":"TABERT"}
+{"Sentiment Analysis Tool":"Sentiment Analysis"}
+{"Sentiment-preserving Document Summarization (SDS)":"SDS"}
+{"Generative Adversarial Networks (GAN)":"GAN"}
+{"PAM clustering":"PAM"}
+{"Lexicon of subjectivity clues":"Subjectivity Lexicon"}
+{"GuMa":"GuMa"}
+{"SAFE":"SAFE"}
+{"ReUS":"ReUS"}
+{"Wasserstein based Transfer Network (WTN)":"WTN"}
+{"SCL":"SCL"}
+{"SFA":"SFA"}
+{"DANN":"DANN"}
+{"AMN":"AMN"}
+{"DAS":"DAS"}
+{"HATN":"HATN"}
+{"ONSET":"ONSET"}
+{"SMACK":"SMACK"}
+{"TrustSVD":"TrustSVD"}
+{"Opinion Keyword Extraction":"Opinion Keyword Extraction"}
+{"Navie Bayes":"Naive Bayes"}
+{"Genetic Algorithm based feature reduction":"GA Feature Selection"}
+{"Sentiment Analysis (SA)":"Sentiment Analysis"}
+{"ReadMe":"ReadMe"}
+{"Aggregate Supervised Classification Scheme":"Aggregate Classification"}
+{"Additive Regularization of Topic Models (ARTM)":"ARTM"}
+{"Tree-Structured Long Short-Term Memory (Tree-LSTM)":"Tree-LSTM"}
+{"Optimized-Modified-GetOldTweets3-OMGOT":"OMGOT"}
+{"Stanford Arabic part-of-speech tagger":"Stanford Arabic POS Tagger"}
+{"Opinion Observer":"Opinion Observer"}
+{"Houndify API":"Houndify"}
+{"Deep Learning Algorithm":"Deep Learning"}
+{"Fisherfaces":"Fisherfaces"}
+{"Gated Multimodal Embedding LSTM with Temporal Attention (GME-LSTM(A))":"GME-LSTM-A"}
+{"TCNN-BiLSTM":"TCNN-BiLSTM"}
+{"Microsoft Azure":"Microsoft Azure"}
+{"Hindi dependency parser":"Hindi Dependency Parser"}
+{"GA-LSSVR":"GA-LSSVR"}
+{"Text mining for opinion score":"Text Mining"}
+{"LSSVR":"LS-SVR"}
+{"GA":"Genetic Algorithm"}
+{"BAT-neural network":"BAT-NN"}
+{"Octopus v7.1":"Octoparse"}
+{"RVVC":"RVVC"}
+{"SAHAR-LSTM":"SAHAR-LSTM"}
+{"WOA":"Whale Optimization Algorithm"}
+{"LARA":"LARA"}
+{"Aspect Finder":"Aspect Finder"}
+{"Opinion Ranking":"Opinion Ranking"}
+{"MPQA subjectivity corpus":"MPQA"}
+{"Argument mining tools":"Argument Mining"}
+{"Argumentative recommender systems":"Argumentative Recommender"}
+{"LIWC dictionary":"LIWC"}
+{"sentiment-based lexicon":"Sentiment Lexicon"}
+{"Naïve Base classifier":"Naive Bayes"}
+{"partitioning around medoids (PAM)":"PAM"}
+{"Document Term Matrix":"DTM"}
+{"Interactive survey browser":"Interactive Survey Browser"}
+{"Visualization techniques for sentiment data":"Sentiment Visualization"}
+{"BERT-MTL":"BERT-MTL"}
+{"BAT":"BAT"}
+{"BERT-LSTM/Attention":"BERT-LSTM-Attention"}
+{"AAL":"AAL"}
+{"BERT-Post Training":"BERT-PT"}
+{"BERT-Attention":"BERT-Attention"}
+{"DomBERT":"DomBERT"}
+{"CapsNet-BERT":"CapsNet-BERT"}
+{"Event Study":"Event Study"}
+{"Regression Analysis":"Regression Analysis"}
+{"Regression Tree":"Regression Tree"}
+{"Sentiment Augmented Topic Popularity Prediction (SATP)":"SATP"}
+{"Gaussian Process":"Gaussian Process"}
+{"SI Model":"SI Model"}
+{"SPIKEM":"SPIKEM"}
+{"SISe":"SISe"}
+{"Cox Model":"Cox Model"}
+{"Reinforced Poisson Process":"Reinforced Poisson Process"}
+{"Skipgram":"skip-gram"}
+{"PGOpi":"PGOpi"}
+{"OpinionLink":"OpinionLink"}
+{"Natural Language Processing-based tool":"Natural Language Processing"}
+{"Neural Opinion Dynamics (NOD)":"NOD"}
+{"Hierarchical LDA (HLDA)":"HLDA"}
+{"Cuckoo Search Algorithm":"Cuckoo Search"}
+{"Wang-Mendel algorithm":"Wang-Mendel Algorithm"}
+{"Multiobjective Genetic Algorithm":"Multi-objective GA"}
+{"NSGA-II":"NSGA-II"}
+{"Rough Set Based Optimal Feature Set Partitioning (RS-OFSP)":"RS-OFSP"}
+{"Interactive LSTM":"Interactive LSTM"}
+{"CMN":"CMN"}
+{"ICON":"ICON"}
+{"Python Vietnamese Toolkit":"Python Vietnamese Toolkit"}
+{"RandomForest":"Random Forest"}
+{"Weakly supervised framework for aspect-based sentiment analysis":"Weakly Supervised ABSA"}
+{"TransTE":"TransTE"}
+{"CLMA+":"CLMA+"}
+{"RINANTE+":"RINANTE+"}
+{"Li-unified-R":"Li-unified-R"}
+{"KWHW":"KWHW"}
+{"Deep Interaction Text Matching (DITM)":"DITM"}
+{"BM25":"BM25"}
+{"ESIM":"ESIM"}
+{"BiMPM":"BiMPM"}
+{"ARCII":"ARC-II"}
+{"MV-LSTM":"MV-LSTM"}
+{"aNMM":"aNMM"}
+{"DIIN":"DIIN"}
+{"DRCN":"DRCN"}
+{"RE2":"RE2"}
+{"Gloss":"Gloss"}
+{"Stacking":"Stacking"}
+{"Markov models":"Markov Model"}
+{"Deep learning classifier":"Deep Learning"}
+{"MyGov":"MyGov"}
+{"Hierarchical Opinion Phrase (HOP)":"HOP"}
+{"Joint Sentiment Topic (JST)":"JST"}
+{"hierarchical Latent Dirichlet Allocation (HLDA)":"HLDA"}
+{"Aspect-Sentiment Model":"Aspect-Sentiment Model"}
+{"Netvizz":"Netvizz"}
+{"Google Trends":"Google Trends"}
+{"KE-CNN":"KE-CNN"}
+{"CNN-BiGRU-MAttention":"CNN-BiGRU-MAttention"}
+{"Multihead Attention":"Multi-head Attention"}
+{"OMFeedback":"OMFeedback"}
+{"Sentiment lexicon":"Sentiment Lexicon"}
+{"Semantic similarity algorithm":"Semantic Similarity"}
+{"SentiFars":"SentiFars"}
+{"SenticNet 3.0":"SenticNet"}
+{"Liu's Polarity Lexicon":"Bing Liu Opinion Lexicon"}
+{"DENFIS":"DENFIS"}
+{"ANFIS":"ANFIS"}
+{"SC-ANFIS":"SC-ANFIS"}
+{"FCM-ANFIS":"FCM-ANFIS"}
+{"K-means-based ANFIS":"K-means-ANFIS"}
+{"FCE-SVM":"FCE-SVM"}
+{"Case-Based Reasoning (CBR)":"CBR"}
+{"Big Data Quality Metrics (BDQM)":"BDQM"}
+{"Aylien":"AYLIEN"}
+{"PNNs":"PNN"}
+{"Self-attention mechanism":"Self-Attention"}
+{"2-layer LSTM":"Stacked LSTM"}
+{"CNN+2-layer LSTM":"CNN-Stacked LSTM"}
+{"2-layer CNN+LSTM":"Stacked CNN-LSTM"}
+{"Self-attention":"Self-Attention"}
+{"Hierarchical Fusion Attention Network":"Hierarchical Fusion Attention"}
+{"TransH":"TransH"}
+{"RSD":"RSD"}
+{"SpEagle":"SpEagle"}
+{"TDSD":"TDSD"}
+{"CHMM":"CHMM"}
+{"Spam2Vec":"Spam2Vec"}
+{"CNN-GRNN":"CNN-GRNN"}
+{"SWNN":"SWNN"}
+{"ABNN":"ABNN"}
+{"AEDA":"AEDA"}
+{"Open NLP":"Apache OpenNLP"}
+{"Cloud-based software tool for sentiment analysis":"Cloud Sentiment Analysis"}
+{"Random forest tree":"Random Forest"}
+{"Fuzzy lattice reasoning":"Fuzzy Lattice Reasoning"}
+{"GRU NN":"GRU"}
+{"LSTM NN":"LSTM"}
+{"Dual-Channel CNN":"Dual-Channel CNN"}
+{"Deep Belief Neural Networks (DBN)":"DBN"}
+{"USA-Emoticons":"USA-Emoticons"}
+{"OTAWE":"OTAWE"}
+{"Sanders-Twitter Sentiment Corpus":"Sanders Twitter Sentiment Corpus"}
+{"SemRep":"SemRep"}
+{"RE-BERT":"RE-BERT"}
+{"DeepSpot":"DeepSpot"}
+{"TSNN":"TSNN"}
+{"OpCNN":"OpCNN"}
+{"Urdu Lexicon":"Urdu Lexicon"}
+{"Bing Liu's List of Opinion Words":"Bing Liu Opinion Lexicon"}
+{"English SentiWordNet":"SentiWordNet"}
+{"English to Urdu bilingual dictionary":"English-Urdu Dictionary"}
+{"Stanford Core NLP Toolkit":"Stanford CoreNLP"}
+{"Hierarchical Attention Networks":"HAN"}
+{"Lexical opinion miner":"Lexical Opinion Miner"}
+{"Azure Sentiment Analysis API":"Azure Text Analytics"}
+{"CRNN":"CRNN"}
+{"Gensim LDA":"Gensim"}
+{"Rules-based":"Rule-based System"}
+{"Fuzzy TOPSIS":"Fuzzy TOPSIS"}
+{"Hybrid Semantic Knowledgebase-Machine Learning approach":"Hybrid KB-ML"}
+{"Semantic Knowledgebase approaches":"Semantic Knowledge Base"}
+{"Negation handling technique":"Negation Handling"}
+{"word sense disambiguation algorithm":"WSD"}
+{"SANLE":"SANLE"}
+{"Data Programming":"Data Programming"}
+{"Self-Training":"Self-Training"}
+{"Pseudo-Labelling":"Pseudo-Labeling"}
+{"Mean-Teacher":"Mean Teacher"}
+{"NLPTools":"NLP Tools"}
+{"SWOANN":"SWOANN"}
+{"Konlpy":"KoNLPy"}
+{"Mecab-ko":"MeCab-ko"}
+{"RULING":"RULING"}
+{"CRD-SentEnse":"CRD-SentEnse"}
+{"chi-square test":"Chi-squared Test"}
+{"SAM":"SAM"}
+{"GDELT":"GDELT"}
+{"Self-Organizing Fuzzy Neural Network (SOFNN)":"SOFNN"}
+{"Complement Naive Bayes (ComplementNB)":"Complement Naive Bayes"}
+{"AHP":"AHP"}
+{"TOPSIS":"TOPSIS"}
+{"Contextual Multi-modal Attention Framework":"Contextual Multi-modal Attention"}
+{"LSTM-improved CNN":"LSTM-CNN"}
+{"ParSoDA":"ParSoDA"}
+{"Text Blob API":"TextBlob"}
+{"CRISP-DM":"CRISP-DM"}
+{"SentiLexPT-02":"SentiLex-PT"}
+{"BERT embeddings":"BERT"}
+{"Fuzzy Logic System":"Fuzzy Logic"}
+{"WordNet 2.1":"WordNet"}
+{"OMCR":"OMCR"}
+{"Aylien Sentiment Analysis Tool":"AYLIEN"}
+{"Sigmalaw PBSA":"Sigmalaw PBSA"}
+{"machine learning-based approaches":"Machine Learning"}
+{"hybrids of machine learning and lexicon-based approaches":"Hybrid Sentiment Analysis"}
+{"HiErarchical ATtention (HEAT) network":"HEAT"}
+{"Graph Convolutional Network (GCN)":"GCN"}
+{"mTFIDF":"mTFIDF"}
+{"JiebaR":"jiebaR"}
+{"Li and Tsai's fuzzy model":"Li-Tsai Fuzzy Model"}
+{"Graph Convolutional Networks (GCN)":"GCN"}
+{"Attention Network":"Attention Network"}
+{"Diverse Power Iteration Embeddings (DPIE)":"DPIE"}
+{"Spectral Embedding":"Spectral Embedding"}
+{"Power Iteration Clustering (PIC)":"PIC"}
+{"Frequent-direction Sketching":"Frequent Direction Sketching"}
+{"Deflation PIC":"Deflation PIC"}
+{"Column Sampling Approximation":"Column Sampling"}
+{"Randomized Sketching":"Randomized Sketching"}
+{"Self-Attention-Based BiLSTM":"Self-Attention-BiLSTM"}
+{"Target-Dependent LSTM":"TD-LSTM"}
+{"Stanford Twitter Sentiment Corpus":"Stanford Twitter Sentiment"}
+{"Intelligent Computer Network Simulation":"Intelligent Network Simulation"}
+{"Hierarchical User Attention Network (HUAN)":"HUAN"}
+{"BiLSTM+UA":"BiLSTM-UA"}
+{"BiLSTM+UAl":"BiLSTM-UAl"}
+{"NSC+UPA":"NSC-UPA"}
+{"HUAN-usr":"HUAN-usr"}
+{"HUAN-asp":"HUAN-asp"}
+{"HUAN-usr-asp":"HUAN-usr-asp"}
+{"DCLSTM-MLP":"DCLSTM-MLP"}
+{"Power BI":"Power BI"}
+{"Textom 4.5":"TEXTOM"}
+{"NetDraw":"NetDraw"}
+{"CAMEL":"CAMEL"}
+{"CAMEL-DP":"CAMEL-DP"}
+{"AME":"AME"}
+{"EAME":"EAME"}
+{"MaxEnt-LDA":"MaxEnt-LDA"}
+{"LocLDA":"LocLDA"}
+{"ccTAM":"ccTAM"}
+{"Bidirectional Encoder Representations from Transformers (BERT)":"BERT"}
+{"Sent2Vec":"Sent2Vec"}
+{"High Profit Sequential Feature Groups based on High Utility Sequences (HPSFG HUS)":"HPSFG-HUS"}
+{"High Utility Sequential Pattern Mining (HUSPM)":"HUSPM"}
+{"High Utility Itemset Mining":"High Utility Itemset Mining"}
+{"OpinionScraper":"OpinionScraper"}
+{"Newspaper":"newspaper3k"}
+{"Srcraperwiki":"ScraperWiki"}
+{"RCrawler":"Rcrawler"}
+{"Query-focused Sentiment-Oriented Multi-Objective Crow Search Algorithm (QSO-MOCSA)":"QSO-MOCSA"}
+{"CCNU":"CCNU"}
+{"IIITSum":"IIITSum"}
+{"ITALICA":"ITALICA"}
+{"NUS":"NUS"}
+{"PolyU":"PolyU"}
+{"IITSummarizers":"IITSummarizers"}
+{"QMOS":"QMOS"}
+{"SentiML++":"SentiML++"}
+{"SentiML":"SentiML"}
+{"OpinionMiningML":"OpinionMiningML"}
+{"EmotionML":"EmotionML"}
+{"HyCoR":"HyCoR"}
+{"BH-GWO-Fuzzy":"BH-GWO-Fuzzy"}
+{"Fuzzy":"Fuzzy Logic"}
+{"Neural Network (NN)":"ANN"}
+{"Naïve Bayes classifiers":"Naive Bayes"}
+{"Fuzzy Multi-Intent Classifier":"Fuzzy Multi-Intent Classifier"}
+{"Stanford Parse Tree":"Stanford Parser"}
+{"DECA":"DECA"}
+{"Intention classifier from Panichella et al.":"Panichella Intention Classifier"}
+{"Twitter data extraction and analysis framework":"Twitter Analysis Framework"}
+{"Twitter Advanced Search":"Twitter Advanced Search"}
+{"maximum entropy model":"Maximum Entropy"}
+{"StageI model":"StageI Model"}
+{"StageII model":"StageII Model"}
+{"COVID-19 TweetIDs;TweePy API;Python Natural Language Toolkit (NLTK);Scikit-learn":["COVID-19 TweetIDs", "Tweepy", "NLTK", "scikit-learn"]}
+{"Convolutional Neural Networks;Naive Bayes":["CNN", "Naive Bayes"]}
+{"Double Propagation Algorithm":"Double Propagation"}
+{"Google Profile of Mood States (GPOMS)":"GPOMS"}
+{"CRF (Conditional Random Fields)":"CRF"}
+{"ARM (Association Rule Mining)":"Association Rule Mining"}
+{"MGGP-FR":"MGGP-FR"}
+{"Fuzzy regression":"Fuzzy Regression"}
+{"Genetic programming-based fuzzy regression":"GP Fuzzy Regression"}
+{"Sentiment analysis methods":"Sentiment Analysis"}
+{"SentiWordNet 3.0.0":"SentiWordNet"}
+{"Semantic Orientation (SO) computation method":"Semantic Orientation"}
+{"PMI-IR":"PMI-IR"}
+{"Stanford NLP POS tagger":"Stanford POS Tagger"}
+{"Key-Information-oriented Convolutional Neural Network (KIN-CNN)":"KIN-CNN"}
+{"Skip-gram model":"skip-gram"}
+{"N-gram Stacked Autoencoder":"N-gram Stacked Autoencoder"}
+{"Nebular":"Nebular"}
+{"asymmetric impact-sentiment-performance analysis (AISPA)":"AISPA"}
+{"Traceable Heterogeneous Graph Representation Learning (THGRL)":"THGRL"}
+{"Sentiment Analyzer":"Sentiment Analyzer"}
+{"Emotion classifier":"Emotion Classifier"}
+{"Polarity classifier":"Polarity Classifier"}
+{"Corpus-Based Model":"Corpus-Based Model"}
+{"Dictionary-Based Model":"Dictionary-Based Model"}
+{"NLP learning model":"NLP Model"}
+{"sentiment dictionary":"Sentiment Dictionary"}
+{"JHAZM":"Jhazm"}
+{"PerSent":"PerSent"}
+{"Berkley Neural Parser":"Berkeley Neural Parser"}
+{"JamSpell":"JamSpell"}
+{"TARS":"TARS"}
+{"SEntiMoji":"SentiMoji"}
+{"DeepMoji":"DeepMoji"}
+{"SentiStrength-SE":"SentiStrength-SE"}
+{"SentiCR":"SentiCR"}
+{"Senti4SD":"Senti4SD"}
+{"modified categorical proportional difference (MCPD)":"MCPD"}
+{"balance category feature (BCF)":"BCF"}
+{"Fisher's Linear Discriminant Analysis (FLDA)":"LDA-Classifier"}
+{"Partial Least Squares (PLS)":"PLS"}
+{"feature-based Twitter sentiment analysis system":"Feature-based Twitter Sentiment"}
+{"multiple dictionaries":"Multiple Dictionaries"}
+{"vector autoregression model":"VAR"}
+{"hypothesis test":"Hypothesis Test"}
+{"AHC (Agglomerative Hierarchical Clustering)":"Hierarchical Clustering"}
+{"Neural Text Categorizer (NTC)":"NTC"}
+{"Neural Text Self Organizer (NTSO)":"NTSO"}
+{"Semkey-BERT":"Semkey-BERT"}
+{"Sentence Transformer":"Sentence Transformers"}
+{"Transformer-XL":"Transformer-XL"}
+{"Harris hawks optimizer":"Harris Hawks Optimizer"}
+{"Grey Wolf Optimizer":"Grey Wolf Optimizer"}
+{"Grasshopper Optimization Algorithm":"Grasshopper Optimization"}
+{"Differential Evolution":"Differential Evolution"}
+{"Basic Whale Optimizer Algorithm":"Whale Optimization Algorithm"}
+{"Enhanced Whale Optimizer Algorithm":"Enhanced Whale Optimization"}
+{"Slap Swarm Algorithm":"Salp Swarm Algorithm"}
+{"Ant–Lion Optimizer":"Ant Lion Optimizer"}
+{"VGG16-LSTM":"VGG16-LSTM"}
+{"Spectrograms-CNN":"Spectrogram-CNN"}
+{"BERT-as-service":"bert-as-service"}
+{"CERT":"CERT"}
+{"OpenEAR":"openEAR"}
+{"OpenSmile":"openSMILE"}
+{"AdaRNN":"AdaRNN"}
+{"AF-LSTM":"AF-LSTM"}
+{"ATLS":"ATLS"}
+{"TNet-AS":"TNet-AS"}
+{"CAN":"CAN"}
+{"RecNN":"Recursive Neural Network"}
+{"Memory Network":"Memory Network"}
+{"decision-support framework":"Decision Support Framework"}
+{"LDA-ARMA hybrid model":"LDA-ARMA"}
+{"Sentiment-LDA":"Sentiment-LDA"}
+{"Sentence-LDA (SLDA)":"Sentence-LDA"}
+{"ARMA":"ARMA"}
+{"Ultimate Facebook Scraper":"Ultimate Facebook Scraper"}
+{"BERT tokenizer":"BERT Tokenizer"}
+{"Multi-way matching deep neural network model":"Multi-way Matching DNN"}
+{"R-Net":"R-Net"}
+{"DocRNN":"DocRNN"}
+{"Sentiment-140":"Sentiment140"}
+{"NICT Opinion Extraction Tool":"NICT Opinion Extractor"}
+{"Natural Language Understanding":"NLU"}
+{"eSOL":"eSOL"}
+{"BayesNet":"Bayesian Network"}
+{"deep semantic network":"Deep Semantic Network"}
+{"minimum lexical separation distance algorithm":"Minimum Lexical Separation"}
+{"Elman RNN":"Elman Network"}
+{"double machine-learning":"Double Machine Learning"}
+{"FastText-XGBoost":"FastText-XGBoost"}
+{"BiLSTM-CRFs":"BiLSTM-CRF"}
+{"BiLSTM-CNN-CRFs":"BiLSTM-CNN-CRF"}
+{"FastText-NB":"FastText-NB"}
+{"FastText-SVM":"FastText-SVM"}
+{"Opinion mining technology":"Opinion Mining"}
+{"Adaptive diffusion method of partial differential equations":"Adaptive Diffusion PDE"}
+{"half-point difference format numerical method":"Half-point Difference Method"}
+{"Plotly":"Plotly"}
+{"RoBERTa-wwm-ext":"RoBERTa-wwm"}
+{"RoBERT":"RoBERTa"}
+{"ExtCRF":"ExtCRF"}
+{"MKC-LSTMVs-ATT":"MKC-LSTM-ATT"}
+{"SemEval-2016 Task 6-A":"SemEval-2016"}
+{"Pkudblab":"Pkudblab"}
+{"TakeLab":"TakeLab"}
+{"TGMN-CR":"TGMN-CR"}
+{"n-grams+embeddings":["n-gram", "Word Embeddings"]}
+{"AS-biGRU-CNN":"AS-BiGRU-CNN"}
+{"T-PAN":"T-PAN"}
+{"EnsembleTKPGHS":"EnsembleTKPGHS"}
+{"DMAN":"DMAN"}
+{"KoNLP":"KoNLP"}
+{"KOSAC":"KOSAC"}
+{"LOT (Latent embedding structured Opinion mining Topic model)":"LOT"}
+{"Gaussian LDA":"Gaussian LDA"}
+{"MAS":"MAS"}
+{"SVM-PUK":"SVM-PUK"}
+{"CHIRP":"CHIRP"}
+{"MOEA/PT Optimization Algorithm":"MOEA-PT"}
+{"Deep2S":"Deep2S"}
+{"Abstract Meaning Representation (AMR)":"AMR"}
+{"Answer Set Programming (ASP)":"ASP"}
+{"Enhanced Visually Derived Wiener Filter":"Enhanced VDWF"}
+{"LSTM based lip-reading regression model":"LSTM Lip-reading"}
+{"Spectral Subtraction":"Spectral Subtraction"}
+{"Log-MMSE":"Log-MMSE"}
+{"Conventional Multilayer Perceptron":"MLP"}
+{"State-of-the-art Visually Derived Wiener Filter":"VDWF"}
+{"Generalized Wiener Filtering":"Generalized Wiener Filter"}
+{"Minimum Mean-Square Error":"MMSE"}
+{"IALA":"IALA"}
+{"BiLSTM + CRF":"BiLSTM-CRF"}
+{"J48 decision tree":"J48"}
+{"content analysis":"Content Analysis"}
+{"Stanford Co-reference Resolution model":"Stanford Coreference"}
+{"Stanford Sentiment Annotator":"Stanford Sentiment Annotator"}
+{"Probabilistic Latent Semantic Analysis":"PLSA"}
+{"LAN2FIS":"LAN2FIS"}
+{"Deep learning algorithms":"Deep Learning"}
+{"Neural Graph Collaborative Filtering (NGCF)":"NGCF"}
+{"Deep Factorization-Machine based Neural Network (DeepFM)":"DeepFM"}
+{"Probabilistic Matrix Factorization (PMF)":"PMF"}
+{"User-based Collaborative Filtering (CF)":"User-based CF"}
+{"Hybrid NBC-TFIDF":"Hybrid NBC-TF-IDF"}
+{"Sentiment classifier":"Sentiment Classifier"}
+{"GoogleProfiile":"GPOMS"}
+{"Sentiment-Target Word Pair Extraction Model":"Sentiment-Target Extraction"}
+{"Web-PMI method":"Web-PMI"}
+{"Long Jiang's model":"Long Jiang Model"}
+{"Opinion and Context-Aware Inverted Index graph model":"Opinion Context-Aware Index"}
+{"Selasdia Intelligent Sales Assistant":"Selasdia"}
+{"Sentaero":"Sentaero"}
+{"TheySay":"TheySay"}
+{"Text sentiment analyzer":"Text Sentiment Analyzer"}
+{"MIOPIA Supervised Model":"MIOPIA"}
+{"Sentiment Analysis Opinion mining":"Sentiment Analysis"}
+{"Pattern Sentiment Analysis":"Pattern"}
+{"Sentiment Vivekn":"Vivekn"}
+{"Alchemy Language Document Sentiment":"AlchemyAPI"}
+{"Alchemy Language Targeted Emotion":"AlchemyAPI"}
+{"Intellexer":"Intellexer"}
+{"ParallelDots":"ParallelDots"}
+{"DepecheMood":"DepecheMood"}
+{"Twinword":"Twinword"}
+{"Tone Analyzer":"IBM Watson Tone Analyzer"}
+{"Pythia Semantic Features":"Pythia"}
+{"Pythia Term n-grams":"Pythia"}
+{"Pythia Character n-grams":"Pythia"}
+{"Pythia All n-grams":"Pythia"}
+{"Pythia All Features":"Pythia"}
+{"Opinion-Lexicon-English lexicon":"Bing Liu Opinion Lexicon"}
+{"Ontology driven TF-IDF":"Ontology-driven TF-IDF"}
+{"BoW-s":"Bag-of-Words"}
+{"Independent Encoding (IE)":"Independent Encoding"}
+{"Bidirectional Conditional Encoding (BiCoEn)":"BiCoEn"}
+{"GreenSAP":"GreenSAP"}
+{"self-attention network":"Self-Attention Network"}
+{"SVM-IPSO":"SVM-IPSO"}
+{"APSO":"APSO"}
+{"AIWPSO":"AIWPSO"}
+{"Go tagger":"Go Tagger"}
+{"Universum SVM":"Universum SVM"}
+{"Standard SVM":"SVM"}
+{"Bayesian classifier":"Bayesian Classifier"}
+{"Gaussian Processes":"Gaussian Process"}
+{"AspectEmo":"AspectEmo"}
+{"Inforex":"Inforex"}
+{"PolEmo 2.0":"PolEmo"}
+{"Support Vector Regression":"SVR"}
+{"Classification and Regression Tree":"CART"}
+{"random forest machine learning algorithm":"Random Forest"}
+{"hierarchical dictionary counts":"Hierarchical Dictionary Counts"}
+{"Diction":"Diction"}
+{"PULSAR":"PULSAR"}
+{"Modified GCNN":"Modified GCNN"}
+{"Modified GCAE":"Modified GCAE"}
+{"Facebook4j API":"Facebook4J"}
+{"Lucene Arabic Stemmer API":"Lucene Arabic Stemmer"}
+{"khoja stemmer":"Khoja Stemmer"}
+{"light stemmer":"Light Stemmer"}
+{"WEKA toolkit":"WEKA"}
+{"TopicAnalyzer":"TopicAnalyzer"}
+{"PGCDBN":"PGCDBN"}
+{"CDBN":"CDBN"}
+{"RDBN":"RDBN"}
+{"Tylor-DBN":"Taylor-DBN"}
+{"SAAN":"SAAN"}
+{"Deeply Moving":"Deeply Moving"}
+{"Sentiment Vocabulary Ontology":"Sentiment Vocabulary Ontology"}
+{"Personality Traits Privacy Preference Integration":"Personality Traits Privacy Preference"}
+{"deep autoencoders":"Deep Autoencoder"}
+{"Quindl mood":"Quindl Mood"}
+{"Weighted Conditional Probability":"Weighted Conditional Probability"}
+{"ResNet101":"ResNet-101"}
+{"Amazon Rekognition":"Amazon Rekognition"}
+{"MS Teams":"Microsoft Teams"}
+{"Slack":"Slack"}
+{"Zoom":"Zoom"}
+{"Emotion-Tweet":"Emotion-Tweet"}
+{"ArabicBERT":"ArabicBERT"}
+{"Event Graph Neural Network (EventGCN)":"EventGCN"}
+{"ABAE_labeled":"ABAE"}
+{"MATE_labeled":"MATE"}
+{"TextGCN":"TextGCN"}
+{"Multi-channel distributed representation model":"Multi-channel Distributed Representation"}
+{"Yoon-Kim's CNN model":"Kim CNN"}
+{"CAVIAR-Dragonfly optimization with Extended Naive Bayes (CDNB)":"CDNB"}
+{"Naive Bayes with dragonfly algorithm (NBDF)":"NBDF"}
+{"Opinion COW":"Opinion COW"}
+{"Opinion Circle":"Opinion Circle"}
+{"Hybrid method":"Hybrid Sentiment Analysis"}
+{"DMCILN":"DMCILN"}
+{"fuzzy c-means routing algorithm":"Fuzzy c-means Routing"}
+{"multi-view pointer-generator network":"Multi-view Pointer-Generator"}
+{"pointer-generator network":"Pointer-Generator Network"}
+{"multi-task learning model":"Multi-Task Learning"}
+{"National Research Council Canada (NRC) Lexicons (NRCLex)":"NRC Emotion Lexicon"}
+{"UCINET 6's NetDraw":"NetDraw"}
+{"LDA-SVM":"LDA-SVM"}
+{"Sentiment Sensitive Tree (SST) with Convolution Tree Kernel":"SST-CTK"}
+{"LDA Toolkit":"LDA Toolkit"}
+{"Circumplex model of affect":"Circumplex Model"}
+{"Google Cloud Prediction API":"Google Cloud Prediction API"}
+{"Multistage hybrid scheme":"Multistage Hybrid"}
+{"Dynamic artificial neural network":"Dynamic ANN"}
+{"AdaBoost Classifier":"AdaBoost"}
+{"Advantages and Drawbacks Lexicon":"Advantages and Drawbacks Lexicon"}
+{"RA-DLNet":"RA-DLNet"}
+{"VGG-19":"VGG-19"}
+{"Inception-Resnet-V2":"Inception-ResNet-v2"}
+{"ResNet-50":"ResNet-50"}
+{"Xception":"Xception"}
+{"NASNet":"NASNet"}
+{"SentiProMo Tool":"SentiProMo"}
+{"Sentiment Analysis Module (SAM)":"SAM"}
+{"Interactive Transformer":"Interactive Transformer"}
+{"Soft Mapping":"Soft Mapping"}
+{"Memory Fusion Network":"MFN"}
+{"Graph Memory Fusion Network":"Graph-MFN"}
+{"Relational Tensor Network":"Relational Tensor Network"}
+{"Transformer-Encoder":"Transformer Encoder"}
+{"AEB-CNN":"AEB-CNN"}
+{"Natural Language Processing algorithm":"Natural Language Processing"}
+{"meta classifier":"Meta Classifier"}
+{"text classifier":"Text Classifier"}
+{"name classifier":"Name Classifier"}
+{"IBM Visual Recognition API":"IBM Visual Recognition"}
+{"SKP-LDA":"SKP-LDA"}
+{"PLSI":"PLSA"}
+{"LSM":"LSM"}
+{"LTM":"LTM"}
+{"ELDA":"ELDA"}
+{"FrameNet":"FrameNet"}
+{"sentiment-spanish":"sentiment-spanish"}
+{"NDMGA-XGB":"NDMGA-XGB"}
+{"Neutrality Detector Model (NDM)":"NDM"}
+{"NDM-Grid":"NDM-Grid"}
+{"graph based adjusted Laplace smoothing":"Graph Laplace Smoothing"}
+{"Bayesian model":"Bayesian Model"}
+{"PMI":"PMI"}
+{"fuzzy product ontology mining":"Fuzzy Product Ontology"}
+{"Joint Aspect/Sentiment model":"Joint Aspect-Sentiment Model"}
+{"Explicit Topic Model":"Explicit Topic Model"}
+{"LSTM–CNN–grid search-based deep neural network":"LSTM-CNN-Grid Search"}
+{"CNN–LSTM":"CNN-LSTM"}
+{"LSTM–CNN":"LSTM-CNN"}
+{"PrefixSpan":"PrefixSpan"}
+{"Deep Convolutional Neural Networks (DCNN)":"DCNN"}
+{"Very-deep convolutional neural networks (VDCNNs)":"VDCNN"}
+{"ResNet-101":"ResNet-101"}
+{"Texture Module":"Texture Module"}
+{"Active Learning":"Active Learning"}
+{"Hybrid sentiment analysis approach":"Hybrid Sentiment Analysis"}
+{"POME":"POME"}
+{"Opiner":"Opiner"}
+{"So-PMI":"SO-PMI"}
+{"RNN-BLSTM":"BiLSTM"}
+{"Amazon Mechanical Turk":"Amazon Mechanical Turk"}
+{"GRNN-CNN":"GRNN-CNN"}
+{"Bidirectional Long Short-Term Memory (BiLSTM)":"BiLSTM"}
+{"Senti-N-Gram":"Senti-N-Gram"}
+{"Hu and Liu sentiment dictionaries":"Bing Liu Opinion Lexicon"}
+{"Sometrend":"Sometrend"}
+{"Dynamic Fusion Graph":"Dynamic Fusion Graph"}
+{"Early Fusion – LSTM":"Early Fusion LSTM"}
+{"Multi-attention recurrent network":"Multi-attention RNN"}
+{"Multimodal Factorization Model":"Multimodal Factorization"}
+{"Multimodal Cyclic Translation Network":"Multimodal Cyclic Translation"}
+{"Context-Aware Interactive Attention":"Context-Aware Interactive Attention"}
+{"ComplEx":"ComplEx"}
+{"Aspect-based sentiment analysis tool":"ABSA"}
+{"Elastic Search":"Elasticsearch"}
+{"AS-Capsules":"AS-Capsules"}
+{"M-IAN":"M-IAN"}
+{"DIMN":"DIMN"}
+{"No-Interactive":"No-Interactive"}
+{"NO-Position-Weight":"No-Position-Weight"}
+{"Aspect-based Transparent Memories (ATM)":"ATM"}
+{"Neural Turing Machines":"Neural Turing Machine"}
+{"Memory Networks":"Memory Network"}
+{"Matrix Factorization (MF)":"Matrix Factorization"}
+{"Neural Attentional Rating Regression (NARRE)":"NARRE"}
+{"Teaching Senti-Lexicon":"Teaching Senti-Lexicon"}
+{"SPPM":"SPPM"}
+{"Micro-Blog Sentiment Analysis System (MSAS)":"MSAS"}
+{"Least Squares Support Vector Machine (LSSVR) with Chaotic Particle Swarm Optimization (CPSO)":"LSSVR-CPSO"}
+{"Multi-aspect Sentiment Analysis (MSA-COSRs)":"MSA-COSRs"}
+{"EmoWeb":"EmoWeb"}
+{"Classify and Count":"Classify and Count"}
+{"Adjusted Classify and Count":"Adjusted Classify and Count"}
+{"Probabilistic Classify and Count":"Probabilistic Classify and Count"}
+{"Hellinger Distance":"Hellinger Distance"}
+{"Quantification using probability Estimators":"Quantification"}
+{"NRC library":"NRC Emotion Lexicon"}
+{"Syuzhet package":"syuzhet"}
+{"tm package":"tm"}
+{"Instagram API":"Instagram API"}
+{"Instagram-PHP-Scraper":"instagram-php-scraper"}
+{"Aspect-based LSTM-CNN Attention model":"Aspect LSTM-CNN Attention"}
+{"Recursive Neural Networks":"Recursive Neural Network"}
+{"Tree-LSTMs":"Tree-LSTM"}
+{"Hierarchical LSTMs":"Hierarchical LSTM"}
+{"KNU Korean language sentiment dictionary":"KNU Korean Sentiment Dictionary"}
+{"N2H3":"N2H3"}
+{"EffectWordNet":"EffectWordNet"}
+{"Semantic Orientation":"Semantic Orientation"}
+{"GA-GRU":"GA-GRU"}
+{"Hindi SentiWordNet (H-SWN)":"Hindi SentiWordNet"}
+{"K-means-ANFIS":"K-means-ANFIS"}
+{"Siamese-based framework":"Siamese Network"}
+{"Emoji2vec":"Emoji2Vec"}
+{"Rweka":"RWeka"}
+{"bayesm":"bayesm"}
+{"Aspect-level Sentiment Analysis (ASLSA)":"ABSA"}
+{"House of Quality (HoQ)":"House of Quality"}
+{"Pareto Chart":"Pareto Chart"}
+{"Fishbone Diagram":"Fishbone Diagram"}
+{"Intuitionistic Fuzzy Weighted Averaging (IFWA)":"IFWA"}
+{"PROMETHEE II":"PROMETHEE II"}
+{"OpinionML":"OpinionML"}
+{"OpinionMining-ML":"OpinionMiningML"}
+{"OntoSenticNet 2":"OntoSenticNet"}
+{"EML":"EML"}
+{"MFOEM":"MFOEM"}
+{"Conceptual Graph-based Document Representation (CGDR)":"CGDR"}
+{"Decision Tree (C5.0)":"C5.0"}
+{"Ensemble Voted Classifier":"Ensemble Voting"}
+{"Stochastic Neighbor Embedding":"t-SNE"}
+{"SSE":"SSE"}
+{"BLSE":"BLSE"}
+{"MEDA":"MEDA"}
+{"mSDA":"mSDA"}
+{"CharSCNN":"CharSCNN"}
+{"MutiChannel CNN-BiLSTM":"MultiChannel CNN-BiLSTM"}
+{"SR-LSTM":"SR-LSTM"}
+{"SSR-LSTM":"SSR-LSTM"}
+{"BOMW":"BOMW"}
+{"KuCut":"KuCut"}
+{"Jitar":"Jitar"}
+{"LEXiTRON":"LEXiTRON"}
+{"Thai Twitter corpus":"Thai Twitter Corpus"}
+{"EmoText":"EmoText"}
+{"gavagai":"Gavagai"}
+{"MonkeyLearn":"MonkeyLearn"}
+{"Auto-Encoders":"Autoencoder"}
+{"Contractive Auto-Encoders":"Contractive Autoencoder"}
+{"Sparse Auto-Encoders":"Sparse Autoencoder"}
+{"KNN Classifier":"KNN"}
+{"Chinese Emotional Vocabulary Ontology Database (Dalian University of Technology)":"Dalian Emotion Ontology"}
+{"NTUSD (National Taiwan University)":"NTUSD"}
+{"Multi-Class Support Vector Machine":"Multi-class SVM"}
+{"Relief":"Relief"}
+{"Correlation-based feature selection (CFS)":"CFS"}
+{"Fast Correlated Based Filter (FCBF)":"FCBF"}
+{"INTERACT":"INTERACT"}
+{"Fisher Score":"Fisher Score"}
+{"Minimum Redundancy Maximum Relevance (mRMR)":"mRMR"}
+{"FAST":"FAST"}
+{"Linked FS":"Linked FS"}
+{"Branch and Bound Algorithm":"Branch and Bound"}
+{"Bee Colony Optimization":"Bee Colony Optimization"}
+{"Advanced Binary Ant Colony Optimization":"Binary Ant Colony"}
+{"Sequential Forward Selection":"SFS"}
+{"Sequential Backward Selection":"SBS"}
+{"Decision tree classifier-CART":"CART"}
+{"Hidden Markov Model Latent Dirichlet Allocation (HMM-LDA)":"HMM-LDA"}
+{"Fuzzy-based three-way decision framework":"Fuzzy Three-way Decision"}
+{"Fuzzy Formal Concept Analysis (FFCA)":"FFCA"}
+{"Convolutional Neural Networks (CNNs)":"CNN"}
+{"AlchemyAPI":"AlchemyAPI"}
+{"RFacebook library":"Rfacebook"}
+{"import.io cloud solution":"import.io"}
+{"Tableau Data Analytics":"Tableau"}
+{"Association Rule Mining (ARM)":"Association Rule Mining"}
+{"Stanford Dependency Parser (SDP)":"Stanford Parser"}
+{"Random Projection (RP)":"Random Projection"}
+{"Particle Swarm Optimizer (PSO)":"PSO"}
+{"Grey Wolf Optimizer (GWO)":"Grey Wolf Optimizer"}
+{"Whale Optimization Algorithm (WOA)":"Whale Optimization Algorithm"}
+{"Channel Transformation Based Convolutional Neural Network (CTBCNN)":"CTBCNN"}
+{"Japanese WordNet":"Japanese WordNet"}
+{"Open Multilingual WordNet":"Open Multilingual WordNet"}
+{"Bing Liu's Opinion Lexicon":"Bing Liu Opinion Lexicon"}
+{"Hierarchical User Sentiment Topic Model (HUSTM)":"HUSTM"}
+{"Hierarchical Aspect-Sentiment Model (HASM)":"HASM"}
+{"Structured Sentiment Model":"Structured Sentiment Model"}
+{"Author-Topic Model":"Author-Topic Model"}
+{"Community-Author-Recipient-Topic (CART)":"CART"}
+{"Author Interest Topic (AIT)":"AIT"}
+{"User-Sentiment Topic Model (USTM)":"USTM"}
+{"recursive Chinese Restaurant Process (rCRP)":"rCRP"}
+{"nested Chinese Restaurant Process (nCRP)":"nCRP"}
+{"RAKE":"RAKE"}
+{"ELK Stack":"ELK Stack"}
+{"Logstash":"Logstash"}
+{"Kibana":"Kibana"}
+{"MLlib":"MLlib"}
+{"C5.0":"C5.0"}
+{"C&RT":"CART"}
+{"Liu and Hu Lexicon":"Bing Liu Opinion Lexicon"}
+{"BERT-P":"BERT-P"}
+{"BERT-H":"BERT-H"}
+{"OpinAIS":"OpinAIS"}
+{"SFL-NB":"SFL-NB"}
+{"Artificial Immune System":"Artificial Immune System"}
+{"Shuffled Frog Leaping":"SFLA"}
+{"Naive Bayesian method":"Naive Bayes"}
+{"Bi-LSTM-CRF":"BiLSTM-CRF"}
+{"MeCab":"MeCab"}
+{"CDSARFE":"CDSARFE"}
+{"TRG-DAtt":"TRG-DAtt"}
+{"BiGRUAtt":"BiGRU-Attention"}
+{"Transformer encoder layers":"Transformer Encoder"}
+{"Facebook Graph API":"Facebook Graph API"}
+{"Adam Deep Learning":"Adam"}
+{"MaxAbsScaler":"MaxAbsScaler"}
+{"PCA":"PCA"}
+{"Urdu Sentiment Lexicon":"Urdu Sentiment Lexicon"}
+{"Urdu Sentiment Analyzer":"Urdu Sentiment Analyzer"}
+{"online sentiment analysis":"Online Sentiment Analysis"}
+{"online polls":"Online Polls"}
+{"Weighted Multivariate FTS (WMVFTS)":"WMVFTS"}
+{"Self Organizing Fuzzy Neural Networks":"Self-Organizing Fuzzy NN"}
+{"Multiple Regression":"Multiple Regression"}
+{"Ensemble Averaging":"Ensemble Averaging"}
+{"EMOTEX":"EMOTEX"}
+{"graph based semi-supervised learning algorithm":"Graph Semi-supervised Learning"}
+{"Opportunity algorithm":"Opportunity Algorithm"}
+{"Bi-Integrated CRF":"Bi-Integrated CRF"}
+{"Bi-Directional-CRF":"Bidirectional CRF"}
+{"Bayes Networks":"Bayesian Network"}
+{"Simplified Sentiment Analysis (SSA)":"SSA"}
+{"SenseComp":"SenseComp"}
+{"WSCNet":"WSCNet"}
+{"WILDCAT":"WILDCAT"}
+{"SPN":"SPN"}
+{"Gradient Boosting Model":"Gradient Boosting"}
+{"Least Squares Linear Regression":"Least Squares Regression"}
+{"Bayesian Ridge Regression":"Bayesian Ridge Regression"}
+{"ElasticNet":"ElasticNet"}
+{"Hybrid":"Hybrid Sentiment Analysis"}
+{"LA-GCN":"LA-GCN"}
+{"R-GAT":"R-GAT"}
+{"Data Mining":"Data Mining"}
+{"Machine Learning systems":"Machine Learning"}
+{"Topsy":"Topsy"}
+{"Twitter Political Index":"Twitter Political Index"}
+{"SLDA":"Supervised LDA"}
+{"HME-LDA":"HME-LDA"}
+{"Product Defect Latent Dirichlet Allocation (PDLDA)":"PDLDA"}
+{"Fuzzy C-means":"Fuzzy c-means"}
+{"retrieve-and-edit":"Retrieve-and-Edit"}
+{"PERI NOMOU SYSTEM":"PERI NOMOU"}
+{"EU-WIDE LEGAL TEXT MINING USING BIG DATA PROCESSING INFRASTRUCTURES":"EU Legal Text Mining"}
+{"T1OWA operator":"T1OWA"}
+{"ARLSTem Arabic stemmer":"ARLSTem"}
+{"imbalanced-learn":"imbalanced-learn"}
+{"Text-mining method":"Text Mining"}
+{"ELMo-BiGRU-Att":"ELMo-BiGRU-Attention"}
+{"GloVe-BiGRU-Att":"GloVe-BiGRU-Attention"}
+{"FastText-BiGRU-Att":"FastText-BiGRU-Attention"}
+{"Word2Vec-BiGRU-Att":"Word2Vec-BiGRU-Attention"}
+{"Boson NLP":"BosonNLP"}
+{"Reinforced Hard Typed Decoder (RHTD)":"RHTD"}
+{"Pointer-Generator Network (PGNet)":"Pointer-Generator Network"}
+{"Hard Typed Decoder (HTD)":"HTD"}
+{"Algorithmia (nlp/SentimentAnalysis)":"Algorithmia"}
+{"SWARM":"SWARM"}
+{"Yourview":"Yourview"}
+{"E-rator":"E-rater"}
+{"Sentiment analysis tools":"Sentiment Analysis"}
+{"Modified Support Vector Machine":"SVM"}
+{"Attention based LSTM-CNN model":"Attention-LSTM-CNN"}
+{"Bahdanau Attention":"Bahdanau Attention"}
+{"Neural Machine Translation":"NMT"}
+{"Attention based convolutional network":"Attention-CNN"}
+{"TOUR":"TOUR"}
+{"bi-directional contextual LSTM (BC-LSTM)":"BC-LSTM"}
+{"categorical Bi-LSTM (CAT-LSTM)":"CAT-LSTM"}
+{"binary convolutional Bi-LSTM (BIN-LSTM)":"BIN-LSTM"}
+{"BDT":"BDT"}
+{"GBoost":"Gradient Boosting"}
+{"ktrain":"ktrain"}
+{"Seeded Aspect and Sentiment (SAS)":"SAS"}
+{"Maximum Entropy based SAS (ME-SAS)":"ME-SAS"}
+{"Senti-COVID19":"Senti-COVID19"}
+{"Yake":"YAKE"}
+{"PEARL":"PEARL"}
+{"PTT sentiment analysis tool":"PTT"}
+{"MeaningCloud API":"MeaningCloud"}
+{"CLAWS-C7":"CLAWS C7"}
+{"Weighted Lexicon-Based Algorithm (WLBA)":"WLBA"}
+{"Netlytic":"Netlytic"}
+{"PSL":"PSL"}
+{"UWB":"UWB"}
+{"SRL":"SRL"}
+{"twitteR package":"twitteR"}
+{"Google geocoding web-service":"Google Geocoding"}
+{"dismo package":"dismo"}
+{"sentimentr package":"sentimentr"}
+{"DBSCAN algorithm":"DBSCAN"}
+{"Sentiments based Labeled LDA model (SLLDA)":"SLLDA"}
+{"Labeled LDA":"Labeled LDA"}
+{"Nearest distance model":"Nearest Distance Model"}
+{"Google popularity model":"Google Popularity Model"}
+{"SUED":"SUED"}
+{"SUED2":"SUED2"}
+{"Monkey Learn":"MonkeyLearn"}
+{"Snowball Sentiment Analysis System":"Snowball"}
+{"SAGE":"SAGE"}
+{"Markov model":"Markov Model"}
+{"Masked Aspect Embedding":"Masked Aspect Embedding"}
+{"q-rung orthopair fuzzy interaction weighted Heronian mean operators":"q-ROFIWH"}
+{"SERVQUAL":"SERVQUAL"}
+{"Genre-level sentiment lexicon adaptation model":"Genre Sentiment Adaptation"}
+{"Truncated Singular Value Decomposition":"Truncated SVD"}
+{"Entity Sentiment Topic Model (ESTM)":"ESTM"}
+{"Joint Sentiment/Topic model (JST)":"JST"}
+{"iSA":"iSA"}
+{"PLSD":"PLSD"}
+{"ELSA":"ELSA"}
+{"Foursquare":"Foursquare"}
+{"Sina Weibo":"Sina Weibo"}
+{"MS Excel":"Microsoft Excel"}
+{"HDP":"HDP"}
+{"Leximancer":"Leximancer"}
+{"OWA operators":"OWA"}
+{"Analytic Hierarchy Process (AHP)":"AHP"}
+{"CAROL":"CAROL"}
+{"Generalized Cross Entropy":"Generalized Cross Entropy"}
+{"DIA-MLM":"DIA-MLM"}
+{"Loughran-McDonald Sentiment Lexicon":"Loughran-McDonald"}
+{"High-Coverage Lexical resource (HCL)":"HCL"}
+{"Semantic Sentiment Approach (SSA)":"SSA"}
+{"Sentiment140 Lexicon":"Sentiment140"}
+{"BERT-LDA hybrid model":"BERT-LDA"}
+{"twitterscraper":"twitterscraper"}
+{"MaxEnt-L1":"MaxEnt-L1"}
+{"C4.5 decision tree":"C4.5"}
+{"SVM-kernel":"SVM"}
+{"Danmaku Sentiment Dictionary":"Danmaku Sentiment Dictionary"}
+{"EdgeBoxes":"EdgeBoxes"}
+{"Neural Network Classifier":"ANN"}
+{"Extreme Gradient Boosting (XGBoost)":"XGBoost"}
+{"Bot-O-Meter":"Botometer"}
+{"hybrid naive Bayes classifier":"Hybrid Naive Bayes"}
+{"lexical analysis":"Lexical Analysis"}
+{"Krill Herd Harmony Search Optimization Algorithm (KHHSOA)":"KHHSOA"}
+{"Linear Discriminant Analysis (LDA)":"LDA-Classifier"}
+{"Scraper":"Web Scraper"}
+{"EvoSent":"EvoSent"}
+{"Multi-granular fuzzy linguistic modelling methods":"Multi-granular Fuzzy Linguistic"}
+{"Fuzzy ontologies":"Fuzzy Ontology"}
+{"Sentiment analysis procedures":"Sentiment Analysis"}
+{"Fuzzy-based sentiment analysis system":"Fuzzy Sentiment Analysis"}
+{"Nymi software":"Nymi"}
+{"Lexicon-based SA for student feedback analysis":"Lexicon-based Feedback Analysis"}
+{"Fuzzy-based student feedback analysis":"Fuzzy Feedback Analysis"}
+{"Supervised machine learning approach for teacher's performance evaluation":"Supervised ML Performance Evaluation"}
+{"Tree Augmented Naive (TAN)":"TAN"}
+{"Bayes Factor TAN":"Bayes Factor TAN"}
+{"UIST":"UIST"}
+{"UST":"UST"}
+{"IST":"IST"}
+{"JASE":"JASE"}
+{"DMN (Deep Memory Network)":"MemNet"}
+{"FakeGAN":"FakeGAN"}
+{"SeqGAN":"SeqGAN"}
+{"Wasserstein GAN":"WGAN"}
+{"Recurrent Neural Network (RecurrentNN)":"RNN"}
+{"Recursive Neural Network (RecursiveNN)":"Recursive Neural Network"}
+{"Multilevel Fuzzy Cognitive Map (MFCM)":"MFCM"}
+{"Fuzzy Cognitive Maps (FCM)":"Fuzzy Cognitive Map"}
+{"Outscraper":"Outscraper"}
+{"Word Alignment Model":"Word Alignment Model"}
+{"graph-based co-ranking algorithm":"Graph Co-ranking"}
+{"JEST":"JEST"}
+{"JEST-Ideology":"JEST-Ideology"}
+{"Arc Map":"ArcMap"}
+{"ggmap":"ggmap"}
+{"Text mining methods":"Text Mining"}
+{"Twitter Archiving Google Sheet":"TAGS"}
+{"HMC":"HMC"}
+{"Extra Trees Classifier":"Extra-Trees"}
+{"Mozdeh":"Mozdeh"}
+{"Webometrics Analyst":"Webometrics Analyst"}
+{"Parallel dots":"ParallelDots"}
+{"KKSSA technique":"KKSSA"}
+{"Isolation Forest":"Isolation Forest"}
+{"Local Outlier Factor":"Local Outlier Factor"}
+{"ARMLOWA":"ARMLOWA"}
+{"FULL-LRNN-ASR":"FULL-LRNN-ASR"}
+{"LRNN":"LRNN"}
+{"Network Lasso":"Network Lasso"}
+{"PMSC-Log":"PMSC-Log"}
+{"PMSC-Hinge":"PMSC-Hinge"}
+{"NetLasso-Log":"NetLasso-Log"}
+{"NetLasso-Hinge":"NetLasso-Hinge"}
+{"Single-pass clustering algorithm":"Single-Pass Clustering"}
+{"R twitter package":"twitteR"}
+{"WorldNet":"WordNet"}
+{"Language R":"R"}
+{"Sentiment-opinion Alignment Explainable Recommendation (SAER)":"SAER"}
+{"Attribute-to-Sequence (Att2Seq)":"Att2Seq"}
+{"Neural Rating and Tips generation (NRT)":"NRT"}
+{"Neural Template Explanations Generation (NETE)":"NETE"}
+{"Latent Aspect Rating Analysis (LARA)":"LARA"}
+{"CSA tool":"CSA"}
+{"Rhadoop":"RHadoop"}
+{"Text:Ngrams":"Text::Ngrams"}
+{"TransG":"TransG"}
+{"TransE":"TransE"}
+{"TransA":"TransA"}
+{"TransR":"TransR"}
+{"TransD":"TransD"}
+{"ClausIE":"ClausIE"}
+{"Open Information Extraction":"OpenIE"}
+{"Coordinated Embedding Topic Model (CETM)":"CETM"}
+{"Latent Feature Topic Model (LFTM)":"LFTM"}
+{"TopicVec":"TopicVec"}
+{"Collaborative Language Model (CLM)":"CLM"}
+{"iDocNADEe":"iDocNADEe"}
+{"Continuous Bag-of-Words (CBOW)":"CBOW"}
+{"Neural Probabilistic Language Model (NPLM)":"NPLM"}
+{"sentic computing-based sentiment analysis framework":"Sentic Computing"}
+{"Healthgrades.com":"Healthgrades"}
+{"Vitals.com":"Vitals"}
+{"OpinionExtractor":"OpinionExtractor"}
+{"Baidu aip":"Baidu AI Platform"}
+{"Decision Tree (DTree)":"Decision Tree"}
+{"ROST-CM6":"ROST Content Mining"}
+{"DeBot":"DeBot"}
+{"Topic-Sentiment Mixture Model with Time Factor (TSTS)":"TSTS"}
+{"biterm topic model (BTM)":"BTM"}
+{"Topic Over Time (TOT)":"TOT"}
+{"CNN for extracting aspects":"CNN"}
+{"K-means for clustering aspects":"k-means"}
+{"Apriori-SD for descriptive rules":"Apriori-SD"}
+{"Drone Emprit Academic":"Drone Emprit Academic"}
+{"Academic Journal Predatory Checking (AJPC) system":"AJPC"}
+{"Beall's List":"Beall's List"}
+{"Stop Predatory Journals List":"Stop Predatory Journals"}
+{"Directory of Open Access Journals (DOAJ)":"DOAJ"}
+{"Master Journals List":"Master Journal List"}
+{"International Network for the Availability of Scientific Publications":"INASP"}
+{"African Journals Online":"AJOL"}
+{"InfoGather":"InfoGather"}
+{"OpenTag":"OpenTag"}
+{"Nell":"NELL"}
+{"Reverb":"ReVerb"}
+{"DBpedia":"DBpedia"}
+{"HDFS":"HDFS"}
+{"vector space model (VSM)":"VSM"}
+{"Baidu search":"Baidu"}
+{"Kino":"Kino"}
+{"Cinemito":"Cinemito"}
+{"IBM's Watson Assistant Service":"IBM Watson Assistant"}
+{"Wit.ai":"Wit.ai"}
+{"Amazon Lex":"Amazon Lex"}
+{"Microsoft's LUIS":"LUIS"}
+{"Observatório do Consumidor":"Observatorio do Consumidor"}
+{"CAM-LSTM":"CAM-LSTM"}
+{"CITREC":"CITREC"}
+{"CoLil":"CoLil"}
+{"MVEDL":"MVEDL"}
+{"Orange Canvas":"Orange"}
+{"BERT-Base-Thai":"Thai BERT"}
+{"Bidirectional Long Short-Term Memory (Bi-LSTM)":"BiLSTM"}
+{"ExtremeSentiLex":"ExtremeSentiLex"}
+{"AISA-HCM":"AISA-HCM"}
+{"BSO-DBN":"BSO-DBN"}
+{"BAS-ELM":"BAS-ELM"}
+{"Gulati et al. (ML classifications)":"Gulati et al."}
+{"TClustVID":"TClustVID"}
+{"Garcia and Berton":"Garcia and Berton"}
+{"Shah et al.":"Shah et al."}
+{"Opinion Diffusion Simulation Framework":"Opinion Diffusion Simulation"}
+{"public opinion sensitivity index (POSI)":"POSI"}
+{"variable-scale clustering (VSC)":"VSC"}
+{"Hierarchical Dirichlet Process":"HDP"}
+{"Partially Labeled LDA":"Partially Labeled LDA"}
+{"Hierarchical LDA":"HLDA"}
+{"Semi-supervised deep neural network":"Semi-supervised DNN"}
+{"Supervised deep neural network":"Supervised DNN"}
+{"VIKOR":"VIKOR"}
+{"FullBoost":"FullBoost"}
+{"TrAdaBoost":"TrAdaBoost"}
+{"COREG":"COREG"}
+{"Semi-SVM":"Semi-supervised SVM"}
+{"SGDC":"SGDClassifier"}
+{"Holistic User Behavior model (HUB)":"HUB"}
+{"Stochastic block model":"Stochastic Block Model"}
+{"content based filtering":"Content-based Filtering"}
+{"SDGCN (Syntactical Distance Attention Guided Graph Convolutional Network)":"SDGCN"}
+{"FB-SVM":"FB-SVM"}
+{"RAN":"RAN"}
+{"Phrasing":"Phrasing"}
+{"LSTM+SynATT":"LSTM-SynATT"}
+{"ASEDS":"ASEDS"}
+{"Facebook Reactions Crawler":"Facebook Reactions Crawler"}
+{"SMO classification algorithm":"SMO"}
+{"Neural network models":"ANN"}
+{"Jena":"Jena"}
+{"SemEval 2017 Task 10":"SemEval-2017"}
+{"End-to-End Neural Opinion Extraction Model":"End-to-End Opinion Extraction"}
+{"VDCNN":"VDCNN"}
+{"n-grams + tfidf":["n-gram", "TF-IDF"]}
+{"StarSpace":"StarSpace"}
+{"HFT":"HFT"}
+{"DeepCoNN":"DeepCoNN"}
+{"NeuMF":"NeuMF"}
+{"TransNets":"TransNets"}
+{"NARRE":"NARRE"}
+{"MPCN":"MPCN"}
+{"PRUS":"PRUS"}
+{"CasualConc":"CasualConc"}
+{"HMFF":"HMFF"}
+{"TCNNF-RoBERTa":"TCNNF-RoBERTa"}
+{"ALA-LSTM":"ALA-LSTM"}
+{"Whale Optimization Algorithm & Support Vector Machines (WOA-SVM)":"WOA-SVM"}
+{"AD-LDA":"AD-LDA"}
+{"Scrapy-Redis-Bloomfilter":"Scrapy-Redis-Bloomfilter"}
+{"Jiagu deep learning model":"Jiagu"}
+{"WKWSCI Sentiment Lexicon":"WKWSCI Sentiment Lexicon"}
+{"Hu & Liu Opinion Lexicon":"Bing Liu Opinion Lexicon"}
+{"NRC Word-Sentiment Association Lexicon":"NRC Emotion Lexicon"}
+{"SO-CAL lexicon":"SO-CAL"}
+{"Lexicon Sentiment Analysis":"Lexicon-based Sentiment Analysis"}
+{"Naive Bayes Machine Learning Algorithm":"Naive Bayes"}
+{"korpus":"korpus"}
+{"hu-liu":"Bing Liu Opinion Lexicon"}
+{"jockers":"Jockers-Rinker"}
+{"sentiword":"SentiWordNet"}
+{"slang":"Slang"}
+{"vadar":"VADER"}
+{"Hierarchical LSTM with Attention":"Hierarchical Attention-LSTM"}
+{"Word Mover's Distance":"Word Mover's Distance"}
+{"KL Divergence":"KL Divergence"}
+{"Numberbatch":"Numberbatch"}
+{"Fuzzy Recommendation System":"Fuzzy Recommender"}
+{"Ontology Alignment":"Ontology Alignment"}
+{"CRF classifier":"CRF"}
+{"CORD-19 Search":"CORD-19 Search"}
+{"tmCOVID":"tmCOVID"}
+{"WellAI COVID-19 Research Tool":"WellAI COVID-19"}
+{"Covidex":"Covidex"}
+{"CovidQA":"CovidQA"}
+{"CAiRE-COVID":"CAiRE-COVID"}
+{"CO-Search":"CO-Search"}
+{"NLPIR":"NLPIR"}
+{"UserRank":"UserRank"}
+{"TSRank":"TSRank"}
+{"TRank":"TRank"}
+{"K-LT":"K-LT"}
+{"UI-LR":"UI-LR"}
+{"SA-FCM":"SA-FCM"}
+{"SA-PSO":"SA-PSO"}
+{"Google Knowledge Graph":"Google Knowledge Graph"}
+{"Weibo crawler":"Weibo Crawler"}
+{"Google Cloud Platform":"Google Cloud Platform"}
+{"IMDbPY":"IMDbPY"}
+{"GrammarViz 2.0":"GrammarViz"}
+{"AYLIEN API":"AYLIEN"}
+{"SAX":"SAX"}
+{"DTW":"DTW"}
+{"GLSTM":"GLSTM"}
+{"UGRNN":"UGRNN"}
+{"TextMind":"TextMind"}
+{"LIWC (Linguistic Inquiry and Word Count)":"LIWC"}
+{"Emoji training heuristic":"Emoji Training Heuristic"}
+{"Functional Resonance Analysis Method":"FRAM"}
+{"Facebook4j":"Facebook4J"}
+{"Bayesian classifiers":"Bayesian Classifier"}
+{"ADJLex":"ADJLex"}
+{"RF-SA":"RF-SA"}
+{"SBS":"SBS"}
+{"Python LDA library":"lda"}
+{"MDAE-BERT":"MDAE-BERT"}
+{"SKFE":"SKFE"}
+{"FT-EC-Net":"FT-EC-Net"}
+{"RPCA-KFE":"RPCA-KFE"}
+{"FT-net":"FT-net"}
+{"EC-net":"EC-net"}
+{"OWA operator":"OWA"}
+{"fuzzy extension principle":"Fuzzy Extension Principle"}
+{"MAIM":"MAIM"}
+{"LSTM-CRF":"LSTM-CRF"}
+{"ARP":"ARP"}
+{"LinReg":"Linear Regression"}
+{"SVR":"SVR"}
+{"CNN-Att":"CNN-Attention"}
+{"LSTM-Att":"LSTM-Attention"}
+{"ATAE":"ATAE-LSTM"}
+{"ARP-basic":"ARP-basic"}
+{"natural language processing technology":"Natural Language Processing"}
+{"COVIDSensing":"COVIDSensing"}
+{"Reputation generation approach":"Reputation Generation"}
+{"IMDB weighted average vote (IMDBWAV)":"IMDB WAV"}
+{"IBAA (Intelligent Bayesian Asset Allocation)":"IBAA"}
+{"ExplainIt":"ExplainIt"}
+{"ABAE":"ABAE"}
+{"Aspect-based auto-encoder":"Aspect Autoencoder"}
+{"comparative opinion mining":"Comparative Opinion Mining"}
+{"quantile regression model":"Quantile Regression"}
+{"SHINE":"SHINE"}
+{"Node2vec":"Node2Vec"}
+{"SDNE":"SDNE"}
+{"LINE":"LINE"}
+{"SAS Text Miner":"SAS Text Miner"}
+{"Fuzzy decision tree":"Fuzzy Decision Tree"}
+{"BiLSTM-CRF model":"BiLSTM-CRF"}
+{"Softmax Layer":"Softmax"}
+{"Structural Topic Model (STM)":"STM"}
+{"SumHAN":"SumHAN"}
+{"ABC algorithm":"ABC"}
+{"Social Mention":"Social Mention"}
+{"Trackur":"Trackur"}
+{"Sysomos":"Sysomos"}
+{"Viralheat":"Viralheat"}
+{"Indonesian POS Tagger":"Indonesian POS Tagger"}
+{"multi-dimensional LSTM":"Multi-dimensional LSTM"}
+{"FPGA":"FPGA"}
+{"Graph LSTM":"Graph LSTM"}
+{"multi-head fusion attention-based recurrent neural network":"Multi-head Fusion Attention RNN"}
+{"IBM Watson Speech-to-Text":"IBM Watson Speech to Text"}
+{"Content Sense and Inference BiLSTM (CSI-BiLSTM)":"CSI-BiLSTM"}
+{"Treato analytics":"Treato"}
+{"Fuzzy C-Means (FCM)":"Fuzzy c-means"}
+{"Dragonfly Algorithm (DA)":"Dragonfly Algorithm"}
+{"Hybrid Particle Swarm Optimization (PSO)":"Hybrid PSO"}
+{"MRF feature selection":"MRF Feature Selection"}
+{"Hu & Liu's opinion lexicon":"Bing Liu Opinion Lexicon"}
+{"MPQA's opinion lexicon":"MPQA"}
+{"Naive Bayesian Classifier":"Naive Bayes"}
+{"Moses":"Moses"}
+{"Giza++":"GIZA++"}
+{"IRSTLM":"IRSTLM"}
+{"CoreNLP SentimentAnnotator":"Stanford Sentiment Annotator"}
+{"Centroid":"Centroid"}
+{"Opinosis":"Opinosis"}
+{"Granger causality test":"Granger Causality"}
+{"Multiple Imputation Chained Equation (MICE)":"MICE"}
+{"Multiple Imputation":"Multiple Imputation"}
+{"Listwise Deletion":"Listwise Deletion"}
+{"MALLET JAVA module":"MALLET"}
+{"S-SEIR":"S-SEIR"}
+{"NBM":"Multinomial Naive Bayes"}
+{"Twitter Hashtags":"Twitter Hashtags"}
+{"Weighted log frequency approach":"Weighted Log Frequency"}
+{"BERT-BiLSTM-CRF":"BERT-BiLSTM-CRF"}
+{"Adversarial Reptile":"Adversarial Reptile"}
+{"Reptile":"Reptile"}
+{"Recurrent Convolution Neural Network":"RCNN"}
+{"hierarchical cluster analysis":"Hierarchical Clustering"}
+{"PLS-SEM":"PLS-SEM"}
+{"REV2SEQ":"REV2SEQ"}
+{"SENT2IMP":"SENT2IMP"}
+{"PosATT-LSTM":"PosATT-LSTM"}
+{"UMAP":"UMAP"}
+{"MB-LDA":"MB-LDA"}
+{"Bi-RNN":"BiRNN"}
+{"SSA-ST":"SSA-ST"}
+{"rough number method":"Rough Number Method"}
+{"multi-criteria weighted POI graph":"Multi-criteria POI Graph"}
+{"FSPM":"FSPM"}
+{"compact pattern mining":"Compact Pattern Mining"}
+{"location correlation analysis":"Location Correlation Analysis"}
+{"frequent item-set mining-based word network":"Frequent Itemset Word Network"}
+{"VADER-EXT":"VADER-EXT"}
+{"General Use Lexicon Model":"General Use Lexicon"}
+{"Correspondence Analysis":"Correspondence Analysis"}
+{"Wordscores":"Wordscores"}
+{"ML Affinity":"ML Affinity"}
+{"Structural Topic Modeling (STM)":"STM"}
+{"Stanford Basic Dependency":"Stanford Dependencies"}
+{"Stanford Part-Of-Speech Tagger":"Stanford POS Tagger"}
+{"Naive Bayes Multinomial":"Multinomial Naive Bayes"}
+{"Expert System":"Expert System"}
+{"mathplotlib":"Matplotlib"}
+{"Att-BLSTM-CNN":"Attention-BiLSTM-CNN"}
+{"Att-CNN":"Attention-CNN"}
+{"Att-BLSTM":"Attention-BiLSTM"}
+{"Sentiment140 API":"Sentiment140"}
+{"DTOpS":"DTOpS"}
+{"Deep Boltzmann Machine":"DBM"}
+{"Robust Variational Autoencoder":"Robust VAE"}
+{"Semi-Supervised SVM":"Semi-supervised SVM"}
+{"self-extended domain sentiment dictionary":"Self-extended Domain Dictionary"}
+{"CART tree":"CART"}
+{"Python sklearn":"scikit-learn"}
+{"Harvard Psychosocial Dictionary":"Harvard IV-4"}
+{"Marketing Research Support System (MRSS)":"MRSS"}
+{"Visualization System for Analyzing Customer Comments (VSC)":"VSC"}
+{"Visualization of dialogue data":"Dialogue Visualization"}
+{"Visualization of social data":"Social Data Visualization"}
+{"OLSRNN":"OLSRNN"}
+{"Naïve Bayes machine learning algorithm":"Naive Bayes"}
+{"ROSTCM6":"ROST Content Mining"}
+{"NLPIR big data semantic intelligent analysis system":"NLPIR"}
+{"NVivo12":"NVivo"}
+{"User-Opinion-Rating":"User-Opinion-Rating"}
+{"Louvain's community detection algorithm":"Louvain"}
+{"SE-14-Lap":"SemEval-2014 Laptop"}
+{"SE-14-Res":"SemEval-2014 Restaurant"}
+{"SE-15-Lap":"SemEval-2015 Laptop"}
+{"SE-15-Res":"SemEval-2015 Restaurant"}
+{"SE-16-Lap":"SemEval-2016 Laptop"}
+{"SE-16-Res":"SemEval-2016 Restaurant"}
+{"SAS Text Miner 12.1":"SAS Text Miner"}
+{"NUVI":"NUVI"}
+{"ME-ASM":"ME-ASM"}
+{"CRF-L2R":"CRF-L2R"}
+{"CRF-PSC":"CRF-PSC"}
+{"RSVD":"RSVD"}
+{"TriFac":"TriFac"}
+{"PCA+KMeans":"PCA-KMeans"}
+{"Item Specific":"Item Specific"}
+{"Mieruka Engine R©":"Mieruka Engine"}
+{"Max Ent":"Maximum Entropy"}
+{"ML-ITV":"ML-ITV"}
+{"Bi-directional LSTM based on attention mechanism":"Attention-BiLSTM"}
+{"joint tensor factorization":"Joint Tensor Factorization"}
+{"tensor factorization":"Tensor Factorization"}
+{"Bayesian Personalized Ranking":"BPR"}
+{"Explicit Factor Models":"Explicit Factor Model"}
+{"Alkhalil Morpho Sys 2":"Alkhalil Morpho Sys"}
+{"LOGIT-Gini-PLS":"LOGIT-Gini-PLS"}
+{"Generalized Gini-PLS":"Generalized Gini-PLS"}
+{"K-nearest-neighbors":"KNN"}
+{"SPSS 25.0":"IBM SPSS Statistics"}
+{"IBM SPSS Statistics 25":"IBM SPSS Statistics"}
+{"Multiple Linear Regression":"Multiple Linear Regression"}
+{"xTML":"xTML"}
+{"EU":"EU"}
+{"RAML":"RAML"}
+{"FRML":"FRML"}
+{"MTDA":"MTDA"}
+{"RHMTML":"RHMTML"}
+{"NeuO":"NeuO"}
+{"distributed document representation":"Distributed Document Representation"}
+{"Paragraph Vector with Distributed Memory (PV-DM)":"PV-DM"}
+{"Paragraph Vector with Distributed Bag of Words (PV-DBOW)":"PV-DBOW"}
+{"K-Medoids":"K-Medoids"}
+{"PySpark":"PySpark"}
+{"MLib":"MLlib"}
+{"IOT":"IoT"}
+{"IO-LSTM":"IO-LSTM"}
+{"Improved CSIM":"Improved CSIM"}
+{"CSIM":"CSIM"}
+{"Ant colony algorithm":"Ant Colony Optimization"}
+{"NLPIR/ICTCLAS 2016":"NLPIR"}
+{"JGibbLDA":"JGibbLDA"}
+{"Bifurcated-LSTM":"Bifurcated-LSTM"}
+{"Hownet sentiment dictionary":"HowNet Sentiment Dictionary"}
+{"CSR-IRIS":"CSR-IRIS"}
+{"TFIDF-weighted Naive Bayes classifier":"TF-IDF Naive Bayes"}
+{"Jieba Word Segmentation":"jieba"}
+{"IOG":"IOG"}
+{"TC-BiLSTM":"TC-BiLSTM"}
+{"TS-GCN":"TS-GCN"}
+{"Ina-BWR":"Ina-BWR"}
+{"Kansei-integrated Kano model":"Kansei-Kano Model"}
+{"ADOPS":"ADOPS"}
+{"Hybrid Firefly-Ontology-Based Clustering Algorithm":"Firefly-Ontology Clustering"}
+{"Firefly Algorithm":"Firefly Algorithm"}
+{"Porter's stemming algorithm":"Porter Stemmer"}
+{"Natural Language Processor Parser":"NLP Parser"}
+{"Artificial Bees Colony":"ABC"}
+{"Improved Particle Swarm Optimization":"Improved PSO"}
+{"Nearest Neighbor Algorithm":"KNN"}
+{"K-Medoids algorithm":"K-Medoids"}
+{"ASTE-RL":"ASTE-RL"}
+{"WhatHowWhy":"WhatHowWhy"}
+{"TOP":"TOP"}
+{"Bootstrapped classifiers":"Bootstrapping"}
+{"Bayesian theorem":"Bayes Theorem"}
+{"Structured query expansion based retrieval algorithm":"Structured Query Expansion"}
+{"Pearson correlation":"Pearson Correlation"}
+{"Quadratic assignment procedure (QAP)":"QAP"}
+{"Semantic knowledge bases":"Semantic Knowledge Base"}
+{"Recursive Neural Networks (ReNNs)":"Recursive Neural Network"}
+{"VAUT":"VAUT"}
+{"Google Ngram Viewer":"Google Ngram Viewer"}
+{"WSM":"WSM"}
+{"SVMeop":"SVMeop"}
+{"MinCut":"MinCut"}
+{"SVMsle":"SVMsle"}
+{"Deep Random Subspace Ensembles (DRSE)":"DRSE"}
+{"Deep Belief Networks (DBN)":"DBN"}
+{"ImproveSelfTrP":"ImproveSelfTrP"}
+{"SVM-indep":"SVM-indep"}
+{"SVM-dep":"SVM-dep"}
+{"RecursiveNN":"Recursive Neural Network"}
+{"AdaRNN-w/oE":"AdaRNN"}
+{"AdaRNN-w/E":"AdaRNN"}
+{"AdaRNN-comb":"AdaRNN"}
+{"Target-dep":"Target-dep"}
+{"Target-dep+":"Target-dep+"}
+{"SK-means":"SK-means"}
+{"LabelProK":"LabelProK"}
+{"LabelProR":"LabelProR"}
+{"LabelSpK":"LabelSpK"}
+{"LabelSpR":"LabelSpR"}
+{"S3VMOVOvote":"S3VM-OVO"}
+{"S3VMOVR":"S3VM-OVR"}
+{"SelfTrH":"SelfTrH"}
+{"SelfTrP":"SelfTrP"}
+{"Grouped Spam Detection approach based on Nominated Topics (GSDNT)":"GSDNT"}
+{"Frequent Itemset Mining (FIM)":"FIM"}
+{"Temporal MNB":"Temporal MNB"}
+{"EEG":"EEG"}
+{"Intelligent Argumentation System":"Intelligent Argumentation System"}
+{"MM-TOWE":"MM-TOWE"}
+{"LOTN":"LOTN"}
+{"Sentiment-integrated critiquing system":"Sentiment Critiquing System"}
+{"Preference-based Organization (Pref-ORG)":"Pref-ORG"}
+{"Dynamic Critiquing":"Dynamic Critiquing"}
+{"FindMe":"FindMe"}
+{"Hesitant Fuzzy Linguistic Term Sets (HFLTS)":"HFLTS"}
+{"NoSQL DB":"NoSQL"}
+{"RepTrak":"RepTrak"}
+{"TRI*M":"TRI*M"}
+{"Alva":"Alva"}
+{"Fuzzy Ranking Evaluation Algorithm":"Fuzzy Ranking Evaluation"}
+{"Fuzzy Inference System":"Fuzzy Inference System"}
+{"Opinion leaders' prediction framework":"Opinion Leaders Prediction"}
+{"text analysis":"Text Analysis"}
+{"chi-square tests":"Chi-squared Test"}
+{"DEMATEL":"DEMATEL"}
+{"Automatic data extraction":"Automatic Data Extraction"}
+{"text classification":"Text Classification"}
+{"opinion leaders' identification":"Opinion Leader Identification"}
+{"stemming":"Stemming"}
+{"emotion analysis":"Emotion Analysis"}
+{"Correspondence Learning":"Correspondence Learning"}
+{"Tensor Fusion Networks":"TFN"}
+{"PLDTN-UCF":"PLDTN-UCF"}
+{"Ward":"Ward Clustering"}
+{"RubE":"RubE"}
+{"Standford CoreNLP English annotator":"Stanford CoreNLP"}
+{"transformers library by huggingface":"Transformers"}
+{"LDA–CRF hybrid model":"LDA-CRF"}
+{"EliXa":"EliXa"}
+{"SRS/I model":"SRS-I"}
+{"Hydrator":"Hydrator"}
+{"BabelFy":"BabelFy"}
+{"UData":"UData"}
+{"Word vectors":"Word Embeddings"}
+{"Condition Random Field (CRF)":"CRF"}
+{"Hidden Markov Model (HMM)":"HMM"}
+{"gensim Python library":"Gensim"}
+{"CFSFDP":"CFSFDP"}
+{"MCMC":"MCMC"}
+{"Emotional Chatting Machine (ECM)":"ECM"}
+{"Gram matrix guided visual representation extractor;CNN models including AlexNet, VGG, DenseNet, ResNet":["Gram Matrix Visual Extractor", "AlexNet", "VGG", "DenseNet", "ResNet"]}
+{"CNN;AlexNet;VGG;DenseNet;ResNet;Gram matrix guided visual representation extractor":["CNN", "AlexNet", "VGG", "DenseNet", "ResNet", "Gram Matrix Visual Extractor"]}
+{"football-specific sentiment lexicon":"Football Sentiment Lexicon"}
+{"RankNet":"RankNet"}
+{"ListNet":"ListNet"}
+{"Ensemble":"Ensemble Learning"}
+{"Agglomerative Clustering":"Hierarchical Agglomerative Clustering"}
+{"Dirichlet Mixture Model (DMM)":"DMM"}
+{"Community Detection Algorithm":"Community Detection"}
+{"Distributed LDA":"Distributed LDA"}
+{"Hierarchical Clustering":"Hierarchical Clustering"}
+{"Clustered Latent Dirichlet Allocation (CLDA)":"CLDA"}
+{"Hidden Markov":"HMM"}
+{"Natural Language API from Google Cloud":"Google Cloud Natural Language API"}
+{"YouTube Studio Analytics":"YouTube Studio Analytics"}
+{"Mozdeh Big Data Analysis tool":"Mozdeh"}
+{"Comment Term Frequency Comparison":"Comment Term Frequency"}
+{"Hype indicator":"Hype Indicator"}
+{"Google BERT":"BERT"}
+{"Google Cloud Vision API":"Google Cloud Vision"}
+{"Tess4J":"Tess4J"}
+{"Sentigem":"Sentigem"}
+{"Voce":"Voce"}
+{"Facial Action Coding System (FACS)":"FACS"}
+{"BST-LSTM":"BST-LSTM"}
+{"VAR":"VAR"}
+{"micro-blog text mining":"Microblog Text Mining"}
+{"TVP-VAR model":"TVP-VAR"}
+{"Naïve Bayes Bag of Words":"Naive Bayes BoW"}
+{"VosViewer":"VOSviewer"}
+{"syuzhet R package":"syuzhet"}
+{"stm R package":"stm"}
+{"Tensorflow Keras":["TensorFlow", "Keras"]}
+{"Deep Convolutional Neural Network":"DCNN"}
+{"Apollo Social Sensing Tool":"Apollo Social Sensing"}
+{"Katz Back-off":"Katz Back-off"}
+{"Laplace Smoothing":"Laplace Smoothing"}
+{"Valence Aware Dictionary Sentiment Reasoner (VADER)":"VADER"}
+{"IBM Watson Language Understanding":"IBM Watson NLU"}
+{"Patterns":"Pattern"}
+{"LDA algorithm":"LDA"}
+{"word lists":"Word Lists"}
+{"regression models":"Regression"}
+{"Python 3 scraper":"Python Scraper"}
+{"RUSBTM":"RUSBTM"}
+{"Sparsity enhanced PTM":"Sparsity-enhanced PTM"}
+{"Discriminative Bi-term Topic model":"Discriminative BTM"}
+{"twitter-BTM":"Twitter BTM"}
+{"BTM Topic model with K-means":"BTM-KMeans"}
+{"semantic orientation analysis":"Semantic Orientation Analysis"}
+{"hierarchical clustering approach (HCA)":"Hierarchical Clustering"}
+{"bibliographic coupling":"Bibliographic Coupling"}
+{"Automatic Question Answering (AQA)":"AQA"}
+{"Review Mining":"Review Mining"}
+{"negation handling":"Negation Handling"}
+{"positive/negative N-grams counts":"N-gram Counts"}
+{"Multi-iterative Graph-based opinion Spam Detection (MGSD)":"MGSD"}
+{"HITS":"HITS"}
+{"word n-gram":"Word n-gram"}
+{"char n-gram":"Character n-gram"}
+{"Barrón-Cedeño et al. (2019)":"Barron-Cedeno et al."}
+{"Barfar (2022)":"Barfar"}
+{"Kausar, Tahir & Mehmood (2020)":"Kausar et al."}
+{"multi-task autoencoder":"Multi-task Autoencoder"}
+{"multimodal network":"Multimodal Network"}
+{"Connie":"Connie"}
+{"Metis AI platform":"Metis AI"}
+{"RBT3":"RBT3"}
+{"Bayesian network reasoning":"Bayesian Network"}
+{"Variable elimination":"Variable Elimination"}
+{"Connection tree reasoning":"Connection Tree"}
+{"Crimson Hexagon's ForSight":"Crimson Hexagon"}
+{"BrightView":"BrightView"}
+{"Apache Pig":"Apache Pig"}
+{"Probabilistic Linguistic TODIM":"Probabilistic TODIM"}
+{"simulated annealing algorithm":"Simulated Annealing"}
+{"ALS":"ALS"}
+{"D-Hocs":"D-Hocs"}
+{"VDIQA":"VDIQA"}
+{"BRISQUE":"BRISQUE"}
+{"DIIVINE":"DIIVINE"}
+{"BLIINDS-II":"BLIINDS-II"}
+{"FRIQUE":"FRIQUE"}
+{"CurveletQA":"CurveletQA"}
+{"BQMS":"BQMS"}
+{"hypertext-induced topic selection algorithm":"HITS"}
+{"Named Entity Recognition (NER)":"NER"}
+{"Social network analysis":"Social Network Analysis"}
+{"EPDM model":"EPDM"}
+{"Supervised Machine Learning":"Supervised Learning"}
+{"Unsupervised Machine Learning (topic modeling)":"Topic Modeling"}
+{"GubaLex":"GubaLex"}
+{"Multiclass Support Vector Machine (MSVM)":"Multi-class SVM"}
+{"Simulated Annealing":"Simulated Annealing"}
+{"Multi-objective Cat Swarm Optimization (MCSO)":"MCSO"}
+{"Multi-objective Gray Wolf Optimization (MGWO)":"MGWO"}
+{"Multi-objective Moth Flame Optimization (MMFO)":"MMFO"}
+{"Multi-objective Flower Pollination Optimization (MFPO)":"MFPO"}
+{"Holistic Recurrent Attention on Target-dependent Memories":"Holistic Recurrent Attention"}
+{"Deep Memory Network (DMN)":"MemNet"}
+{"Target-Dependent LSTM (TD-LSTM)":"TD-LSTM"}
+{"Target-Connection LSTM (TC-LSTM)":"TC-LSTM"}
+{"Attention-based LSTM with Aspect Embedding (ATAE-LSTM)":"ATAE-LSTM"}
+{"Interactive Attention Networks (IAN)":"IAN"}
+{"Recurrent Attention on Memory (RAM)":"RAM"}
+{"Content Attention Model (CAM)":"CAM"}
+{"LSTM-based dependency parser":"LSTM Dependency Parser"}
+{"seeded topic modeling (seeded LDA)":"Seeded LDA"}
+{"BERT-based semantic role labeling model":"BERT SRL"}
+{"AllenNLP dependency parser":"AllenNLP"}
+{"API webtools":"API Webtools"}
+{"SentiMo":"SentiMo"}
+{"Bayesian regularization backpropagation":"Bayesian Regularization BP"}
+{"Levenberg-Marquardt backpropagation":"Levenberg-Marquardt BP"}
+{"Conjugate gradient backpropagation with Powell-Beale restarts":"Conjugate Gradient BP"}
+{"Gradient descent with adaptive learning rate backpropagation":"Adaptive LR Gradient Descent"}
+{"Pruned Exact Linear Time (PELT)":"PELT"}
+{"Knowledge-oriented Convolutional Neural Network (K-CNN)":"K-CNN"}
+{"bidirectional Gated Recurrent Neural Network (biGRU)":"BiGRU"}
+{"CNN (Convolutional Neural Network)":"CNN"}
+{"Stanford GloVe":"GloVe"}
+{"latent Dirichlet allocation algorithm":"LDA"}
+{"textmineR":"textmineR"}
+{"J48 algorithm":"J48"}
+{"Real AdaBoost":"RealAdaBoost"}
+{"Gentle AdaBoost":"GentleBoost"}
+{"Modest AdaBoost":"ModestBoost"}
+{"Neuro-Fuzzy":"ANFIS"}
+{"Graph Mining Technique":"Graph Mining"}
+{"TweetNLP":"TweetNLP"}
+{"SnowBall NLP stemmer":"Snowball Stemmer"}
+{"Active Norms of English Words (ANEW)":"ANEW"}
+{"K2":"K2"}
+{"Makalu":"Makalu"}
+{"Aconcagua":"Aconcagua"}
+{"Microsoft Excel 2007":"Microsoft Excel"}
+{"JAT":"JAT"}
+{"MIN":"MIN"}
+{"S-PLSA":"S-PLSA"}
+{"FGAOM":"FGAOM"}
+{"ARSA":"ARSA"}
+{"RAkEL":"RAkEL"}
+{"MEKA":"MEKA"}
+{"Autoencoding Variational Inference for Aspect Discovery (AVIAD)":"AVIAD"}
+{"Autoencoding Variational Inference for Joint Sentiment/Topic (AVIJST)":"AVIJST"}
+{"Python Reddit API Wrapper (PRAW)":"PRAW"}
+{"SentiNeuron":"SentiNeuron"}
+{"Memetic algorithm":"Memetic Algorithm"}
+{"Microsoft Research Paraphrase Corpus (MRPC)":"MRPC"}
+{"IPRLS":"IPRLS"}
+{"SDA":"SDA"}
+{"Hybrid Generic Particle Swarm Optimization algorithm (HGA-PSO)":"HGA-PSO"}
+{"Improved Transductive support vector machine (ITSVM)":"ITSVM"}
+{"Successor Variety Stemmers (SVS)":"SVS"}
+{"Hybrid Genetic-Particle Swarm Optimization (HGA-PSO)":"HGA-PSO"}
+{"Anserini":"Anserini"}
+{"A Unified Dual-view Model":"Unified Dual-view Model"}
+{"HEAT Network":"HEAT"}
+{"encoder-decoder framework":"Encoder-Decoder"}
+{"EventPeriscope":"EventPeriscope"}
+{"Review Grouping Algorithm":"Review Grouping"}
+{"Reviewer Group Collusion Model":"Reviewer Group Collusion"}
+{"Supervised learning":"Supervised Learning"}
+{"Unsupervised methods":"Unsupervised Learning"}
+{"Semi-supervised learning":"Semi-supervised Learning"}
+{"ROST Content Mining System version 6.0":"ROST Content Mining"}
+{"SSAM":"SSAM"}
+{"feaLDA":"feaLDA"}
+{"SenticLDA":"SenticLDA"}
+{"HTSM":"HTSM"}
+{"TOTM":"TOTM"}
+{"National Research Council of Canada Emotion Lexicon":"NRC Emotion Lexicon"}
+{"WordNet Similarity":"WordNet Similarity"}
+{"Twarc2":"Twarc2"}
+{"tidygeocoder":"tidygeocoder"}
+{"ldatuning":"ldatuning"}
+{"Apache SOLR":"Apache Solr"}
+{"Perl Web Crawler":"Perl Crawler"}
+{"Net::Twitter":"Net::Twitter"}
+{"Facebook::Graph":"Facebook::Graph"}
+{"API::Instagram":"API::Instagram"}
+{"WebService::YouTube":"WebService::YouTube"}
+{"LSTM-ATTN":"LSTM-Attention"}
+{"Support Vector Machine with Kernel Gaussian Radial Basis Function":"SVM-RBF"}
+{"ICSA-HSSVM":"ICSA-HSSVM"}
+{"Euclidean distance":"Euclidean Distance"}
+{"cosine distance":"Cosine Distance"}
+{"ICSA":"ICSA"}
+{"Topic_Disc":"Topic_Disc"}
+{"CherryPick":"CherryPick"}
+{"SLANT":"SLANT"}
+{"AsLM":"AsLM"}
+{"DeGroot":"DeGroot"}
+{"Voter":"Voter"}
+{"Biased Voter":"Biased Voter"}
+{"XGBoost":"XGBoost"}
+{"Random Forest":"Random Forest"}
+{"Logistic Regression":"Logistic Regression"}
+{"SVM":"SVM"}
+{"KNN":"KNN"}
+{"Naive Bayes":"Naive Bayes"}
+{"Decision Tree":"Decision Tree"}
+{"LSTM":"LSTM"}
+{"CNN":"CNN"}
+{"RNN":"RNN"}
+{"GRU":"GRU"}
+{"BiLSTM":"BiLSTM"}
+{"BERT":"BERT"}
+{"GPT":"GPT"}
+{"word2vec":"word2vec"}
+{"GloVe":"GloVe"}
+{"fastText":"fastText"}
+{"TF-IDF":"TF-IDF"}
+{"LDA":"LDA"}
+{"NMF":"NMF"}
+{"CRF":"CRF"}
+{"HMM":"HMM"}
+{"PCA":"PCA"}
+{"t-SNE":"t-SNE"}
+{"VADER":"VADER"}
+{"TextBlob":"TextBlob"}
+{"spaCy":"spaCy"}
+{"NLTK":"NLTK"}
+{"Stanford CoreNLP":"Stanford CoreNLP"}
+{"Gensim":"Gensim"}
+{"scikit-learn":"scikit-learn"}
+{"TensorFlow":"TensorFlow"}
+{"Keras":"Keras"}
+{"PyTorch":"PyTorch"}
+{"Apache Spark":"Apache Spark"}
+{"Hadoop":"Apache Hadoop"}
+{"R":"R"}
+{"Python":"Python"}
+{"WEKA":"WEKA"}
+{"RapidMiner":"RapidMiner"}
+{"Tableau":"Tableau"}
+{"NVivo":"NVivo"}
+{"IBM SPSS Statistics":"IBM SPSS Statistics"}
+{"SentiWordNet":"SentiWordNet"}
+{"NRC Emotion Lexicon":"NRC Emotion Lexicon"}
+{"Bing Liu Opinion Lexicon":"Bing Liu Opinion Lexicon"}
+{"AFINN":"AFINN"}
+{"MPQA":"MPQA"}
+{"SenticNet":"SenticNet"}
+{"WordNet":"WordNet"}
+{"Tweepy":"Tweepy"}
+{"Twitter API":"Twitter API"}
+{"Facebook Graph API":"Facebook Graph API"}
+{"Google Cloud Natural Language API":"Google Cloud Natural Language API"}
+{"IBM Watson NLU":"IBM Watson NLU"}
+{"Azure Text Analytics":"Azure Text Analytics"}
+{"Amazon Comprehend":"Amazon Comprehend"}
+{"MeaningCloud":"MeaningCloud"}
+{"AYLIEN":"AYLIEN"}
+{"ParallelDots":"ParallelDots"}
+{"MonkeyLearn":"MonkeyLearn"}
+{"Sentiment140":"Sentiment140"}
+{"IMDB Dataset":"IMDB Dataset"}
+{"Amazon Product Reviews":"Amazon Product Reviews"}
+{"Yelp Dataset":"Yelp Dataset"}
+{"SemEval":"SemEval"}
+{"SST":"Stanford Sentiment Treebank"}
+{"ABSA":"ABSA"}
+{"Opinion Mining":"Opinion Mining"}
+{"Sentiment Analysis":"Sentiment Analysis"}
+{"Topic Modeling":"Topic Modeling"}
+{"Text Classification":"Text Classification"}
+{"Named Entity Recognition":"NER"}
+{"Part-of-Speech Tagging":"POS Tagging"}
+{"Dependency Parsing":"Dependency Parsing"}
+{"Word Sense Disambiguation":"WSD"}
+{"Machine Translation":"Machine Translation"}
+{"Text Summarization":"Text Summarization"}
+{"Question Answering":"Question Answering"}
+{"Information Extraction":"Information Extraction"}
+{"Relation Extraction":"Relation Extraction"}
+{"Event Extraction":"Event Extraction"}
+{"Coreference Resolution":"Coreference Resolution"}
+{"Semantic Role Labeling":"Semantic Role Labeling"}
+{"Discourse Analysis":"Discourse Analysis"}
+{"Pragmatics":"Pragmatics"}
+{"Morphological Analysis":"Morphological Analysis"}
+{"Tokenization":"Tokenization"}
+{"Lemmatization":"Lemmatization"}
+{"Stemming":"Stemming"}
+{"Stop Word Removal":"Stop Word Removal"}
+{"N-gram":"n-gram"}
+{"Bag-of-Words":"Bag-of-Words"}
+{"Word Embeddings":"Word Embeddings"}
+{"Sentence Embeddings":"Sentence Embeddings"}
+{"Document Embeddings":"Document Embeddings"}
+{"Attention Mechanism":"Attention"}
+{"Transformer":"Transformer"}
+{"Encoder-Decoder":"Encoder-Decoder"}
+{"Seq2Seq":"Seq2Seq"}
+{"Beam Search":"Beam Search"}
+{"Greedy Decoding":"Greedy Decoding"}
+{"Cross-Entropy Loss":"Cross-Entropy Loss"}
+{"Softmax":"Softmax"}
+{"Dropout":"Dropout"}
+{"Batch Normalization":"Batch Normalization"}
+{"Layer Normalization":"Layer Normalization"}
+{"Residual Connection":"Residual Connection"}
+{"Skip Connection":"Skip Connection"}
+{"Pooling":"Pooling"}
+{"Convolution":"Convolution"}
+{"Recurrence":"Recurrence"}
+{"Self-Attention":"Self-Attention"}
+{"Multi-Head Attention":"Multi-head Attention"}
+{"Positional Encoding":"Positional Encoding"}
+{"Masking":"Masking"}
+{"Padding":"Padding"}
+{"Truncation":"Truncation"}
+{"Subword Tokenization":"Subword Tokenization"}
+{"BPE":"BPE"}
+{"WordPiece":"WordPiece"}
+{"SentencePiece":"SentencePiece"}
+{"Unigram":"Unigram"}
+{"Character-level":"Character-level"}
+{"Word-level":"Word-level"}
+{"Sentence-level":"Sentence-level"}
+{"Document-level":"Document-level"}
+{"Aspect-level":"Aspect-level"}
+{"Entity-level":"Entity-level"}
+{"Fine-tuning":"Fine-tuning"}
+{"Pre-training":"Pre-training"}
+{"Transfer Learning":"Transfer Learning"}
+{"Multi-task Learning":"Multi-Task Learning"}
+{"Zero-shot Learning":"Zero-shot Learning"}
+{"Few-shot Learning":"Few-shot Learning"}
+{"Meta-learning":"Meta-learning"}
+{"Reinforcement Learning":"Reinforcement Learning"}
+{"Active Learning":"Active Learning"}
+{"Semi-supervised Learning":"Semi-supervised Learning"}
+{"Self-supervised Learning":"Self-supervised Learning"}
+{"Contrastive Learning":"Contrastive Learning"}
+{"Knowledge Distillation":"Knowledge Distillation"}
+{"Pruning":"Pruning"}
+{"Quantization":"Quantization"}
+{"Model Compression":"Model Compression"}
+{"Ensemble Learning":"Ensemble Learning"}
+{"Bagging":"Bagging"}
+{"Boosting":"Boosting"}
+{"Stacking":"Stacking"}
+{"Voting":"Voting"}
+{"Random Forest":"Random Forest"}
+{"Gradient Boosting":"Gradient Boosting"}
+{"XGBoost":"XGBoost"}
+{"LightGBM":"LightGBM"}
+{"CatBoost":"CatBoost"}
+{"AdaBoost":"AdaBoost"}
+{"Extra-Trees":"Extra-Trees"}
+{"Isolation Forest":"Isolation Forest"}
+{"One-Class SVM":"One-Class SVM"}
+{"K-Means":"k-means"}
+{"DBSCAN":"DBSCAN"}
+{"Hierarchical Clustering":"Hierarchical Clustering"}
+{"Gaussian Mixture Model":"Gaussian Mixture Model"}
+{"Spectral Clustering":"Spectral Clustering"}
+{"Mean Shift":"Mean Shift"}
+{"Affinity Propagation":"Affinity Propagation"}
+{"OPTICS":"OPTICS"}
+{"BIRCH":"BIRCH"}
+{"Agglomerative Clustering":"Hierarchical Agglomerative Clustering"}
+{"Divisive Clustering":"Divisive Clustering"}
+{"Fuzzy C-Means":"Fuzzy c-means"}
+{"Self-Organizing Map":"Self-Organizing Map"}
+{"Growing Neural Gas":"Growing Neural Gas"}
+{"Neural Gas":"Neural Gas"}
+{"Competitive Learning":"Competitive Learning"}
+{"Hebbian Learning":"Hebbian Learning"}
+{"Hopfield Network":"Hopfield Network"}
+{"Boltzmann Machine":"Boltzmann Machine"}
+{"Restricted Boltzmann Machine":"RBM"}
+{"Deep Belief Network":"DBN"}
+{"Autoencoder":"Autoencoder"}
+{"Variational Autoencoder":"VAE"}
+{"Generative Adversarial Network":"GAN"}
+{"Diffusion Model":"Diffusion Model"}
+{"Flow-based Model":"Flow-based Model"}
+{"Energy-based Model":"Energy-based Model"}
+{"Normalizing Flow":"Normalizing Flow"}
+{"Neural ODE":"Neural ODE"}
+{"Graph Neural Network":"GNN"}
+{"Graph Convolutional Network":"GCN"}
+{"Graph Attention Network":"GAT"}
+{"Message Passing Neural Network":"MPNN"}
+{"Graph Transformer":"Graph Transformer"}
+{"Knowledge Graph":"Knowledge Graph"}
+{"Knowledge Graph Embedding":"Knowledge Graph Embedding"}
+{"TransE":"TransE"}
+{"TransR":"TransR"}
+{"RotatE":"RotatE"}
+{"ComplEx":"ComplEx"}
+{"DistMult":"DistMult"}
+{"ConvE":"ConvE"}
+{"R-GCN":"R-GCN"}
+{"CompGCN":"CompGCN"}
+{"Link Prediction":"Link Prediction"}
+{"Node Classification":"Node Classification"}
+{"Graph Classification":"Graph Classification"}
+{"Community Detection":"Community Detection"}
+{"Influence Maximization":"Influence Maximization"}
+{"Network Embedding":"Network Embedding"}
+{"Node2Vec":"Node2Vec"}
+{"DeepWalk":"DeepWalk"}
+{"LINE":"LINE"}
+{"SDNE":"SDNE"}
+{"GraphSAGE":"GraphSAGE"}
+{"GAE":"GAE"}
+{"VGAE":"VGAE"}
+{"Issue Supervised Approaches: Random Forest (RF), Naïve Bayes (NB), fastText":["Random Forest", "Naive Bayes", "fastText"]}
+{"Review Supervised Approaches: k-Nearest Neighbors (kNN), Multinomial NB (MNB), Support Vector Machines (SVM), Multilayer Perceptron (MLP), and One-Class SVM (OCSVM)":["KNN", "Multinomial Naive Bayes", "SVM", "MLP", "One-Class SVM"]}
+{"Review Multi-label Active Learning with Auxiliary Learner (Logistic Regression, SVM)":["Multi-label Active Learning", "Logistic Regression", "SVM"]}
+{"Review Supervised Approaches: RF, NB, NBM, SVM":["Random Forest", "Naive Bayes", "Multinomial Naive Bayes", "SVM"]}
+{"Review Supervised Approaches: NBM and Multi-criteria heuristic function":["Multinomial Naive Bayes", "Multi-criteria Heuristic Function"]}
+{"Machine Learning, Deep Learning and genetics Algorithms":["Machine Learning", "Deep Learning", "Genetic Algorithm"]}
+{"Naive Bayes and Random Forest, Logistic Regression":["Naive Bayes", "Random Forest", "Logistic Regression"]}
+{"BERT, Refined Rules, Rank-based TF-IDF":["BERT", "Rule-based Approach", "TF-IDF"]}
+{"Python Libraries (Pandas, NumPy, Requests, BeautifulSoup, NLTK, spaCy, gensim, TextBlob)":["pandas", "NumPy", "Requests", "Beautiful Soup", "NLTK", "spaCy", "Gensim", "TextBlob"]}
+{"Word Embedding and Ensemble Learning":["Word Embeddings", "Ensemble Learning"]}
+{"ML classification algorithms (Logistics Regression, Tuned Logistics Regression, Support Vector Classifier, Tuned Support Vector Classifier)":["Logistic Regression", "SVC"]}
+{"Amazon's online product reviews":"Amazon Product Reviews"}
+{"NLTK packages 'punkt' and 'stopwords'":"NLTK"}
+{"Modified Red Deer Algorithm (MRDA) Extreme Learning Machine Sparse Autoencoder (ELMSAE)":["MRDA", "Extreme Learning Machine", "Sparse Autoencoder"]}
+{"deep learning, chain classifier, and joint learning models":["Deep Learning", "Chain Classifier", "Joint Learning"]}
+{"Keras with TensorFlow":["Keras", "TensorFlow"]}
+{"Recurrent Neural Networks with word embeddings":["RNN", "Word Embeddings"]}
+{"Logistic Regression SVM":["Logistic Regression", "SVM"]}
+{"stemming, feature correlation, n-gram models":["Stemming", "Feature Correlation", "n-gram"]}
+{"Gabor features with SVMs":["Gabor Features", "SVM"]}
+{"SentiBank + SentiStrength":["SentiBank", "SentiStrength"]}
+{"CBOW + DA + LR":["CBOW", "Data Augmentation", "Logistic Regression"]}
+{"SVM + TF-IDF":["SVM", "TF-IDF"]}
+{"DistilBERT + FFNN":["DistilBERT", "Feedforward Neural Network"]}
+{"Recurrent Neural Network (RNN), Long Short-Term Memory (LSTM), Restricted Boltzmann Machine (RBM)":["RNN", "LSTM", "RBM"]}
+{"CNN + CNN-Word2Vec + RNN with LSTM+Word2Vec":["CNN", "word2vec", "RNN", "LSTM"]}
+{"Unigram with Sentiwordnet":["Unigram", "SentiWordNet"]}
+{"Chen-Skiena's Lexicon":"Chen-Skiena Lexicon"}
+{"Tutubalina's Lexicon":"Tutubalina Lexicon"}
+{"Kotelnikov et al.'s Lexicon (large)":"Kotelnikov Lexicon"}
+{"Kotelnikov et al.'s Lexicon (small)":"Kotelnikov Lexicon"}
+{"Supervised learning models (SVM, Naive Bayes, Logistic Regression, K-Nearest Neighbors)":["SVM", "Naive Bayes", "Logistic Regression", "KNN"]}
+{"NLProcessor;Text to Matrix Generator":["NLProcessor", "Text to Matrix Generator"]}
+{"Apache Lucene and Solr":["Apache Lucene", "Apache Solr"]}
+{"Stanford's CoreNLP":"Stanford CoreNLP"}
+{"Loughran and McDonald's dictionary":"Loughran-McDonald Financial Sentiment Lexicon"}
+{"Rubtsova's corpus":"Rubtsova Corpus"}
+{"Facebook's graph API":"Facebook Graph API"}
+{"Liu's Polarity Lexicon":"Bing Liu Opinion Lexicon"}
+{"COVID-19 TweetIDs;TweePy API;Python Natural Language Toolkit (NLTK);Scikit-learn":["COVID-19 TweetIDs", "Tweepy", "NLTK", "scikit-learn"]}
+{"Convolutional Neural Networks;Naive Bayes":["CNN", "Naive Bayes"]}
+{"n-grams+embeddings":["n-gram", "Word Embeddings"]}
+{"Long Jiang's model":"Long Jiang Model"}
+{"Bing Liu's Opinion Lexicon":"Bing Liu Opinion Lexicon"}
+{"Supervised machine learning approach for teacher's performance evaluation":"Supervised Machine Learning"}
+{"IBM's Watson Assistant Service":"IBM Watson Assistant"}
+{"Microsoft's LUIS":"LUIS"}
+{"n-grams + tfidf":["n-gram", "TF-IDF"]}
+{"Hu & Liu's opinion lexicon":"Bing Liu Opinion Lexicon"}
+{"MPQA's opinion lexicon":"MPQA"}
+{"Porter's stemming algorithm":"Porter Stemmer"}
+{"Gram matrix guided visual representation extractor;CNN models including AlexNet, VGG, DenseNet, ResNet":["Gram Matrix Visual Extractor", "CNN", "AlexNet", "VGG", "DenseNet", "ResNet"]}
+{"CNN;AlexNet;VGG;DenseNet;ResNet;Gram matrix guided visual representation extractor":["CNN", "AlexNet", "VGG", "DenseNet", "ResNet", "Gram Matrix Visual Extractor"]}
+{"Tensorflow Keras":["TensorFlow", "Keras"]}
+{"Crimson Hexagon's ForSight":"Crimson Hexagon ForSight"}

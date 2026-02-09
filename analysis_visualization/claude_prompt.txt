@@ -1,0 +1,4534 @@
+
+# Task: Standardize Tool Names
+
+You are given a list of tool names extracted from academic papers. Many of these refer to the same tool but use different formatting, capitalization, or include extra words like "library", "package", "tool", etc.
+
+Your task is to create a mapping from each original tool name to its standardized form.
+
+## Guidelines for Standardization:
+
+1. **Use the official/canonical name** of the tool (e.g., "scikit-learn" not "sklearn", "NLTK" not "nltk")
+2. **Remove generic suffixes** like "library", "package", "tool", "API", "framework" unless they are part of the official name
+3. **Preserve official capitalization** (e.g., "NLTK", "spaCy", "scikit-learn")
+4. **Use hyphens or spaces as in the official name** (e.g., "scikit-learn" not "scikit learn")
+5. **For versions**, remove version numbers unless the version is a distinct tool (e.g., "BERT" not "BERT-base", but "GPT-3" vs "GPT-4" are distinct)
+6. **For acronyms**, use uppercase if that is the standard (e.g., "SVM", "LSTM", "BERT")
+7. **Group variations together** - different capitalizations or separators of the same tool should map to one canonical form
+
+## Output Format:
+
+Write a JSON file called tools_dict.json where keys are the original tool names and values are the standardized names:
+
+```json
+{{
+  "NLTK library": "NLTK",
+  "nltk": "NLTK",
+  "Natural Language Toolkit": "NLTK",
+  "scikit learn": "scikit-learn",
+  "sklearn": "scikit-learn"
+}}
+```
+
+## Tool Names to Standardize:
+
+1DCNN
+2-layer CNN+LSTM
+2-layer LSTM
+3-RBC
+3W3DT
+A Comparative Analysis of Sentiment Analysis Approaches for Twitter Data
+A Deep Learning-Based Sentiment Analysis System for Tweets in Indonesian Language
+A joint model of feature mining and sentiment analysis for product review rating
+A Pattern-Based Approach For Multi-Class Sentiment Analysis In Twitter
+A Unified Dual-view Model
+AAFSA
+AAL
+AARCNN
+ABAE
+ABAE_labeled
+ABC algorithm
+ABCDM
+ABFBSA
+ABNN
+ABO-RF
+ABSA
+ABSA system
+ABSA-PER
+Abstract Meaning Representation (AMR)
+ABWE
+AC_BLSTM
+AC-BiLSTM
+Academia Sinica Bilingual Ontological Wordnet (BOW-Wordnet)
+Academic Journal Predatory Checking (AJPC) system
+academictwitteR
+Accuracy Weighted Ensemble
+ACE
+ACL-SA
+Aconcagua
+Action-verb lexicon
+Active Community Opinion Network Mining and Maximization (ACOMax)
+Active Deep Learning (ADL) classifier
+Active Learning
+Active Norms of English Words (ANEW)
+aCtive Opinion Estimator (CONE)
+AD-LDA
+AD-SAL
+Ada Boost
+Ada Boost classifier
+AdaBoost
+AdaBoost Classifier
+AdaBoost M1
+AdaBoost-AAFSA-Elman
+AdaBoostClassifier
+Adaboosting with SVM
+AdaBoostM1
+Adam
+Adam Deep Learning
+Adaptive Boosting
+Adaptive diffusion method of partial differential equations
+Adaptive Ensemble
+adaptive instance-based learning
+Adaptive Neuro-Fuzzy Inference System
+Adaptive Neuro-Fuzzy Inference System (ANFIS)
+Adaptive Random Forest Classifier
+Adaptive Recursive Neural Network
+Adaptive Rider Feedback Artificial Tree Optimization-Based Deep Neuro-Fuzzy Network (A-RFATO-based DNFN)
+Adaptive Synthetic k-nearest neighbours
+Adaptive Synthetic Multinomial Naive Bayes
+Adaptive Synthetic Random Forest
+AdaRNN
+AdaRNN-comb
+AdaRNN-w/E
+AdaRNN-w/oE
+AdaSent
+Adblock Plus
+Additive Expert Ensemble
+Additive Regularization of Topic Models (ARTM)
+ADJLex
+Adjusted Classify and Count
+ADL classifier
+Adolescent depression management ontology
+ADOPS
+ADSLDA
+Advanced Binary Ant Colony Optimization
+Advantages and Drawbacks Lexicon
+Adversarial Reptile
+ADWIN
+AE-DLSTM
+AE-LSTM
+AEB-CNN
+AEDA
+AEE
+AEN
+AEN-BERT
+AEN-Glove
+AF-LSTM
+Affective Model
+Affective Norms for English Words
+Affective norms for English words (ANEW)
+AFFGCN
+AFFIN
+Affin Dictionary
+AFFIN-111
+AFINN
+AFINN dictionary
+AFINN lexicon
+AFINN-111
+AFINN-III
+African Journals Online
+AFSA
+Agglomerative Clustering
+Agglomerative Hierarchical Clustering
+Aggregate Supervised Classification Scheme
+AGRUAMCNN
+AGSK optimization algorithm
+AHC (Agglomerative Hierarchical Clustering)
+AHF
+AHP
+AIDA
+AIN
+AISA-HCM
+AIWPSO
+AL-SSVAE
+ALA-LSTM
+ALBANA
+ALBERT
+ALBM
+Alchemy API
+Alchemy Language API
+Alchemy Language Document Sentiment
+Alchemy Language Targeted Emotion
+AlchemyAPI
+ALGA
+Algorithmia (nlp/SentimentAnalysis)
+Ali Xiaomi
+Alkhalil Morpho Sys
+Alkhalil Morpho Sys 2
+AllenNLP
+AllenNLP dependency parser
+Almahdawi et al. dataset
+ALS
+ALSTM
+Alva
+Amazon Comprehend
+Amazon embedding
+Amazon Lex
+Amazon Mechanical Turk
+Amazon Rekognition
+Amazon Web Analysis App
+Amazon’s online product reviews
+AME
+AMF-BiGRU
+AMLDA
+AMN
+Analytic Hierarchy Process (AHP)
+ANEW
+ANFIS
+ANFIS-SVM
+aNMM
+ANN
+ANN (Backpropagation)
+ANNIE
+Anserini
+Answer Set Programming (ASP)
+Ant colony algorithm
+Ant Colony Optimization
+Ant Lion Optimization (ALO)
+Ant–Lion Optimizer
+AOA
+Apache Flume
+Apache Hadoop
+Apache Hive
+Apache Kafka
+Apache Lucene and Solr
+Apache OpenNLP
+Apache Pig
+Apache SOLR
+Apache Spark
+Apache Spark MLlib
+Apache Zeppelin
+API webtool
+API webtools
+API::Instagram
+Apollo Social Sensing Tool
+Apriori
+Apriori algorithm
+Apriori-SD for descriptive rules
+APSO
+APSO-LSTM
+Aquila merged Arithmetic Optimization (AIAO)
+Arab Jordanian twitter corpus
+AraBERT
+Arabic senti-lexicon
+Arabic_news
+ArabicBERT
+ArabicDialects framework
+Arabvec
+Araelectra
+AraFT
+AraSenTi
+AraSenti-Tweets
+AraVec
+AraWord2Vec
+Arc Map
+ARCII
+ARDOC
+ArECTD dataset
+ARGCN+BERT
+Argument mining tools
+Argumentative recommender systems
+ARIMA
+ark-tweet-nlp
+ARLSTem Arabic stemmer
+ARM (Association Rule Mining)
+ARMA
+ARMLOWA
+AROA
+ARP
+ARP-basic
+ARSA
+ArSAS
+ArSenL
+Artificial Bees Colony
+Artificial Immune System
+Artificial Intelligence
+Artificial Neural Network
+Artificial Neural Network (ANN)
+artificial neural networks
+Artificial Neural Networks (ANN)
+AS-biGRU-CNN
+AS-Capsules
+ASA
+ASA (Arabic Sentiment Analysis) framework
+ASAD
+ASCF
+ASCNN
+ASEDS
+ASEGCN
+ASFul
+ASGCN
+ASGCN-DT
+AsLM
+ASP-MTL
+Aspect and Sentiment Unification Model (ASUM)
+Aspect Extraction Knowledge Transfer
+Aspect Finder
+Aspect map-based sentiment analysis network (AMSAN)
+Aspect Mining Module (AMM)
+Aspect Opinion Mining Module (AOM)
+Aspect-based analysis ontology
+Aspect-based auto-encoder
+Aspect-based LSTM-CNN Attention model
+Aspect-based opinion mining framework
+Aspect-based sentiment
+Aspect-based Sentiment Analysis
+Aspect-Based Sentiment Analysis (ABSA)
+Aspect-based sentiment analysis tool
+Aspect-based Transparent Memories (ATM)
+Aspect-level Recurrent Convolutional Neural Network (AARCNN)
+Aspect-level SA
+Aspect-Level Sentiment Analysis
+Aspect-level Sentiment Analysis (ASLSA)
+Aspect-map extraction network (AMEN)
+Aspect-Opinion Target Expression
+Aspect-oriented Opinion Alignment Network (AOAN)
+Aspect-Sentiment Model
+Aspect-Sentiment Unification Model (ASUM)
+AspectEmo
+ASQP
+Association Rule Mining
+Association Rule Mining (ARM)
+Association Rules
+ASTCN
+ASTD
+ASTE-RL
+ASUM
+asymmetric impact-sentiment-performance analysis (AISPA)
+AT-CNN
+AT-JSS-Lex
+AT-LSTM
+ATAE
+ATAE-LSTM
+ATLS
+ATSAD
+Att-BLSTM
+Att-BLSTM-CNN
+Att-CNN
+ATT-LSTM
+Attensity
+Attention
+Attention based convolutional network
+Attention based LSTM-CNN model
+attention mechanism
+Attention Network
+Attention Networks
+Attention over Attention Networks (AOA)
+attention-based CNN-LSTM model
+Attention-based Convolutional Neural Network
+Attention-Based Hawkes Process Model
+Attention-based LSTM
+Attention-based LSTM for Aspect-level Sentiment Classification
+Attention-based LSTM model with the Aspect information (ALA)
+Attention-based LSTM with Aspect Embedding (ATAE-LSTM)
+Attention-based neural model
+Attention-based Separate Pooling BRNN (ASP-BRNN)
+Attention-BGRU
+Attention-Bi-LSTM
+Attention-BLSTM
+Attentional BLSTM models
+Attentive Deep Neural Network
+Attentive LSTM with social context embeddings
+Attribute Selected Classifier
+Attribute-to-Sequence (Att2Seq)
+ATV
+ATVF
+Author Interest Topic (AIT)
+Author-Topic Model
+Auto-Encoder based Long Short Term Memory (AuE-LSTM)
+Auto-Encoders
+Auto-labeled Max-Ent Model (AMEM)
+Auto-Regressive Moving Average (ARIMA)
+Autocorrect
+autoencoder
+Autoencoder structural correspondence learning (AE-SCL)
+Autoencoders
+Autoencoding Variational Inference for Aspect Discovery (AVIAD)
+Autoencoding Variational Inference for Joint Sentiment/Topic (AVIJST)
+Automated Essay Scoring (AES)
+Automated Synonym Dictionary (ASDICT)
+Automatic data extraction
+Automatic Question Answering (AQA)
+autonomy network public opinion system
+AutoP
+AV-MC
+AWATIF
+AWD-LSTM
+Aylien
+AYLIEN API
+AYLIEN Sentiment Analysis
+Aylien Sentiment Analysis Tool
+AYLIEN Text Analysis API
+Aylien Text API
+Azure Data Lake tools Plug-in
+Azure Sentiment Analysis API
+B-MRC
+BabelFy
+BabelNet
+back propagation neural networks
+Backpropagation
+Backpropagation Neural Networks (BNN)
+Backtranslation
+Bag of Word
+Bag of Words
+Bag of Words (BoW)
+Bag of Words (BOW) Approach
+Bag-of-words
+Bag-Of-Words (BOW)
+Bagging
+Bahdanau Attention
+Baidu aip
+Baidu search
+balance category feature (BCF)
+Bangla-BERT
+BanglaBERT
+BanglishBERT
+Barfar (2022)
+Barrón-Cedeño et al. (2019)
+BART
+BAS-ELM
+Base Model
+Basic Whale Optimizer Algorithm
+BAT
+BAT-neural network
+Bayes Factor TAN
+Bayes Net
+Bayes Networks
+Bayes Point Machine
+Bayesian
+Bayesian classifier
+Bayesian classifiers
+Bayesian filter
+Bayesian Logistic Regression
+Bayesian Logistic Regression (BLR)
+Bayesian model
+Bayesian Network
+Bayesian network based Extreme Learning Machine (BNELM)
+Bayesian network reasoning
+Bayesian Nonparametric Relational Topic Model
+Bayesian Personalized Ranking
+Bayesian regularization backpropagation
+Bayesian Ridge Regression
+Bayesian theorem
+bayesm
+BayesNet
+BBFN
+BC-LSTM
+BCBL
+BCBL-Att
+BD-LSTM
+BDT
+Beall's List
+Beautiful Soup
+Beautiful Soup4
+Bee Colony Optimization
+BER-BiLSTM-ATT
+Berkley Neural Parser
+Bernoulli Naive Bayes
+Bernoulli Naïve Bayes
+Bernoulli Naive Bayesian
+Bernoulli NB
+Bernoulli NB Model
+Bernoulli’s Naive Bayes
+BERT
+BERT base
+BERT big
+BERT embeddings
+BERT tokenizer
+BERT_wwm
+BERT-ADA
+BERT-as-service
+BERT-Attention
+bert-base-multilingual-cased
+bert-base-multilingual-uncased
+BERT-Base-Thai
+BERT-Base-uncased
+BERT-based machine learning classifier
+BERT-based semantic role labeling model
+BERT-BextCNN
+BERT-Bi-LSTM
+BERT-BiGRU-TextCNN
+BERT-BiLSTM
+BERT-BiLSTM-CRF
+BERT-BiLSTM-TextCNN
+BERT-CNN
+BERT-CRF
+BERT-family language model
+BERT-FC
+BERT-H
+BERT-LDA
+BERT-LDA hybrid model
+BERT-LSTM-TextCNN
+BERT-LSTM/Attention
+BERT-MTL
+BERT-P
+BERT-pair-QA-M
+BERT-Post Training
+BERT-PT
+BERT-RCNN
+BERT-SPC
+BERT, Refined Rules, Rank-based TF-IDF
+BERT+BiLSTM+CNN
+BERT+CRF
+BERTB
+Bertbase
+BERTE
+BERTE-CDRG
+BERTE-UDA
+BERTimbau
+BERTopic
+BertViz
+BERTweet
+Beto
+BFE
+BFTree
+BGRU
+BGRU-CapsNet
+BH-GWO
+BH-GWO-Fuzzy
+BH-TFIDF
+Bi-ConvLSTM
+bi-directional contextual LSTM (BC-LSTM)
+Bi-directional Long Short-Term Memory
+Bi-directional LSTM
+Bi-directional LSTM based on attention mechanism
+bi-directional LSTM with CRF
+Bi-directional LSTM-CNN
+Bi-Directional-CRF
+Bi-DLSTM
+Bi-GRU
+Bi-GRU End-to-End Model with self-attention
+Bi-Integrated CRF
+Bi-LSTM
+Bi-LSTM and Attention-based sentiment classifier
+Bi-LSTM based attention network
+Bi-LSTM-ATT-G
+Bi-LSTM-CRF
+Bi-RNN
+Bi-Sense Emoji Embedding (BSEE)
+BiAffine
+Biaffine Attention Model (BAM)
+Biased Voter
+bibliographic coupling
+Bibliometric Analysis
+BiCond
+Bidirectional Conditional Encoding (BiCoEn)
+Bidirectional Encoder Representations from Transformers (BERT)
+Bidirectional Gated Recurrent Neural Network
+bidirectional Gated Recurrent Neural Network (biGRU)
+Bidirectional Gated Recurrent Unit (Bi-GRU)
+Bidirectional Gated Recurrent Unit (BiGRU)
+Bidirectional GRU
+Bidirectional Long Short-Term Memory (Bi-LSTM)
+Bidirectional Long Short-Term Memory (BiLSTM)
+Bidirectional LSTM
+Bidirectional LSTM (Bi-LSTM)
+Bidirectional recurrent neural networks (Bi-RNNs)
+Bifurcated-LSTM
+Big BlueButton
+Big Data Quality Metrics (BDQM)
+BigDL
+Bigram
+BiGRU
+BiGRU + CNN
+BiGRU-attention model
+BiGRU-CRF
+BiGRUAtt
+BigScience
+BiLSTM
+BiLSTM + CRF
+BiLSTM-ATT
+BiLSTM-CNN
+BiLSTM-CNN-CRFs
+BiLSTM-CRF
+BiLSTM-CRF model
+BiLSTM-CRFs
+BiLSTM+Att
+BiLSTM+UA
+BiLSTM+UAl
+BiLSTMs
+BIMHA
+BiMPM
+Binary Brain Storm Optimization (BBSO) algorithm
+binary convolutional Bi-LSTM (BIN-LSTM)
+Binary SVM classifier
+Bing
+Bing lexicon
+Bing Liu lexicon
+Bing Liu's lexicon
+Bing Liu's List of Opinion Words
+Bing Liu’s Opinion Lexicon
+Bing-Liu opinion lexicon
+Biterm Topic Model
+biterm topic model (BTM)
+BLIINDS-II
+Blinov et al.'s Lexicon
+bloomz-mt
+BLSE
+BLSTM
+BLSTM-2DCNN
+BLSTM-2DPooling
+BLSTM-CRF
+BM25
+BM25 model
+BMRC
+BNB
+BOMW
+BookCorpus
+Boosted Random Forest
+Boosting Support Vector Machine (BSVM)
+Bootstrap
+Bootstrapped classifiers
+Boruta
+Boson NLP
+Bot-O-Meter
+Botometer
+BoW
+BoW-base
+BoW-s
+BP Neural Network
+BPSO random subspace integrated learning method
+BQMS
+BRAD 1.0
+BRAD 2.0
+BRAE
+Branch and Bound Algorithm
+BranchLSTM
+Brandwatch
+BrightView
+BRISQUE
+BRNN
+BRNN-CRF
+broom
+BroXLNet
+BSLTM-Att
+BSO-DBN
+BST-LSTM
+BTM
+BTM Topic model with K-means
+Butterfly Optimization Algorithm
+Buy-and-hold SPY
+Buzzlogic
+C-LSTM
+C-RNN
+C&RT
+C4.5 decision tree
+C5.0
+CABASC
+CADEN
+Caffe
+CaffeNet
+CAiRE-COVID
+CALD
+CAM-LSTM
+CAMEL
+CAMEL-DP
+CAMelBERT
+CamemBERT
+CAMF
+CAN
+CapsNet
+CapsNet-BERT
+Capsule Network
+Capsule Network with Gravitational Search Algorithm (CN-GSA)
+CAROL
+CART
+CART tree
+Cartesian-ASQP
+Case-Based Reasoning (CBR)
+CasualConc
+Cat Swarm Optimization-based Long Short-Term Memory Neural Network (CSO-LSTMNN)
+CatBoost Classifier
+Catboost Recurrent Neural Framework (CRNF)
+categorical Bi-LSTM (CAT-LSTM)
+Category Discriminative Strength (CDS)
+CatSeq
+CAVIAR-Dragonfly optimization with Extended Naive Bayes (CDNB)
+CBiLSTM
+CBOW
+CBOW + DA + LR
+CBRNN
+ccLDA
+CCNU
+CCR
+CCRO
+CCRSA
+ccTAM
+CD-E2EABSA
+CDBN
+CDSARFE
+CDT
+CEEMDAN
+CenterNet
+Centroid
+CEOM
+CERT
+CFF-ATT
+CFSFDP
+Channel Transformation Based Convolutional Neural Network (CTBCNN)
+char n-gram
+Char-CNN
+Char-Domain-BiLSTM-POS-CRF
+Character to Sentence CNN
+CharCNN
+CharCNN-SVM
+CharSCNN
+ChatGLM-6B
+ChatGPT
+Chebyshev
+Chen-Skiena’s Lexicon
+CherryPick
+CHESLY
+Chi-square
+Chi-Square (X2)
+Chi-square statistics model
+chi-square test
+chi-square tests
+Chinese Emotional Vocabulary Ontology Database (Dalian University of Technology)
+Chinese emotional vocabulary ontology database of Dalian University of Technology
+Chinese futures financial sentiment dictionary
+CHIRP
+CHMM
+Choquet Fuzzy Integral
+CIET.5embed
+CIM-Att
+Cinemito
+CIPTA
+Circumplex model of affect
+CITREC
+CKEMN
+CKIP Chinese Word Segmentation System
+CKIP word segmentation system
+Clarabridge
+Classification algorithms
+Classification and Regression Tree
+Classification Via Regression
+Classify and Count
+ClausIE
+CLAWS-C7
+Client Heartbeat
+CLMA+
+Cloud Speech-to-Text
+Cloud-based software tool for sentiment analysis
+CLSA-CapsNet
+CLSTM
+Clustered Latent Dirichlet Allocation (CLDA)
+clustering
+Clustering analysis
+CMLA
+CMLA+
+CMML
+CMN
+CNBL
+CNN
+CNN (Convolutional Neural Network)
+CNN + CNN-Word2Vec + RNN with LSTM+Word2Vec
+CNN and GRU combination
+CNN and LSTM
+CNN for extracting aspects
+CNN model GMEI
+CNN model LRMSI
+CNN with Attention network
+CNN with residual connection
+CNN_Bidirectional LSTM
+CNN_LSTM model
+CNN-Ana
+CNN-Att
+CNN-Bi-GRU
+CNN-Bi-LSTM
+CNN-BiGRU
+CNN-BiGRU-MAttention
+CNN-BiLSTM
+CNN-BiLSTM-Attention model
+CNN-GRNN
+CNN-GRU
+CNN-L2-SVM
+CNN-LSTM
+CNN-LSTM architecture
+CNN-LSTM Hybrid
+CNN-LSTM hybrid model
+CNN-Maxpooling
+CNN-MC
+CNN-Multi
+CNN-non-static
+CNN-rand
+CNN-RNN
+CNN-sigTan-Beta
+CNN-static
+CNN–LSTM
+CNN;AlexNet;VGG;DenseNet;ResNet;Gram matrix guided visual representation extractor
+CNN+2-layer LSTM
+CNN+Bi-LSTM
+CNN+BiLSTM
+CNN+CRF
+CNN+GRU
+CNN+LP
+CNN+LSTM
+CNN+Softmax
+CNNs
+CNNSC
+CNTK
+Co-clustering
+CO-Search
+CoFO
+Cognitive Dictionary
+Cognitive-inspired Domain Adaptation with Higher-level Supervision (CDAHS)
+CoLil
+Collaborative Filtering
+Collaborative Language Model (CLM)
+Collective Search
+Column Sampling Approximation
+COMB
+Combine-skip
+Comment Term Frequency Comparison
+Community Detection Algorithm
+Community-Author-Recipient-Topic (CART)
+CommuteClub App
+CoMn
+compact pattern mining
+comparative opinion mining
+Complement Naive Bayes
+Complement Naïve Bayes
+Complement Naive Bayes (ComplementNB)
+ComplEx
+compromise
+Computational Linguistic Analyses
+Con-BIAM
+CoNBiLSTM
+ConceptNet
+ConceptNet ontology
+Conceptual Graph-based Document Representation (CGDR)
+Condition Random Field (CRF)
+Conditional Random Field
+Conditional Random Field (CRF)
+conditional random field classifier
+Conditional Random Fields
+Conditional Random Fields (CRF)
+CONE
+Conjugate gradient backpropagation with Powell-Beale restarts
+Conjunctive Rule
+Connection tree reasoning
+Connie
+content analysis
+Content Attention Model (CAM)
+content based filtering
+Content Sense and Inference BiLSTM (CSI-BiLSTM)
+ConText
+Context Fusion Encoding Method
+Context-Aware Interactive Attention
+Contextual Analysis (CA)
+Contextual Multi-modal Attention Framework
+Contextual Recursive Auto-Encoders (CoRAE)
+contextual sentiment lexicon
+Continuous Bag of Words
+Continuous Bag-of-Words (CBOW)
+Contractive Auto-Encoders
+contraLDA
+Conv-char-Emb
+CONV1D
+ConvBERT
+Conventional Multilayer Perceptron
+Conversational-GCN
+ConvLSTM
+ConvLSTMConv
+ConvNet
+Convolution Neural Network
+Convolution Neural Network (CNN)
+convolution neural networks (CNN)
+Convolutional layer with attention and bi-directional LSTM
+Convolutional Matrix Factorization (ConvMF)
+Convolutional neural network
+Convolutional Neural Network (CNN)
+Convolutional Neural Network Long Short-Term Memory
+Convolutional Neural Networks
+Convolutional Neural Networks (CNN)
+Convolutional Neural Networks (CNNs)
+Convolutional Neural Networks;Naive Bayes
+Coordinated Embedding Topic Model (CETM)
+COPYCAT
+CopyRNN
+CORD-19 Search
+COREG
+CoreNLP
+CoreNLP SentimentAnnotator
+CORP
+Corpus-Based Model
+Correlation Feature Selection (CFS)
+Correlation-based feature selection (CFS)
+Correspondence Analysis
+Correspondence Learning
+CorrRNN
+CoSchedule Content Analyzer
+Cosine
+cosine distance
+cosine function-based algorithm
+Cosine Similarity
+Count Vectorization
+Count Vectorizer
+CountVectorizer
+Coupled Multi-layer Attentions
+COVAREP
+COVID-19 Tweet Classification Using Hybrid Machine Learning Techniques
+COVID-19 TweetIDs;TweePy API;Python Natural Language Toolkit (NLTK);Scikit-learn
+COVID-SA
+Covidex
+CovidQA
+COVIDSensing
+Cox Model
+COXL-net
+CRAFT
+crawler technology
+CRbSA
+CRD-SentEnse
+CREDBANK
+CRF
+CRF (Conditional Random Fields)
+CRF classifier
+CRF models
+CRF-Extract-Classify
+CRF-L2R
+CRF-PSC
+CRF++
+CRFs
+Crime2Vec
+Crimson Hexagon’s ForSight
+CRISP-DM
+CRNN
+Cross-view Recurrent Neural Network Pair
+CrystalFeel
+CSA tool
+CSIM
+CSMOUTE
+CSNSA
+CSO-LSTMNN
+CSR
+CSR-IRIS
+CT-BERT
+Ctrl
+Cuckoo search
+Cuckoo Search (CS)
+Cuckoo Search Algorithm
+CueNet-DL
+CurveletQA
+Custom sentiment lexicon
+Customer Loyalty Improvement Recommender System (CLIRS)
+Customer Sure
+CV
+D-Hocs
+D-SPAN-ASTE
+DAE
+Danmaku Sentiment Dictionary
+DANN
+DAS
+Dash
+Data Mining
+Data Programming
+Datastories
+DAuM
+DAViewer
+DBN
+DBN (Deep Belief Network)
+DBNN
+DBpedia
+DBSCAN
+DBSCAN algorithm
+DCANN
+DCLSTM-MLP
+DCNN
+DDM
+DE-CNN
+DeBERTa
+DeBERTa-MLP
+DeBot
+DECA
+Decision Stump
+Decision Table
+Decision Tree
+Decision Tree (C5.0)
+Decision Tree (DT)
+Decision Tree (DTree)
+Decision Tree Algorithm
+Decision Tree Classifier
+Decision Tree Classifier (DTC)
+Decision tree classifier-CART
+decision trees
+Decision Trees (DT)
+decision-support framework
+DecisionTree
+DecisionTreeClassifier
+DECNN+SoftProtoB (BASE)
+DECNN+SoftProtoB (PT)
+DECNN+SoftProtoE
+deep autoencoders
+Deep Average Network
+Deep Belief Network
+Deep Belief Network (DBN)
+Deep Belief Networks
+Deep Belief Networks (DBN)
+Deep Belief Neural Networks (DBN)
+Deep Boltzmann Machine
+Deep CNN
+Deep Convolution Neural Networks
+Deep Convolutional Neural Network
+Deep Convolutional Neural Networks
+Deep Convolutional Neural Networks (DCNN)
+Deep Cooperative Neural Network (DeepCoNN)
+Deep Coupled Adjective-Noun Neural Network (DCANN)
+Deep Factorization-Machine based Neural Network (DeepFM)
+Deep Feedforward Network
+Deep Intelligent Contextual Embedding for Twitter (DICET)
+Deep Interaction Text Matching (DITM)
+Deep Learning
+Deep Learning Algorithm
+Deep learning algorithms
+Deep Learning Classification Algorithm
+Deep learning classifier
+Deep Learning Hierarchical Decision Model
+Deep Learning model
+Deep Learning models
+Deep Learning Modified Neural Network
+Deep Learning Neural Network
+Deep learning techniques
+Deep Learning Technology
+Deep Learning-based Intermodal (DLBI)
+Deep learning-based model
+deep learning, chain classifier, and joint learning models
+Deep Memory Network
+Deep Memory Network (DMN)
+Deep Memory Network (MemNet)
+Deep Multimodal Attentive Fusion (DMAF)
+Deep Neural Network
+Deep Neural Network (DNN)
+Deep Neural Network model
+Deep neural network with glove embedding
+Deep Neural Networks
+Deep Random Subspace Ensembles (DRSE)
+Deep Recurrent Neural Network
+Deep RNN
+deep semantic network
+Deep Speech
+deep_translation
+deep_translator
+Deep-ABSA
+Deep2S
+DeepBot
+DeepCoNN
+Deepcut
+DeepFinancial
+Deeplearning4j
+Deeply Moving
+DeepMoji
+DeepPavlov
+DeepSentiBank
+DeepSpot
+Deflation PIC
+DeGroot
+Delta Naive Bayes
+DEMATEL
+DEMLOnto
+DENFIS
+Dense Net
+Dense Neural Network
+DepecheMood
+Dependency-Sentiment-LDA (DSLDA)
+Description Logic (DLs)
+DFM (Deep Fusion Model)
+DGEDT
+DHBK
+DHOA-FNN
+DIA-MLM
+DiaASQ
+DiaASQMTV
+Dialogue Earth project (GASP, WB, WA)
+DialogueRNN
+DICO
+DICO-2
+Diction
+Dictionary of Affect in Language
+Dictionary-Based Model
+DidaxTo
+Differential Evolution
+Differential Evolution (DE)
+Differential Evolution algorithm
+Digimind
+DIIN
+DIIVINE
+DIMN
+Directory of Open Access Journals (DOAJ)
+Dirichlet Mixture Model (DMM)
+Discourse-LSTM
+DiscoverText
+Discriminative Bi-term Topic model
+Discriminative multinomial naive Bayes
+dismo package
+DiSSBUS
+DistilBERT
+DistilBERT + FFNN
+DistilBERT-base-uncased
+DistilCamemBERT
+DistMult
+distributed document representation
+Distributed Evolutionary Algorithms in Python (DEAP)
+Distributed LDA
+Diverse Power Iteration Embeddings (DPIE)
+Django
+DKG
+DKL
+DKPro WSD API
+DL
+DL4J
+DLIREC
+DLMNN
+DLUIO
+DLUSA
+DMAN
+DMCILN
+DMN (Deep Memory Network)
+DMNB
+DNet
+DNN
+DNN-LR
+DOC-ABSADeepL
+Doc2Vec
+DocRNN
+DocuBurst
+Document Neural Autoregressive Distribution Estimation (DocNADE)
+Document Term Matrix
+Document Vector Representation (Doc2vec)
+DOM4J
+Domain Adversarial Neural Networks (DANN)
+Domain Focused (DF) lexicon
+Domain Specific Sentiment Lexicon
+domain-based lexicons
+Domain-BiLSTM
+Domain-GloVe-BiLSTM
+Domain-GloVe-BiLSTM-CRF
+Domain-independent ABSA Model
+Domain-Independent Automatic Labeling System (DIALS)
+domain-specific sentiment analysis
+Domain-specific sentiment dictionary
+DomBERT
+double machine-learning
+Double Propagation
+Double Propagation Algorithm
+Double Propagation-ACOS
+Double Tree
+DPCNN
+Dragonfly Algorithm (DA)
+DRCN
+DRFA
+Drift Detection-based Adaptive Windowing (DDAW)
+Drone Emprit Academic
+Drools
+DROP3
+DSCNN
+DSLDA
+DSO
+DSociaL
+DT
+DT-FNN
+DTC
+DTOpS
+DTW
+Dual Graph Convolutional Network (DualGCN)
+Dual-Channel CNN
+Dual-MRC
+DualGCN
+Duwairi and Qarqaz model
+Dynamic Architecture for Artificial Neural Networks (DAN2)
+Dynamic artificial neural network
+Dynamic Artificial Neural Network (DAN2)
+Dynamic Case-Based Reasoning
+Dynamic Convolutional Neural Network
+Dynamic Critiquing
+Dynamic Fusion Graph
+Dynamic Lexicons
+Dynamic Topic Models
+Dynamic topic-sentiment hybrid model
+Dython
+E-HowNet
+e-rater
+E-rator
+E2SAM
+EAME
+Early Fusion – LSTM
+Easy Data Augmentation (EDA)
+EAT-LSTM
+EBi-SAN
+EBSVM
+EC-net
+EDDM
+EdgeBoxes
+EdgeImpulse
+educational data mining
+Educational Resources Assessment System (ERAS)
+EEAS
+EEG
+EF-LSTM
+Effect WordNet
+EffectWordNet
+EfficientNet
+EHO
+EIE-CBiL-Att
+Elastic Search
+ElasticNet
+Elasticsearch
+ELDA
+ElecBERT
+ELECTRA
+ELECTRE
+EliXa
+ELK Stack
+ELM sparse autoencoder
+Elman
+Elman RNN
+ELMo
+ELMo-BiGRU-Att
+ELSA
+ELSTM
+ELTDS
+Embedding layer
+Embedding-100
+Embedding-32-
+Embedding-32-Maxpooling
+Embeddings from Language Models (ELMo)
+EML
+EMLo Embedding
+Emo2Vec
+Emoji
+emoji embedding
+Emoji Library
+Emoji training heuristic
+Emoji-Based Models
+Emoji2vec
+emojis features
+EmoLex
+EmoSenticNet
+EmoSpell
+emot
+EMOTAIX.PT
+EMOTEX
+EmoText
+emotion analysis
+emotion classification algorithm
+Emotion classifier
+Emotion ontology
+Emotion Tracker
+Emotion-Tweet
+Emotional Chatting Machine (ECM)
+Emotional dictionary
+EmotionML
+EmoTxt
+EmoWeb
+empirical mode decomposition (EMD)
+EMRC
+encoder-decoder framework
+Encoder-decoder LSTM
+encoder-decoder model
+End-to-End Neural Opinion Extraction Model
+English SentiWordNet
+English to Urdu bilingual dictionary
+English Wikipedia
+Enhanced Bootstrapping Algorithm
+enhanced feature-based sentiment analysis
+Enhanced Visually Derived Wiener Filter
+Enhanced Whale Optimizer Algorithm
+Enhanced word vector ensemble
+Enhanced XG Boost
+ENN
+Enrich-GHSOM
+Ensemble
+Ensemble Averaging
+Ensemble Classifier
+ensemble empirical mode decomposition (EEMD)
+Ensemble Learning
+Ensemble RNN
+Ensemble Voted Classifier
+Ensemble-TextHMM
+EnsembleTKPGHS
+Entity Sentiment Topic Model (ESTM)
+entropy
+Entropy Weighted Genetic Algorithm
+EOP
+EPDM model
+epicure
+EPINetz
+ERF-XGB
+ERNIE
+ERNIE-BiLSTM
+ESGCN
+ESIM
+eSM
+eSM2
+eSOL
+ETAT-LSTM
+Ethnicolr
+EU
+EU-WIDE LEGAL TEXT MINING USING BIG DATA PROCESSING INFRASTRUCTURES
+Euclidean
+Euclidean distance
+Evatalk
+Event Attention Network (EAN)
+Event Graph Neural Network (EventGCN)
+Event Study
+EventPeriscope
+EViews
+evolutionary strategy algorithm
+EvoMSA
+EvoSent
+EWGA
+Expert System
+Expert Systems
+ExplainIt
+Explicit Factor Model
+Explicit Factor Models
+Explicit Topic Model
+Exponential Poor-Rich Optimization-based Gated Recurrent Unit
+Exponential Smoothing
+Exponential-Salp Swarm Algorithm (ESSA)-ACNN
+ExportComments
+ExtCRF
+Extra Tree
+Extra Tree classifier
+Extra Trees Classifier
+Extra-Trees
+Extract-Classify-ACOS
+eXtreme Gradient Boosting
+Extreme Gradient Boosting (XGBoost)
+ExtremeSentiLex
+Facebook API
+Facebook Graph API
+Facebook Reactions Crawler
+Facebook::Graph
+Facebook’s graph API
+Facebook4j
+Facebook4j API
+FACET
+Facial Action Coding System (FACS)
+Factorization machines
+FakeGAN
+FARASA
+FARNN-Att
+FAST
+Fast Correlated Based Filter (FCBF)
+Fast R-CNN
+Fast Text
+FAST-LCF-ATEPC
+FastText
+FastText-BiGRU-Att
+FastText-NB
+FastText-SVM
+FastText-XGBoost
+FB-SVM
+FBIOP-based model
+FBProphet
+FCE-SVM
+FCM
+FCM-ANFIS
+FDNN
+feaLDA
+Feature Ensemble Model
+Feature Relation Network (FRN)
+Feature-based SVM
+feature-based Twitter sentiment analysis system
+Featurewiz
+federated deep neural network
+Feed Forward Neural Network
+Feedforward Neural Network (FFNN)
+FEEL
+FEMA
+FerdowsNet
+FF
+FFNN
+FGAOM
+FGM
+Filtered Classifier
+Filtered-LDA
+FinBERT
+FindMe
+Fine-Grained Topic Sentiment Unification (FG-TSU)
+Fine-tuning BERT
+Finer Semantic Analysis
+Finite State Automata
+Finite-state automata-based tool
+Fire Fly-oriented Multi-Verse Optimizer (FF-MVO)
+Firefly Algorithm
+Firefly Algorithm (FA)
+Firefly with Levy and Multilayer Perceptron (FF-MLP)
+Fishbone Diagram
+Fisher Score
+Fisher's Linear Discriminant Analysis (FLDA)
+Fisherfaces
+FLAIR
+Flask
+FlauBERT
+Floqapp
+FLR
+FollowExpert
+football-specific sentiment lexicon
+Formal Concept Analysis (FCA)
+founder intelligent public opinion monitoring and analysis system
+Foursquare
+FPGA
+FrameNet
+Framester
+Freeling
+frequent item-set mining-based word network
+Frequent Itemset Mining (FIM)
+Frequent-direction Sketching
+FRIQUE
+FRML
+FS-ABSA
+FSPM
+FT-EC-Net
+FT-net
+FTOP
+FULL-LRNN-ASR
+FullBoost
+Functional Resonance Analysis Method
+Fuzz Set
+Fuzz Sort
+Fuzzy
+Fuzzy C-means
+Fuzzy C-Means (FCM)
+fuzzy c-means routing algorithm
+Fuzzy Classifier
+Fuzzy Clustering
+Fuzzy Cognitive Maps (FCM)
+Fuzzy Control System
+Fuzzy decision tree
+Fuzzy Deep Learning Classifier (FDLC)
+Fuzzy Domain Ontology
+fuzzy extension principle
+Fuzzy Formal Concept Analysis (FFCA)
+Fuzzy Inference System
+Fuzzy lattice reasoning
+Fuzzy Lattice Reasoning (FLR)
+fuzzy linguistic hedges
+Fuzzy Logic
+Fuzzy Logic System
+Fuzzy Multi-Intent Classifier
+Fuzzy NN
+Fuzzy ontologies
+Fuzzy Ontology
+fuzzy product ontology mining
+Fuzzy Ranking Evaluation Algorithm
+Fuzzy Recommendation System
+Fuzzy regression
+Fuzzy rule-based classifiers
+Fuzzy rule-based system
+Fuzzy sentiment analysis
+Fuzzy TOPSIS
+Fuzzy-based sentiment analysis system
+Fuzzy-based student feedback analysis
+Fuzzy-based three-way decision framework
+FuzzySentClass
+FWLSA-score
+G Power
+GA
+GA-FCM
+GA-GRU
+GA-LSSVR
+Gabor features with SVMs
+GAFN
+GAGRUAMCNN
+GAGRUCNN
+Gain Ratio
+GARCH
+Garcia and Berton
+GAS
+GAS-ACOS
+GAT
+GATE
+Gate recurrent node
+Gated Convolutional Networks
+Gated Multimodal Embedding LSTM with Temporal Attention (GME-LSTM(A))
+Gated Recurrent Units (GRU)
+Gated-Recurrent Unit (GRU)
+Gaussian
+Gaussian LDA
+Gaussian mixture
+Gaussian mixture distribution model
+Gaussian mixture vectors
+Gaussian Naive Bayes
+Gaussian Naïve Bayes
+Gaussian NB
+Gaussian Process
+gaussian process regression
+Gaussian Processes
+gavagai
+GAWA
+GBDT
+GBM
+GBoost
+GCAE
+GCC
+GCN
+GDELT
+GEN-NAT-SCL
+General Inquirer
+General Inquirer (GI)
+General purpose lexicons
+general regression neural networks
+General Use Lexicon Model
+General word counting
+Generalized Cross Entropy
+Generalized Gini-PLS
+Generalized Linear Model
+Generalized Sequential Pattern (GSP)
+Generalized Wiener Filtering
+Generative Adversarial Network (GAN)
+Generative Adversarial Networks
+Generative Adversarial Networks (GAN)
+Genetic Algorithm
+Genetic Algorithm (GA)
+Genetic algorithm based ensemble
+Genetic Algorithm based feature reduction
+Genetic Algorithms
+Genetic Programming
+Genetic programming-based fuzzy regression
+Genetic Rank Aggregation
+genism
+Genre-level sentiment lexicon adaptation model
+Gensim
+Gensim LDA
+gensim Python library
+Gentle AdaBoost
+Geo-Linguistic Computational Mapping Analysis (G-LCMA)
+geocoding
+GeoVec
+Gephi
+GermanPolarityClues
+GetOldTweets3
+ggmap
+Gibbs Sampling
+Gibbs Sampling Dirichlet Multinomial Mixture (GSDMM) model
+Gini Index
+Giza++
+Glasgow
+GLMNet
+Global-Att-LSTM
+Gloss
+GloVe
+GloVe DCNN
+GloVe word embedding
+GloVe-BiGRU-Att
+GLSTM
+GME-LSTM
+gMLP
+Go tagger
+GoodReads dataset for Arabic sentiment analysis
+Google API
+Google APIs
+Google BERT
+Google Cloud
+Google Cloud Natural Language
+Google Cloud Natural Language API
+Google Cloud Platform
+Google cloud prediction
+Google Cloud Prediction API
+Google Cloud SDK
+Google Cloud sentiment analysis
+Google Cloud Services
+Google Cloud Vision API
+Google geocoding web-service
+Google Knowledge Graph
+Google Natural Language API
+Google Neural Machine Translation (NMT)
+Google Ngram Viewer
+Google popularity model
+Google Profile of Mood States
+Google Profile of Mood States (GPOMS)
+Google search engine
+Google Translate
+Google Translate API
+Google Trends
+Google word2vec
+Google-Profile Mood State
+Google-Profile of Mood States API
+Google's natural language application programming interface
+GoogleProfiile
+gooseeker
+Goudas model
+GpSense
+GPT
+GPT v1-3
+GPT-3
+GPT-3.5
+GPT-3.5-Turbo
+GPT2
+GPTAGRUAMCNN
+GPU-based active shape model
+Gradient Boost
+Gradient Boost Tree
+Gradient Boosted Decision Tree classifier (GBDT)
+Gradient Boosted Decision Trees
+Gradient Boosting
+Gradient Boosting Classifier
+Gradient Boosting Decision Tree
+Gradient Boosting Machine
+Gradient Boosting Machine (GBM)
+Gradient Boosting Machines
+Gradient Boosting Model
+Gradient Booting
+Gradient descent with adaptive learning rate backpropagation
+Gradient Tree Boosting
+Gradient-Boosted Trees
+Gram matrix guided visual representation extractor;CNN models including AlexNet, VGG, DenseNet, ResNet
+GrammarViz 2.0
+Granger analysis
+Granger causality test
+graph based adjusted Laplace smoothing
+graph based semi-supervised learning algorithm
+Graph Convolution Networks (GCN)
+Graph Convolutional Feature-based Convolutional Neural Network
+Graph Convolutional Network
+Graph Convolutional Network (GCN)
+Graph Convolutional Networks (GCN)
+Graph LSTM
+Graph Memory Fusion Network
+Graph Mining Technique
+Graph Neural Networks
+graph-based co-ranking algorithm
+Graph-based Semi-supervised Learning
+Graph-MFN
+GraphBERT
+GraphEDM
+GraphML
+GraphSAGE
+Grasshopper Optimization Algorithm
+Gravitational Search Algorithm (GSA)
+Gray Wolf Optimization
+Greek Sentiment Lexicon
+GREEK-BERT
+GreekBERT
+GreekSocialBERT
+GreenSAP
+Grey Wolf Optimizer
+Grey Wolf Optimizer (GWO)
+GRNN
+GRNN-CNN
+GRNN-SR
+Grounded Theory
+Grouped Spam Detection approach based on Nominated Topics (GSDNT)
+GRU
+GRU + CNN
+GRU NN
+GRU-CNN
+GRU-LSTM
+gtrendR
+GTS
+GTS-BERT
+GubaLex
+Gulati et al. (ML classifications)
+GuMa
+GWU-Clustering
+H-LSTM
+H-SVM
+H-TFIDF
+H2CBi
+HAABSA
+HAABSA++
+HAAD Dataset
+Haar Cascade Classifier
+Hadoop
+Hadoop Cloud
+Hadoop Distributed File System (HDFS)
+Hadoop MapReduce
+half-point difference format numerical method
+Hamming
+HAN
+Happiness Index
+HARD
+Hard Typed Decoder (HTD)
+Hard Voting Classifier
+Harris Hawks Optimization (HHO) with Simulated Annealing
+Harris hawks optimizer
+Harvard IV-4 Psychosocial Dictionary
+Harvard Psychosocial Dictionary
+Hashing Vector
+HashingVectorizer
+HAST
+HATN
+Hawkes process
+Hazm
+HCopy-GAT
+HDBSCAN
+HDFS
+HDFS MapReduce
+HDP
+Health Care Reform (HCR) dataset
+Healthgrades.com
+HEAT Network
+Hebb Rule Feature Selection (HRFS)
+Hebrew POS tagger
+Hedonometer
+HEFCA
+Hellinger Distance
+Henry
+Henry (2008)
+Hesitant Fuzzy Linguistic Term Sets (HFLTS)
+Heterogeneous graph model
+Heterogenous Influence graph model
+heuristic deep learning method
+HF-Conv-BiLSTM
+HFT
+HGLNET
+Hidden Markov
+Hidden Markov Model
+Hidden Markov Model (HMM)
+Hidden Markov Model (TextHMM)
+Hidden Markov Model Latent Dirichlet Allocation (HMM-LDA)
+Hidden Markov Models
+Hidden Topic Sentiment Model (HTSM)
+HiEd-Sent
+HiEd-Sent corpus
+Hier-Joint
+Hierarchical Aspect-Sentiment Model (HASM)
+HiErarchical ATtention (HEAT) network
+Hierarchical Attention Network
+Hierarchical Attention Network (HAN)
+Hierarchical Attention Networks
+Hierarchical attention-LSTM
+hierarchical cluster analysis
+Hierarchical Clustering
+hierarchical clustering approach (HCA)
+Hierarchical Clustering Techniques
+hierarchical dictionary counts
+Hierarchical Dirichlet Process
+Hierarchical Fusion Attention Network
+hierarchical Latent Dirichlet Allocation (HLDA)
+Hierarchical LDA
+Hierarchical LDA (HLDA)
+Hierarchical LSTM
+Hierarchical LSTM with Attention
+Hierarchical LSTMs
+Hierarchical Opinion Phrase (HOP)
+Hierarchical Self-Attention Network
+Hierarchical Transformer
+Hierarchical User Attention Network (HUAN)
+Hierarchical User Sentiment Topic Model (HUSTM)
+Hierarchical-Att-GRU
+High Profit Sequential Feature Groups based on High Utility Sequences (HPSFG HUS)
+High Utility Itemset Mining
+High Utility Sequential Pattern Mining (HUSPM)
+High-Coverage Lexical resource (HCL)
+HILATSA
+Hindi dependency parser
+Hindi SentiWordNet
+Hindi SentiWordNet (H-SWN)
+Hindi Subjective Lexicon (HSL)
+Hindi Wordnet Affect (HWA)
+HITS
+HIV-4
+Hive
+HLESV
+HMC
+HMDSAD
+HME-LDA
+HMFF
+HMM
+HoeffdingTree
+Holistic Recurrent Attention on Target-dependent Memories
+Holistic User Behavior model (HUB)
+Holt-Winters
+HOMPer
+Hootsuite
+Houndify API
+House of Quality (HoQ)
+HowNet
+Hownet sentiment dictionary
+HP-LSTM
+HRED
+HSAuNN
+HSL
+HSMM
+HSWN
+HTF
+Html Agility Pack
+HTSM
+httr
+Hu & Liu Opinion Lexicon
+Hu & Liu’s opinion lexicon
+Hu and Liu opinion words list
+Hu and Liu sentiment dictionaries
+Hu and Liu's method
+hu-liu
+Hu-Liu04 opinion lexicon
+Hu&Liu
+HUAN-asp
+HUAN-usr
+HUAN-usr-asp
+HuAndLiu
+Hugging Face NLP package
+Hugging Face Transformers
+Human sentiment method
+Hybrid
+Hybrid Adaptive Neuro-Fuzzy Interface and Support Vector Machine (ANFIS-SVM)
+Hybrid Approach
+Hybrid approaches
+Hybrid Based Approach (HBA)
+Hybrid CNN-LSTM
+Hybrid Deep Learning Model
+Hybrid Educational Platform
+Hybrid Feature Extraction Method
+Hybrid Firefly-Ontology-Based Clustering Algorithm
+Hybrid Fusion Network
+Hybrid Fuzzy-BiLSTM Model
+Hybrid Generic Particle Swarm Optimization algorithm (HGA-PSO)
+Hybrid Genetic-Particle Swarm Optimization (HGA-PSO)
+Hybrid method
+Hybrid methods
+Hybrid model
+Hybrid Naïve Bayes
+hybrid naive Bayes classifier
+Hybrid NBC-TFIDF
+Hybrid Particle Swarm Optimization (PSO)
+Hybrid R System
+hybrid regularizations
+Hybrid Semantic Knowledgebase-Machine Learning approach
+Hybrid sentiment analysis approach
+Hybrid Sentiment Classification
+Hybrid Spider Monkey Optimization Method
+Hybrid Support Vector Machine with Ant Colony Optimization (HSVMACO)
+Hybrid-GFX–Attention–BiGRU–CNN
+Hybrid-NN (RNN+CNN)
+HybridDA
+Hybridized Attribute-centric Sentiment Classification
+hybrids of machine learning and lexicon-based approaches
+HyCoR
+Hydrator
+Hype indicator
+Hyper Pipes
+HyperGCN
+Hypergraph with Helly property
+Hyperparameter Tuning with Grid Search
+hypertext-induced topic selection algorithm
+Hypex
+hypothesis test
+HyRank
+IALA
+IAN
+IAN-INF
+IANFIS
+IB1
+IB3
+IBAA (Intelligent Bayesian Asset Allocation)
+IBK
+IBM MS-BRE
+IBM Social Media Capture Four
+IBM SPSS
+IBM SPSS 24.0
+IBM SPSS Modeler Text Analytics
+IBM SPSS Statistics 25
+IBM Visual Recognition API
+IBM voice recognition
+IBM Watson
+IBM Watson Language Understanding
+IBM Watson Natural Language Understanding
+IBM Watson Speech-to-Text
+IBM Watson text analytics
+IBM Watson Tone Analyzer
+IBM Watson's Natural Language Understanding
+IBM’s Watson Assistant Service
+Ibrahim et al. dataset
+iCARE
+ICNN-LSTM-DNN
+ICON
+ICSA
+ICSA-HSSVM
+ICTCLAS
+ID3
+ID3 decision tree
+iDocNADEe
+IEGA
+IFI
+IHS RD
+IIITSum
+IITSummarizers
+ILLR
+ILP framework
+iLteC lexicon
+Image Segmentation
+ImageNet
+imbalanced-learn
+IMDB
+IMDB weighted average vote (IMDBWAV)
+IMDbPY
+IMN
+import.io cloud solution
+Improved Adaptive Neuro-Fuzzy Inference System
+Improved CSIM
+Improved Elephant Herd Optimization (I-EHO)
+Improved Particle Swarm Optimization
+Improved Shuffled Frog Leaping Algorithm (ISFLA)
+Improved Transductive support vector machine (ITSVM)
+ImproveSelfTrP
+Ina-BWR
+Inception-Resnet-V2
+Inception-V3
+Independent Component Analysis
+Independent Encoding (IE)
+IndicBERT
+IndoBERT
+Indonesian POS Tagger
+InfoGather
+Inforex
+Information Gain
+Information Gain (IG)
+Information Gain based Feature Selection (IGbFS)
+Input Mapped Classifier
+Instagram API
+Instagram-PHP-Scraper
+Instagram-scraper
+InstructABSA
+Integer Linear Programming
+Integer Linear Programming (ILP)
+Intel Data Analytics Acceleration Library
+Intellexer
+Intelligence Media Analysis (IMA) software
+Intelligent Argumentation System
+Intelligent Computer Network Simulation
+Intelligent system for public positions on vaccination
+Intention classifier from Panichella et al.
+INTERACT
+Interactive Attention Network (IAN)
+Interactive Attention Networks (IAN)
+Interactive Classifier Optimizer
+Interactive LSTM
+Interactive survey browser
+Interactive Transformer
+Interdependent latent Dirichlet allocation
+International Network for the Availability of Scientific Publications
+Internet Movie Data Bases (IMDB)
+Internet-based campus security incident prototype system
+interval type-2 fuzzy numbers
+Intuitionistic Fuzzy Weighted Averaging (IFWA)
+Inversed LCR-Rot
+IO-BiLSTM
+IO-LSTM
+IOG
+IOT
+IPET-BERT
+IPRLS
+IRS-T2D
+IRSTLM
+iSA
+iSOL
+Isolation Forest
+ISRI
+Issue Supervised Approaches: Random Forest (RF), Naïve Bayes (NB), fastText
+IST
+ITALICA
+Item Specific
+Item-based Collaborative Filtering
+Item-based Collaborative Filtering (ITEMCF)
+ItemCF
+ITU Turkish NLP Web Service
+IWVSA
+J48
+J48 algorithm
+J48 decision tree
+JABST
+Jaccard
+JamSpell
+Japanese WordNet
+JASE
+JAST
+JAT
+Jena
+Jess
+JEST
+JEST-Ideology
+JET
+JET_o
+JET_t
+JET-ACOS
+JET-BERT
+JETt
+jFuzzyLogic
+JGibbLDA
+JHAZM
+Jiagu deep learning model
+jieba
+Jieba Chinese text segmentation
+Jieba Word Segmentation
+JiebaR
+Jigsaw
+Jitar
+JMTS
+jockers
+Jockers–Rinker
+Joint Aspect/Sentiment model
+Joint Model of Sentiment and Topic (JST)
+Joint Opinion Miner
+Joint Sentiment Topic (JST)
+Joint Sentiment Topic Detection with MEDLDA
+joint sentiment topic models (JST)
+Joint Sentiment-Topic (JST) detection model
+Joint Sentiment/Topic (JST)
+Joint Sentiment/Topic model (JST)
+joint tensor factorization
+Joint-MCMK
+jRiebaR
+JRip
+JRoBERTa
+JSBERT
+jsLDA
+JSOUP
+Jspell
+JST
+Jupyter
+K nearest neighbor
+K Nearest Neighbors classifier
+K Nearest Neighbour
+K-LT
+K-mean algorithm
+k-means
+K-means clustering
+K-means clustering detection algorithm
+K-means for clustering aspects
+K-means-ANFIS
+K-means-based ANFIS
+K-Medoids
+K-Medoids algorithm
+K-Nearest Neighbor (K-NN)
+K-nearest neighbor (KNN)
+K-Nearest Neighbors
+k-Nearest Neighbors (k-NN)
+K-Nearest Neighbors (KNN)
+K-Nearest Neighbours
+K-nearest-neighbors
+K-Neighbors
+k-NN
+K2
+Kafka
+Kahoot!
+KALDI
+Kana
+Kansei-integrated Kano model
+Katz Back-off
+Kausar, Tahir & Mehmood (2020)
+KE-CNN
+Keras
+Keras Tokenizer
+Keras with TensorFlow
+Key-Information-oriented Convolutional Neural Network (KIN-CNN)
+KeyBERT
+KGCapsAN
+KH Coder
+Khoja
+khoja stemmer
+Kibana
+Kino
+KKSSA technique
+KL Divergence
+KLOSURE
+KNeighbors
+KNIME
+KNIME Lexicon-based
+kNN
+KNN Classifier
+Knowledge Graphs
+Knowledge-oriented Convolutional Neural Network (K-CNN)
+KNU Korean language sentiment dictionary
+KoBERT
+KoNLP
+Konlpy
+korpus
+KOSAC
+KOSELF
+Kotelnikov et al.’s Lexicon (large)
+Kotelnikov et al.’s Lexicon (small)
+KPRO
+Krill Herd Harmony Search Optimization Algorithm (KHHSOA)
+KryptoOracle
+Kstar
+ktrain
+KuCut
+KWEM
+KWHW
+L-BSJ
+LA-GCN
+Label Encoder
+Labeled LDA
+labeling tool for aspect-based sentiment analysis
+Labelled LDA
+LabelProK
+LabelProR
+LabelSpK
+LabelSpR
+LABR
+LABSA
+LAL-Parser
+LAN2FIS
+Langdetect
+Language R
+Laplace
+Laplace Smoothing
+LARA
+LASSO
+Lasso-based ensemble model
+Latent Aspect Rating Analysis
+Latent Aspect Rating Analysis (LARA)
+Latent Aspect Rating Analysis Model (LARAM)
+latent Dirichlet allocation
+Latent Dirichlet Allocation (LDA)
+latent Dirichlet allocation algorithm
+Latent Dirichlet Allocation model
+latent feature LDA model (LFLDA)
+Latent Feature Topic Model (LFTM)
+Latent Rating Regression (LRR)
+Latent Semantic Analysis
+Latent Semantic Analysis (LSA)
+Latent Semantic Indexing (LSI)
+LCF-ATEPC
+LCF-BERT
+LCR-Rot
+LCR-Rot-hop
+LCR-Rot-hop++
+LCWCC
+LD-MAN
+LDA
+LDA (Latent Dirichlet Allocation)
+LDA algorithm
+LDA model
+LDA Models
+LDA ranking method
+LDA Toolkit
+LDA-ARMA hybrid model
+LDA-based method
+LDA-Bert
+LDA-POS
+LDA-SVM
+LDA–CRF hybrid model
+LDA2Vec
+ldatuning
+LDAvis
+Learnable Conjunctions Enhanced Model (LCEM)
+learning analytics
+Learning Vector Quantization (LVQ)
+least square support vector machine (LSSVM)
+least square support vector regression
+Least Squares Linear Regression
+Least Squares Support Vector Machine (LSSVR) with Chaotic Particle Swarm Optimization (CPSO)
+LEP-SDL
+Lesk Algorithm
+Levenberg-Marquardt backpropagation
+Levenshtein
+Levenshtein distance
+Levenshtein distance algorithm
+Lexalytics
+Lexi-Augmenter
+lexical analysis
+Lexical approach
+Lexical opinion miner
+Lexical Semantics
+Lexicoder Sentiment Dictionary
+Lexicon
+Lexicon Based
+Lexicon Based Approach (LBA)
+Lexicon based opinion mining
+Lexicon based techniques
+Lexicon Based Unsupervised
+lexicon dictionary
+Lexicon integrated two-channel CNN–BiLSTM
+Lexicon of subjectivity clues
+Lexicon Sentiment Analysis
+Lexicon-based approach
+Lexicon-based approaches
+lexicon-based features
+Lexicon-Based Linguistic Tweet Analysis Algorithm
+lexicon-based method
+Lexicon-based methods
+Lexicon-based models
+Lexicon-based SA for student feedback analysis
+lexicon-based sentiment analysis
+Lexicon-based system
+Lexicon-based technique
+Lexicon-enhanced LSTM with attention
+Lexicon-enhanced neural network
+Lexicon-Enhanced Sentiment Analysis Framework
+Lexicon-pointed hybrid N-gram Features Extraction Model (LeNFEM)
+Lexicon2VEC
+Leximancer
+LexiPers
+Lexipres
+LEXiTRON
+LexTo
+LexToPlus
+LF-DNN
+LGBM
+Li
+Li and Tsai's fuzzy model
+Li-unified
+Li-unified-R
+LibLinear
+Libnsa
+libshorttext
+LIBSVM
+LibSVM (SVM)
+Light Gradient Boosted Machine
+Light Gradient Boosting Machine
+light stemmer
+Light10
+LightGBM
+LIME
+LimeSurvey
+LINE
+Linear Discriminant Analysis
+Linear Discriminant Analysis (LDA)
+Linear Four Rates (LFR)
+Linear Regression
+Linear Support Vector Classification
+Linear Support Vector Classifiers
+Linear Support Vector Machine
+Linear SVC
+Linear SVC Model
+Linear SVM
+LinearSVC
+LinearSVMs
+LING PIPE
+LingPipe Library
+Linguistic Inquiry
+Linguistic Inquiry and Word Count
+Linguistic Inquiry and Word Count (LIWC)
+Linguistic Inquiry Word Count
+Linguistic-based Augmentation Dataset
+LinisCrowd
+Link Prediction methods
+Link Regression
+Linked FS
+LinReg
+ListNet
+Listwise Deletion
+Liu (2017)
+Liu and Hu Lexicon
+Liu lexicon
+Liu's lexicon
+Liu’s Polarity Lexicon
+LIWC
+LIWC (Linguistic Inquiry and Word Count)
+LIWC 2015
+LIWC dictionary
+LIWC-22
+LIWC2007
+LIWC2015
+LLA
+LMAEB-CNN
+LMD
+LMF
+LML
+LMT
+Local Context Focus (LCF)
+Local Outlier Factor
+Local Sentiment Aggregation (LSA)
+location correlation analysis
+LocLDA
+Log-MMSE
+Logistic
+Logistic Regression
+Logistic Regression (LR)
+Logistic Regression Model
+Logistic Regression SVM
+Logistic Regression with Stochastic Gradient Descent
+LogisticRegression
+Logit Booster
+LOGIT-Gini-PLS
+Logstash
+Long Jiang’s model
+Long short-term memory
+Long Short-Term Memory (LSTM)
+Long short-term memory network (LSTM)
+Long Short-Term Memory Networks
+long short-term memory with attention mechanism
+Long- and Short-Term Memory Network
+Longformer
+LOT (Latent embedding structured Opinion mining Topic model)
+LOTN
+Loughran & McDonald dictionary
+Loughran and McDonald
+Loughran and McDonald (2011)
+Loughran and McDonald (2011) financial dictionary
+Loughran and McDonald’s dictionary
+Loughran-McDonald dictionary
+Loughran-McDonald Sentiment Lexicon
+Louvain's community detection algorithm
+Lovins Stemmer
+LPProcessor
+LR
+LR-CNN
+LRCWG
+LRNN
+LRSGD
+LS
+LSA
+LSI
+LSI (Latent Semantic Analysis)
+LSIBA-ENN
+LSM
+LSSVR
+LSTM
+LSTM + CNN
+LSTM based lip-reading regression model
+LSTM Neural Networks
+LSTM NN
+LSTM-Att
+LSTM-ATTN
+LSTM-based dependency parser
+LSTM-CNN
+LSTM-CRF
+LSTM-improved CNN
+LSTM-RNN
+LSTM–CNN
+LSTM–CNN–grid search-based deep neural network
+LSTM+CNN
+LSTM+GCN
+LSTM+MLP
+LSTM+SynATT
+LSTMs
+LSVM
+LTM
+LTNBERT
+LTP
+lubridate
+Lucene
+Lucene Arabic Stemmer API
+LWL
+M-Adaptive
+M-adaptive software
+M-BERT
+M-IAN
+M3-Inference
+MA
+MA-OWA
+MAAM
+MAC
+MacBERT
+Machine learning
+machine learning algorithms
+Machine learning applications
+Machine learning approach
+Machine learning approaches
+Machine learning based approach
+Machine learning based methods
+Machine learning methods
+Machine Learning methods to construct Emotional Arcs (ML-EA)
+Machine Learning Model for RTI Prioritization
+Machine Learning models
+Machine Learning systems
+Machine learning techniques
+machine learning-based approaches
+Machine Learning, Deep Learning and genetics Algorithms
+Machine-learning prediction model
+MADAMIRA
+Mahmoud Nabil et al. dataset
+Mahout
+MAIM
+Makalu
+Mallet
+MALLET JAVA module
+MAM
+Manhattan
+Map-Reduce
+MApp-IDEA
+MapReduce
+MARBERT
+Marketing Research Support System (MRSS)
+Markov model
+Markov models
+MARN
+MAS
+Mask Language Model (MLM)
+Masked Aspect Embedding
+Master Journals List
+MATE_labeled
+mathplotlib
+MATLAB
+Matplotlib
+Matrix Factorization
+Matrix Factorization (MF)
+Matrix-Vector RNN (MV-RNN)
+Max Ent
+Max-Entropy
+Max.Entropy
+MaxAbsScaler
+MaxDiffTwitter
+MaxE
+MaxEnt
+MaxEnt-JABST
+MaxEnt-L1
+MaxEnt-LDA
+MaxEnt–JABST
+MaxentTagger
+Maximum Entropy
+Maximum Entropy (MaxEnt)
+Maximum Entropy (ME)
+Maximum Entropy based SAS (ME-SAS)
+Maximum Entropy Method
+maximum entropy model
+Maximum-entropy-based classification
+MaxQDA
+MB-LDA
+MBERT
+MC-CCR
+MCCNN
+MCMC
+MCMK
+MCMTD
+MCNN-MA
+MDA Stemmer
+MDAE-BERT
+ME
+ME-ASM
+Mean-Teacher
+Meaning cloud
+MeaningCloud
+MeaningCloud API
+MEC model
+MeCab
+Mecab-ko
+MEDA
+Media Frame Corpus (MFC)
+MEDLDA
+Megaptera Whale Optimization-based Adaptive LSTM
+MEKA
+MELex
+Memetic algorithm
+MemNet
+MemNN
+Memory Fusion Network
+Memory Network
+Memory Networks
+Memristive LSTM
+Mentionlytics
+meta classifier
+Metis AI platform
+MFCC
+MFN
+MFOEM
+MG-LDA
+MGAN
+MGGP-FR
+Micro-Blog Sentiment Analysis System (MSAS)
+micro-blog text mining
+Microblog Aspect Miner (MAM)
+Microsoft Azure
+Microsoft Azure Blob storage
+Microsoft Azure Machine Learning Studio
+Microsoft Azure Sentiment Analysis
+Microsoft Excel 2007
+Microsoft Research Paraphrase Corpus (MRPC)
+Microsoft Teams
+Microsoft Text Analytics
+Microsoft’s LUIS
+Mieruka Engine R©
+MILSentic
+MIN
+MinCut
+minimum lexical separation distance algorithm
+Minimum Mean-Square Error
+Minimum Redundancy Maximum Relevance (mRMR)
+Minkowski
+MIOPIA Supervised Model
+MITRE
+MJST
+MKC-LSTMVs-ATT
+ML
+ML Affinity
+ML classification algorithms (Logistics Regression, Tuned Logistics Regression, Support Vector Classifier, Tuned Support Vector Classifier)
+ML-EA
+ML-ITV
+ML-SentiCON
+MLBTWCR
+MLformer
+MLib
+MLlib
+MLP
+MLP Classifier
+MLP Multilayer Perceptron Structure 1
+MLP Multilayer Perceptron Structure 2
+MLP-SCL-ES
+mLSTM
+MM-TOWE
+MMMU-BA
+MMSA
+MMSC
+MNB
+MOA
+MOA-TweetReader
+Mobile Net
+Modest AdaBoost
+Modified Altman's Z-score model
+modified categorical proportional difference (MCPD)
+Modified GCAE
+Modified GCNN
+Modified Possibilistic Fuzzy C-Means (PFCM)
+Modified Red Deer Algorithm (MRDA) Extreme Learning Machine Sparse Autoencoder (ELMSAE)
+Modified Salp Swarm Algorithm
+Modified Support Vector Machine
+MOEA/PT Optimization Algorithm
+MOGW optimization algorithm
+MongoDB
+Monkey Learn
+MonkeyLearn
+MONPA
+Moroccan Sentiment Analysis Corpus (MSAC)
+Moroccan YouTube Corpus (MYC)
+morphological analyzer
+Moses
+MOSI
+Most Persistent Feature Selection (MPFS)
+MOTAZ
+Moth Flame Optimization (MFO)
+Movie Review Data
+MoviePy
+MOWOT
+Mozdeh
+Mozdeh Big Data Analysis tool
+MPCN
+MPQA
+MPQA corpus
+MPQA sentiment lexicon
+MPQA subjectivity corpus
+MPQA Subjectivity Lexicon
+MPQA’s opinion lexicon
+MPT
+MRF feature selection
+MS Excel
+MS Teams
+MSA Stemmer
+mSDA
+MSR
+MSTD
+MSTM
+MT-ARC-II
+MT-CNN
+MT-GRNA
+MT-LRM-BERT
+MT-RNN-I
+MT-RNN-III
+mt0-xxl-mt
+MTCNN-LSTM
+MTDA
+mTFIDF
+MTIN
+MTNN framework
+MTVAE
+MuLeHyABSC
+MULT
+Multi Class Classifier
+Multi Class Classifier Updateable
+Multi Layer Perceptron (MLP)
+Multi Perspective Question Answering Subjectivity Lexicon (MPQA)
+Multi Refined Neutrosophic Set (MRNS)
+Multi-aspect Sentiment Analysis (MSA-COSRs)
+Multi-Attention Fusion Modeling (Multi-AFM)
+Multi-attention recurrent network
+Multi-channel distributed representation model
+Multi-Channel Embedding Convolutional Neural Network (MCE-CNN)
+Multi-Class Support Vector Machine
+multi-criteria weighted POI graph
+multi-dimensional LSTM
+Multi-domain Arabic Sentiment Corpus (MASC)
+Multi-Grain Topic model (MG-LDA)
+Multi-granular fuzzy linguistic modelling methods
+multi-head fusion attention-based recurrent neural network
+Multi-head Self-Attention (MSHA)
+Multi-hop LCR-Rot
+Multi-instance Attribute-Sentiment (MAS) inference model
+Multi-iterative Graph-based opinion Spam Detection (MGSD)
+Multi-layer Convolutional Neural Network
+Multi-Layer Perceptron
+Multi-level Attention-Based LSTM
+Multi-objective Cat Swarm Optimization (MCSO)
+Multi-objective Flower Pollination Optimization (MFPO)
+Multi-objective Gray Wolf Optimization (MGWO)
+Multi-objective Moth Flame Optimization (MMFO)
+multi-objective PSO
+Multi-Perspective Question Answering (MPQA)
+multi-task autoencoder
+multi-task learning framework
+multi-task learning model
+Multi-Verse Optimizer
+Multi-view Deep Network
+multi-view pointer-generator network
+Multi-way matching deep neural network model
+Multichannel CNN
+Multichannel Convolutional Neural Network (MCNN)
+Multichannel Deep Convolutional Neural Network (MCNN)
+Multiclass Support Vector Machine (MSVM)
+Multihead Attention
+multilayer bi-directional recurrent neural network
+Multilayer Perceptron
+Multilayer Perceptron (MLP)
+Multilayer Perceptron Neural Network
+Multilayer Perceptron using Emoticon Space Model
+Multilevel Fuzzy Cognitive Map (MFCM)
+Multilingual BERT
+Multilogue-Net
+Multimodal Cyclic Translation Network
+Multimodal Factorization Model
+Multimodal Interaction and Fused Graph Convolutional Network (MIFGCN)
+multimodal network
+Multinomial Logistic Regression
+Multinomial Logistic Regression Model
+Multinomial Naive Bayes
+Multinomial Naïve Bayes
+Multinomial Naive Bayes (MNB)
+Multinomial Naive Bayes Classifier
+Multinomial Naïve Bayes Classifier
+Multinomial Naïve Bayes using Similarity based Conditional Probability (SECP-MNB)
+Multinomial Naive Bayesian
+Multinomial-NB
+MultinomialNB
+Multiobjective Genetic Algorithm
+multiple dictionaries
+Multiple Imputation
+Multiple Imputation Chained Equation (MICE)
+Multiple Linear Regression
+Multiple Regression
+Multiple Stacked Attention Mechanism (MSAM)
+multiple-output support vector regression (MSVR)
+MultiSentiNet
+Multistage hybrid scheme
+Multistrategy Sentiment Analysis Of Consumer Reviews
+Multitask Learning Model
+Multivariate vehicle regression models
+MutiChannel CNN-BiLSTM
+mutual information
+MV-DNN
+MV-LSTM
+MV-RNN
+MVEDL
+MXNet
+MyGov
+N-gram
+n-gram analysis
+N-Gram Language Model
+N-gram Stacked Autoencoder
+N-gram2vec
+N-grams
+n-grams + tfidf
+n-grams+embeddings
+N-TF-IDF Algorithm
+N-UDDP
+N2H3
+NA-DLSTM
+Naïve Base classifier
+Naive Bayes
+Naïve Bayes
+Naive Bayes (NB)
+Naïve Bayes (NB)
+Naive Bayes Algorithm
+Naïve Bayes algorithm
+Naïve Bayes Analyzer
+Naive Bayes and Random Forest, Logistic Regression
+Naïve Bayes Bag of Words
+Naive Bayes Classification
+Naïve Bayes classification
+Naive Bayes Classifier
+Naïve Bayes Classifier
+Naive Bayes Classifier (NBC)
+Naïve Bayes classifiers
+Naive Bayes Machine Learning Algorithm
+Naïve Bayes machine learning algorithm
+Naive Bayes Multinomial
+Naïve Bayes Multinomial
+Naïve Bayes Multinomial Text
+Naïve Bayes Multinomial Updateable
+Naïve Bayes Updateable
+Naive Bayes with dragonfly algorithm (NBDF)
+Naïve Bayes with Kernel Density Estimator (NB-KDE)
+Naive Bayesian
+Naïve Bayesian
+Naive Bayesian (NB)
+Naive Bayesian classification
+Naive Bayesian Classifier
+Naive Bayesian method
+Naïve bays
+Naïve Bias
+NaiveBayes Classifier
+name classifier
+Named Entity Recognition (NER)
+NARRE
+NASNet
+National Research Council Canada (NRC) Lexicons (NRCLex)
+National Research Council Canada’s (NRC)
+National Research Council Emotion
+National Research Council of Canada Emotion Lexicon
+National Taiwan University Sentiment Dictionary (NTUSD)
+Natural Language API from Google Cloud
+Natural language processing
+Natural Language Processing (NLG)
+Natural Language Processing (NLP)
+Natural Language Processing algorithm
+Natural Language Processing pipeline
+natural language processing techniques
+natural language processing technology
+Natural Language Processing tools
+Natural Language Processing-based tool
+Natural Language Processor Parser
+Natural Language Tool Kit
+Natural Language Toolkit
+Natural Language Toolkit (NLTK)
+Natural Language Toolkits
+Natural Language Understanding
+Navie Bayes
+NB
+NBM
+NBR algorithm
+NBSVM
+NCapture
+ND (Negation Dictionary)
+NDM-Grid
+NDMGA-XGB
+Nearest Centroid
+Nearest distance model
+Nearest Neighbor
+Nearest Neighbor Algorithm
+Nebular
+NegAIT
+negation handling
+Negation handling technique
+Negative Stopwords Aware Sentiment Analysis (NSASA)
+NegBERT
+Nell
+Neo4j
+Nepali SenticNet
+Nepali SentiWordNet
+NER
+nested Chinese Restaurant Process (nCRP)
+Net Sentiment Score
+Net::Twitter
+NetBase
+NetDraw
+NetLasso-Hinge
+NetLasso-Log
+Netlytic
+Netvizz
+Network Lasso
+NeuMF
+NeuO
+Neural Attentional Rating Regression (NARRE)
+Neural Autoregressive Distribution Estimation (NADE)
+Neural Collaborative Filtering (NCF)
+Neural Factorization Machine (NFM)
+Neural Graph Collaborative Filtering (NGCF)
+Neural Machine Translation
+Neural Net
+neural nets
+Neural Network
+Neural Network (NN)
+Neural Network Classifier
+Neural Network Intelligence
+Neural network method
+Neural network models
+Neural networks
+Neural Networks (NN)
+Neural Opinion Dynamics (NOD)
+Neural pooling
+Neural Probabilistic Language Model (NPLM)
+Neural Rating and Tips generation (NRT)
+Neural Template Explanations Generation (NETE)
+Neural Text Categorizer (NTC)
+Neural Text Self Organizer (NTSO)
+Neural Transition-Based Model
+Neural Tree Indexer (NTI)
+Neural Turing Machines
+neural variational inference
+Neuro-Fuzzy
+neuro-fuzzy classifiers
+NeuroSent
+Neutrality Detector Model (NDM)
+Neutrosophic Logic
+Neutrosophic-Aspect-Based Sentiment Analysis (NABSA)
+News API
+Newspaper
+NgramCNN
+NICT Opinion Extraction Tool
+Nielsen
+NILC word embeddings
+NILC-Embeddings
+Nile University's Arabic sentiment Lexicon (NilULex)
+NileULex
+NiosTo
+Nivivo
+NLANGP
+NLI-B
+NLP learning model
+NLP Tool Kits
+NLP-SEM
+NLPIR
+NLPIR big data semantic intelligent analysis system
+NLPIR/ICTCLAS 2016
+NLProcessor;Text to Matrix Generator
+NLPTools
+NLTK
+NLTK 2.0.4
+NLTK 3.0
+NLTK ISRI Stemmer
+NLTK packages ‘punkt’ and ‘stopwords’
+NLTK POS tagger
+NLTK's Vader Analyzer
+NLTK/VADER
+NMF
+NMF (Non-negative Matrix Factorization)
+NN
+NNge
+No-Interactive
+NO-Position-Weight
+Node2vec
+NodeXL
+Non-aspect noun lexicon
+Non-negative Matrix Factorization
+Non-Negative Matrix Factorization (NMF)
+Noslang
+NoSQL DB
+Novel Auto-Encoder
+NPS4SD
+NRC
+NRC Emotion Lexicon
+NRC Emotion Lexicon (EmoLex)
+NRC Hashtag Sentiment Lexicon
+NRC Lexicon
+NRC library
+NRC sentiment
+NRC sentiment dictionary
+NRC Word-Emotion Association Lexicon
+NRC Word-Sentiment Association Lexicon
+NRC Yelp Word-Aspect Association
+NRC-Canada
+NSC+UPA
+NSGA-II
+NSLinguisticTagger
+Nstein
+NTUSD
+NTUSD (National Taiwan University)
+NTUSD_NB
+NTUSD-Fin
+Nu SVC
+Numberbatch
+Numeral-Aware Model (NAM)
+numpy
+NUS
+nuSVC
+NUVI
+NVivo
+NVivo 12 Plus
+NVivo Pro 12
+NVivo12
+Nymi software
+OAR
+Obama-McCain Debate (OMD) dataset
+Observatório do Consumidor
+OCA
+OCC model
+OCC sentiment rule system
+Oceni Profesora
+Octopus
+Octopus collector
+Octopus Data Collector
+Octopus v7.1
+ODCNN-BiLSTM-CRF
+Odia Morphological Analyzer (OMA)
+OdinText
+Okapi BM25
+OLSRNN
+OMCR
+OMFeedback
+OMLML
+OneR
+ONG
+online latent semantic indexing
+Online Non-negative Matrix Factorization (ONMF) topic model
+online polls
+online sentiment analysis
+Online sentiment analyzers
+ONSET
+Onto-PT
+Ontology Alignment
+Ontology driven TF-IDF
+ontology-driven aspect-based sentiment analysis
+ontology-driven feature engineering
+OntoSenticNet 2
+OpCluster-PT
+OpCNN
+Open Information Extraction
+Open Multilingual WordNet
+Open NLP
+openAI GPT
+OpenEAR
+OpenNLP
+OpenNLP1
+OpenSmile
+OpenTag
+OpinAIS
+OPINE
+OpineDB
+Opiner
+Opinion
+Opinion and Context-Aware Inverted Index graph model
+Opinion Based Influence Network (OBIN)
+Opinion Circle
+Opinion COW
+Opinion Diffusion Simulation Framework
+Opinion digger
+Opinion Finder
+Opinion Keyword Extraction
+opinion leaders' identification
+Opinion leaders' prediction framework
+Opinion lexicon
+Opinion mining
+Opinion Mining (OM)
+Opinion mining technology
+Opinion Observer
+Opinion Ranking
+Opinion-enhanced collaborative filtering
+Opinion-Lexicon-English lexicon
+OpinionExtractor
+OpinionFinder
+OpinionLink
+OpinionMiner
+OpinionMining-ML
+OpinionMiningML
+OpinionML
+OpinionScraper
+Opinosis
+Opportunity algorithm
+OPSCIENCE
+OPSUM
+Optimized K-Means Algorithm
+Optimized-Modified-GetOldTweets3-OMGOT
+ORANGE
+Orange Canvas
+Orange Software
+Ordinal Regression
+ORDSAENet
+OriNet
+orthogonal regularization
+OTAWE
+OTE-MTL
+Outscraper
+OWA operator
+OWA operators
+OWL
+OWL2
+OzaBaggingADWINClassifier
+Pachinko Allocation Model (PAM)
+PADSLDA
+PAG
+Page-Hinkley
+PageRank
+PaloBERT
+PAM clustering
+PANAS-t
+Pandas
+Paragraph Vector
+Paragraph Vector with Distributed Bag of Words (PV-DBOW)
+Paragraph Vector with Distributed Memory (PV-DM)
+Parallel dots
+ParallelDots
+ParallelDots AI APIs
+PARAPHRASE
+Pareto Chart
+ParsBERT
+Parsimmon
+ParSoDA
+PART
+Part of Speech LDA (POSLDA)
+Part-of-Speech feature-based Weighting (PSW)
+Partial Least Squares (PLS)
+Partial Tree Kernel (PTK)
+Partially Labeled LDA
+Particle Swarm Optimization
+particle swarm optimization (PSO)
+Particle Swarm Optimizer (PSO)
+partitioning around medoids (PAM)
+Passive Aggressive
+Pattern
+Pattern for Python
+Pattern Library
+Pattern Sentiment Analysis
+Pattern-Based Approach
+Patterns
+PBAN
+PBF
+PCA
+PCA+KMeans
+PCNN
+PEARL
+Pearson correlation
+Perception
+Perceptron
+PERI NOMOU SYSTEM
+Perl Web Crawler
+PerSent
+PERSEUS
+Persian corpus with polarities
+Persian Sentence Dependency Parser
+Persian Sentiment Word Miner (PSWM)
+Persian SentiWordNet (PSWN)
+Personality Traits Privacy Preference Integration
+Persuasive Argument Prediction Model
+PERT
+PET-BERT
+PGCDBN
+PGOpi
+PHEME
+PhoBERT
+Phrasing
+Pickle
+Piecewise Convolutional Neural Network (PCNN)
+Pig
+Pkudblab
+PLDTN-UCF
+Plotly
+plotrix
+PLS-SEM
+PLSA
+PLSD
+PLSI
+PLSO
+Plutchik-based hybrid sentiment analysis tool
+plyr
+PMI
+PMI-IR
+PMSA
+PMSC-Hinge
+PMSC-Log
+PMTL
+PNN
+PNNs
+pointer-generator network
+Pointer-Generator Network (PGNet)
+Pointwise Mutual Information (PMI)
+Polarity classifier
+Polarity Lexicon
+Polarity-Enriched Tree Kernel (PETK)
+PolEmo 2.0
+Political multi-class sentiment analysis (PMSA)
+Polyglot-NER
+PolyU
+POME
+Popescu and Etzioni (2007)
+Popscu
+Poria
+Porter Algorithm
+Porter Stemmer
+Porter Stemmer Algorithm
+Porter's stemming algorithm
+Porter’s stemming algorithm
+POS grammar rules
+POS Tagger
+POS tags
+POS-AttWD-BLSTM-CRF
+POS-Tagger elimination methodology
+POS2Vec
+PosATT-LSTM
+Position-aware Bidirectional Attention Network (PBAN)
+Positive and Negative Affect Schedule (PANAS) scale
+Positive and Negative Affect Schedule-Twitter
+positive/negative N-grams counts
+Possibilistic Fuzzy C-Means (PFCM)
+PostgreSQL
+Power BI
+Power Iteration Clustering (PIC)
+Pre-trained word embedding and LSTMs
+Preference-based Organization (Pref-ORG)
+PrefixSpan
+PRET+MULT
+Principal Component Analysis
+principal component analysis (PCA)
+Probabilistic aspect mining
+probabilistic automata
+Probabilistic Classify and Count
+Probabilistic Latent Semantic Analysis
+Probabilistic Latent Semantic Analysis (PLSA)
+Probabilistic Linguistic TODIM
+Probabilistic Matrix Factorization (PMF)
+Probabilistic Neural Network
+Probabilistic Neural Network (PNN)
+probabilistic topic modeling
+Product Defect Latent Dirichlet Allocation (PDLDA)
+ProductSentiRus
+Project Essay Grade (PEG)
+Prolog
+PROMETHEE II
+Pruned Exact Linear Time (PELT)
+PRUS
+PSA system
+Pseudo-Labelling
+PSL
+PSO
+PSO-FCM
+PSO-LSTM
+PSWAM
+PTT sentiment analysis tool
+PTT Tool
+Public Maturity Assessment on Official Statistics (PMAOS)
+public opinion sensitivity index (POSI)
+PULSAR
+PV
+PV-DM-NS-NB
+PyABSA
+Pycontractions
+Pyecharts
+PyFin-sentiment
+PyLDAvis
+pylogsentiment
+PyMorphy2
+PySpark
+Pythia All Features
+Pythia All n-grams
+Pythia Character n-grams
+Pythia Semantic Features
+Pythia Term n-grams
+Python
+Python 3
+Python 3 scraper
+Python 3.10.0
+Python API for Twitter
+Python crawler
+Python Fastai
+Python LDA library
+python lexicon dictionary
+Python libraries
+Python Libraries (Pandas, NumPy, Requests, BeautifulSoup, NLTK, spaCy, gensim, TextBlob)
+Python library from the Computational Linguistics and Psycholinguistics Research Center
+Python NLTK
+Python Reddit API Wrapper (PRAW)
+Python request library
+Python script for data extraction
+Python SeleniumWebDriver
+Python sklearn
+Python software
+Python Twitter API
+Python Vietnamese Toolkit
+python-based valence aware dictionary for sentiment reasoning
+Python-Jieba
+PyTorch
+Pytorch-ABSA
+Pyvi
+q-rung orthopair fuzzy interaction weighted Heronian mean operators
+Q-WordNet
+QA-B
+qalsadi
+Qalsadi stemmer
+QARiB
+QDAP
+QMOS
+QSR NVivo 11
+QSR NVivo Pro 11.0
+Quadratic assignment procedure (QAP)
+Quadratic Discriminant Analysis
+Qualtrics Insight Platform
+Quantification using probability Estimators
+quantile regression model
+Quantum-Inspired Sentiment Representation Model
+Query-focused Sentiment-Oriented Multi-Objective Crow Search Algorithm (QSO-MOCSA)
+questionnaire survey
+Quindl mood
+R
+R 3.4.2
+R language
+R package rvest
+R programming
+R programming software
+R software
+R Statistical Software
+R Studio
+R Tool
+R twitter package
+R-CNN
+R-GAT
+R-Net
+R-Program
+R-SA
+R-Text Mining Solution (R.TeMiS)
+RA-DLNet
+RabbitMQ
+RABERT
+RACL-BERT
+Radial Bias Neural Network (RBNN)
+Radian6
+RAE
+Rainbow
+RAKE
+RAkEL
+RAM
+RAML
+RAN
+Random Committee
+Random Forest
+Random Forest (RF)
+Random Forest Classifier
+random forest machine learning algorithm
+Random forest tree
+Random Forest with Gini Index
+Random Forests
+Random Forests (RF)
+Random Forests Classifier
+Random Indexing
+Random Logistic Vector (RLV)
+Random Projection (RP)
+Random Sub Space
+Random Subspace
+Random Tree
+Random Tree (RT)
+Random walk network
+RandomForest
+Randomizable Filtered Classifier
+Randomized Sketching
+RandonForest
+ranking algorithm
+RankNet
+Rapid Miner
+Rapid Miner Studio version 9.9
+RapidMiner
+RapidMiner v9.9
+Rasa Open Source
+Rating Prediction Based On Social Sentiment From Textual Reviews
+RBEM
+RBF Classifier
+RBF Network
+RBT3
+RCNN
+RCNN-LSTM
+RCrawler
+RCurl
+RDBN
+RDDM
+RE-BERT
+RE2
+ReadMe
+Real Ada Boost
+Real AdaBoost
+Real-Time Social Knowledge Discovery Algorithm (RT-SKDA)
+RecNN
+Recommendation systems
+Recurrent Attention on Memory (RAM)
+Recurrent Convolution Neural Network
+Recurrent neural network
+Recurrent Neural Network (RecurrentNN)
+Recurrent Neural Network (RNN)
+Recurrent Neural Network (RNN), Long Short-Term Memory (LSTM), Restricted Boltzmann Machine (RBM)
+Recurrent Neural Networks
+Recurrent Neural Networks (RNN)
+Recurrent Neural Networks with Attention Mechanism (RNN-AM)
+Recurrent Neural Networks with word embeddings
+recursive Chinese Restaurant Process (rCRP)
+Recursive deep learning
+Recursive Feature Elimination (RFE)
+Recursive Neural Network
+Recursive Neural Network (RecursiveNN)
+Recursive Neural Network (RNN)
+Recursive Neural Networks
+Recursive Neural Networks (ReNNs)
+Recursive Neural Tensor Network
+Recursive Neural Tensor Network (RNTN)
+RecursiveNN
+Reformer
+RegEx
+Region-based CNN (R-CNN)
+Regression Analysis
+regression models
+Regression Tree
+Regression Tree Learner (REPT)
+Regular Expression
+Regular Expressions
+Reinforced Hard Typed Decoder (RHTD)
+Reinforced Poisson Process
+Relational Tensor Network
+Relief
+ReliefF
+RelNet
+RemBERT
+Replicated Softmax Model (RS)
+Reptile
+RepTrak
+REPTree
+Repustate
+Reputation generation approach
+Requests
+ResNet
+ResNet-101
+ResNet-50
+ResNet101
+REST API
+restricted Boltzmann machine
+Restricted Boltzmann Machine (RBM)
+Restricted Boltzmann machines
+retrieve-and-edit
+ReUS
+REV2SEQ
+Reverb
+Reverse-JST
+Review Grouping Algorithm
+Review Mining
+Review Multi-label Active Learning with Auxiliary Learner (Logistic Regression, SVM)
+Review Supervised Approaches: k-Nearest Neighbors (kNN), Multinomial NB (MNB), Support Vector Machines (SVM), Multilayer Perceptron (MLP), and One-Class SVM (OCSVM)
+Review Supervised Approaches: NBM and Multi-criteria heuristic function
+Review Supervised Approaches: RF, NB, NBM, SVM
+Review Unsupervised Approaches: BTM
+Reviewer Group Collusion Model
+RF
+RF-SA
+RFacebook library
+RFATO-based deep RNN
+RFC
+RGAT-BERT
+RGCN
+Rhadoop
+RHMTML
+Ridge Classifier
+Ridge Regression
+Ridor
+RINANTE
+RINANTE+
+RJST
+RMI-BSSL
+RNCRF
+RNN
+RNN capsule
+RNN with attention mechanism
+RNN with GRU
+RNN with LSTM
+RNN-BLSTM
+RNN-highway
+RNN-LSTM
+RNN/LSTM
+RNN+GRU
+RNN+LSTM
+RNNLM
+RNNs
+RNSA
+RNSCN
+RNTN
+ROAuth
+RoBERT
+RoBERTa
+RoBERTa model
+RoBERTa-Base
+RoBERTa-BiLSTM-Attention
+RoBERTa-FT
+RoBERTa-wwm
+RoBERTa-wwm-ext
+RoBERTuito
+Robust Variational Autoencoder
+Rocchio classifier
+Rocchio's Algorithm
+Roformer
+root based stemmers
+ROS-NCL
+Rosetta Stone
+Rosette Entity Extractor
+ROST Content Mining 6.0
+ROST Content Mining System version 6.0
+ROST-CM6
+ROSTCM6
+ROUGE
+rough number method
+Rough Set Based Optimal Feature Set Partitioning (RS-OFSP)
+Rough Set Theory
+RPCA-KFE
+RSD
+RSentiment
+RStudio
+RSVD
+RTextTools
+RTweet
+rtweet package
+RubE
+RuBERT
+Rubert-base-cased
+Rubtsova’s corpus
+Rule-based Expert System
+Rule-Based Model (RBM)
+Rule-based system
+Rules-based
+RulesContext
+RULING
+RUS
+RUSBTM
+RuSentiLex
+RuSentiLex (large)
+RuSentiLex (small)
+RuSentiment corpus
+Russell Circumplex Model
+RuWordNet
+rvest
+RVVC
+rwalk/gsdmm
+Rweka
+Rwordseg
+S-AESC
+S-LSTM
+S-PLSA
+S-SEIR
+S-Sense
+S2AP
+S3VMOVOvote
+S3VMOVR
+SA-FCM
+SA-LSTM
+SA-LSTM-P
+SA-PSO
+SAAN
+SABRE
+SAFE
+SAGE
+SAHAR-LSTM
+SALOM
+Salp Swarm Algorithm (SSA)
+SAM
+SAM-OWA
+SAMAR
+Samar embeddings
+SAMBERT
+SANA
+Sanders-Twitter Sentiment Corpus
+Sanders’s Twitter dataset
+SANET
+SANLE
+SANT
+SAOM
+SAP (Insight)
+SAP BW
+SAP ECC
+SAPCP
+SAS Enterprise Miner
+SAS Institute
+SAS Text Miner
+SAS Text Miner 12.1
+SASA
+SASS
+Sastrawi
+SATALex
+SauDiSenti
+SAX
+SBAD
+SBC
+SBERT
+SBS
+SC-ANFIS
+SCA
+SCA model
+scales
+Scatterblogs
+Sci-kit Learn
+Sci-Learn
+SciBERT
+Scikit-learn
+Scikit-Learn (sklearn)
+scikit-learn python package
+SCL
+SCLFT
+SCN
+Scraper
+Scrapy
+Scrapy-Redis
+Scrapy-Redis-Bloomfilter
+Scup
+SCWE-d
+SD (Sentiment Dictionary)
+SDA
+SDD (Sentiment Degree Dictionary)
+SDGCN
+SDGCN (Syntactical Distance Attention Guided Graph Convolutional Network)
+SDNE
+SDRN
+SDRN+BERT
+SE-14-Lap
+SE-14-Res
+SE-15-Lap
+SE-15-Res
+SE-16-Lap
+SE-16-Res
+Seaborn
+SEBA
+SECA
+Seeded Aspect and Sentiment (SAS)
+seeded topic modeling (seeded LDA)
+SEIR
+SEL
+Selasdia Intelligent Sales Assistant
+Selective memory architecture-based convolutional neural network (SMA-CNN)
+Selenium
+Self Organizing Fuzzy Neural Networks
+Self-Att-LSTM
+Self-attention
+Self-attention mechanism
+self-attention network
+Self-Attention-Based BiLSTM
+self-extended domain sentiment dictionary
+SELF-MM
+Self-Organizing Fuzzy Neural Network (SOFNN)
+Self-organizing Map (SOM)
+Self-Organizing Maps
+Self-Training
+Self-training through Classifier Disagreement (SCD)
+SelfTrH
+SelfTrP
+SELSUM
+SEM
+SEM-PLS
+Semantic knowledge bases
+Semantic Knowledgebase approaches
+Semantic Network Analysis
+Semantic Orientation
+Semantic Orientation (SO) computation method
+semantic orientation analysis
+semantic orientation by the point-wise mutual information method
+Semantic Orientation of Words
+Semantic Role Labeling (SRL)
+Semantic Sentiment Approach (SSA)
+Semantic similarity algorithm
+Semantic Tree Kernels (STK)
+Semantic Web technologies
+Semantria
+SemEval
+SemEval 2017 Task 10
+SemEval-2016 Task 6-A
+SemEval-2017 Task 4-C Corpus
+Semi-Markov Conditional Random Field (Semi-CRF)
+Semi-supervised CNN
+Semi-Supervised Convolutional Neural Network (SSC)
+Semi-supervised deep neural network
+Semi-supervised learning
+Semi-supervised Sequence Learning
+Semi-Supervised SVM
+Semi-SVM
+Semkey-BERT
+SemRep
+SEN-GAT
+Senpy
+SenseComp
+SENSECOR
+Sensitive Information Topics-Based Sentiment Analysis Model (SITSAM)
+Sent2Bayes
+SENT2IMP
+Sent2Vec
+SENTA
+Sentaero
+Sentence Transformer
+sentence_transformers
+Sentence-LDA
+Sentence-LDA (SLDA)
+Senti
+Senti strength Approach
+Senti Word Net
+Senti-COVID19
+Senti-lexicon
+Senti-LSTM
+SENTI-METER
+Senti-N-Gram
+Senti-NSetPSO
+Senti-TFIDF
+Senti-Word-Net
+Senti2Vec
+Senti4SD
+SentiALG
+SentiBank
+SentiBank + SentiStrength
+SentiBERT
+SentiBERT-BiLSTM-CNN
+sentic computing-based sentiment analysis framework
+Sentic GCN
+SenticGCN
+SenticGCN BERT
+SentiCircles
+SenticLDA
+SenticNet
+SenticNet (SCN)
+SenticNet 3.0
+SenticNet 5
+SenticNet 6
+SenticNet MA-LSTM
+SentiCNN
+SentiCR
+SentiCRF
+SentiFars
+Sentigem
+SentiLex-PT
+SentiLexPT-02
+sentiment analysis
+Sentiment Analysis (SA)
+Sentiment analysis algorithm
+Sentiment Analysis Engine
+Sentiment analysis methods
+sentiment analysis models for Jordanian Arabic
+Sentiment Analysis Module (SAM)
+Sentiment Analysis of COVID-19 Tweets Using Machine Learning Techniques
+sentiment analysis on Arabic hotel reviews
+Sentiment Analysis Opinion mining
+Sentiment analysis procedures
+Sentiment Analysis System
+Sentiment Analysis Tool
+Sentiment analysis tools
+Sentiment analysis: Adjectives and adverbs
+Sentiment Analyzer
+Sentiment analyzers
+Sentiment Augmented Topic Popularity Prediction (SATP)
+Sentiment classification using lexical contextual sentence structure
+Sentiment classifier
+Sentiment Connection Weights
+sentiment dictionary
+Sentiment Information Collector-Extractor Neural Network (SICENN)
+Sentiment lexicon
+Sentiment Parser based on X-Bar Theory
+Sentiment Selector
+Sentiment Sensitive Thesaurus
+Sentiment Sensitive Tree (SST) with Convolution Tree Kernel
+Sentiment Topic Model with Decomposed Prior (STDP)
+Sentiment Vivekn
+Sentiment Vocabulary Ontology
+Sentiment-140
+sentiment-based lexicon
+Sentiment-integrated critiquing system
+Sentiment-LDA
+Sentiment-opinion Alignment Explainable Recommendation (SAER)
+Sentiment-preserving Document Summarization (SDS)
+sentiment-spanish
+Sentiment-specific word embeddings (SSWE)
+Sentiment-Target Word Pair Extraction Model
+Sentiment140
+Sentiment140 API
+Sentiment140 Dataset
+Sentiment140 Lexicon
+SentimentIntensityAnalyzer
+sentimentr
+sentimentr package
+Sentiments based Labeled LDA model (SLLDA)
+SentiML
+SentiML++
+SentiMo
+SEntiMoji
+SentiNet
+SentiNeuron
+SentiProMo Tool
+SentiRank
+SentiSense
+SentiSense Synset
+SentiStrength
+SentiStrength - SE
+SentiStrength 3.0
+SentiStrength_ID
+SentiStrength-SE
+SentiStrength3
+Sentitext
+SentiTurkNet
+SENTiVENT
+SentiVerb
+SentiViT
+sentiword
+SentiWordNet
+SentiWordNet 3.0
+SentiWordNet 3.0.0
+SentiWordNet for Hindi
+SentiWordNet Lexicon
+SentiWordNet3.0
+SentiWords
+SentiWordsNet
+SentiXGboost
+SentPOSLDA
+SentProp
+SentWordNet
+Seq2Path
+seq2seq
+SeqGAN
+Sequential Backward Selection
+Sequential Forward Selection
+Sequential Least-Squares Programming (SLSQP)
+Sequential Minimal Optimization
+Sequential minimal optimization with decision tree
+Serendio
+Serendio Lexicon
+Serendio Sentiment Engine
+Service Quality-Based Text Analytics (SQTA) model
+SERVQUAL
+SERVQUAL model
+SFA
+SFL-NB
+SFLA-based fuzzy classification systems
+SGD
+SGD Text
+SGDC
+Shah et al.
+Shared Multitask Learning Network (SMLN)
+Sharethrough Content Analyzer
+SHINE
+Shiny
+Shuffled Frog Leaping
+Shuffled Frog Leaping Algorithm (SFLA)
+SI Model
+SI-TS
+SIA
+SIAAC
+SIACC
+Siamese-based framework
+Sigmalaw PBSA
+SignalSentiWord (SSW)
+Signatures
+SILTN
+Simple Embedding + Average Pooling
+Simple Logistic
+simple neural network
+Simple RNN
+simple RNN (SRN)
+Simple Sequential LSTM
+Simple Transformers
+Simple10
+SimpleCart
+Simplified Sentiment Analysis (SSA)
+Simulated Annealing
+Simulated Annealing (SA)
+simulated annealing algorithm
+Sina Weibo
+Single Value Decomposition
+Single Valued Neutrosophic Set (SVNS)
+Single-Pass algorithm
+Single-pass clustering algorithm
+Singular Value Decomposition
+Singular Value Decomposition (SVD)
+SINICA CKIP
+SIR
+SIS
+SISe
+SK-GCN-BERT
+SK-means
+SKEP
+SKFE
+Skip-Gram
+Skip-gram model
+Skipgram
+sklearn
+SKP-LDA
+Slack
+slang
+SLANT
+Slap Swarm Algorithm
+SLCABG
+SLDA
+Słowosieć
+SLTM
+SMACK
+SMO
+SMO classification algorithm
+Smoothed Partial Tree Kernel (SPTK)
+SMOTE
+SMOTE-ENN
+SMOTE-RkNN
+SMOTE-Tomek
+SMOTENC
+SMSC
+SMTL
+SN
+SN-GAT
+Snippext
+Snowball language
+SnowBall NLP stemmer
+Snowball Sentiment Analysis System
+SnowballStemmer
+SnowNLP
+snscrape
+SO-CAL
+SO-CAL lexicon
+So-PMI
+SOAP
+Social Bearing
+Social graph clustering
+Social Impact Theory based Optimization
+Social media analytics
+Social Mention
+Social network analysis
+Social Post Opinion Miner (SPOM)
+Social Spider Optimization (SSO)
+SocialGrep Exports
+SocialMention
+Socio Monitoring Framework (SMF)
+SODA
+Soft Mapping
+Soft Voting
+Softmax
+SoftMax based User Attitude Detection Algorithm
+Softmax Layer
+Softmax regression
+SOLMAT
+Some-Trend
+Sometrend
+SOMPY
+soundex
+SP-MTL
+spaCy
+spaCy Dependency Parser
+spaCy entity analysis
+Spam2Vec
+SPAN
+Span-ASTE
+Span-based CNN
+Span-based extraction and classification models
+SPAN-BERT
+SpanishSentiWordNet
+SpanMlt
+Spark
+Spark MLlib
+SparkML
+Sparse Auto-Encoders
+sparse regularization
+Sparse Self-Attention LSTM (SSALSTM)
+Sparsity enhanced PTM
+SPDFC
+SpEagle
+Spectral Embedding
+Spectral Subtraction
+Spectrograms-CNN
+SpERT
+SPGSB
+Sphinx_align
+Spider Monkey Crow Optimization Algorithm
+SPIKEM
+SPLM
+SPN
+SPPM
+Spring XD
+SPRN-BERT
+SPSS
+SPSS 25.0
+Spyder
+SQL
+Squeeze-and-excitation attention layer
+SR-LSTM
+Srcraperwiki
+SRD-OSGRU
+SRJST
+SRL
+SRNN
+SRNN-MAFM
+SRS/I model
+SS-LDA
+SSA-ST
+SSAM
+SSCWE
+SSE
+SSR-LSTM
+SSVHT ontology
+SSWE
+Stabilized Discriminant Analysis
+Stacked Auto-encoder
+Stacked Auto-encoders
+Stacked Autoencoders
+Stacked Convolutional Neural Network
+Stacked Gated Recurrent Unit
+Stacked GRU
+Stacked LSTM
+Stacked Neural Network (CNN-BiLSTM-CRF)
+Stacking
+StageI model
+StageII model
+StanceRel
+standard LSTM
+Standard SVM
+Standford CoreNLP
+Standford CoreNLP English annotator
+Standford Natural Language Processing
+StandfordCoreNLP
+Stanford Arabic part-of-speech tagger
+Stanford Basic Dependency
+Stanford Co-reference Resolution model
+Stanford Core NLP
+Stanford Core NLP Toolkit
+Stanford CoreNLP
+Stanford CoreNLP Named Entity Recognition
+Stanford CoreNLP Toolkit
+Stanford corpus for Twitter sentiment analysis
+Stanford Dependency Parser
+Stanford Dependency Parser (SDP)
+Stanford Dissertation Browser
+Stanford GloVe
+Stanford Lex parser
+Stanford Log-Linear Part-Of-Speech Tagger
+Stanford Natural Language Processing Group
+Stanford NER
+Stanford NLP
+Stanford NLP Library
+Stanford NLP Parser
+Stanford NLP POS tagger
+Stanford Parse Tree
+Stanford Parser
+Stanford part of speech (POS) tagger
+Stanford Part of Speech tagger
+Stanford Part-Of-Speech Tagger
+Stanford POS Tagger
+Stanford Sentiment Annotator
+Stanford Sentiment Treebank
+Stanford Tagger
+Stanford Twitter Sentiment Corpus
+Stanford Typed Dependencies
+Stanford University's Natural Language Processing Toolkit
+Stanford’s CoreNLP
+Stanza
+StarSpace
+State-of-the-art Visually Derived Wiener Filter
+Static and dynamic embedding models
+Statistical Bayesian classifier
+statistical model
+STDP
+stemming
+stemming, feature correlation, n-gram models
+stm R package
+Stochastic block model
+Stochastic Gradient Decent
+Stochastic Gradient Descent
+Stochastic Gradient Descent (SGD)
+Stochastic Gradient Descent (SGD) classifier
+Stochastic Gradient Descent Optimization Algorithm
+Stochastic Neighbor Embedding
+Stochastic Submodular Summarization (SGS)
+StockTwits
+Stop Predatory Journals List
+StreamCrab
+Streaming API
+Streaming Random Patches
+StreamKM++
+stringr
+STRUCT
+Structural Support Vector Machines
+Structural Topic Model (STM)
+Structural Topic Modeling (STM)
+Structural Topic Modelling (STM)
+structured prediction models
+Structured query expansion based retrieval algorithm
+Structured Sentiment Model
+STRUMKNN
+STViewer
+Subjectivity Lexicon
+Subset Tree Kernel (SSTK)
+Successor Variety Stemmers (SVS)
+SUED
+SUED2
+Sum Votes
+SumHAN
+Supervised
+Supervised Anchor Topic Models
+Supervised deep neural network
+Supervised Emotional Affect Integration
+Supervised LDA
+Supervised learning
+Supervised learning models (SVM, Naive Bayes, Logistic Regression, K-Nearest Neighbors)
+Supervised Machine Learning
+Supervised machine learning approach for teacher’s performance evaluation
+supervised machine learning for text classification
+Supervised Nested LDA
+Support Expectation-Maximization (SEM)
+Support Vector Classification (SVC)
+Support Vector Classifier
+Support Vector Classifier (SVC)
+Support Vector Machine
+Support Vector Machine (SVM)
+Support Vector Machine (SVM) algorithm
+Support Vector Machine Radial Basis Function
+Support Vector Machine Regression
+Support Vector Machine with Kernel Gaussian Radial Basis Function
+Support Vector Machine-Classifier
+Support Vector Machines
+Support Vector Machines (SVM)
+Support Vector Regression
+support vector regression (SVR)
+Support Vectorial Machine
+SurveyGizmo
+SurveyMonkey
+SVC
+SVD
+SVD++
+SVM
+SVM (support vector machine)
+SVM + TF-IDF
+SVM classifier
+SVM with shallow syntactic structures
+SVM-dep
+SVM-indep
+SVM-IPSO
+SVM-IRBF
+SVM-kernel
+SVM-ngrams
+SVM-PUK
+SVM-RBF
+SVM-unigrams
+SVM.SVC
+SVM+
+SVM+MTL
+SVMeop
+SVMlight
+SVMs
+SVMsle
+SVMTool
+SVR
+SW dictionary
+SW-LDA
+SWARM
+SWIM
+Swivel
+Swivel 20
+SWN
+SWNetTR++
+SWNN
+SWOANN
+SWRL method
+Syntax-Aware Transformer (SA-Transformer)
+Syntax-based GCN model
+Synthetic Minority Oversampling Technique (SMOTE)
+Sysomos
+Syuzhet
+Syuzhet package
+syuzhet R package
+T-GCN
+T-LSTM
+T-PAN
+T1OWA operator
+T5
+T5-base
+T5-large
+TABERT
+Tableau
+Tableau Data Analytics
+Taboada adjective list
+Tag Score model with improved K-means
+Tag Sentiment Aspect (TSA)
+Tailored Random Forest
+TakeLab
+TaKIPI
+TalkWalker
+TAM
+TAN
+Tang (2015)
+Target-Connection LSTM (TC-LSTM)
+Target-dep
+Target-dep+
+Target-Dependent LSTM
+Target-Dependent LSTM (TD-LSTM)
+TARS
+TAS-BERT-ACOS
+Tashaphyne
+task-level regularization
+TASO-BERT-CRF
+TASO-BERT-Linear
+TASS
+TAT-LSTM
+TBCNN
+TC-BiLSTM
+TC-LSTM
+TClustVID
+TCN
+TCNN-BiLSTM
+TCNNF-RoBERTa
+TD-BERT
+TD-GAT
+TD-LSTM
+TDGA
+TDSD
+TDT (Topic Detection and Tracking)
+Teaching Senti-Lexicon
+TEAD
+Teddy
+Telugu SentiWordNet
+Temper
+Temporal ATT
+Temporal MNB
+Tensor Blending Network (TBN)
+tensor factorization
+Tensor Factorization (TF)
+Tensor Fusion Network
+Tensor Fusion Networks
+TensorFlow
+TensorFlow Datasets
+Tensorflow Keras
+TensorFlow Lite
+Teragram
+Term Co-occurrence Fitness Evolution (TCFE)
+Term Frequency (TF)
+Term Frequency-Inverse Document Frequency
+Term Frequency-Inverse Document Frequency (TF-IDF)
+Term frequency–inverse document frequency (TF–IDF)
+TermFrequency-Inverse Document Frequency (TF-IDF)
+Tess4J
+text analysis
+Text Analytics API
+Text Blob
+Text Blob API
+text classification
+text classifier
+Text CNN
+Text Flow
+Text GCN
+Text mining
+Text mining for opinion score
+Text mining methods
+Text Mining procedure
+Text Pre-Processing Methods On Twitter Sentiment Analysis
+Text REtrieval Conference (TREC) Blogs 06
+Text sentiment analyzer
+Text-CNN-ATT
+Text-mining method
+Text:Ngrams
+text2emotion
+Text2Onto
+TextBlob
+TextBlob API
+TextBlob Lexicon
+Textblob Naive Bayes Analyzer
+TextBlob package
+TextBlob Python Library
+TextCNN
+TextCNN-att
+TextGCN
+TextMind
+textmineR
+Textom
+Textom 4.5
+TextRank
+TextRCNN
+Textrics
+TextRNN
+Texture Module
+TF
+TF-IDF
+TF-IDF + Logistic regression
+TF-IDF + Multinomial Naive Bayes
+TF-IDF + Random forest
+TF-IDF + SVM
+TF-IDF Vectorization
+TF-IDF Vectorizer
+TF-IDF with Domain Specific Lexicon
+TF-RBM
+TF–IDF
+TF.IDF
+TF*IDF
+TFIDF
+TFIDF Vectorizer
+TFIDF-weighted Naive Bayes classifier
+TfidfVectorizer
+TFN
+TG-Net
+TG-SAN
+TGMN-CR
+Thai Twitter corpus
+Thai2Vec
+Tharwa
+Theme River
+Thet et al. (2010)
+TheySay
+Thirty-three supervised learning algorithms
+three-layer sentiment dictionary
+Tibco (Insightful)
+Ticket
+tidygeocoder
+tidytext
+tidyverse
+TIM
+Time+User Dual Attention Mechanism
+TinyML
+TipTop
+TLI-ASTE
+tm
+tm package
+tmCOVID
+Tnet
+TNet-AS
+TOM
+TOMAS
+Tomek Links
+Tone Analyzer
+TOP
+Topic Keyword Model (TKM)
+Topic Model
+Topic Modeling
+Topic Over Time (TOT)
+Topic sentiment mixture (TSM)
+Topic_Disc
+Topic-Sentiment Mixture Model with Time Factor (TSTS)
+TopicAnalyzer
+TopicVec
+TOPSIS
+Topsy
+TOTM
+TOUR
+TPD dataset
+TPDG
+Traceable Heterogeneous Graph Representation Learning (THGRL)
+Trackur
+TrAdaBoost
+TradML
+TRank
+TransA
+TransD
+TransE
+Transfer Learning
+Transformer
+Transformer architecture
+Transformer based models
+Transformer encoder layers
+Transformer Encoders
+Transformer-CNN-BiLSTM
+Transformer-Encoder
+Transformer-XL
+transformers library by huggingface
+TransG
+TransH
+TransNets
+TransR
+TransTE
+Treato analytics
+Tree Augmented Naive (TAN)
+Tree Decision
+tree-convolutional neural network
+Tree-LSTM
+Tree-LSTMs
+Tree-Structured Long Short-Term Memory (Tree-LSTM)
+TreeLSTM
+TreeTagger
+Trends24.in
+TRG-DAtt
+TRI*M
+TriFac
+Trigram
+Triple Refined Indeterminate Neutrosophic Set (TRINS)
+TRNMF Integration
+TRS internet public opinion information monitoring system
+Truncated Singular Value Decomposition
+TrustSVD
+TS
+TS-GCN
+TSAC
+Tsing Hua (TH)
+TSND
+TSNN
+TSRank
+TSVM
+Tule
+Tunicate Swarm Algorithm (TSA)
+TunRoBERTa
+TutorAlert
+Tutubalina’s Lexicon
+TVP-VAR model
+Tw-StAR SA system
+Twarc2
+tweepy
+Tweepy API
+tweepy.py
+Tweet feel
+Tweet-level neural network
+Tweetdeck
+TweetFeel
+TweetNLP
+Tweets sentimental analyzers (TSA)
+TWIFIL
+TWINT
+Twinword
+Twinword Sentiment Analysis API
+TwiSP
+Twitris 2.0
+twitteR
+Twitter Advanced Search
+Twitter API
+Twitter Archiving Google Sheet
+Twitter Aspect Classifier (TAC)
+Twitter Crawler
+Twitter data extraction and analysis framework
+Twitter dataset
+Twitter Developer API
+Twitter Hashtags
+Twitter Intelligence Tool (TWINT)
+twitteR package
+Twitter Political Index
+Twitter Rest API
+Twitter Search API
+Twitter Sentiment
+Twitter Sentiment Analysis
+Twitter Sentiment Analysis Framework Using A Hybrid Classification Scheme
+Twitter Sentiment Analysis: A Survey
+Twitter Sentiment Corpus
+Twitter sentiment tools
+Twitter Stream Application Programming Interface (API)
+Twitter streaming API
+Twitter Streaming Application Programming Interface (API)
+Twitter tokenizer
+twitter-BTM
+Twitter-Scraper
+Twitter4J
+twitteroauth
+TwitterRoBERTa
+twitterscraper
+Twittratr
+two layered LSTM model
+Two State GRU (TS-GRU)
+Two-pass classifier (SVMNN)
+Two-Stage
+Twython API
+Tylor-DBN
+Type-aware Graph Convolutional Network (T-GCN)
+Type1 Fuzzy Logic
+Type2 Fuzzy Logic
+U-Net
+UAMSA
+UCINET
+UCINET 6.0
+UCINET 6's NetDraw
+uClassify
+UCRNN
+UData
+Uddin and Khomh Sentiment Orientation
+ufal.udpipe
+UGRNN
+UI-LR
+UI-SFI dynamic model
+UIST
+ULMFiT
+Ultimate Facebook Scraper
+UMAP
+UMLS Metathesaurus
+UMUTextStats
+Underthesea
+Unfolding Recursive Auto-Encoders
+unified model
+Unigram
+Unigram Sentiwordnet
+Unigram with Sentiwordnet
+Universal Dependency (UD) Project
+Universal Language Model Fine-tuning (ULMFit)
+Universum SVM
+Unsupervised
+unsupervised convolutional neural network
+unsupervised lexicon based system
+Unsupervised Machine Learning (topic modeling)
+Unsupervised methods
+Urdu Lexicon
+Urdu Sentiment Analyzer
+Urdu Sentiment Lexicon
+Urduhack
+URI Framework
+USA-Emoticons
+User-based Collaborative Filtering (CF)
+User-Opinion-Rating
+User-Review-Item (URI) Framework
+User-Sentiment Topic Model (USTM)
+UserCF
+UserRank
+USI
+USSPAD
+UST
+USTM
+UWB
+VAD
+vadar
+VADER
+VADER analysis tool
+Vader Lexicon
+VADER NLTK Sentiment Analyser
+Vader Sentiment
+VADER Sentiment Analysis
+VADER Sentiment Analyzer
+VADER Sentiment Intensity Analyzer
+VADER-EXT
+VaderSentiment
+VAE-ATT
+VAE-GANs
+Valence Aware Dictionary
+Valence Aware Dictionary and sEntiment Reasoner
+Valence Aware Dictionary and sEntiment Reasoner (VADER)
+Valence Aware Dictionary for Sentiment Reasoning (VADER)
+Valence Aware Dictionary Sentiment Reasoner (VADER)
+VAR
+Variable elimination
+variable-scale clustering (VSC)
+Variational LSTM
+Variational RHN
+VAUT
+VD-CNN
+VDCNN
+VDIQA
+vector autoregression model
+vector space model (VSM)
+VEDER dictionary
+Vender Sentiment
+Verint Systems
+Very-deep convolutional neural networks (VDCNNs)
+VERY-NEG
+VERY-POS
+VGG Net
+VGG network
+VGG Network-based Intermodal Sentiment Analysis Model (VGGNET-ISAM)
+VGG-16
+VGG-19
+VGG16
+VGG16-LSTM
+VGG19
+VGGNet
+VIKOR
+Viralheat
+VistaNet
+Visual Aspect Attention Network
+Visual Sentiment Analysis Framework (VSAF)
+Visual Studio Code
+Visualization of dialogue data
+Visualization of social data
+Visualization System for Analyzing Customer Comments (VSC)
+Visualization techniques for sentiment data
+ViT
+Vitals.com
+voc method
+Voce
+VODUM
+VosViewer
+Vote
+VOTEBOT
+Voted Perceptron
+Voted Perceptron (VP)
+Voter
+Voting classifier
+Voting Classifier (LR-SGD)
+Voting Ensemble
+VS-CNN
+VSAF
+VSO
+W-InCF
+W-WSD
+W2V
+W2VLDA
+Waikato Environment for Knowledge Analysis (Weka)
+WAM
+Wang-Mendel algorithm
+Wang2vec
+WangchanBERTa
+Ward
+WARM
+Wasserstein based Transfer Network (WTN)
+Wasserstein GAN
+WAT-API
+Wavelet Transforms
+WDEmb
+Weakly Supervised Coupled Convolutional Network (WSCCN)
+Weakly supervised framework for aspect-based sentiment analysis
+weakly supervised topic sentiment joint model with word embeddings (WS-TSWE)
+Web scraping R package rvest
+Web-PMI method
+WebChild
+Webometrics Analyst
+WebService::YouTube
+Weibo
+Weibo crawler
+weibo-preprocess-toolkit
+Weighing Scheme
+Weighted Conditional Probability
+Weighted Lexicon-Based Algorithm (WLBA)
+Weighted log frequency approach
+Weighted Multivariate FTS (WMVFTS)
+Weka
+WEKA Naïve Bayes Classifier
+WEKA toolkit
+WellAI COVID-19 Research Tool
+Whale Optimization Algorithm
+Whale Optimization Algorithm (WOA)
+Whale Optimization Algorithm & Support Vector Machines (WOA-SVM)
+WhatHowWhy
+Whissell dictionary
+White Shark Optimizer
+WILDCAT
+wink-sentiment
+Wit.ai
+WKWSCI Sentiment Lexicon
+WLDA-Apriori model
+WOA
+WoBERT
+WOLF
+WOLF 0.6
+Word Alignment Model
+Word Cloud
+Word Count
+Word Embedding
+Word Embedding and Ensemble Learning
+Word Embeddings
+word lists
+Word Mover's Distance
+word n-gram
+word sense disambiguation algorithm
+Word Tree
+Word vectors
+Word Weighting Technique
+Word-Guide Attention-Based LSTM
+Word-position2Vec
+Word-sense disambiguation (WSD)
+Word2Vec
+Word2vec by weighted average
+Word2Vec-BiGRU-Att
+Word2Vec-BiLSTM-TextCNN
+Word2vec-LSTM
+Word2Vec+GCN
+word2vector
+WordCloud
+WordEmbedding
+WordNet
+WordNet 2.1
+WordNet Similarity
+WordNet-Affect
+WordNet.Net Library
+WordNetLemmatizer
+WordPiece
+Wordscores
+WorldNet
+WPAM-ACS
+Wrapper Approaches
+WS4J
+WSAM-OWA
+WSCCN
+WSCNet
+WSM
+WSTM
+WTFM
+Wu and Palmer Measure
+Xatkit
+Xception
+Xerox POS Tagger
+XG-Boost
+XGB
+XGB Classifier
+xgboost
+XGBoost Classifier
+XI Social Discovery
+XLM-RoBERTa
+XLM-Roberta-large
+xlm-roberta-large-xnli
+XLM-RoBERTa-sag
+XLNet
+XLNet-BiLSTM
+XLNet-CNN
+XML-RoBERTa-large
+xTML
+Yahoo! Finance API
+Yake
+Yandex Translate
+Yandex Translator API
+Yang's method
+Yelp Restaurant Sentiment Lexicon
+Yi et al. (2003)
+Yoon-Kim's CNN model
+Yourview
+YouTube Data API
+YouTube Studio Analytics
+YT8M
+Zapier
+Zemberek
+ZEN
+ZeroR
+zhconv
+Zhiwang Sentiment Dictionary
+Zoom

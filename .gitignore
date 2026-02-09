@@ -53,3 +53,5 @@ analysis_visualization/fig/
 .python-version
 analysis_visualization/reqs
 zotero-export
+analysis_visualization/1._tools_dict_old.json
+analysis_visualization/1._tools_dict_unclean.json
