@@ -6,6 +6,7 @@ format:
 knitr:
   opts_chunk:
     dev: pdf
+    echo: false
     fig.path: "fig/"
 ---
 
@@ -37,6 +38,17 @@ results <- rio::import("2._annotation-results.csv")
 abstracts_clean <- rio::import(
   "https://github.com/JBGruber/opinion-wg2/raw/main/relevance-prediction/Opinion%20Papers%20Abstracts%20-%20data_abstracts_clean_withpredictedrelevance.csv"
 )
+tool_dict <- rio::import("1.2_tool_dict.csv")
+tools_df <- results |>
+  filter(
+    variable %in% c("Q1_1_Tool-Name", "Q2_1_Tool-Name"),
+    !result %in% c("-", "IRRELEVANT"),
+    nchar(result) > 1
+  ) |>
+  separate_longer_delim(cols = result, delim = "; ") |>
+  rename(tool = result) |>
+  left_join(tool_dict, by = "tool")
+tools_annotated <- readRDS("1.2_tools_annotated_long.rds")
 ```
 
 # Main
@@ -44,6 +56,53 @@ abstracts_clean <- rio::import(
 
 
 ## RQ1a theoretical concepts
+
+Question Q4_1_Opinion-Evaluation
+
+```{r}
+# Define categories for opinion evaluation concepts
+categories_evaluations_l <- jsonlite::read_json("2._concept_dict.json")
+
+categories_evaluations_dict <- tibble(
+  category = names(categories_evaluations_l),
+  concept = categories_evaluations_l
+) |>
+  unnest_longer(concept)
+
+# Process and categorize concepts
+concepts <- results |>
+  filter(
+    variable == "Q4_1_Opinion-Evaluation",
+    !result %in% c("-", "IRRELEVANT")
+  ) |>
+  separate_longer_delim(cols = result, delim = "; ") |>
+  mutate(
+    result = trimws(result),
+    result_lower = tolower(result)
+  ) |>
+  left_join(categories_evaluations_dict, by = c("result_lower" = "concept"))
+
+# Aggregate counts by category
+concepts_aggregated <- concepts |>
+  count(category, name = "n") |>
+  arrange(desc(n))
+```
+
+```{r}
+#| fig-width: 7
+#| fig-height: 5
+#| fig-cap: "Categories of Opinion Evaluation Concepts"
+concepts_aggregated |>
+  filter(category != "coding-error") |>
+  mutate(category = fct_reorder(category, n)) |>
+  ggplot(aes(x = n, y = category)) +
+  geom_col() +
+  labs(
+    title = "What theoretical concepts are being measured?",
+    x = "Count",
+    y = NULL
+  )
+```
 
 ## RQ1b methods and measurements used for opinion mining?
 

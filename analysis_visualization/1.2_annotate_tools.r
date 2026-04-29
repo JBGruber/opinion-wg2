@@ -25,6 +25,8 @@ tool_dict <- tibble(
 ) |>
   distinct(tool, .keep_all = TRUE)
 
+rio::export(tool_dict, "1.2_tool_dict.csv")
+
 tools_df <- import("2._annotation-results.csv") |>
   filter(
     variable %in% c("Q1_1_Tool-Name", "Q2_1_Tool-Name"),
@@ -116,7 +118,7 @@ path_safe <- function(x) {
 tools_annotated <- tools_df |>
   count(tool = tool_clean) |>
   filter(!is.na(tool)) |>
-  slice_max(n, n = 50) |>
+  slice_max(n, n = 100) |>
   mutate(
     query = make_query(
       text = tool,
@@ -145,7 +147,11 @@ saveRDS(tools_annotated, "1.2_tools_annotated_raw.rds")
 tools_annotated_df <- tools_annotated |>
   mutate(
     annotation_data = map(annotation, jsonlite::fromJSON),
-    annotation_data = purrr::map_chr(annotation_data, c("message", "content")),
+    annotation_data = map_chr(
+      annotation_data,
+      c("message", "content"),
+      .default = ""
+    ),
     annotation_data = map(annotation_data, jsonlite::fromJSON)
   ) |>
   unnest_wider(annotation_data)
