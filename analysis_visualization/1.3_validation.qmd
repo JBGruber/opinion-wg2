@@ -1,0 +1,257 @@
+---
+title: tool annotation validation
+author: Johannes B. Gruber
+date: today
+format:
+  html:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+---
+
+# Introduction
+
+We validate the annotation of tools between our two human coders, and the two human coders plus the LLM.
+
+## Packages and Functions
+
+```{r}
+#| include: false
+library(googledrive)
+library(tidyverse)
+library(tidycomm)
+library(gt)
+library(yardstick)
+start <- Sys.time() # note start time for later
+setwd(here::here("analysis_visualization"))
+```
+
+Function to colour-code ICR results
+
+```{r}
+# 𝛼-levels:
+#
+# 𝛼 > 0.8 reliable
+# 𝛼 > 0.667 and 𝛼 < 0.8 tentative conclusions
+# 𝛼 < 0.667 not reliable
+# (Krippendorff, 2004, pp. 241-243)
+icr_print <- function(
+  tbl,
+  cols = c("Agreement", "Cohens_Kappa", "Krippendorffs_Alpha")
+) {
+  alpha_color <- function(x) {
+    seg_high <- scales::col_numeric(c("#90EE90", "#006400"), domain = c(0.8, 1)) # light → dark green
+    seg_mid <- scales::col_numeric(
+      c("#FFA500", "#ADFF2F"),
+      domain = c(0.667, 0.8)
+    )
+    seg_low <- scales::col_numeric(
+      c("#8B0000", "#FF6B6B"),
+      domain = c(-1, 0.667)
+    )
+
+    out <- character(length(x))
+    high <- !is.na(x) & x >= 0.8
+    mid <- !is.na(x) & x >= 0.667 & x < 0.8
+    low <- !is.na(x) & x < 0.667
+    out[high] <- seg_high(x[high])
+    out[mid] <- seg_mid(x[mid])
+    out[low] <- seg_low(x[low])
+    out[is.na(x)] <- "#FFFFFF"
+    out
+  }
+
+  tbl |>
+    gt() |>
+    fmt_number(
+      columns = all_of(cols),
+      decimals = 2L,
+      drop_trailing_zeros = TRUE
+    ) |>
+    data_color(
+      columns = all_of(cols),
+      fn = alpha_color
+    )
+}
+
+ml_metrics <- metric_set(accuracy, precision, recall, f_meas)
+```
+
+## Data
+
+```{r load data}
+# get annotation data from G drive
+annotation <- "1.2_tools_annotated_manual.xlsx"
+if (!file.exists(annotation)) {
+  drive_download(
+    file = "https://docs.google.com/spreadsheets/d/1a5m1SgQ3ccZN6N1c-u0ZqJkkOKbmYXGjjOcxIefqmf0",
+    path = annotation
+  )
+}
+
+manual_annotation <- map(c("validation_DT", "validation_CV"), function(s) {
+  rio::import(
+    annotation,
+    sheet = s
+  ) |>
+    mutate(annotator = str_remove(s, "validation_"))
+}) |>
+  bind_rows()
+
+llm_annotation <- readRDS("1.2_tools_annotated_long.rds") |>
+  select(-request, -cache_file, -query, -annotation) |>
+  mutate(annotator = "LLM") |>
+  slice_head(n = 50)
+```
+
+Combine data:
+
+```{r}
+annotation_df <- bind_rows(
+  manual_annotation,
+  llm_annotation
+) |>
+  as_tibble()
+```
+
+# Main
+
+Below are the annotation columns we measure reliability for:
+
+```{r}
+# Columns to compare
+compare_cols <- c(
+  "category",
+  "task_representation",
+  "task_classification",
+  "task_target",
+  "software"
+)
+```
+
+## Human ICR
+
+```{r}
+#| tbl-cap: "Intercoder reliability for human annotators"
+annotation_df |>
+  filter(annotator != "LLM") |>
+  test_icr(
+    unit_var = tool,
+    coder_var = annotator,
+    all_of(compare_cols),
+    cohens_kappa = TRUE,
+    fleiss_kappa = FALSE,
+    brennan_prediger = FALSE,
+    lotus = FALSE,
+    s_lotus = FALSE,
+    holsti = FALSE,
+    na.omit = TRUE
+  ) |>
+  icr_print()
+```
+
+## human + LLM ICR
+
+```{r}
+#| tbl-cap: "Intercoder reliability for human+LLM annotators"
+annotation_df |>
+  test_icr(
+    unit_var = tool,
+    coder_var = annotator,
+    all_of(compare_cols),
+    cohens_kappa = FALSE,
+    fleiss_kappa = TRUE,
+    brennan_prediger = FALSE,
+    lotus = FALSE,
+    s_lotus = FALSE,
+    holsti = FALSE,
+    na.omit = TRUE
+  ) |>
+  icr_print(cols = c("Agreement", "Fleiss_Kappa", "Krippendorffs_Alpha"))
+```
+
+# Machine learning metrics
+
+Alternatively to the ICR metrics, we can also calculate more classic machine learning metrics: precision, recall and F1 scores.
+Since we have two annotators, I calculate these measures for both of them separately:
+
+```{r}
+annotation_df_wide <- annotation_df |>
+  pivot_longer(
+    cols = all_of(compare_cols),
+    names_to = "variable",
+    values_to = "annotation"
+  ) |>
+  pivot_wider(
+    id_cols = tool,
+    names_from = c(annotator, variable),
+    values_from = annotation
+  ) |>
+  mutate(across(contains("_category"), function(x) {
+    factor(
+      x,
+      levels = c(
+        "algorithm",
+        "approach",
+        "commercial_api",
+        "data_collection",
+        "general_library",
+        "general_purpose_nlp",
+        "gui_tool",
+        "infrastructure",
+        "linguistic_resource",
+        "model",
+        "other_unclear",
+        "programming_language",
+        "single_purpose_nlp"
+      )
+    )
+  }))
+```
+
+```{r}
+conf_mat(annotation_df_wide, truth = "DT_category", estimate = "LLM_category")
+```
+
+Daniel vs the machine:
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(truth = DT_category, estimate = LLM_category) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+#| eval: false
+annotation_df_wide |>
+  ml_metrics(truth = DT_software, estimate = LLM_software) |>
+  icr_print(cols = ".estimate")
+```
+
+Christina vs the machine
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(truth = CV_category, estimate = LLM_category) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+#| eval: false
+annotation_df_wide |>
+  ml_metrics(truth = CV_software, estimate = LLM_software) |>
+  icr_print(cols = ".estimate")
+```
+
+# wrap up
+
+Save data if it takes long to preprocess it here. 
+Afterwards we get some information which is important to reproduce the report.
+
+```{r}
+sessionInfo()
+Sys.time()
+# note how long the script takes to (re-)run
+Sys.time() - start
+```

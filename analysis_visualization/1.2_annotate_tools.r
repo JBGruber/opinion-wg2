@@ -62,15 +62,20 @@ schema <- list(
       ),
       description = "The category of the tool"
     ),
-    opinion_measurement_general = list(
+    task_representation = list(
       type = "string",
       enum = c("yes", "no", "unclear"),
-      description = "Whether this is a general opinion measurement tool"
+      description = "Whether this tool can be used for text representation"
     ),
-    opinion_measurement_specific = list(
+    task_classification = list(
       type = "string",
       enum = c("yes", "no", "unclear"),
-      description = "Whether this is a specific opinion measurement tool"
+      description = "Whether this tool can be used for classification"
+    ),
+    task_target = list(
+      type = "string",
+      enum = c("yes", "no", "unclear"),
+      description = "Whether this tool can be used for identification of targets/entities in text"
     ),
     software = list(
       type = "string",
@@ -84,8 +89,9 @@ schema <- list(
   ),
   required = c(
     "category",
-    "opinion_measurement_general",
-    "opinion_measurement_specific",
+    "task_representation",
+    "task_classification",
+    "task_target",
     "software",
     "note"
   )
@@ -156,7 +162,7 @@ tools_annotated_df <- tools_annotated |>
   ) |>
   unnest_wider(annotation_data)
 
-saveRDS(tools_annotated, "1.2_tools_annotated_long.rds")
+saveRDS(tools_annotated_df, "1.2_tools_annotated_long.rds")
 tools_annotated_df |>
   select(-request, -cache_file, -query, -annotation) |>
   export("1.2_tools_annotated.xlsx")
