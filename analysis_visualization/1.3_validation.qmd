@@ -8,6 +8,8 @@ format:
     toc_depth: 3
     toc_float: true
     number_sections: true
+    code-fold: true
+    code-tools: true
 ---
 
 # Introduction
@@ -38,7 +40,7 @@ Function to colour-code ICR results
 # (Krippendorff, 2004, pp. 241-243)
 icr_print <- function(
   tbl,
-  cols = c("Agreement", "Cohens_Kappa", "Krippendorffs_Alpha")
+  cols = c("Agreement", "Krippendorffs_Alpha")
 ) {
   alpha_color <- function(x) {
     seg_high <- scales::col_numeric(c("#90EE90", "#006400"), domain = c(0.8, 1)) # light → dark green
@@ -90,19 +92,21 @@ if (!file.exists(annotation)) {
   )
 }
 
-manual_annotation <- map(c("validation_DT", "validation_CV"), function(s) {
-  rio::import(
-    annotation,
-    sheet = s
-  ) |>
-    mutate(annotator = str_remove(s, "validation_"))
-}) |>
+manual_annotation <- map(
+  c("validation_DT", "validation_CV", "validation_JG"),
+  function(s) {
+    rio::import(
+      annotation,
+      sheet = s
+    ) |>
+      mutate(annotator = str_remove(s, "validation_"))
+  }
+) |>
   bind_rows()
 
 llm_annotation <- readRDS("1.2_tools_annotated_long.rds") |>
   select(-request, -cache_file, -query, -annotation) |>
-  mutate(annotator = "LLM") |>
-  slice_head(n = 50)
+  mutate(annotator = "LLM")
 ```
 
 Combine data:
@@ -113,6 +117,27 @@ annotation_df <- bind_rows(
   llm_annotation
 ) |>
   as_tibble()
+```
+
+Only use complete cases:
+
+```{r}
+annotation_df <- annotation_df |>
+  mutate(
+    missing = rowSums(across(
+      c(
+        category,
+        task_representation,
+        task_classification,
+        task_target,
+        software
+      ),
+      is.na
+    ))
+  ) |>
+  group_by(tool) |>
+  filter(all(missing == 0)) |>
+  ungroup()
 ```
 
 # Main
@@ -140,12 +165,14 @@ annotation_df |>
     unit_var = tool,
     coder_var = annotator,
     all_of(compare_cols),
-    cohens_kappa = TRUE,
+    agreement = TRUE,
+    holsti = FALSE,
+    kripp_alpha = TRUE,
+    cohens_kappa = FALSE,
     fleiss_kappa = FALSE,
     brennan_prediger = FALSE,
     lotus = FALSE,
     s_lotus = FALSE,
-    holsti = FALSE,
     na.omit = TRUE
   ) |>
   icr_print()
@@ -188,33 +215,44 @@ annotation_df_wide <- annotation_df |>
     names_from = c(annotator, variable),
     values_from = annotation
   ) |>
-  mutate(across(contains("_category"), function(x) {
-    factor(
-      x,
-      levels = c(
-        "algorithm",
-        "approach",
-        "commercial_api",
-        "data_collection",
-        "general_library",
-        "general_purpose_nlp",
-        "gui_tool",
-        "infrastructure",
-        "linguistic_resource",
-        "model",
-        "other_unclear",
-        "programming_language",
-        "single_purpose_nlp"
+  mutate(
+    across(contains("_category"), function(x) {
+      factor(
+        x,
+        levels = c(
+          "algorithm",
+          "approach",
+          "commercial_api",
+          "data_collection",
+          "general_library",
+          "general_purpose_nlp",
+          "gui_tool",
+          "infrastructure",
+          "linguistic_resource",
+          "model",
+          "other_unclear",
+          "programming_language",
+          "single_purpose_nlp"
+        )
       )
-    )
-  }))
+    }),
+    across(c(contains("_task"), contains("_software")), function(x) {
+      factor(
+        x,
+        levels = c(
+          "yes",
+          "no"
+        )
+      )
+    })
+  )
 ```
 
 ```{r}
 conf_mat(annotation_df_wide, truth = "DT_category", estimate = "LLM_category")
 ```
 
-Daniel vs the machine:
+### Daniel vs the machine:
 
 ```{r}
 annotation_df_wide |>
@@ -223,13 +261,36 @@ annotation_df_wide |>
 ```
 
 ```{r}
-#| eval: false
+annotation_df_wide |>
+  ml_metrics(
+    truth = DT_task_representation,
+    estimate = LLM_task_representation
+  ) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(
+    truth = DT_task_classification,
+    estimate = LLM_task_classification
+  ) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(truth = DT_task_target, estimate = LLM_task_target) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
 annotation_df_wide |>
   ml_metrics(truth = DT_software, estimate = LLM_software) |>
   icr_print(cols = ".estimate")
 ```
 
-Christina vs the machine
+### Christina vs the machine
 
 ```{r}
 annotation_df_wide |>
@@ -238,11 +299,185 @@ annotation_df_wide |>
 ```
 
 ```{r}
-#| eval: false
+annotation_df_wide |>
+  ml_metrics(
+    truth = CV_task_representation,
+    estimate = LLM_task_representation
+  ) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(
+    truth = CV_task_classification,
+    estimate = LLM_task_classification
+  ) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(truth = CV_task_target, estimate = LLM_task_target) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
 annotation_df_wide |>
   ml_metrics(truth = CV_software, estimate = LLM_software) |>
   icr_print(cols = ".estimate")
 ```
+
+### Johannes vs the machine
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(truth = JG_category, estimate = LLM_category) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(
+    truth = JG_task_representation,
+    estimate = LLM_task_representation
+  ) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(
+    truth = JG_task_classification,
+    estimate = LLM_task_classification
+  ) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(truth = JG_task_target, estimate = LLM_task_target) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide |>
+  ml_metrics(truth = JG_software, estimate = LLM_software) |>
+  icr_print(cols = ".estimate")
+```
+
+### Majority vs the machine
+
+```{r}
+# row-wise majority vote across the three human coders.
+# with 3 coders a binary (yes/no) variable always has a majority; for the
+# multi-class category a tie (all three disagree) returns NA and is dropped
+# from the metrics below.
+majority_vote <- function(...) {
+  vals <- as.character(c(...))
+  vals <- vals[!is.na(vals)]
+  if (length(vals) == 0) {
+    return(NA_character_)
+  }
+  tab <- sort(table(vals), decreasing = TRUE)
+  if (length(tab) > 1 && tab[[1]] == tab[[2]]) {
+    return(NA_character_)
+  }
+  names(tab)[1]
+}
+
+annotation_df_wide_maj <- annotation_df_wide |>
+  rowwise() |>
+  mutate(
+    MAJ_category = majority_vote(DT_category, CV_category, JG_category),
+    MAJ_task_representation = majority_vote(
+      DT_task_representation,
+      CV_task_representation,
+      JG_task_representation
+    ),
+    MAJ_task_classification = majority_vote(
+      DT_task_classification,
+      CV_task_classification,
+      JG_task_classification
+    ),
+    MAJ_task_target = majority_vote(
+      DT_task_target,
+      CV_task_target,
+      JG_task_target
+    ),
+    MAJ_software = majority_vote(DT_software, CV_software, JG_software)
+  ) |>
+  ungroup() |>
+  mutate(
+    MAJ_category = factor(MAJ_category, levels = levels(DT_category)),
+    across(
+      c(
+        MAJ_task_representation,
+        MAJ_task_classification,
+        MAJ_task_target,
+        MAJ_software
+      ),
+      function(x) factor(x, levels = c("yes", "no"))
+    )
+  )
+```
+
+```{r}
+annotation_df_wide_maj |>
+  ml_metrics(truth = MAJ_category, estimate = LLM_category) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide_maj |>
+  ml_metrics(
+    truth = MAJ_task_representation,
+    estimate = LLM_task_representation
+  ) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide_maj |>
+  ml_metrics(
+    truth = MAJ_task_classification,
+    estimate = LLM_task_classification
+  ) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide_maj |>
+  ml_metrics(truth = MAJ_task_target, estimate = LLM_task_target) |>
+  icr_print(cols = ".estimate")
+```
+
+```{r}
+annotation_df_wide_maj |>
+  ml_metrics(truth = MAJ_software, estimate = LLM_software) |>
+  icr_print(cols = ".estimate")
+```
+
+# Disagreement
+
+```{r}
+disagreement <- map(compare_cols, function(col) {
+  annotation_df |>
+    group_by(tool) |>
+    filter(n_distinct(.data[[col]]) > 1) |>
+    ungroup() |>
+    select(tool, all_of(col), annotator) |>
+    pivot_wider(
+      id_cols = tool,
+      names_from = annotator,
+      values_from = all_of(col)
+    )
+}) |>
+  set_names(compare_cols)
+
+rio::export(disagreement, "disagreement.xlsx")
+```
+
 
 # wrap up
 

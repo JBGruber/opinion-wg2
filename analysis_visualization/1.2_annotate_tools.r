@@ -38,7 +38,7 @@ tools_df <- import("2._annotation-results.csv") |>
   left_join(tool_dict, by = "tool")
 
 
-prompt <- readr::read_file("1.1_standardization_prompt.md")
+prompt <- readr::read_file("1.2_tool-annotation_prompt.md")
 schema <- list(
   type = "object",
   properties = list(
@@ -121,10 +121,13 @@ path_safe <- function(x) {
   str_replace_all(x, "[^A-z.0-9]", "_")
 }
 
+dir.create("reqs", showWarnings = FALSE)
+
 tools_annotated <- tools_df |>
   count(tool = tool_clean) |>
   filter(!is.na(tool)) |>
-  slice_max(n, n = 100) |>
+  #slice_max(n, n = 50) |>
+  filter(n >= 10) |>
   mutate(
     query = make_query(
       text = tool,
@@ -134,7 +137,7 @@ tools_annotated <- tools_df |>
     request = query(
       query,
       screen = FALSE,
-      model = "gpt-oss:120b",
+      model = "qwen3.6:35b",
       output = "httr2_request",
       format = schema,
       model_params = list(seed = 42, temperature = 0)
