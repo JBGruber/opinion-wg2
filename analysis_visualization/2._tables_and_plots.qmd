@@ -49,6 +49,20 @@ tools_df <- results |>
   rename(tool = result) |>
   left_join(tool_dict, by = "tool")
 tools_annotated <- readRDS("1.2_tools_annotated_long.rds")
+
+
+warning("A few raw tool names are not in the lookup-dictionary, e.g.: 'Recurrent Neural Network', 'Bert', 'K-means'. Please use the merging helper function `merge_paper_tools()` instead, by running: 
+`source('scripts/helper_tools2paper.R')`") 
+
+source('scripts/helper_tools2paper.R')
+
+merge_paper_tools(
+  dict_file = "1.2_tool_dict.csv", 
+  tool_file = "1.2_tools_annotated_long.rds", ## replace with complete annotation later on
+   paper_file = ""
+   
+)
+
 ```
 
 # Main
