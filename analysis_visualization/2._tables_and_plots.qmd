@@ -56,18 +56,16 @@ warning("A few raw tool names are not in the lookup-dictionary, e.g.: 'Recurrent
 
 source('scripts/helper_tools2paper.R')
 
-merge_paper_tools(
+tools_annotated <- merge_paper_tools(
   dict_file = "1.2_tool_dict.csv", 
-  tool_file = "1.2_tools_annotated_long.rds", ## replace with complete annotation later on
-   paper_file = ""
-   
+  tool_file = "1.2_tools_annotated_long.rds", ## replace with complete annotation once it's finished
+   paper_file = "2._annotation-results.csv"
 )
 
 ```
 
 # Main
 ## Validation
-
 
 ## RQ1a theoretical concepts
 
@@ -157,12 +155,16 @@ approaches |>
   labs(x = NULL, y = NULL)
 ```
 
+## RQ1c: Which tools are used for opinion mining?
+
+
+
+
+
 ## RQ1d: Which data is used in CSS opinion mining?
 
 
 ## Target  
-
-
 
 ```{r}
 #| fig-width: 7
