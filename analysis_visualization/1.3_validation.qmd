@@ -123,6 +123,8 @@ Only use complete cases:
 
 ```{r}
 annotation_df <- annotation_df |>
+  complete(annotator, tool) |>
+  group_by(tool) |>
   mutate(
     missing = rowSums(across(
       c(
@@ -135,7 +137,6 @@ annotation_df <- annotation_df |>
       is.na
     ))
   ) |>
-  group_by(tool) |>
   filter(all(missing == 0)) |>
   ungroup()
 ```
@@ -188,14 +189,14 @@ annotation_df |>
     coder_var = annotator,
     all_of(compare_cols),
     cohens_kappa = FALSE,
-    fleiss_kappa = TRUE,
+    fleiss_kappa = FALSE,
     brennan_prediger = FALSE,
     lotus = FALSE,
     s_lotus = FALSE,
     holsti = FALSE,
     na.omit = TRUE
   ) |>
-  icr_print(cols = c("Agreement", "Fleiss_Kappa", "Krippendorffs_Alpha"))
+  icr_print(cols = c("Agreement", "Krippendorffs_Alpha"))
 ```
 
 # Machine learning metrics
@@ -230,7 +231,6 @@ annotation_df_wide <- annotation_df |>
           "infrastructure",
           "linguistic_resource",
           "model",
-          "other_unclear",
           "programming_language",
           "single_purpose_nlp"
         )
@@ -248,122 +248,68 @@ annotation_df_wide <- annotation_df |>
   )
 ```
 
-```{r}
-conf_mat(annotation_df_wide, truth = "DT_category", estimate = "LLM_category")
-```
-
 ### Daniel vs the machine:
 
 ```{r}
-annotation_df_wide |>
-  ml_metrics(truth = DT_category, estimate = LLM_category) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(
-    truth = DT_task_representation,
-    estimate = LLM_task_representation
+coder <- "DT"
+map(compare_cols, function(col) {
+  annotation_df_wide |>
+    ml_metrics(
+      truth = paste0(coder, "_", col),
+      estimate = paste0("LLM_", col)
+    ) |>
+    add_column(variable = col)
+}) |>
+  bind_rows() |>
+  pivot_wider(
+    id_cols = variable,
+    names_from = .metric,
+    values_from = .estimate
   ) |>
-  icr_print(cols = ".estimate")
+  icr_print(cols = c("accuracy", "precision", "recall", "f_meas"))
 ```
 
-```{r}
-annotation_df_wide |>
-  ml_metrics(
-    truth = DT_task_classification,
-    estimate = LLM_task_classification
-  ) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(truth = DT_task_target, estimate = LLM_task_target) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(truth = DT_software, estimate = LLM_software) |>
-  icr_print(cols = ".estimate")
-```
 
 ### Christina vs the machine
 
 ```{r}
-annotation_df_wide |>
-  ml_metrics(truth = CV_category, estimate = LLM_category) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(
-    truth = CV_task_representation,
-    estimate = LLM_task_representation
+coder <- "CV"
+map(compare_cols, function(col) {
+  annotation_df_wide |>
+    ml_metrics(
+      truth = paste0(coder, "_", col),
+      estimate = paste0("LLM_", col)
+    ) |>
+    add_column(variable = col)
+}) |>
+  bind_rows() |>
+  pivot_wider(
+    id_cols = variable,
+    names_from = .metric,
+    values_from = .estimate
   ) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(
-    truth = CV_task_classification,
-    estimate = LLM_task_classification
-  ) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(truth = CV_task_target, estimate = LLM_task_target) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(truth = CV_software, estimate = LLM_software) |>
-  icr_print(cols = ".estimate")
+  icr_print(cols = c("accuracy", "precision", "recall", "f_meas"))
 ```
 
 ### Johannes vs the machine
 
 ```{r}
-annotation_df_wide |>
-  ml_metrics(truth = JG_category, estimate = LLM_category) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(
-    truth = JG_task_representation,
-    estimate = LLM_task_representation
+coder <- "JG"
+map(compare_cols, function(col) {
+  annotation_df_wide |>
+    ml_metrics(
+      truth = paste0(coder, "_", col),
+      estimate = paste0("LLM_", col)
+    ) |>
+    add_column(variable = col)
+}) |>
+  bind_rows() |>
+  pivot_wider(
+    id_cols = variable,
+    names_from = .metric,
+    values_from = .estimate
   ) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(
-    truth = JG_task_classification,
-    estimate = LLM_task_classification
-  ) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(truth = JG_task_target, estimate = LLM_task_target) |>
-  icr_print(cols = ".estimate")
-```
-
-```{r}
-annotation_df_wide |>
-  ml_metrics(truth = JG_software, estimate = LLM_software) |>
-  icr_print(cols = ".estimate")
+  icr_print(cols = c("accuracy", "precision", "recall", "f_meas"))
 ```
 
 ### Majority vs the machine
@@ -423,40 +369,65 @@ annotation_df_wide_maj <- annotation_df_wide |>
 ```
 
 ```{r}
-annotation_df_wide_maj |>
-  ml_metrics(truth = MAJ_category, estimate = LLM_category) |>
-  icr_print(cols = ".estimate")
+coder <- "MAJ"
+majority_metrics <- map(compare_cols, function(col) {
+  annotation_df_wide_maj |>
+    ml_metrics(
+      truth = paste0(coder, "_", col),
+      estimate = paste0("LLM_", col)
+    ) |>
+    add_column(variable = col)
+}) |>
+  bind_rows() |>
+  pivot_wider(id_cols = variable, names_from = .metric, values_from = .estimate)
+
+majority_metrics |>
+  icr_print(cols = c("accuracy", "precision", "recall", "f_meas"))
 ```
 
-```{r}
-annotation_df_wide_maj |>
-  ml_metrics(
-    truth = MAJ_task_representation,
-    estimate = LLM_task_representation
-  ) |>
-  icr_print(cols = ".estimate")
-```
+
+## Confusion Matrices
+
+Software:
 
 ```{r}
-annotation_df_wide_maj |>
-  ml_metrics(
-    truth = MAJ_task_classification,
-    estimate = LLM_task_classification
-  ) |>
-  icr_print(cols = ".estimate")
+conf_mat(
+  annotation_df_wide_maj,
+  truth = "MAJ_software",
+  estimate = "LLM_software"
+)
 ```
 
-```{r}
-annotation_df_wide_maj |>
-  ml_metrics(truth = MAJ_task_target, estimate = LLM_task_target) |>
-  icr_print(cols = ".estimate")
-```
+task_representation:
 
 ```{r}
-annotation_df_wide_maj |>
-  ml_metrics(truth = MAJ_software, estimate = LLM_software) |>
-  icr_print(cols = ".estimate")
+conf_mat(
+  annotation_df_wide_maj,
+  truth = "MAJ_task_representation",
+  estimate = "LLM_task_representation"
+)
 ```
+
+task_classification:
+
+```{r}
+conf_mat(
+  annotation_df_wide_maj,
+  truth = "MAJ_task_classification",
+  estimate = "LLM_task_classification"
+)
+```
+
+task_target:
+
+```{r}
+conf_mat(
+  annotation_df_wide_maj,
+  truth = "MAJ_task_target",
+  estimate = "LLM_task_target"
+)
+```
+
 
 # Disagreement
 
@@ -480,6 +451,13 @@ rio::export(disagreement, "disagreement.xlsx")
 
 
 # wrap up
+
+Save important result:
+
+```{r}
+saveRDS(majority_metrics, "1.3_humans-LLM-validation.rds")
+write_csv(majority_metrics, "1.3_humans-LLM-validation.csv")
+```
 
 Save data if it takes long to preprocess it here. 
 Afterwards we get some information which is important to reproduce the report.
