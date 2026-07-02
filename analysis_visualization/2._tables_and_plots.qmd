@@ -1,12 +1,17 @@
 ---
-title: "PDF annotation"
+title: "Opinion Mining in Computational Social Science: A Systematic Review"
+subtitle: "Tables and Plots"
 format:
   pdf:
-    keep-tex: true
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
 knitr:
   opts_chunk:
     dev: pdf
     echo: false
+    warning: false
+    message: false
     fig.path: "fig/"
 ---
 
@@ -56,18 +61,16 @@ warning("A few raw tool names are not in the lookup-dictionary, e.g.: 'Recurrent
 
 source('scripts/helper_tools2paper.R')
 
-merge_paper_tools(
+tools_annotated <- merge_paper_tools(
   dict_file = "1.2_tool_dict.csv", 
-  tool_file = "1.2_tools_annotated_long.rds", ## replace with complete annotation later on
-   paper_file = ""
-   
+  tool_file = "1.2_tools_annotated_long.rds", ## replace with complete annotation once it's finished
+   paper_file = "2._annotation-results.csv"
 )
 
 ```
 
 # Main
 ## Validation
-
 
 ## RQ1a theoretical concepts
 
@@ -157,12 +160,245 @@ approaches |>
   labs(x = NULL, y = NULL)
 ```
 
+## RQ1c: Which tools are used for opinion mining?
+
+
+```{r}
+#| label: tbl-tools-1
+#| tbl-cap: "Most Frequently Used Tools for Opinion Mining"
+# Prepare data for table
+dt <- tools_annotated |> 
+  dplyr::filter(
+    question == "Q1_1",
+    category %in% c(
+      "algorithm",
+      "commercial_api",
+      "general_purpose_nlp",
+      "gui_tool",
+      "linguistic_resource",
+      "model",
+      "single_purpose_nlp"
+    )
+  ) |> 
+  dplyr::group_by(tool_clean, category) |>
+  dplyr::summarise(
+    n = dplyr::n_distinct(id),
+    task_classification = any(task_classification == "yes", na.rm = TRUE),
+    task_target = any(task_target == "yes", na.rm = TRUE),
+    software = any(software == "yes", na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  dplyr::arrange(-n) |> 
+  head(25) |>
+  dplyr::mutate(
+    category = tools::toTitleCase(gsub("_", " ", category)),
+    Classification = ifelse(task_classification, "x", ""),
+    Target = ifelse(task_target, "x", ""),
+    Software = ifelse(software, "x", "")
+  ) |>
+  dplyr::select(
+    Tool = tool_clean,
+    Category = category,
+    Classification,
+    Target,
+    Software,
+    N = n
+  )
+
+# Define APA borders
+apa_border <- flextable::fp_border_default(width = 0.75)
+
+# Build table
+ft <- flextable::flextable(dt) |>
+  flextable::set_header_labels(
+    Tool = "Tool",
+    Category = "Category",
+    Classification = "Classification",
+    Target = "Target",
+    Software = "Software",
+    N = "N"
+  ) |>
+  flextable::theme_apa() |>
+  flextable::border_remove() |>
+  flextable::hline_top(border = apa_border, part = "all") |>
+  flextable::hline_bottom(border = apa_border, part = "body") |>
+  flextable::fontsize(size = 9, part = "all") |>
+  flextable::line_spacing(space = 1) |>
+  flextable::padding(padding = 1, part = "all") |>
+  flextable::set_table_properties(width = 1, layout = "autofit") |>
+  flextable::autofit() |>
+  flextable::align(j = "Tool", align = "left", part = "all") |>
+  flextable::align(j = "Category", align = "left", part = "all") |>
+  flextable::align(j = c("Classification", "Target", "Software", "N"), align = "center", part = "all") |> 
+  flextable::add_footer_lines("Note: N represents the number of unique papers that mention having used the tool in question for opinion mining (Q1.1). x indicate whether tool has been annotated as typically used for classification tasks or target-identification, or is available as software.") |>
+  flextable::fontsize(size = 8, part = "footer") |>
+  flextable::italic(part = "footer")
+
+ft
+```
+
+
+```{r}
+#| label: tbl-tools-2
+#| tbl-cap: "Most Frequently Used Tools for Classification in Opinion Mining"
+# Prepare data for table
+dt <- tools_annotated |> 
+  dplyr::filter(
+    question == "Q1_1",
+    task_classification == "yes",
+    category %in% c(
+      "algorithm",
+      "commercial_api",
+      "general_purpose_nlp",
+      "gui_tool",
+      "linguistic_resource",
+      "model",
+      "single_purpose_nlp"
+    )
+  ) |> 
+  dplyr::group_by(tool_clean, category) |>
+  dplyr::summarise(
+    n = dplyr::n_distinct(id),
+    task_classification = any(task_classification == "yes", na.rm = TRUE),
+    task_target = any(task_target == "yes", na.rm = TRUE),
+    software = any(software == "yes", na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  dplyr::arrange(-n) |> 
+  head(10) |>
+  dplyr::mutate(
+    category = tools::toTitleCase(gsub("_", " ", category)),
+    Classification = ifelse(task_classification, "x", ""),
+    Target = ifelse(task_target, "x", ""),
+    Software = ifelse(software, "x", "")
+  ) |>
+  dplyr::select(
+    Tool = tool_clean,
+    Category = category,
+ #   Classification,
+ #   Target,
+    Software,
+    N = n
+  )
+
+# Define APA borders
+apa_border <- flextable::fp_border_default(width = 0.75)
+
+# Build table
+ft <- flextable::flextable(dt) |>
+  flextable::set_header_labels(
+    Tool = "Tool",
+    Category = "Category",
+ #   Classification = "Classification",
+ #   Target = "Target",
+    Software = "Software",
+    N = "N"
+  ) |>
+  flextable::theme_apa() |>
+  flextable::border_remove() |>
+  flextable::hline_top(border = apa_border, part = "all") |>
+  flextable::hline_bottom(border = apa_border, part = "body") |>
+  flextable::fontsize(size = 9, part = "all") |>
+  flextable::line_spacing(space = 1) |>
+  flextable::padding(padding = 1, part = "all") |>
+  flextable::set_table_properties(width = 1, layout = "autofit") |>
+  flextable::autofit() |>
+  flextable::align(j = "Tool", align = "left", part = "all") |>
+  flextable::align(j = "Category", align = "left", part = "all") |>
+  flextable::align(j = c(
+    #"Classification", 
+    #"Target", 
+    "Software", "N"), align = "center", part = "all") |> 
+  flextable::add_footer_lines("Note: N represents the number of unique papers that mention having used the tool in question for opinion mining (Q1.1).") |>
+  flextable::fontsize(size = 8, part = "footer") |>
+  flextable::italic(part = "footer")
+
+ft
+```
+
+
+```{r}
+#| label: tbl-tools-3
+#| tbl-cap: "Most Frequently Used Tools for Target-Identification in Opinion Mining"
+# Prepare data for table
+dt <- tools_annotated |> 
+  dplyr::filter(
+    question == "Q1_1",
+    task_target == "yes",
+    category %in% c(
+      "algorithm",
+      "commercial_api",
+      "general_purpose_nlp",
+      "gui_tool",
+      "linguistic_resource",
+      "model",
+      "single_purpose_nlp"
+    )
+  ) |> 
+  dplyr::group_by(tool_clean, category) |>
+  dplyr::summarise(
+    n = dplyr::n_distinct(id),
+    task_classification = any(task_classification == "yes", na.rm = TRUE),
+    task_target = any(task_target == "yes", na.rm = TRUE),
+    software = any(software == "yes", na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  dplyr::arrange(-n) |> 
+  head(10) |>
+  dplyr::mutate(
+    category = tools::toTitleCase(gsub("_", " ", category)),
+    Classification = ifelse(task_classification, "x", ""),
+    Target = ifelse(task_target, "x", ""),
+    Software = ifelse(software, "x", "")
+  ) |>
+  dplyr::select(
+    Tool = tool_clean,
+    Category = category,
+ #   Classification,
+ #   Target,
+    Software,
+    N = n
+  )
+
+# Define APA borders
+apa_border <- flextable::fp_border_default(width = 0.75)
+
+# Build table
+ft <- flextable::flextable(dt) |>
+  flextable::set_header_labels(
+    Tool = "Tool",
+    Category = "Category",
+ #   Classification = "Classification",
+ #   Target = "Target",
+    Software = "Software",
+    N = "N"
+  ) |>
+  flextable::theme_apa() |>
+  flextable::border_remove() |>
+  flextable::hline_top(border = apa_border, part = "all") |>
+  flextable::hline_bottom(border = apa_border, part = "body") |>
+  flextable::fontsize(size = 9, part = "all") |>
+  flextable::line_spacing(space = 1) |>
+  flextable::padding(padding = 1, part = "all") |>
+  flextable::set_table_properties(width = 1, layout = "autofit") |>
+  flextable::autofit() |>
+  flextable::align(j = "Tool", align = "left", part = "all") |>
+  flextable::align(j = "Category", align = "left", part = "all") |>
+  flextable::align(j = c(
+    #"Classification", 
+    #"Target", 
+    "Software", "N"), align = "center", part = "all") |> 
+  flextable::add_footer_lines("Note: N represents the number of unique papers that mention having used the tool in question for opinion mining (Q1.1).") |>
+  flextable::fontsize(size = 8, part = "footer") |>
+  flextable::italic(part = "footer")
+
+ft
+```
+
 ## RQ1d: Which data is used in CSS opinion mining?
 
 
 ## Target  
-
-
 
 ```{r}
 #| fig-width: 7
